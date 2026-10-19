@@ -15,7 +15,7 @@ const SITE_CONFIG = {
     phone: "+91 7304263532", // Formatted phone or international tel link
     leetcodeUrl: "https://leetcode.com/u/Meetpokal/", // LeetCode profile URL
     hackerrankUrl: "https://www.hackerrank.com/profile/meetpokalwork", // HackerRank profile URL
-    resumeUrl: "assets/docs/Meet_Pokal_Resume.pdf",
+    resumeUrl: "assets/docs/Meet_Pokal_Data_Analyst_BI_Resume.pdf",
     resumeAvailable: true, // Verified: authentic PDF present at assets/docs/Meet_Pokal_Resume.pdf
     tableauPublicUrl: "", // Tableau Public profile/workbook URL when published
     powerBiUrl: "" // Power BI portfolio/report URL when published
