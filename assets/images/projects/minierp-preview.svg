@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" fill="none" width="100%" height="100%">
+  <rect width="600" height="240" rx="8" fill="#0f172a"/>
+  <defs>
+    <pattern id="grid-erp" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.8"/>
+    </pattern>
+    <marker id="arrow-erp" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#10b981"/>
+    </marker>
+  </defs>
+  <rect width="600" height="240" fill="url(#grid-erp)"/>
+
+  <!-- Streamlit Frontend -->
+  <g transform="translate(35, 60)">
+    <rect width="130" height="120" rx="6" fill="#1e293b" stroke="#f43f5e" stroke-width="1.2"/>
+    <text x="12" y="24" fill="#fb7185" font-family="monospace" font-size="11" font-weight="bold">Streamlit UI</text>
+    <line x1="12" y1="32" x2="118" y2="32" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="52" fill="#e2e8f0" font-family="sans-serif" font-size="9">• Stock In / Out Form</text>
+    <text x="12" y="72" fill="#e2e8f0" font-family="sans-serif" font-size="9">• Item Catalog View</text>
+    <text x="12" y="92" fill="#e2e8f0" font-family="sans-serif" font-size="9">• Supplier Profiles</text>
+    <text x="12" y="112" fill="#e2e8f0" font-family="sans-serif" font-size="9">• Realtime Totals</text>
+  </g>
+
+  <path d="M 165 120 L 210 120" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow-erp)"/>
+
+  <!-- Python Business Logic -->
+  <g transform="translate(215, 65)">
+    <rect width="130" height="110" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+    <text x="12" y="24" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold">Python Service</text>
+    <line x1="12" y1="32" x2="118" y2="32" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="54" fill="#cbd5e1" font-family="monospace" font-size="9">Transaction Rollback</text>
+    <text x="12" y="74" fill="#cbd5e1" font-family="monospace" font-size="9">Validation Checks</text>
+    <text x="12" y="94" fill="#cbd5e1" font-family="monospace" font-size="9">Stock Level Calc</text>
+  </g>
+
+  <path d="M 345 120 L 390 120" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow-erp)"/>
+
+  <!-- SQLite Database Tables -->
+  <g transform="translate(395, 45)">
+    <rect width="170" height="150" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.2"/>
+    <text x="12" y="24" fill="#34d399" font-family="monospace" font-size="11" font-weight="bold">SQLite Relational DB</text>
+    
+    <rect x="12" y="38" width="146" height="26" rx="3" fill="#334155"/>
+    <text x="18" y="54" fill="#f8fafc" font-family="monospace" font-size="9">TABLE: items</text>
+
+    <rect x="12" y="70" width="146" height="26" rx="3" fill="#334155"/>
+    <text x="18" y="86" fill="#f8fafc" font-family="monospace" font-size="9">TABLE: suppliers</text>
+
+    <rect x="12" y="102" width="146" height="34" rx="3" fill="#334155"/>
+    <text x="18" y="118" fill="#f8fafc" font-family="monospace" font-size="9">TABLE: inventory_ledger</text>
+    <text x="18" y="130" fill="#94a3b8" font-family="monospace" font-size="8">  timestamp, delta, audit</text>
+  </g>
+</svg>

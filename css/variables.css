@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Design Tokens & Theme System: Editorial Analytics Studio
+   Primary Inspiration: Being Brute (Aditya Ranjan) & Nikita Kumari
+   Refined dark palette, warm amber/teal/steel accents, hairline borders,
+   editorial typography (Space Grotesk + Source Serif 4 + IBM Plex Mono).
+   ========================================================================== */
+
+:root {
+  /* Color System — Default: Refined Editorial Dark Palette */
+  --bg-canvas: #11151b;        /* Deep charcoal canvas */
+  --bg-surface: #171d27;       /* Refined dark panel */
+  --bg-surface-subtle: #1e2634;/* Elevated functional zones */
+  --bg-surface-elevated: #222c3d;
+  --bg-ruled: rgba(233, 231, 224, 0.12); /* Subtle hairline rules */
+
+  --border-subtle: rgba(233, 231, 224, 0.12); /* Restrained 1px border */
+  --border-strong: rgba(233, 231, 224, 0.22); /* Active state border */
+
+  --text-primary: #e9e7e0;     /* High-contrast ivory text (13.5:1 WCAG AAA) */
+  --text-secondary: #cbd5e1;   /* Slate light body (10.2:1 WCAG AAA) */
+  --text-muted: #98a0b0;       /* Muted slate meta (6.1:1 WCAG AAA) */
+  --text-inverse: #11151b;
+
+  /* Accents */
+  --accent-amber: #eab04a;     /* Warm amber primary */
+  --accent-teal: #4fb3a9;      /* Sage / teal */
+  --accent-steel: #89a3d8;     /* Steel blue */
+  --accent-rose: #e58a8a;      /* Soft coral / rose */
+
+  --accent-primary: #eab04a;   /* Warm amber */
+  --accent-hover: #f59e0b;
+  --accent-surface: rgba(234, 176, 74, 0.1);
+  --accent-border: rgba(234, 176, 74, 0.35);
+
+  /* Status Tokens */
+  --status-ok-bg: rgba(79, 179, 169, 0.14);
+  --status-ok-text: #4fb3a9;
+  --status-ok-border: rgba(79, 179, 169, 0.35);
+
+  --status-mismatch-bg: rgba(229, 138, 138, 0.14);
+  --status-mismatch-text: #e58a8a;
+  --status-mismatch-border: rgba(229, 138, 138, 0.35);
+
+  --status-progress-bg: rgba(234, 176, 74, 0.14);
+  --status-progress-text: #eab04a;
+  --status-progress-border: rgba(234, 176, 74, 0.35);
+
+  /* Chart Tokens */
+  --chart-ok-fill: #4fb3a9;
+  --chart-ok-bg: rgba(79, 179, 169, 0.18);
+  --chart-flagged-fill: #e58a8a;
+  --chart-flagged-bg: rgba(229, 138, 138, 0.18);
+  --chart-bar-mh: #e9e7e0;
+  --chart-bar-other: #89a3d8;
+  --chart-segment-text: #11151b;
+
+  /* Typography */
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fs-xs: 0.8125rem;   /* 13px */
+  --fs-sm: 0.875rem;    /* 14px */
+  --fs-base: 1rem;      /* 16px */
+  --fs-md: 1.125rem;    /* 18px */
+  --fs-lg: 1.25rem;     /* 20px */
+  --fs-xl: 1.5rem;      /* 24px */
+  --fs-2xl: 2rem;       /* 32px */
+  --fs-3xl: 2.75rem;    /* 44px */
+
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-base: 1.6;
+  --lh-prose: 1.75;
+
+  /* Spacing Scale (8px rhythm) */
+  --space-4: 0.25rem;   /* 4px */
+  --space-8: 0.5rem;    /* 8px */
+  --space-12: 0.75rem;  /* 12px */
+  --space-16: 1rem;     /* 16px */
+  --space-20: 1.25rem;  /* 20px */
+  --space-24: 1.5rem;   /* 24px */
+  --space-28: 1.75rem;  /* 28px */
+  --space-32: 2rem;     /* 32px */
+  --space-48: 3rem;     /* 48px */
+  --space-64: 4rem;     /* 64px */
+  --space-96: 6rem;     /* 96px */
+
+  /* Structural Dimensions */
+  --container-max-w: 1040px;
+  --prose-max-w: 68ch;
+  --header-height: 64px;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-full: 9999px;
+
+  /* Subtle State Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 200ms ease;
+}
+
+/* Light Mode: Supported via [data-theme="light"] */
+[data-theme="light"] {
+  --bg-canvas: #f8fafc;        /* Slate 50 */
+  --bg-surface: #ffffff;       /* Pure white */
+  --bg-surface-subtle: #f1f5f9;/* Slate 100 */
+  --bg-surface-elevated: #ffffff;
+  --bg-ruled: #e2e8f0;
+
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  --text-primary: #0f172a;     /* Slate 900 */
+  --text-secondary: #334155;   /* Slate 700 */
+  --text-muted: #64748b;       /* Slate 500 */
+  --text-inverse: #ffffff;
+
+  --accent-amber: #d97706;     /* Amber 600 */
+  --accent-teal: #0d9488;      /* Teal 600 */
+  --accent-steel: #2563eb;     /* Blue 600 */
+  --accent-rose: #dc2626;      /* Red 600 */
+
+  --accent-primary: #d97706;
+  --accent-hover: #b45309;
+  --accent-surface: rgba(217, 119, 6, 0.08);
+  --accent-border: rgba(217, 119, 6, 0.3);
+
+  --status-ok-bg: #ecfdf5;
+  --status-ok-text: #065f46;
+  --status-ok-border: #a7f3d0;
+
+  --status-mismatch-bg: #fef2f2;
+  --status-mismatch-text: #991b1b;
+  --status-mismatch-border: #fecaca;
+
+  --status-progress-bg: #fffbeb;
+  --status-progress-text: #92400e;
+  --status-progress-border: #fde68a;
+
+  --chart-ok-fill: #059669;
+  --chart-ok-bg: #ecfdf5;
+  --chart-flagged-fill: #dc2626;
+  --chart-flagged-bg: #fef2f2;
+  --chart-bar-mh: #0f172a;
+  --chart-bar-other: #2563eb;
+  --chart-segment-text: #ffffff;
+}

@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Pokal: Data Analyst &amp; Business Intelligence Portfolio</title>
+  <meta name="description" content="Personal portfolio of Meet Pokal, Data Analyst and Business Intelligence internship candidate in Mumbai. Specializing in Python, Pandas, SQL, Excel, and automated reconciliations.">
+  <meta name="keywords" content="Data Analyst, Business Intelligence, Python, Pandas, SQL, Streamlit, Excel Automation, Mumbai, Navi Mumbai">
+  <meta name="author" content="Meet Pokal">
+  <meta name="theme-color" content="#11151b" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23eab04a%22><rect x=%223%22 y=%2212%22 width=%224%22 height=%229%22 rx=%221%22/><rect x=%2210%22 y=%227%22 width=%224%22 height=%2214%22 rx=%221%22/><rect x=%2217%22 y=%223%22 width=%224%22 height=%2218%22 rx=%221%22/></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Meet Pokal: Data Analyst Portfolio">
+  <meta property="og:description" content="Business data reconciliation, inventory threshold modeling, and automated Python/SQL pipelines.">
+
+  <!-- Editorial Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Chivo:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- JS Gate for motion reveals -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Immediate Theme Check to avoid flash of unstyled content -->
+  <script src="js/theme.js"></script>
+</head>
+<body id="top">
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-identity" aria-label="Meet Pokal home">
+        <span class="brand-name">Meet Pokal</span>
+        <span class="brand-role">/ Data Analyst</span>
+      </a>
+
+      <!-- Primary Navigation -->
+      <nav aria-label="Primary navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#projects" class="nav-link">Case Studies</a></li>
+          <li><a href="#matrix" class="nav-link">Methods Matrix</a></li>
+          <li><a href="#technical-systems" class="nav-link">Supporting Systems</a></li>
+          <li><a href="#about" class="nav-link">Approach &amp; Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="mobile-menu-item"><a href="assets/docs/Meet_Pokal_Resume.pdf" class="nav-link" target="_blank" rel="noopener noreferrer" data-config="resume" style="display: none;" download>Download Resume (PDF) ↗</a></li>
+          <li class="mobile-menu-item"><a href="https://github.com/meetpokal1" class="nav-link" target="_blank" rel="noopener noreferrer" data-config="github">GitHub Profile ↗</a></li>
+          <li class="mobile-menu-item"><a class="nav-link" target="_blank" rel="noopener noreferrer" data-config="linkedin" style="display: none;">LinkedIn Profile ↗</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Utilities -->
+      <div class="nav-actions">
+        <!-- Resume Link (Direct Navbar Access) -->
+        <a href="assets/docs/Meet_Pokal_Resume.pdf" class="btn btn-secondary btn-sm nav-resume-btn" target="_blank" rel="noopener noreferrer" aria-label="Download Meet Pokal's resume (PDF)" data-config="resume" style="display: none;" download>
+          <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <span>Resume</span>
+        </a>
+
+        <!-- GitHub Link -->
+        <a href="https://github.com/meetpokal1" class="btn btn-secondary btn-sm nav-social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile" data-config="github">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+
+        <!-- LinkedIn (dynamically revealed only when configured) -->
+        <a class="btn btn-secondary btn-sm nav-social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile" data-config="linkedin" style="display: none;">
+          <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle visual theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="hero-domain-note">Data Analyst &amp; BI Portfolio · SQL · Python · Excel · Power BI</p>
+        <h1 id="hero-title" class="hero-title">Reconciling messy data.<br>Modeling operational truth.</h1>
+        
+        <p class="hero-lede">
+          I build Python, Pandas, and SQL systems that audit transactional records, model inventory replenishment thresholds, and automate business reporting. <span class="muted-inline">Focused on verifiable data integrity, relational precision, and decision-ready outputs.</span>
+        </p>
+
+        <div class="availability-pill">
+          <span class="status-dot"></span>
+          <span>Navi Mumbai / Mumbai, Maharashtra · Available for Internships (On-site, Hybrid, Remote)</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Case Studies ↓</span>
+          </a>
+
+          <!-- Resume Link (Revealed dynamically only when real PDF exists in assets/docs/) -->
+          <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-config="resume" style="display: none;" download>
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span>View Resume (PDF)</span>
+          </a>
+
+          <a href="https://github.com/meetpokal1" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-config="github">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub Profile</span>
+          </a>
+
+          <!-- LinkedIn Link (Revealed dynamically only when configured) -->
+          <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-config="linkedin" style="display: none;">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
+        <!-- Proof Strip (4-Up Horizontal Stat Grid) -->
+        <div class="proof-strip" aria-label="Key Portfolio Proof Points">
+          <div class="proof-item">
+            <span class="proof-num">₹215.5K</span>
+            <span class="proof-label">Batch Turnover Reconciled</span>
+            <span class="proof-desc">10-invoice multi-state test batch audited with Pandas logic</span>
+          </div>
+
+          <div class="proof-item">
+            <span class="proof-num">89.2%</span>
+            <span class="proof-label">Tax Validation Rate</span>
+            <span class="proof-desc">₹35,700 expected tax verified; ₹4,320 flagged for review</span>
+          </div>
+
+          <div class="proof-item">
+            <span class="proof-num">6 SKUs</span>
+            <span class="proof-label">Inventory Thresholds Tracked</span>
+            <span class="proof-desc">Seeded reorder triggers &amp; open PO tracking in SQLite</span>
+          </div>
+
+          <div class="proof-item">
+            <span class="proof-num">100%</span>
+            <span class="proof-label">Reproducible Codebases</span>
+            <span class="proof-desc">Auditable Python transformation scripts &amp; relational schemas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Case Studies Section -->
+    <section id="projects" class="section" aria-labelledby="case-studies-heading">
+      <div class="container">
+        <div class="section-intro">
+          <h2 id="case-studies-heading">Featured Analytics Case Studies</h2>
+          <p>Two data problems worked end-to-end: financial tax reconciliation and operational inventory replenishment.</p>
+        </div>
+
+        <!-- Case Study 1: GST Invoice & Ledger Automation -->
+        <article class="project-case-study project--teal" id="project-gst" aria-labelledby="title-gst">
+          <div class="project-header-top">
+            <div>
+              <span class="case-domain-tag">Financial Data Auditing &amp; Tax Reconciliation</span>
+              <h3 id="title-gst" class="project-title">GST Invoice &amp; Ledger Automation: Multi-State Reconciliation Engine</h3>
+            </div>
+            <span class="status-pill status-pill-ok">Core tool operational · Enhancements in draft PR #1</span>
+          </div>
+
+          <p class="project-problem">
+            <strong>Business Problem:</strong> In Indian commercial accounting, manual cross-checking between vendor invoices and accounting purchase ledgers is labor-intensive and prone to missed input tax credit, rounding errors, and wrong tax head classification. This project automates calculation verification across intra-state (CGST + SGST) and inter-state (IGST) invoices, flagging discrepancies before statutory ledger posting.
+          </p>
+
+          <!-- KPI Metric Row -->
+          <div class="kpi-row" aria-label="GST Case Study Key Metrics">
+            <div class="kpi-cell">
+              <span class="kpi-num">₹215,500</span>
+              <span class="kpi-label">Batch Taxable Turnover (10 Invoices)</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">8 / 10</span>
+              <span class="kpi-label">Invoices Fully Reconciled</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">₹40,020</span>
+              <span class="kpi-label">Expected Total GST (Simplified Rules)</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">₹4,320</span>
+              <span class="kpi-label">Flagged Tax (INV-1005 &amp; INV-1009)</span>
+            </div>
+          </div>
+
+          <!-- Technical Evidence: Visual Chart & Interactive Table -->
+          <div class="case-evidence-grid">
+            <!-- Visualisation 1: Reconciliation Breakdown & Geography Split -->
+            <div class="chart-box">
+              <div class="evidence-subhead">
+                <span>Reconciliation Results: Volume &amp; Expected Tax Breakdown</span>
+              </div>
+              <p style="font-size: var(--fs-xs); color: var(--text-muted); margin-bottom: var(--space-8);">
+                Decoupled distribution of verified invoices vs. flagged exceptions across ₹40,020 expected tax and ₹215,500 taxable turnover.
+              </p>
+
+              <!-- Expected Tax Distribution -->
+              <div class="ratio-bar-wrap">
+                <div class="ratio-bar" role="img" aria-label="Expected Tax: Reconciled 89.2% (₹35,700), Flagged 10.8% (₹4,320)">
+                  <div class="ratio-segment reconciled" style="width: 89.2%;">
+                    <span>89.2% (₹35,700)</span>
+                  </div>
+                  <div class="ratio-segment flagged" style="width: 10.8%;">
+                    <span>10.8%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Turnover Geography Distribution -->
+              <div class="ratio-bar-wrap" style="margin-top: var(--space-16);">
+                <div style="font-size: var(--fs-xs); color: var(--text-muted); margin-bottom: 4px;">
+                  Turnover by Geography (₹215,500 Total):
+                </div>
+                <div class="ratio-bar" role="img" aria-label="Taxable Turnover: Maharashtra 68.0% (₹146,500), Other States 32.0% (₹69,000)">
+                  <div class="ratio-segment mh-origin" style="width: 68%;">
+                    <span>Maharashtra 68.0% (₹146.5K)</span>
+                  </div>
+                  <div class="ratio-segment other-states" style="width: 32%;">
+                    <span>Other States 32.0% (₹69K)</span>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="chart-legend" aria-hidden="true">
+                <li class="legend-item">
+                  <span class="legend-swatch reconciled"></span>
+                  <span>Reconciled Expected Tax (₹35,700 · 8 invoices)</span>
+                </li>
+                <li class="legend-item">
+                  <span class="legend-swatch flagged"></span>
+                  <span>Flagged Expected Tax (₹4,320 · 2 invoices: INV-1005 &amp; INV-1009)</span>
+                </li>
+                <li class="legend-item">
+                  <span class="legend-swatch mh-origin"></span>
+                  <span>Maharashtra (5 invoices · CGST + SGST)</span>
+                </li>
+                <li class="legend-item">
+                  <span class="legend-swatch other-states"></span>
+                  <span>Other States (5 invoices · IGST)</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Interactive Evidence: Sample Reconciliation Ledger (10 Invoices) -->
+            <div class="evidence-panel" data-ui="gst-workbench">
+              <div class="evidence-header">
+                <span class="evidence-heading">Sample Reconciliation Ledger (10 Invoices)</span>
+                <div class="filter-group" role="group" aria-label="Filter sample reconciliation rows">
+                  <button type="button" class="filter-btn active" data-filter="all">All (10)</button>
+                  <button type="button" class="filter-btn" data-filter="mismatch">Flagged (2)</button>
+                  <button type="button" class="filter-btn" data-filter="ok">Reconciled (8)</button>
+                </div>
+              </div>
+
+              <div class="table-scroll-container">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th class="col-nowrap">Invoice No</th>
+                      <th>Customer Name</th>
+                      <th class="col-nowrap">State</th>
+                      <th class="col-nowrap">Taxable</th>
+                      <th class="col-nowrap">Rate</th>
+                      <th class="col-nowrap">Expected</th>
+                      <th class="col-nowrap">Reported</th>
+                      <th class="col-nowrap">Status</th>
+                      <th class="col-audit">Audit Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="ok-row">
+                      <td class="col-nowrap"><code>INV-1001</code></td>
+                      <td>Bluebird Retail</td>
+                      <td class="col-nowrap">Maharashtra</td>
+                      <td class="col-nowrap">₹10,000</td>
+                      <td class="col-nowrap">18%</td>
+                      <td class="col-nowrap">₹11,800</td>
+                      <td class="col-nowrap">₹11,800</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
+                      <td class="col-audit">Intra-state split (CGST ₹900, SGST ₹900) verified</td>
+                    </tr>
+                    <tr class="ok-row">
+                      <td class="col-nowrap"><code>INV-1002</code></td>
+                      <td>Northstar Traders</td>
+                      <td class="col-nowrap">Gujarat</td>
+                      <td class="col-nowrap">₹25,000</td>
+                      <td class="col-nowrap">18%</td>
+                      <td class="col-nowrap">₹29,500</td>
+                      <td class="col-nowrap">₹29,500</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
+                      <td class="col-audit">Inter-state supply (IGST ₹4,500) verified</td>
+                    </tr>
+                    <tr class="ok-row">
+                      <td class="col-nowrap"><code>INV-1003</code></td>
+                      <td>Coastal Mart</td>
+                      <td class="col-nowrap">Madhya Pradesh</td>
+                      <td class="col-nowrap">₹8,000</td>
+                      <td class="col-nowrap">5%</td>
+                      <td class="col-nowrap">₹8,400</td>
+                      <td class="col-nowrap">₹8,400</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
+                      <td class="col-audit">Inter-state supply (IGST ₹400) verified</td>
+                    </tr>
+                    <tr class="ok-row">
+                      <td class="col-nowrap"><code>INV-1004</code></td>
+                      <td>Metro Supplies</td>
+                      <td class="col-nowrap">Maharashtra</td>
+                      <td class="col-nowrap">₹45,000</td>
+                      <td class="col-nowrap">12%</td>
+                      <td class="col-nowrap">₹50,400</td>
+                      <td class="col-nowrap">₹50,400</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
+                      <td class="col-audit">Intra-state split (CGST ₹2,700, SGST ₹2,700) verified</td>
+                    </tr>
+                    <tr class="mismatch-row">
+                      <td class="col-nowrap"><code>INV-1005</code></td>
+                      <td>Sunrise Stores</td>
+                      <td class="col-nowrap">Karnataka</td>
+                      <td class="col-nowrap">₹12,000</td>
+                      <td class="col-nowrap">18%</td>
+                      <td class="col-nowrap">₹14,160</td>
+                      <td class="col-nowrap">₹14,060</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-mismatch">Mismatch</span></td>
+                      <td class="col-audit">Reported ₹14,060 vs Expected ₹14,160 (IGST underreported by ₹100)</td>
+                    </tr>
+                    <tr class="ok-row">
+                      <td class="col-nowrap"><code>INV-1006</code></td>
+                      <td>Apex Enterprises</td>
+                      <td class="col-nowrap">Maharashtra</td>
+                      <td class="col-nowrap">₹30,000</td>
+                      <td class="col-nowrap">18%</td>
+                      <td class="col-nowrap">₹35,400</td>
+                      <td class="col-nowrap">₹35,400</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
+                      <td class="col-audit">Intra-state split (CGST ₹2,700, SGST ₹2,700) verified</td>
+                    </tr>
+                    <tr class="ok-row">
+                      <td class="col-nowrap"><code>INV-1007</code></td>
+                      <td>Zenith Distributors</td>
+                      <td class="col-nowrap">Maharashtra</td>
+                      <td class="col-nowrap">₹11,500</td>
+                      <td class="col-nowrap">18%</td>
+                      <td class="col-nowrap">₹13,570</td>
+                      <td class="col-nowrap">₹13,570</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
+                      <td class="col-audit">Intra-state split (CGST ₹1,035, SGST ₹1,035) verified</td>
+                    </tr>
+                    <tr class="ok-row">
+                      <td class="col-nowrap"><code>INV-1008</code></td>
+                      <td>Pioneer Tech</td>
+                      <td class="col-nowrap">Delhi</td>
+                      <td class="col-nowrap">₹6,000</td>
+                      <td class="col-nowrap">18%</td>
+                      <td class="col-nowrap">₹7,080</td>
+                      <td class="col-nowrap">₹7,080</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
+                      <td class="col-audit">Inter-state supply (IGST ₹1,080) verified</td>
+                    </tr>
+                    <tr class="mismatch-row">
+                      <td class="col-nowrap"><code>INV-1009</code></td>
+                      <td>Value House</td>
+                      <td class="col-nowrap">Rajasthan</td>
+                      <td class="col-nowrap">₹18,000</td>
+                      <td class="col-nowrap">12%</td>
+                      <td class="col-nowrap">₹20,160</td>
+                      <td class="col-nowrap">₹20,160</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-mismatch">Mismatch</span></td>
+                      <td class="col-audit">Inter-state invoice: reported under CGST+SGST instead of IGST</td>
+                    </tr>
+                    <tr class="ok-row">
+                      <td class="col-nowrap"><code>INV-1010</code></td>
+                      <td>Prime Retail</td>
+                      <td class="col-nowrap">Maharashtra</td>
+                      <td class="col-nowrap">₹50,000</td>
+                      <td class="col-nowrap">18%</td>
+                      <td class="col-nowrap">₹59,000</td>
+                      <td class="col-nowrap">₹59,000</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
+                      <td class="col-audit">Intra-state split (CGST ₹4,500, SGST ₹4,500) verified</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Method & Analytical Interpretation -->
+          <div style="margin-bottom: var(--space-20);">
+            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary); margin-bottom: var(--space-12);">
+              <strong>Method &amp; Implementation:</strong> The Python engine applies vectorized Pandas logic to compute statutory tax splits based on buyer state relative to the supplier's home jurisdiction (Maharashtra). Records are categorized into Intra-State (equal 50/50 split between CGST and SGST) or Inter-State (100% IGST routing). Line-item rounding differences within a ₹0.50 threshold are evaluated automatically.
+            </p>
+            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary);">
+              <strong>Analytical Findings:</strong> In this 10-invoice batch, 8 invoices (₹185,500 turnover) reconcile with 0 discrepancy. Two records fail verification: <code>INV-1005</code> underreports total tax by ₹100; <code>INV-1009</code> totals ₹20,160 correctly but wrongly classifies ₹2,160 under intra-state CGST+SGST rather than IGST, which would lead to incorrect portal credit allocation if not caught.
+            </p>
+          </div>
+
+          <!-- Recommendation Callout Box -->
+          <div class="recommendation-box">
+            <strong>Operational Scope &amp; Recommendation:</strong>
+            <p>
+              Automated reconciliation flags potential tax head mismatches and math discrepancies prior to monthly return filing. The Python engine assists human review under simplified rules and does not replace professional statutory audit or guarantee statutory input-tax-credit eligibility.
+            </p>
+          </div>
+
+          <ul class="tag-list" aria-label="Technologies used in GST Automation">
+            <li class="tag-item">Python</li>
+            <li class="tag-item">Pandas</li>
+            <li class="tag-item">Tax Reconciliation</li>
+            <li class="tag-item">Excel Automation</li>
+            <li class="tag-item">Streamlit</li>
+          </ul>
+
+          <!-- Deliverables & Source note -->
+          <div class="project-deliverables">
+            <div class="deliverable-actions">
+              <a href="https://github.com/meetpokal1/GST-Invoive-Automation" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>View Repository ↗</span>
+              </a>
+              <a href="https://github.com/meetpokal1/GST-Invoive-Automation/tree/portfolio/gst-validation-and-tests" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>PR #1 Test Branch ↗</span>
+              </a>
+            </div>
+            <p class="project-note">
+              <strong>Data source:</strong> Demonstration batch of 10 sample invoices processed with simplified state-level tax rules.
+            </p>
+          </div>
+        </article>
+
+        <!-- Case Study 2: Mini ERP Inventory System -->
+        <article class="project-case-study project--amber" id="project-minierp" aria-labelledby="title-minierp">
+          <div class="project-header-top">
+            <div>
+              <span class="case-domain-tag">Operational Data Modeling &amp; Stock Thresholds</span>
+              <h3 id="title-minierp" class="project-title">Mini ERP Inventory System: Relational Stock Modeling &amp; Reorder Logic</h3>
+            </div>
+            <span class="status-pill status-pill-ok">Demonstration Dataset · Streamlit UI</span>
+          </div>
+
+          <p class="project-problem">
+            <strong>Business Problem:</strong> Without structured threshold detection and relational data modeling, small distribution businesses face frequent stockouts and unmonitored replenishment cycles. This project implements a normalized relational database in SQLite with automated threshold-breach flags and purchase order tracking.
+          </p>
+
+          <!-- KPI Metric Row -->
+          <div class="kpi-row" aria-label="Mini ERP Key Metrics">
+            <div class="kpi-cell">
+              <span class="kpi-num">6 SKUs</span>
+              <span class="kpi-label">Active Seeded Catalog</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">3 / 6</span>
+              <span class="kpi-label">SKUs Below Reorder Level</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">35 units</span>
+              <span class="kpi-label">Seeded Open POs (PO #1 &amp; #2)</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">SQLite 3NF</span>
+              <span class="kpi-label">Relational Data Integrity</span>
+            </div>
+          </div>
+
+          <!-- Technical Evidence: Threshold Comparison Chart & Sample Inventory Table -->
+          <div class="case-evidence-grid">
+            <!-- Visualisation 2: Stock on Hand vs. Reorder Level -->
+            <div class="chart-box">
+              <div class="evidence-subhead">
+                <span>Inventory Stock vs. Reorder Level (Seeded Catalog)</span>
+              </div>
+              <p style="font-size: var(--fs-xs); color: var(--text-muted); margin-bottom: var(--space-8);">
+                Stock on hand (horizontal bar) measured against reorder threshold pins. 3 items trigger automated replenishment flags.
+              </p>
+
+              <div class="threshold-chart-wrap">
+                <!-- Axis Scale Reference Ticks -->
+                <div class="threshold-axis-row" aria-hidden="true">
+                  <div class="threshold-axis-spacer-left"></div>
+                  <div class="threshold-axis-track">
+                    <span class="threshold-axis-tick" style="left: 0%;">0</span>
+                    <span class="threshold-axis-tick" style="left: 25%;">15</span>
+                    <span class="threshold-axis-tick" style="left: 50%;">30</span>
+                    <span class="threshold-axis-tick" style="left: 75%;">45</span>
+                    <span class="threshold-axis-tick" style="left: 100%;">60 units</span>
+                  </div>
+                  <div class="threshold-axis-spacer-right"></div>
+                </div>
+
+                <!-- SKU-001 -->
+                <div class="threshold-row" title="SKU-001: A4 Copier Paper (Ream) – Stock: 45 units, Reorder level: 20 units (+25 Surplus)">
+                  <div class="threshold-sku" title="A4 Copier Paper (Ream)">
+                    <code>SKU-001</code>
+                    <span class="threshold-sku-name">A4 Copier Paper (Ream)</span>
+                  </div>
+                  <div class="threshold-bar-track" aria-label="SKU-001: A4 Copier Paper (Ream), Stock: 45 units, Reorder level: 20 units">
+                    <div class="threshold-bar-fill ok" style="width: 75%;"></div>
+                    <div class="threshold-line-pin" style="left: 33.3%;" aria-hidden="true" title="Reorder level: 20"></div>
+                  </div>
+                  <div class="threshold-status-cell">
+                    <span class="threshold-status-badge" style="color: var(--status-ok-text);">+25 Surplus</span>
+                  </div>
+                </div>
+
+                <!-- SKU-002 -->
+                <div class="threshold-row" title="SKU-002: USB-C Cable 1m – Stock: 8 units, Reorder level: 15 units (-7 Deficit; Open PO #1 for 25 units)">
+                  <div class="threshold-sku" title="USB-C Cable 1m">
+                    <code>SKU-002</code>
+                    <span class="threshold-sku-name">USB-C Cable 1m</span>
+                  </div>
+                  <div class="threshold-bar-track" aria-label="SKU-002: USB-C Cable 1m, Stock: 8 units, Reorder level: 15 units">
+                    <div class="threshold-bar-fill alert" style="width: 13.3%;"></div>
+                    <div class="threshold-line-pin" style="left: 25%;" aria-hidden="true" title="Reorder level: 15"></div>
+                  </div>
+                  <div class="threshold-status-cell">
+                    <span class="threshold-status-badge" style="color: var(--status-mismatch-text);">-7 Deficit (PO #1: 25)</span>
+                  </div>
+                </div>
+
+                <!-- SKU-003 -->
+                <div class="threshold-row" title="SKU-003: Wireless Mouse – Stock: 30 units, Reorder level: 10 units (+20 Surplus)">
+                  <div class="threshold-sku" title="Wireless Mouse">
+                    <code>SKU-003</code>
+                    <span class="threshold-sku-name">Wireless Mouse</span>
+                  </div>
+                  <div class="threshold-bar-track" aria-label="SKU-003: Wireless Mouse, Stock: 30 units, Reorder level: 10 units">
+                    <div class="threshold-bar-fill ok" style="width: 50%;"></div>
+                    <div class="threshold-line-pin" style="left: 16.7%;" aria-hidden="true" title="Reorder level: 10"></div>
+                  </div>
+                  <div class="threshold-status-cell">
+                    <span class="threshold-status-badge" style="color: var(--status-ok-text);">+20 Surplus</span>
+                  </div>
+                </div>
+
+                <!-- SKU-004 -->
+                <div class="threshold-row" title="SKU-004: Diamond Polishing Cloth – Stock: 5 units, Reorder level: 10 units (-5 Deficit)">
+                  <div class="threshold-sku" title="Diamond Polishing Cloth">
+                    <code>SKU-004</code>
+                    <span class="threshold-sku-name">Diamond Polishing Cloth</span>
+                  </div>
+                  <div class="threshold-bar-track" aria-label="SKU-004: Diamond Polishing Cloth, Stock: 5 units, Reorder level: 10 units">
+                    <div class="threshold-bar-fill alert" style="width: 8.3%;"></div>
+                    <div class="threshold-line-pin" style="left: 16.7%;" aria-hidden="true" title="Reorder level: 10"></div>
+                  </div>
+                  <div class="threshold-status-cell">
+                    <span class="threshold-status-badge" style="color: var(--status-mismatch-text);">-5 Deficit</span>
+                  </div>
+                </div>
+
+                <!-- SKU-005 -->
+                <div class="threshold-row" title="SKU-005: Invoice Book (100 pages) – Stock: 60 units, Reorder level: 25 units (+35 Surplus)">
+                  <div class="threshold-sku" title="Invoice Book (100 pages)">
+                    <code>SKU-005</code>
+                    <span class="threshold-sku-name">Invoice Book (100 pages)</span>
+                  </div>
+                  <div class="threshold-bar-track" aria-label="SKU-005: Invoice Book (100 pages), Stock: 60 units, Reorder level: 25 units">
+                    <div class="threshold-bar-fill ok" style="width: 100%;"></div>
+                    <div class="threshold-line-pin" style="left: 41.7%;" aria-hidden="true" title="Reorder level: 25"></div>
+                  </div>
+                  <div class="threshold-status-cell">
+                    <span class="threshold-status-badge" style="color: var(--status-ok-text);">+35 Surplus</span>
+                  </div>
+                </div>
+
+                <!-- SKU-006 -->
+                <div class="threshold-row" title="SKU-006: External HDD 1TB – Stock: 3 units, Reorder level: 5 units (-2 Deficit; Open PO #2 for 10 units)">
+                  <div class="threshold-sku" title="External HDD 1TB">
+                    <code>SKU-006</code>
+                    <span class="threshold-sku-name">External HDD 1TB</span>
+                  </div>
+                  <div class="threshold-bar-track" aria-label="SKU-006: External HDD 1TB, Stock: 3 units, Reorder level: 5 units">
+                    <div class="threshold-bar-fill alert" style="width: 5%;"></div>
+                    <div class="threshold-line-pin" style="left: 8.3%;" aria-hidden="true" title="Reorder level: 5"></div>
+                  </div>
+                  <div class="threshold-status-cell">
+                    <span class="threshold-status-badge" style="color: var(--status-mismatch-text);">-2 Deficit (PO #2: 10)</span>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="chart-legend" aria-hidden="true">
+                <li class="legend-item">
+                  <span class="legend-swatch reconciled"></span>
+                  <span>Stock on Hand (Above Reorder Level)</span>
+                </li>
+                <li class="legend-item">
+                  <span class="legend-swatch flagged"></span>
+                  <span>Stock on Hand (Below Reorder Level)</span>
+                </li>
+                <li class="legend-item">
+                  <span style="display: inline-block; width: 12px; height: 2px; background-color: var(--text-primary);"></span>
+                  <span>Vertical Pin = Reorder Level Threshold</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Table: Sample Inventory Ledger (6 SKUs) -->
+            <div class="evidence-panel" data-ui="minierp-ledger">
+              <div class="evidence-header">
+                <span class="evidence-heading">Sample Inventory Ledger (6 SKUs)</span>
+                <span class="status-pill status-pill-ok">Demonstration Dataset</span>
+              </div>
+              <div class="table-scroll-container">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th class="col-nowrap">SKU</th>
+                      <th>Product Name</th>
+                      <th class="col-nowrap">Category</th>
+                      <th class="col-nowrap">Unit Price</th>
+                      <th class="col-nowrap">Quantity in Stock</th>
+                      <th class="col-nowrap">Reorder Level</th>
+                      <th class="col-nowrap">Inventory Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="col-nowrap"><code>SKU-001</code></td>
+                      <td>A4 Copier Paper (Ream)</td>
+                      <td class="col-nowrap">Office Supplies</td>
+                      <td class="col-nowrap">₹280.00</td>
+                      <td class="col-nowrap">45 units</td>
+                      <td class="col-nowrap">20 units</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">In Stock</span></td>
+                    </tr>
+                    <tr class="mismatch-row">
+                      <td class="col-nowrap"><code>SKU-002</code></td>
+                      <td>USB-C Cable 1m</td>
+                      <td class="col-nowrap">Electronics</td>
+                      <td class="col-nowrap">₹199.00</td>
+                      <td class="col-nowrap">8 units</td>
+                      <td class="col-nowrap">15 units</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-mismatch">Reorder Triggered</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col-nowrap"><code>SKU-003</code></td>
+                      <td>Wireless Mouse</td>
+                      <td class="col-nowrap">Electronics</td>
+                      <td class="col-nowrap">₹550.00</td>
+                      <td class="col-nowrap">30 units</td>
+                      <td class="col-nowrap">10 units</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">In Stock</span></td>
+                    </tr>
+                    <tr class="mismatch-row">
+                      <td class="col-nowrap"><code>SKU-004</code></td>
+                      <td>Diamond Polishing Cloth</td>
+                      <td class="col-nowrap">Trade Supplies</td>
+                      <td class="col-nowrap">₹120.00</td>
+                      <td class="col-nowrap">5 units</td>
+                      <td class="col-nowrap">10 units</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-mismatch">Reorder Triggered</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col-nowrap"><code>SKU-005</code></td>
+                      <td>Invoice Book (100 pages)</td>
+                      <td class="col-nowrap">Office Supplies</td>
+                      <td class="col-nowrap">₹65.00</td>
+                      <td class="col-nowrap">60 units</td>
+                      <td class="col-nowrap">25 units</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-ok">In Stock</span></td>
+                    </tr>
+                    <tr class="mismatch-row">
+                      <td class="col-nowrap"><code>SKU-006</code></td>
+                      <td>External HDD 1TB</td>
+                      <td class="col-nowrap">Electronics</td>
+                      <td class="col-nowrap">₹3,200.00</td>
+                      <td class="col-nowrap">3 units</td>
+                      <td class="col-nowrap">5 units</td>
+                      <td class="col-nowrap"><span class="status-pill status-pill-mismatch">Reorder Triggered</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Method & Analytical Interpretation -->
+          <div style="margin-bottom: var(--space-20);">
+            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary); margin-bottom: var(--space-12);">
+              <strong>Method &amp; Implementation:</strong> Built a relational SQLite database schema with normalized tables for Products, Inventory Ledgers, and Purchase Orders. The application calculates replenishment triggers in real time by evaluating current stock quantities against configurable reorder level thresholds, rendering a responsive Streamlit operations dashboard.
+            </p>
+            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary);">
+              <strong>Analytical Observations:</strong> Three of the six seeded SKUs have breached their replenishment threshold. Open purchase orders are already recorded for SKU-002 (USB-C Cable, 25 units) and SKU-006 (External HDD, 10 units), while SKU-004 (Diamond Polishing Cloth, 5 in stock vs. 10 threshold) has no pending PO on record, representing an unaddressed stockout risk.
+            </p>
+          </div>
+
+          <!-- Recommendation Callout Box -->
+          <div class="recommendation-box">
+            <strong>Operational Scope &amp; Recommendation:</strong>
+            <p>
+              Automated threshold detection prevents inventory stockouts without holding excessive buffer stock. For immediate operational action, create a purchase order for SKU-004 before trade supply stock reaches zero.
+            </p>
+          </div>
+
+          <ul class="tag-list" aria-label="Technologies used in Mini ERP">
+            <li class="tag-item">Python</li>
+            <li class="tag-item">SQLite</li>
+            <li class="tag-item">Streamlit</li>
+            <li class="tag-item">Relational Modeling</li>
+            <li class="tag-item">Threshold Analytics</li>
+          </ul>
+
+          <!-- Deliverables & Source note -->
+          <div class="project-deliverables">
+            <div class="deliverable-actions">
+              <a href="https://github.com/meetpokal1/Mini-ERP-Inventory-System" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>View Repository ↗</span>
+              </a>
+            </div>
+            <p class="project-note">
+              <strong>Data source:</strong> Illustrative inventory records are seeded from the project's demonstration dataset; stock levels are not live inventory.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Analytical Methods & Toolsets Matrix Section (Being Brute Inspiration) -->
+    <section id="matrix" class="section matrix-section" aria-labelledby="matrix-heading">
+      <div class="container">
+        <div class="section-intro">
+          <h2 id="matrix-heading">At a Glance: Analytical Methods Across Projects</h2>
+          <p>Cross-project comparison of data engineering, validation logic, relational schemas, and operational interfaces.</p>
+        </div>
+
+        <div class="matrix-container">
+          <table class="matrix-table" aria-label="Analytical methods and competencies comparison matrix">
+            <thead>
+              <tr>
+                <th scope="col">Project / System</th>
+                <th scope="col" class="matrix-cell-center">Data Ingestion &amp; Parsing</th>
+                <th scope="col" class="matrix-cell-center">Validation &amp; Business Rules</th>
+                <th scope="col" class="matrix-cell-center">Relational SQL Modeling</th>
+                <th scope="col" class="matrix-cell-center">Threshold &amp; Discrepancy Logic</th>
+                <th scope="col" class="matrix-cell-center">Operational Reporting / UI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>GST Invoice &amp; Ledger Automation</strong></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="CSV &amp; Excel parsing"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Multi-state GST tax rules"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Tax head &amp; rounding discrepancy checks"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Excel workbooks &amp; Streamlit dashboard"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+              </tr>
+              <tr>
+                <td><strong>Mini ERP Inventory System</strong></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="SQLite seed data &amp; transaction logs"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Stock ledger constraints"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="3NF schema: Products, POs, Inventory"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Automated reorder level triggers"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Streamlit inventory dashboard"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+              </tr>
+              <tr>
+                <td><strong>InsightFlow (Pipeline Architecture)</strong></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Batch &amp; streaming ingestion concept"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Data quality validation gates"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Analytical warehouse dimensional schema"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Schema drift &amp; anomaly detection"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
+              </tr>
+              <tr>
+                <td><strong>PharmaGuard AI</strong></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Complaint &amp; adverse event ingestion"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Terminology &amp; classification logic"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Severity triage threshold scoring"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Complaint routing dashboard"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+              </tr>
+              <tr>
+                <td><strong>Dubpilot (Media Pipeline)</strong></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Audio/video extraction via yt-dlp &amp; FFmpeg"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Timeline segment boundary verification"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="Duration drift &amp; atempo matching"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
+                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supporting Technical Projects Section (Tier 2) -->
+    <section id="technical-systems" class="section" aria-labelledby="tech-systems-heading">
+      <div class="container">
+        <div class="section-intro">
+          <h2 id="tech-systems-heading">Supporting Technical &amp; Engineering Systems</h2>
+          <p>Secondary engineering projects showcasing pipeline orchestration, classification algorithms, and media automation.</p>
+        </div>
+
+        <div class="tier2-grid">
+          <!-- InsightFlow -->
+          <article class="tier2-card" id="project-insightflow">
+            <div class="tier2-card-header">
+              <span class="status-pill status-pill-progress">Architecture Preview · In Active Development</span>
+              <h3 class="tier2-card-title" style="margin-top: var(--space-8);">InsightFlow: Data Pipeline Architecture</h3>
+            </div>
+            <p class="tier2-card-prose">
+              Scalable modular ETL architecture designed for batch and stream processing. Ingests transactional data, performs schema validation and deduplication, and prepares structured data marts for dimensional analytics and BI reporting.
+            </p>
+            <div class="pipeline-preview-block">
+              <div class="pipeline-preview-header">
+                <span class="pipeline-header-title">Planned Pipeline Stages</span>
+              </div>
+              <div class="trace-steps-container">
+                <div class="trace-step">
+                  <span class="trace-num">Stage 1</span>
+                  <div class="trace-body"><strong>Raw Ingestion:</strong> JSON, CSV &amp; CDC event streams</div>
+                </div>
+                <div class="trace-step">
+                  <span class="trace-num">Stage 2</span>
+                  <div class="trace-body"><strong>Transform:</strong> Schema validation &amp; deduplication</div>
+                </div>
+                <div class="trace-step">
+                  <span class="trace-num">Stage 3</span>
+                  <div class="trace-body"><strong>Delivery:</strong> Star schema marts for BI tools</div>
+                </div>
+              </div>
+            </div>
+            <div class="tier2-card-footer">
+              <ul class="tag-list" style="margin: 0;" aria-label="InsightFlow tags">
+                <li class="tag-item">ETL Architecture</li>
+                <li class="tag-item">Data Marts</li>
+              </ul>
+              <span class="project-note" style="margin: 0;">In active development</span>
+            </div>
+          </article>
+
+          <!-- PharmaGuard AI -->
+          <article class="tier2-card" id="project-pharmaguard">
+            <div class="tier2-card-header">
+              <span class="status-pill status-pill-ok">Completed Pipeline Prototype</span>
+              <h3 class="tier2-card-title" style="margin-top: var(--space-8);">PharmaGuard AI: Adverse Event Triage</h3>
+            </div>
+            <p class="tier2-card-prose">
+              Automated pharmaceutical complaint categorization and adverse-event classification pipeline. Ingests patient feedback and service tickets, cleans unstructured narrative text, flags potential safety concerns, and routes records to QA compliance teams.
+            </p>
+            <div class="pipeline-preview-block">
+              <div class="pipeline-preview-header">
+                <span class="pipeline-header-title">Triage &amp; Classification Flow</span>
+              </div>
+              <div class="trace-steps-container">
+                <div class="trace-step">
+                  <span class="trace-num">Stage 1</span>
+                  <div class="trace-body"><strong>Ingest:</strong> Customer feedback &amp; support tickets</div>
+                </div>
+                <div class="trace-step">
+                  <span class="trace-num">Stage 2</span>
+                  <div class="trace-body"><strong>NLP Triage:</strong> Entity extraction &amp; severity scoring</div>
+                </div>
+                <div class="trace-step">
+                  <span class="trace-num">Stage 3</span>
+                  <div class="trace-body"><strong>Routing:</strong> Prioritized queues for medical review</div>
+                </div>
+              </div>
+            </div>
+            <div class="tier2-card-footer">
+              <ul class="tag-list" style="margin: 0;" aria-label="PharmaGuard tags">
+                <li class="tag-item">NLP Triage</li>
+                <li class="tag-item">QA Routing</li>
+              </ul>
+              <a href="https://github.com/meetpokal1/PharmaGuard-AI" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>View Repo ↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Dubpilot -->
+          <article class="tier2-card" id="project-dubpilot">
+            <div class="tier2-card-header">
+              <span class="status-pill status-pill-ok">CLI Automation Pipeline</span>
+              <h3 class="tier2-card-title" style="margin-top: var(--space-8);">Dubpilot: Video Dubbing Pipeline</h3>
+            </div>
+            <p class="tier2-card-prose">
+              Modular command-line utility translating YouTube videos into English while preserving pacing and timeline synchronization. Orchestrates yt-dlp, FFmpeg audio extraction, OpenAI Whisper transcription, segment translation, and edge-tts time-stretching.
+            </p>
+            <div class="pipeline-preview-block">
+              <div class="pipeline-preview-header">
+                <span class="pipeline-header-title">5-Stage Media Flow</span>
+              </div>
+              <div class="trace-steps-container">
+                <div class="trace-step">
+                  <span class="trace-num">Stage 1</span>
+                  <div class="trace-body"><strong>Extract:</strong> 16kHz mono audio via yt-dlp &amp; FFmpeg</div>
+                </div>
+                <div class="trace-step">
+                  <span class="trace-num">Stage 2</span>
+                  <div class="trace-body"><strong>Transcribe:</strong> Timestamped segments (Whisper)</div>
+                </div>
+                <div class="trace-step">
+                  <span class="trace-num">Stage 3</span>
+                  <div class="trace-body"><strong>Remux:</strong> edge-tts stretched to segment limits</div>
+                </div>
+              </div>
+            </div>
+            <div class="tier2-card-footer">
+              <ul class="tag-list" style="margin: 0;" aria-label="Dubpilot tags">
+                <li class="tag-item">Python</li>
+                <li class="tag-item">FFmpeg</li>
+              </ul>
+              <a href="https://github.com/meetpokal1/Dubpilot" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>View Repo ↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background, Approach & Skills Section -->
+    <section id="about" class="section section--about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-intro">
+          <h2 id="about-heading">Analytical Approach &amp; Competencies</h2>
+          <p>Methodology, verified toolsets, and internship alignment.</p>
+        </div>
+
+        <!-- How I Approach Analytics (3-Up Grid inspired by Being Brute's "How I Work") -->
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <h3>Data Integrity Over Vanity Dashboards</h3>
+            <p>
+              Dashboards are only as dependable as the transformation pipeline beneath them. My work prioritizes writing reproducible Python parsing logic, testing mathematical edge cases, and catching discrepancies before records surface in executive summaries.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <h3>Relational Modeling &amp; Normalization</h3>
+            <p>
+              Structuring transactional data into clean 3NF relational schemas prevents redundant records and integrity errors. I focus on writing clear SQL queries, establishing unambiguous primary and foreign keys, and designing clean star schema marts.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <h3>Actionable Business Recommendations</h3>
+            <p>
+              Metrics must lead to operational decisions. Whether flagging misallocated tax heads before monthly filing or surfacing stockout risks across inventory SKUs, technical outputs must translate directly into tangible operational actions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Technical Progression Stepper -->
+        <div class="section-intro" style="margin-top: var(--space-48); margin-bottom: var(--space-16);">
+          <h3 style="font-size: var(--fs-lg); margin-bottom: 4px;">Technical Toolsets &amp; Career Progression</h3>
+          <p>Current practical application, active study, and target career direction.</p>
+        </div>
+
+        <div class="progression-stepper">
+          <!-- Stage 1: Used in Projects -->
+          <div class="progression-step-card stage-current">
+            <span class="progression-stage-tag">Used in Projects</span>
+            <h4 class="progression-step-title">Data Cleaning &amp; Scripting</h4>
+            <p class="progression-step-desc">
+              Applied in personal project codebases for transactional data manipulation, automated reconciliation rules, and relational schemas.
+            </p>
+            <ul class="tech-icon-group">
+              <li class="tech-icon-pill">
+                <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.9 2c-3.1 0-5.1.7-5.1 2.2v2.4h5.2v.7H4.4C2.5 7.3 1 8.8 1 11.2c0 2.2 1.6 3.6 3.7 3.7h1.4v-1.8c0-1.6 1.3-2.9 2.9-2.9h5.1c1.4 0 2.6-1.1 2.6-2.6V4.4c0-1.4-2.1-2.4-4.8-2.4zm-1.8 1.5c.5 0 .9.4.9.9 0 .5-.4.9-.9.9s-.9-.4-.9-.9c0-.5.4-.9.9-.9zm2 18.5c3.1 0 5.1-.7 5.1-2.2v-2.4h-5.2v-.7h7.6c1.9 0 3.4-1.5 3.4-3.9 0-2.2-1.6-3.6-3.7-3.7h-1.4v1.8c0 1.6-1.3 2.9-2.9 2.9h-5.1c-1.4 0-2.6 1.1-2.6 2.6v3.2c0 1.4 2.1 2.4 4.8 2.4zm1.8-1.5c-.5 0-.9-.4-.9-.9 0-.5.4-.9.9-.9s.9.4.9.9c0 .5-.4.9-.9.9z"/></svg>
+                <span>Python</span>
+              </li>
+              <li class="tech-icon-pill">
+                <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="4" height="18" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="13" width="4" height="8" rx="1"/></svg>
+                <span>Pandas</span>
+              </li>
+              <li class="tech-icon-pill">
+                <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                <span>SQL (SQLite)</span>
+              </li>
+              <li class="tech-icon-pill">
+                <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+                <span>Excel (Exports)</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>Streamlit UI</span>
+              </li>
+              <li class="tech-icon-pill">
+                <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="6" y1="9" x2="6" y2="15"/><path d="M18 15a9 9 0 0 0-9-9"/></svg>
+                <span>Git</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Stage 2: Currently Learning -->
+          <div class="progression-step-card stage-learning">
+            <span class="progression-stage-tag">Currently Learning</span>
+            <h4 class="progression-step-title">BI Tools &amp; Dimensional Modeling</h4>
+            <p class="progression-step-desc">
+              Active study focused on business KPI definition, star schema data modeling, and reporting dashboard best practices.
+            </p>
+            <ul class="tech-icon-group">
+              <li class="tech-icon-pill">
+                <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="13" width="4" height="8" rx="1"/><rect x="9" y="8" width="4" height="13" rx="1"/><rect x="15" y="3" width="4" height="18" rx="1"/></svg>
+                <span>Power BI (Learning)</span>
+              </li>
+              <li class="tech-icon-pill">
+                <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="11" y="2" width="2" height="6"/><rect x="9" y="4" width="6" height="2"/><rect x="11" y="16" width="2" height="6"/><rect x="9" y="18" width="6" height="2"/><rect x="3" y="11" width="6" height="2"/><rect x="5" y="9" width="2" height="6"/><rect x="15" y="11" width="6" height="2"/><rect x="17" y="9" width="2" height="6"/><circle cx="12" cy="12" r="2"/></svg>
+                <span>Tableau (Learning)</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>Star Schema</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>Relational Queries</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Stage 3: Future Direction -->
+          <div class="progression-step-card stage-future">
+            <span class="progression-stage-tag">Future Direction</span>
+            <h4 class="progression-step-title">Data &amp; Cloud Engineering</h4>
+            <p class="progression-step-desc">
+              Long-term growth trajectory building towards automated ETL orchestration, pipeline reliability, and cloud data warehouses.
+            </p>
+            <ul class="tech-icon-group">
+              <li class="tech-icon-pill">
+                <span>Automated ETL</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>Pipeline Testing</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>Cloud Warehousing</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Learning & Job Simulation Credential Card -->
+        <div class="credential-card" data-config="credential-deloitte" style="display: none;" aria-hidden="true">
+          <div class="credential-header">
+            <span class="credential-badge">Job Simulation</span>
+            <span class="credential-issuer">Deloitte Australia • Forage</span>
+          </div>
+          <h4 class="credential-title">Data Analytics Job Simulation</h4>
+          <p class="credential-desc">
+            Practical simulation covering data discovery, dashboard requirements, and business communication. (Completed via Forage; not an employer certification).
+          </p>
+          <a class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            <span>View Verification ↗</span>
+          </a>
+        </div>
+
+        <!-- Location & Role Alignment -->
+        <div class="location-alignment-card">
+          <h3 style="font-size: var(--fs-md); margin-bottom: var(--space-12);">Location &amp; Engagement Alignment</h3>
+          <ul class="competency-list">
+            <li class="competency-item">
+              <strong>Target Internship Roles</strong>
+              <span>Data Analyst Intern, BI Analyst Intern, Reporting Analyst Intern, Business Operations Analyst.</span>
+            </li>
+            <li class="competency-item">
+              <strong>Base Location &amp; Commute Hubs</strong>
+              <span>Navi Mumbai / Mumbai, Maharashtra, India. Preferred hubs: Airoli, Ghansoli, Rabale, Mahape, Vashi, and across the Mumbai Metropolitan Region (MMR).</span>
+            </li>
+            <li class="competency-item">
+              <strong>Availability &amp; Work Format</strong>
+              <span>Available for immediate internship interviews. Open to On-site, Hybrid, and Remote arrangements.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <h2 id="contact-heading">Contact &amp; Codebases</h2>
+            <p class="project-problem" style="margin-top: var(--space-12);">
+              Review complete commit histories, test suites, and project documentation on GitHub, or get in touch for internship openings across Mumbai and Navi Mumbai.
+            </p>
+
+            <div class="contact-channels">
+              <a href="https://github.com/meetpokal1" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-config="github">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub Profile</span>
+              </a>
+
+              <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-config="linkedin" style="display: none;">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+
+              <a class="btn btn-secondary" data-config="email" style="display: none;">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>meetpokalwork@gmail.com</span>
+              </a>
+
+              <a class="btn btn-secondary" data-config="phone" style="display: none;">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>+91 7304263532</span>
+              </a>
+
+              <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-config="leetcode" style="display: none;">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.874 5.874 0 0 0 .749 1.621 5.485 5.485 0 0 0 1.625 1.625c.348.21.722.38 1.116.508.4.128.816.19 1.233.185.83-.008 1.644-.26 2.348-.727l3.854-4.126 5.406-5.788A1.373 1.373 0 0 0 16.5 6.25a1.374 1.374 0 0 0-1.017-.469 1.374 1.374 0 0 0-.961.438l-4.708 5.042-3.328 3.562a2.74 2.74 0 0 1-1.173.364 2.753 2.753 0 0 1-1.18-.093 2.742 2.742 0 0 1-.813-.554 2.742 2.742 0 0 1-.554-.813 2.753 2.753 0 0 1-.093-1.18 2.74 2.74 0 0 1 .364-1.173l3.328-3.562L13.483 2.75a1.374 1.374 0 0 0 .438-.961 1.374 1.374 0 0 0-.438-.961A1.374 1.374 0 0 0 13.483 0zm4.27 12.875a1.375 1.375 0 1 0 0 2.75h4.872a1.375 1.375 0 1 0 0-2.75H17.753z"/></svg>
+                <span>LeetCode</span>
+              </a>
+
+              <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-config="hackerrank" style="display: none;">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm-1.076 17.5h-1.92V6.5h1.92v4.46h2.152V6.5h1.92v11h-1.92v-4.62h-2.152v4.62z"/></svg>
+                <span>HackerRank</span>
+              </a>
+
+              <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-config="resume" style="display: none;" download>
+                <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                <span>Resume (PDF)</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <aside class="internship-focus-card" aria-label="Internship contact note">
+              <h3 class="focus-card-title">Direct Inquiries</h3>
+              <p style="font-size: var(--fs-xs); color: var(--text-muted); line-height: var(--lh-prose); margin-bottom: var(--space-16);">
+                Available for immediate internship interviews across Navi Mumbai and Mumbai (MMR). Reach out via Phone, Email, LinkedIn, or GitHub to discuss operational analytics, data reconciliation, or reporting roles.
+              </p>
+              <ul class="focus-details-list">
+                <li>
+                  <span class="focus-label">Status</span>
+                  <span class="focus-val">Actively Interviewing</span>
+                </li>
+                <li>
+                  <span class="focus-label">Phone</span>
+                  <span class="focus-val"><a href="tel:+917304263532" style="color: var(--text-primary); text-decoration: none;">+91 7304263532</a></span>
+                </li>
+                <li>
+                  <span class="focus-label">Email</span>
+                  <span class="focus-val"><a href="mailto:meetpokalwork@gmail.com" style="color: var(--text-primary); text-decoration: none;">meetpokalwork@gmail.com</a></span>
+                </li>
+                <li>
+                  <span class="focus-label">Location</span>
+                  <span class="focus-val">Navi Mumbai / Mumbai (MMR)</span>
+                </li>
+                <li>
+                  <span class="focus-label">Work Format</span>
+                  <span class="focus-val">On-site · Hybrid · Remote</span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-main">
+        <div>
+          <span style="font-family: var(--font-sans); font-weight: 700; font-size: var(--fs-md); color: var(--text-primary);">Meet Pokal</span>
+          <p style="font-size: var(--fs-xs); color: var(--text-muted); margin-top: 4px;">
+            Data Analyst &amp; Business Intelligence candidate • Navi Mumbai / Mumbai, India
+          </p>
+        </div>
+
+        <div class="footer-contact-actions">
+          <a href="https://github.com/meetpokal1" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer" data-config="github">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+
+          <a class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer" data-config="linkedin" style="display: none;">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a class="btn btn-secondary btn-sm" data-config="email" style="display: none;">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Email</span>
+          </a>
+
+          <a class="btn btn-secondary btn-sm" data-config="phone" style="display: none;">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Phone</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-colophon">
+        <span>Built with semantic HTML, modern CSS, and vanilla JS. Fully compatible with GitHub Pages.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Control (Being Brute Inspiration) -->
+  <a href="#top" class="to-top" id="toTop" aria-label="Back to top">
+    <svg class="to-top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+    <span>Top</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
