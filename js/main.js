@@ -149,37 +149,15 @@ function applySiteConfig() {
     }
   });
 
-  // 4. Resume availability handling: show only when confirmed available
+  // 4. Resume link handling: show the configured resume without an extra HEAD request.
+  // Some static hosting or caching layers can reject HEAD while the PDF remains reachable.
   const resumeButtons = document.querySelectorAll('[data-config="resume"]');
   resumeButtons.forEach((btn) => {
     if (SITE_CONFIG.profile.resumeAvailable && SITE_CONFIG.profile.resumeUrl) {
-      // Perform client-side verification to ensure file actually exists
-      fetch(SITE_CONFIG.profile.resumeUrl, { method: "HEAD" })
-        .then((res) => {
-          if (res.ok) {
-            btn.href = SITE_CONFIG.profile.resumeUrl;
-            btn.style.display = "";
-            btn.removeAttribute("aria-hidden");
-            btn.removeAttribute("aria-disabled");
-          } else {
-            btn.style.display = "none";
-            btn.setAttribute("aria-hidden", "true");
-            btn.removeAttribute("href");
-          }
-        })
-        .catch(() => {
-          // If running in environment where fetch HEAD is restricted, fallback to verified boolean
-          if (SITE_CONFIG.profile.resumeAvailable) {
-            btn.href = SITE_CONFIG.profile.resumeUrl;
-            btn.style.display = "";
-            btn.removeAttribute("aria-hidden");
-            btn.removeAttribute("aria-disabled");
-          } else {
-            btn.style.display = "none";
-            btn.setAttribute("aria-hidden", "true");
-            btn.removeAttribute("href");
-          }
-        });
+      btn.href = SITE_CONFIG.profile.resumeUrl;
+      btn.style.display = "";
+      btn.removeAttribute("aria-hidden");
+      btn.removeAttribute("aria-disabled");
     } else {
       btn.style.display = "none";
       btn.setAttribute("aria-hidden", "true");
@@ -187,7 +165,7 @@ function applySiteConfig() {
     }
   });
 
-  // 4. GitHub profile link
+  // 5. GitHub profile link
   const githubLinks = document.querySelectorAll('[data-config="github"]');
   githubLinks.forEach((el) => {
     if (SITE_CONFIG.profile.githubUrl) {
@@ -195,7 +173,7 @@ function applySiteConfig() {
     }
   });
 
-  // 5. Deloitte Australia Job Simulation Credential
+  // 6. Deloitte Australia Job Simulation Credential
   const deloitteCredentials = document.querySelectorAll('[data-config="credential-deloitte"]');
   deloitteCredentials.forEach((el) => {
     const url = SITE_CONFIG.credentials?.deloitteForageUrl;
@@ -215,7 +193,7 @@ function applySiteConfig() {
     }
   });
 
-  // 6. Tableau Public and Power BI links
+  // 7. Tableau Public and Power BI links
   const tableauLinks = document.querySelectorAll('[data-config="tableau"]');
   tableauLinks.forEach((el) => {
     const url = SITE_CONFIG.profile.tableauPublicUrl;
@@ -244,7 +222,7 @@ function applySiteConfig() {
     }
   });
 
-  // 7. LeetCode and HackerRank links
+  // 8. LeetCode and HackerRank links
   const leetcodeLinks = document.querySelectorAll('[data-config="leetcode"]');
   leetcodeLinks.forEach((el) => {
     const url = SITE_CONFIG.profile.leetcodeUrl;
