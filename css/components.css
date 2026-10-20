@@ -1581,7 +1581,7 @@
 
 .blueprint-card {
   margin-top: var(--space-28);
-  margin-bottom: var(--space-36);
+  margin-bottom: var(--space-16);
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle); /* taste-skill-ignore */
   border-radius: var(--radius-md);
@@ -1910,13 +1910,178 @@
 }
 
 .blueprint-disclaimer {
-  margin-top: var(--space-12);
+  margin-top: 0;
   margin-bottom: var(--space-24);
   color: var(--text-muted);
   font-family: var(--font-sans);
   font-size: var(--fs-xs);
   line-height: var(--lh-snug);
 }
+
+/* Make the three-project crossover scope unmistakable at a glance. */
+.blueprint-scope-rail {
+  margin: 0 0 var(--space-12);
+  padding: var(--space-16);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-teal);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-subtle);
+}
+
+.blueprint-scope-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.blueprint-scope-kicker {
+  display: block;
+  margin-bottom: var(--space-4);
+  color: var(--accent-amber);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.blueprint-scope-head h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: var(--lh-snug);
+}
+
+.blueprint-scope-count {
+  padding-top: 2px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.blueprint-scope-projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blueprint-scope-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-width: 0;
+  min-height: 56px;
+  padding: var(--space-8) var(--space-12);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.blueprint-scope-link:hover,
+.blueprint-scope-link:focus-visible {
+  border-color: var(--accent-teal);
+  background: var(--accent-surface);
+  text-decoration: none;
+}
+
+.blueprint-scope-link:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+
+.blueprint-scope-index {
+  flex: 0 0 auto;
+  color: var(--accent-teal);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.blueprint-scope-copy {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.blueprint-scope-copy strong {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  overflow-wrap: anywhere;
+}
+
+.blueprint-scope-copy small {
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: var(--lh-snug);
+}
+
+.blueprint-scope-arrow {
+  flex: 0 0 auto;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.blueprint-scope-exclusion {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: var(--space-12) 0 0;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-base);
+}
+
+.blueprint-scope-exclusion strong {
+  color: var(--accent-amber);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+.project-relationship-tag {
+  display: table;
+  margin-bottom: var(--space-8);
+  padding-left: var(--space-8);
+  border-left: 2px solid var(--accent-teal);
+  color: var(--accent-teal);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: var(--lh-snug);
+  text-transform: uppercase;
+}
+
+.project-relationship-tag--independent {
+  border-left-color: var(--text-muted);
+  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  .blueprint-scope-projects {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 
 @media (max-width: 700px) {
   .blueprint-header-left {
@@ -1973,7 +2138,7 @@
   grid-template-columns: minmax(0, 1fr);
   align-items: start;
   gap: var(--space-20);
-  margin-bottom: var(--space-20);
+  margin-bottom: var(--space-12);
 }
 
 .hero-copy { min-width: 0; }
@@ -2116,7 +2281,7 @@
 }
 
 @media (max-width: 679px) {
-  .hero-intro-layout { gap: var(--space-16); margin-bottom: var(--space-16); }
+  .hero-intro-layout { gap: var(--space-16); margin-bottom: var(--space-12); }
   .hero-copy .hero-title { font-size: clamp(2.15rem, 8.5vw, 2.8rem); }
   .hero-status-panel { padding-right: var(--space-12); padding-left: var(--space-12); }
   .hero-status-table th { width: 78px; }
