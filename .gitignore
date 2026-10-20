@@ -1,5 +1,4 @@
 .agents/
-.taste-skill/
 skills-lock.json
 node_modules/
 .venv/
