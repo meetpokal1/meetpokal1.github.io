@@ -155,10 +155,17 @@
     </div>
   </header>
 
+  <!-- Page reading progress indicator -->
+  <div class="reading-progress" aria-hidden="true">
+    <span class="reading-progress-fill" id="reading-progress-fill"></span>
+  </div>
+
   <main id="main-content">
     <!-- Hero Section -->
     <section id="hero" class="hero" aria-labelledby="hero-title">
       <div class="container">
+                <div class="hero-intro-layout">
+          <div class="hero-copy">
         <p class="hero-domain-note">Data Analyst &amp; BI Portfolio · SQL · Python · Excel · Power BI</p>
         <h1 id="hero-title" class="hero-title">Reconciling messy data.<br>Modeling operational truth.</h1>
 
@@ -192,6 +199,36 @@
             <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             <span>LinkedIn</span>
           </a>
+        </div>
+
+          <aside class="hero-status-panel" aria-label="Portfolio focus and availability">
+            <div class="hero-status-panel-head">
+              <span class="hero-status-code">PROFILE / SNAPSHOT</span>
+              <span class="hero-status-state"><span class="hero-status-indicator"></span> OPEN TO INTERNSHIPS</span>
+            </div>
+            <dl class="hero-status-list">
+              <div>
+                <dt>ROLE FOCUS</dt>
+                <dd>Data Analyst · BI</dd>
+              </div>
+              <div>
+                <dt>CORE STACK</dt>
+                <dd>Python · SQL · Excel · Power BI</dd>
+              </div>
+              <div>
+                <dt>WORK</dt>
+                <dd>Data quality, reporting &amp; automation</dd>
+              </div>
+              <div>
+                <dt>REGION</dt>
+                <dd>Navi Mumbai · Mumbai</dd>
+              </div>
+            </dl>
+            <div class="hero-status-panel-footer">
+              <span>PORTFOLIO // MP-DA</span>
+              <span class="hero-status-footer-mark">01</span>
+            </div>
+          </aside>
         </div>
 
         <!-- Proof Strip (4-Up Horizontal Stat Grid) -->
@@ -1601,6 +1638,7 @@
       </div>
 
       <div class="footer-colophon">
+        <span class="footer-copyright">© <span id="copyright-year">2026</span> Meet Pokal. All rights reserved.</span>
         <span>Built with semantic HTML, modern CSS, and vanilla JS. Fully compatible with GitHub Pages.</span>
       </div>
     </div>

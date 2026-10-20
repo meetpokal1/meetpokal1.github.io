@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   applySiteConfig();
   initScrollSpy();
   initBackToTop();
+  initScrollProgress();
+  initPointerSpotlights();
+  initCopyrightYear();
 });
 
 /**
@@ -316,3 +319,70 @@ function initBackToTop() {
 
 
 
+
+
+/**
+ * Reading progress indicator directly below the sticky navigation.
+ * Uses requestAnimationFrame to keep scroll updates lightweight.
+ */
+function initScrollProgress() {
+  const fill = document.getElementById("reading-progress-fill");
+  if (!fill) return;
+
+  let framePending = false;
+
+  function updateProgress() {
+    const root = document.documentElement;
+    const scrollableHeight = root.scrollHeight - window.innerHeight;
+    const progress = scrollableHeight > 0
+      ? Math.min(1, Math.max(0, window.scrollY / scrollableHeight))
+      : 0;
+
+    fill.style.transform = `scaleX(${progress})`;
+    framePending = false;
+  }
+
+  function scheduleUpdate() {
+    if (framePending) return;
+    framePending = true;
+    window.requestAnimationFrame(updateProgress);
+  }
+
+  window.addEventListener("scroll", scheduleUpdate, { passive: true });
+  window.addEventListener("resize", scheduleUpdate, { passive: true });
+  updateProgress();
+}
+
+/**
+ * Cursor-following warm spotlight for selected project and information cards.
+ * Only enabled for mouse/trackpad-like pointers; touch interactions are unchanged.
+ */
+function initPointerSpotlights() {
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+  const targets = document.querySelectorAll(
+    ".project-case-study, .tier2-card, .philosophy-card, " +
+    ".progression-step-card, .credential-card, .location-alignment-card, .internship-focus-card"
+  );
+
+  targets.forEach((card) => {
+    card.classList.add("spotlight-card");
+
+    card.addEventListener("pointermove", (event) => {
+      const bounds = card.getBoundingClientRect();
+      card.style.setProperty("--spotlight-x", `${event.clientX - bounds.left}px`);
+      card.style.setProperty("--spotlight-y", `${event.clientY - bounds.top}px`);
+    }, { passive: true });
+
+    card.addEventListener("pointerleave", () => {
+      card.style.removeProperty("--spotlight-x");
+      card.style.removeProperty("--spotlight-y");
+    });
+  });
+}
+
+/** Keep the copyright year current while providing a static HTML fallback. */
+function initCopyrightYear() {
+  const year = document.getElementById("copyright-year");
+  if (year) year.textContent = String(new Date().getFullYear());
+}

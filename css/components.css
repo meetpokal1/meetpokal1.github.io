@@ -1895,3 +1895,193 @@
   position: relative;
   z-index: 1;
 }
+
+
+/* --------------------------------------------------------------------------
+   Reading progress line beneath the sticky navigation
+   -------------------------------------------------------------------------- */
+.reading-progress {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 3px;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--border-subtle);
+}
+
+.reading-progress-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--accent-steel), var(--accent-amber));
+  box-shadow: 0 0 8px var(--accent-border);
+}
+
+/* --------------------------------------------------------------------------
+   Optional hero status snapshot: a compact, factual code-like profile panel
+   -------------------------------------------------------------------------- */
+.hero-status-panel {
+  display: none;
+}
+
+@media (min-width: 1366px) {
+  .hero-intro-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 252px;
+    align-items: start;
+    gap: var(--space-24);
+  }
+
+  .hero-copy {
+    min-width: 0;
+  }
+
+  .hero-copy .hero-title {
+    font-size: clamp(2.45rem, 3.7vw, 3.4rem);
+  }
+
+  .hero-status-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    min-width: 0;
+    margin-top: 3px;
+    padding: var(--space-16);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-surface);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+
+  .hero-status-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-steel), var(--accent-amber));
+    opacity: 0.9;
+  }
+
+  .hero-status-panel-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-8);
+    padding-bottom: var(--space-12);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .hero-status-code,
+  .hero-status-list dt,
+  .hero-status-panel-footer {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.045em;
+    color: var(--text-muted);
+  }
+
+  .hero-status-state {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--status-ok-text);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-status-indicator {
+    width: 6px;
+    height: 6px;
+    flex: 0 0 6px;
+    border-radius: 50%;
+    background: var(--status-ok-text);
+    box-shadow: 0 0 0 3px var(--status-ok-bg);
+  }
+
+  .hero-status-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin: 0;
+  }
+
+  .hero-status-list > div {
+    display: grid;
+    gap: 4px;
+  }
+
+  .hero-status-list dt {
+    margin: 0;
+  }
+
+  .hero-status-list dd {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .hero-status-panel-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .hero-status-footer-mark {
+    color: var(--accent-amber);
+    font-weight: 600;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Cursor-following spotlight on project cards and supporting information
+   -------------------------------------------------------------------------- */
+@media (hover: hover) and (pointer: fine) {
+  .spotlight-card {
+    background-repeat: no-repeat;
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      border-color 220ms ease;
+  }
+
+  .spotlight-card:hover {
+    background-image: radial-gradient(
+      280px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+      var(--accent-surface),
+      transparent 74%
+    );
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+  }
+
+  .tier2-card.spotlight-card:hover {
+    border-color: var(--border-strong);
+  }
+}
+
+@media (max-width: 540px) {
+  .footer-colophon {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+}
+
+@media print {
+  .reading-progress,
+  .hero-status-panel {
+    display: none !important;
+  }
+}
