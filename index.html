@@ -1424,6 +1424,66 @@
 
     <!-- Background, Approach & Skills Section -->
     <section id="about" class="section section--about" aria-labelledby="about-heading">
+      <div class="about-blueprint-layer" aria-hidden="true">
+        <svg class="about-blueprint-svg" viewBox="0 0 1440 1600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="about-blueprint-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+              <path d="M 28 0 L 0 0 0 28" stroke="var(--border-subtle)" stroke-width="0.7" />
+            </pattern>
+            <pattern id="about-blueprint-grid-major" width="140" height="140" patternUnits="userSpaceOnUse">
+              <path d="M 140 0 L 0 0 0 140" stroke="var(--border-subtle)" stroke-width="1" />
+            </pattern>
+            <linearGradient id="about-blueprint-spectrum" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="var(--accent-teal)" />
+              <stop offset="0.52" stop-color="var(--accent-steel)" />
+              <stop offset="1" stop-color="var(--accent-amber)" />
+            </linearGradient>
+          </defs>
+
+          <rect width="1440" height="1600" fill="url(#about-blueprint-grid)" opacity="0.34" />
+          <rect width="1440" height="1600" fill="url(#about-blueprint-grid-major)" opacity="0.2" />
+
+          <g class="about-blueprint-rail about-blueprint-rail--left" stroke="url(#about-blueprint-spectrum)" stroke-width="1.2">
+            <path class="about-blueprint-flow" d="M 42 110 H 118 V 226 H 158 V 342 H 102 V 460 H 144 V 614 H 74 V 744 H 124 V 880 H 164 V 1020 H 100 V 1168 H 144 V 1310 H 82 V 1460" />
+            <path d="M 118 226 H 82 V 266 H 56" stroke="var(--border-strong)" stroke-dasharray="3 5" />
+            <circle class="about-blueprint-pulse" cx="118" cy="226" r="4" fill="var(--accent-teal)" stroke="none" />
+            <circle class="about-blueprint-pulse delay-1" cx="144" cy="614" r="4" fill="var(--accent-amber)" stroke="none" />
+            <circle class="about-blueprint-pulse delay-2" cx="100" cy="1168" r="4" fill="var(--accent-steel)" stroke="none" />
+          </g>
+
+          <g class="about-blueprint-rail about-blueprint-rail--left" stroke="var(--border-strong)" stroke-width="0.9">
+            <rect x="34" y="348" width="112" height="82" rx="3" />
+            <path d="M 46 362 H 134 M 46 370 H 94" stroke="var(--accent-teal)" />
+            <path d="M 52 412 V 392 H 68 V 412 M 76 412 V 381 H 92 V 412 M 100 412 V 398 H 116 V 412 M 124 412 V 386 H 136 V 412" stroke="url(#about-blueprint-spectrum)" stroke-width="1.5" />
+            <rect x="44" y="782" width="106" height="70" rx="3" />
+            <ellipse cx="97" cy="798" rx="35" ry="8" stroke="var(--accent-steel)" />
+            <path d="M 62 798 V 830 C 62 840 132 840 132 830 V 798 M 62 814 C 62 824 132 824 132 814" />
+            <path d="M 44 1140 H 152 V 1218 H 44 Z" />
+            <path d="M 58 1198 L 74 1184 L 90 1189 L 110 1166 L 138 1173" stroke="var(--accent-teal)" stroke-width="1.5" />
+            <circle cx="110" cy="1166" r="3" fill="var(--accent-amber)" stroke="none" />
+          </g>
+
+          <g class="about-blueprint-rail about-blueprint-rail--right" stroke="url(#about-blueprint-spectrum)" stroke-width="1.2">
+            <path class="about-blueprint-flow" d="M 1398 130 H 1320 V 254 H 1274 V 390 H 1344 V 526 H 1290 V 662 H 1364 V 804 H 1318 V 948 H 1276 V 1084 H 1340 V 1232 H 1294 V 1390 H 1370 V 1490" />
+            <path d="M 1320 254 H 1358 V 294 H 1386" stroke="var(--border-strong)" stroke-dasharray="3 5" />
+            <circle class="about-blueprint-pulse" cx="1320" cy="254" r="4" fill="var(--accent-amber)" stroke="none" />
+            <circle class="about-blueprint-pulse delay-1" cx="1364" cy="804" r="4" fill="var(--accent-teal)" stroke="none" />
+            <circle class="about-blueprint-pulse delay-2" cx="1340" cy="1232" r="4" fill="var(--accent-steel)" stroke="none" />
+          </g>
+
+          <g class="about-blueprint-rail about-blueprint-rail--right" stroke="var(--border-strong)" stroke-width="0.9">
+            <rect x="1282" y="306" width="124" height="88" rx="3" />
+            <path d="M 1294 320 H 1392 M 1294 328 H 1354" stroke="var(--accent-amber)" />
+            <path d="M 1298 376 C 1310 376 1312 354 1328 354 C 1342 354 1342 368 1356 368 C 1370 368 1370 340 1392 340" stroke="var(--accent-teal)" stroke-width="1.5" />
+            <rect x="1290" y="704" width="112" height="72" rx="3" />
+            <path d="M 1302 756 V 738 H 1318 V 756 M 1326 756 V 728 H 1342 V 756 M 1350 756 V 716 H 1366 V 756 M 1374 756 V 733 H 1390 V 756" stroke="url(#about-blueprint-spectrum)" stroke-width="1.5" />
+            <path d="M 1294 1124 H 1390 M 1342 1124 V 1160 M 1310 1160 H 1374 M 1310 1160 V 1184 M 1374 1160 V 1184" />
+            <circle cx="1342" cy="1124" r="5" fill="var(--accent-teal)" stroke="none" />
+            <circle cx="1310" cy="1184" r="4" fill="var(--accent-amber)" stroke="none" />
+            <circle cx="1374" cy="1184" r="4" fill="var(--accent-steel)" stroke="none" />
+          </g>
+        </svg>
+      </div>
       <div class="container">
         <div class="section-intro">
           <h2 id="about-heading">Analytical Approach &amp; Competencies</h2>
