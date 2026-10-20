@@ -291,6 +291,7 @@
         <article class="project-case-study project--teal" id="project-gst" aria-labelledby="title-gst">
           <div class="project-header-top">
             <div>
+              <span class="project-relationship-tag project-relationship-tag--blueprint">Blueprint component · 01/03</span>
               <span class="case-domain-tag">Financial Data Auditing &amp; Tax Reconciliation</span>
               <h3 id="title-gst" class="project-title">GST Invoice &amp; Ledger Automation: Multi-State Reconciliation Engine</h3>
             </div>
@@ -568,6 +569,7 @@
         <article class="project-case-study project--amber" id="project-minierp" aria-labelledby="title-minierp">
           <div class="project-header-top">
             <div>
+              <span class="project-relationship-tag project-relationship-tag--blueprint">Blueprint component · 02/03</span>
               <span class="case-domain-tag">Operational Data Modeling &amp; Stock Thresholds</span>
               <h3 id="title-minierp" class="project-title">Mini ERP Inventory System: Relational Stock Modeling &amp; Reorder Logic</h3>
             </div>
@@ -933,7 +935,7 @@
               <span class="blueprint-spec-id">SPEC // ENG-DS-01</span>
               <div class="blueprint-heading-copy">
                 <span class="blueprint-title-text">Cross-Project Data Systems Blueprint</span>
-                <span class="blueprint-subtitle-text">Conceptual flow across GST Invoice Automation, Mini ERP, and planned InsightFlow</span>
+                <span class="blueprint-subtitle-text">Scope: GST Invoice Automation + Mini ERP + planned InsightFlow only</span>
               </div>
             </div>
             <div class="blueprint-meta-tags">
@@ -1262,12 +1264,48 @@
           </div>
         </div>
 
+        
+        <div class="blueprint-scope-rail" aria-labelledby="blueprint-scope-heading">
+          <div class="blueprint-scope-head">
+            <div>
+              <span class="blueprint-scope-kicker">CROSSOVER SCOPE · 03 PROJECTS</span>
+              <h3 id="blueprint-scope-heading">This blueprint connects these three projects only</h3>
+            </div>
+            <span class="blueprint-scope-count">01 → 02 → 03</span>
+          </div>
+          <ol class="blueprint-scope-projects">
+            <li>
+              <a class="blueprint-scope-link" href="#project-gst">
+                <span class="blueprint-scope-index">01</span>
+                <span class="blueprint-scope-copy"><strong>GST Invoice Automation</strong><small>Core case study</small></span>
+                <span class="blueprint-scope-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="blueprint-scope-link" href="#project-minierp">
+                <span class="blueprint-scope-index">02</span>
+                <span class="blueprint-scope-copy"><strong>Mini ERP Inventory</strong><small>Core case study</small></span>
+                <span class="blueprint-scope-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="blueprint-scope-link" href="#project-insightflow">
+                <span class="blueprint-scope-index">03</span>
+                <span class="blueprint-scope-copy"><strong>InsightFlow</strong><small>Planned · in development</small></span>
+                <span class="blueprint-scope-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ol>
+          <p class="blueprint-scope-exclusion"><strong>OUTSIDE THIS BLUEPRINT:</strong> PharmaGuard AI and Dubpilot are separate projects, not part of this crossover.</p>
+        </div>
+
         <p class="blueprint-disclaimer"><strong>Architecture Context:</strong> Illustrative synthesis connecting architectural patterns from the GST Invoice Automation engine and Mini ERP system with planned InsightFlow pipeline concepts. This is a conceptual reference mapping shared data flow patterns across separate projects, not a single deployed end-to-end pipeline; InsightFlow remains in active development.</p>
 
         <div class="tier2-grid">
           <!-- InsightFlow -->
           <article class="tier2-card" id="project-insightflow">
             <div class="tier2-card-header">
+              <span class="project-relationship-tag project-relationship-tag--blueprint">Blueprint component · 03/03</span>
               <span class="status-pill status-pill-progress">Architecture Preview · In Active Development</span>
               <h3 class="tier2-card-title" style="margin-top: var(--space-8);">InsightFlow: Data Pipeline Architecture</h3>
             </div>
@@ -1305,6 +1343,7 @@
           <!-- PharmaGuard AI -->
           <article class="tier2-card" id="project-pharmaguard">
             <div class="tier2-card-header">
+              <span class="project-relationship-tag project-relationship-tag--independent">Separate project · Outside blueprint</span>
               <span class="status-pill status-pill-ok">Completed Pipeline Prototype</span>
               <h3 class="tier2-card-title" style="margin-top: var(--space-8);">PharmaGuard AI: Adverse Event Triage</h3>
             </div>
@@ -1344,6 +1383,7 @@
           <!-- Dubpilot -->
           <article class="tier2-card" id="project-dubpilot">
             <div class="tier2-card-header">
+              <span class="project-relationship-tag project-relationship-tag--independent">Separate project · Outside blueprint</span>
               <span class="status-pill status-pill-ok">CLI Automation Pipeline</span>
               <h3 class="tier2-card-title" style="margin-top: var(--space-8);">Dubpilot: Video Dubbing Pipeline</h3>
             </div>
