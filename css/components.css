@@ -1572,3 +1572,326 @@
   }
 }
 
+
+
+/* ==========================================================================
+   Data Systems Blueprint & Schematic Linework
+   Engineered architectural visual showcasing end-to-end data pipelines.
+   ========================================================================== */
+
+.blueprint-card {
+  margin-top: var(--space-28);
+  margin-bottom: var(--space-36);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle); /* taste-skill-ignore */
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.blueprint-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  padding: var(--space-12) var(--space-20);
+  background: var(--bg-surface-subtle);
+  border-bottom: 1px solid var(--border-subtle); /* taste-skill-ignore */
+  font-family: var(--font-mono); /* taste-skill-ignore */
+  font-size: var(--fs-xs);
+}
+
+.blueprint-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.blueprint-spec-id {
+  color: var(--accent-amber);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.blueprint-svg text {
+  font-family: var(--font-mono); /* taste-skill-ignore */
+  text-rendering: geometricPrecision;
+}
+
+.blueprint-svg text.bp-sans {
+  font-family: var(--font-sans);
+}
+
+.blueprint-title-text {
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+.blueprint-meta-tags {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.blueprint-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--status-ok-text);
+  font-size: 11px;
+}
+
+.blueprint-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--status-ok-text);
+}
+
+.blueprint-scale-tag {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.blueprint-canvas-wrap {
+  width: 100%;
+  padding: var(--space-12);
+  background: var(--bg-canvas);
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blueprint-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 820px;
+}
+
+/* Restrained Hover & Schematic Interactions */
+.blueprint-node {
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: default;
+}
+
+.blueprint-node:hover rect.blueprint-box-bg {
+  stroke: var(--accent-amber);
+}
+
+.blueprint-node:hover text.blueprint-stage-num {
+  fill: var(--accent-amber);
+}
+
+.blueprint-bus-line {
+  stroke-dasharray: 4 3;
+  animation: blueprintFlow 20s linear infinite;
+}
+
+@keyframes blueprintFlow {
+  to {
+    stroke-dashoffset: -70;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blueprint-bus-line {
+    animation: none;
+    stroke-dasharray: none;
+  }
+}
+
+/* Blueprint Footer & Color Legend */
+.blueprint-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  padding: var(--space-8) var(--space-20);
+  background: var(--bg-surface-subtle);
+  border-top: 1px solid var(--border-subtle); /* taste-skill-ignore */
+  font-family: var(--font-mono); /* taste-skill-ignore */
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.blueprint-legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+}
+
+.blueprint-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blueprint-legend-color {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.blueprint-legend-teal {
+  background: var(--accent-teal);
+}
+
+.blueprint-legend-amber {
+  background: var(--accent-amber);
+}
+
+.blueprint-legend-steel {
+  background: var(--accent-steel);
+}
+
+.blueprint-legend-rose {
+  background: var(--accent-rose);
+}
+
+
+
+/* --------------------------------------------------------------------------
+   Ambient data-engineering field
+   Decorative SVGs stay in wide-screen page gutters. They never intercept input.
+   -------------------------------------------------------------------------- */
+.ambient-data-field {
+  display: none;
+  position: fixed;
+  inset: var(--header-height) 0 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.9;
+}
+
+.ambient-data-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ambient-drift-slow,
+.ambient-drift-reverse {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.ambient-drift-slow {
+  animation: ambient-drift 28s ease-in-out infinite;
+}
+
+.ambient-drift-reverse {
+  animation: ambient-drift-reverse 34s ease-in-out infinite;
+}
+
+.ambient-flow-line {
+  stroke-dasharray: 3 15;
+  animation: ambient-flow 32s linear infinite;
+}
+
+.ambient-data-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ambient-pulse 6.5s ease-in-out infinite;
+}
+
+@keyframes ambient-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(2px, -7px, 0); }
+}
+
+@keyframes ambient-drift-reverse {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-2px, 6px, 0); }
+}
+
+@keyframes ambient-flow {
+  to { stroke-dashoffset: -144; }
+}
+
+@keyframes ambient-pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.95; }
+}
+
+@media (min-width: 1366px) {
+  .ambient-data-field {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-drift-slow,
+  .ambient-drift-reverse,
+  .ambient-flow-line,
+  .ambient-data-pulse {
+    animation: none !important;
+  }
+}
+
+@media print {
+  .ambient-data-field {
+    display: none !important;
+  }
+}
+
+/* Clarify the diagram's cross-project scope without changing its visual identity. */
+.blueprint-header-left {
+  align-items: flex-start;
+  gap: var(--space-12);
+}
+
+.blueprint-heading-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.blueprint-title-text {
+  line-height: 1.3;
+}
+
+.blueprint-subtitle-text {
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 58ch;
+}
+
+.blueprint-disclaimer {
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-24);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-snug);
+}
+
+@media (max-width: 700px) {
+  .blueprint-header-left {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+  }
+
+  .blueprint-heading-copy {
+    flex: 1 1 100%;
+  }
+}
+
+/* Foreground content remains above the decorative SVG layer. */
+#main-content,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
