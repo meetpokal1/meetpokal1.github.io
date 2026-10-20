@@ -39,61 +39,87 @@
   <!-- Accessible Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Ambient data-engineering field: decorative linework stays in the outer page gutters -->
+  <!-- Ambient Data Engineering Field: Decorative technical pipelines restricted to outer page gutters -->
   <div class="ambient-data-field" aria-hidden="true">
-    <svg class="ambient-data-svg" viewBox="0 0 1600 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
-      <g class="ambient-drift-slow ambient-left" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.28">
-        <g transform="translate(30 115)">
-          <rect x="0" y="0" width="128" height="78" rx="3" stroke="var(--accent-steel)" stroke-width="1.1"/>
-          <line x1="0" y1="17" x2="128" y2="17" stroke="var(--accent-teal)"/>
-          <line x1="0" y1="37" x2="128" y2="37"/>
-          <line x1="0" y1="57" x2="128" y2="57"/>
-          <line x1="38" y1="17" x2="38" y2="78"/>
-          <line x1="82" y1="17" x2="82" y2="78"/>
-          <circle class="ambient-data-pulse" cx="10" cy="9" r="2" fill="var(--accent-teal)" stroke="none"/>
-          <circle cx="18" cy="9" r="2" fill="var(--accent-amber)" stroke="none" opacity="0.7"/>
-          <path d="M8 27h20 M47 27h24 M91 27h25 M8 47h17 M47 47h24 M91 47h29 M8 67h20 M47 67h20 M91 67h21" stroke-width="1.2"/>
+    <!-- Left Gutter: Ingestion & Transformation Pipeline (Data Engineering Focus) -->
+    <svg class="ambient-gutter-svg ambient-gutter-left" viewBox="0 0 160 840" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" focusable="false">
+      <!-- Continuous vertical pipeline bus connecting ingestion, transform & orchestration -->
+      <path class="ambient-flow-line" d="M 80 80 V 740" stroke="var(--border-subtle)" stroke-width="1" fill="none" opacity="0.5"/>
+      <circle class="ambient-pulse-travel-down" cx="80" cy="80" r="2.5" fill="var(--accent-teal)"/>
+
+      <g class="ambient-drift-slow" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.32">
+        <!-- Node 1 (Top): Schema Table & Ingest Stream -->
+        <g transform="translate(16 95)">
+          <line x1="64" y1="36" x2="128" y2="36" stroke="var(--border-subtle)" stroke-width="0.8" stroke-dasharray="2 4"/>
+          <rect x="0" y="0" width="128" height="74" rx="3" stroke="var(--accent-steel)" stroke-width="1"/>
+          <line x1="0" y1="16" x2="128" y2="16" stroke="var(--accent-teal)" stroke-width="1"/>
+          <line x1="0" y1="35" x2="128" y2="35" stroke="var(--border-subtle)" stroke-width="0.75"/>
+          <line x1="0" y1="54" x2="128" y2="54" stroke="var(--border-subtle)" stroke-width="0.75"/>
+          <line x1="38" y1="16" x2="38" y2="74" stroke="var(--border-subtle)" stroke-width="0.75"/>
+          <line x1="82" y1="16" x2="82" y2="74" stroke="var(--border-subtle)" stroke-width="0.75"/>
+          <circle class="ambient-data-pulse" cx="10" cy="8" r="2" fill="var(--accent-teal)" stroke="none"/>
+          <circle cx="18" cy="8" r="2" fill="var(--accent-amber)" stroke="none" opacity="0.8"/>
+          <path d="M8 25h20 M47 25h24 M91 25h25 M8 44h17 M47 44h24 M91 44h29 M8 63h20 M47 63h20 M91 63h21" stroke="var(--text-muted)" stroke-width="1.1"/>
         </g>
-        <g class="ambient-drift-reverse" transform="translate(19 355)">
-          <path d="M0 0V92H142" stroke="var(--border-strong)" stroke-width="1"/>
-          <path d="M0 22H142 M0 46H142 M0 69H142" stroke="var(--border-subtle)" stroke-width="0.8" stroke-dasharray="2 6"/>
-          <path d="M8 73 L31 59 L52 64 L73 35 L93 44 L116 17 L137 25" stroke="var(--accent-teal)" stroke-width="1.8" class="ambient-flow-line"/>
-          <circle cx="31" cy="59" r="2.5" fill="var(--accent-teal)" stroke="none"/>
-          <circle class="ambient-data-pulse" cx="73" cy="35" r="3" fill="var(--accent-amber)" stroke="none"/>
-          <circle cx="116" cy="17" r="2.5" fill="var(--accent-steel)" stroke="none"/>
+
+        <!-- Node 2 (Middle): Transformation Metric Sparkline & Plotted Points -->
+        <g class="ambient-drift-reverse" transform="translate(14 340)">
+          <path d="M0 0V84H132" stroke="var(--border-strong)" stroke-width="0.9"/>
+          <path d="M0 21H132 M0 42H132 M0 63H132" stroke="var(--border-subtle)" stroke-width="0.7" stroke-dasharray="2 5"/>
+          <path d="M8 66 L28 54 L48 58 L68 32 L88 40 L108 16 L128 22" stroke="var(--accent-teal)" stroke-width="1.6" class="ambient-flow-line"/>
+          <circle cx="28" cy="54" r="2" fill="var(--accent-teal)" stroke="none"/>
+          <circle class="ambient-data-pulse" cx="68" cy="32" r="2.8" fill="var(--accent-amber)" stroke="none"/>
+          <circle cx="108" cy="16" r="2" fill="var(--accent-steel)" stroke="none"/>
+          <line x1="66" y1="42" x2="132" y2="42" stroke="var(--border-subtle)" stroke-width="0.8" stroke-dasharray="2 4"/>
         </g>
-        <g transform="translate(31 654)">
-          <path d="M9 20H53V0H98 M53 20V52H121" stroke="var(--accent-steel)" stroke-width="1.1"/>
-          <path d="M9 20H53V0H98 M53 20V52H121" stroke="var(--accent-teal)" stroke-width="1.5" stroke-dasharray="2 17" class="ambient-flow-line"/>
-          <rect x="0" y="11" width="18" height="18" rx="3" stroke="var(--accent-teal)"/>
-          <rect x="90" y="-9" width="18" height="18" rx="3" stroke="var(--accent-amber)"/>
-          <rect x="112" y="43" width="18" height="18" rx="3" stroke="var(--accent-steel)"/>
-          <circle class="ambient-data-pulse" cx="53" cy="20" r="3.2" fill="var(--accent-amber)" stroke="none"/>
+
+        <!-- Node 3 (Lower): Orchestration Router & Stage Gate -->
+        <g transform="translate(18 610)">
+          <path d="M8 18H48V0H88 M48 18V48H118" stroke="var(--accent-steel)" stroke-width="1"/>
+          <path d="M8 18H48V0H88 M48 18V48H118" stroke="var(--accent-teal)" stroke-width="1.4" stroke-dasharray="2 14" class="ambient-flow-line"/>
+          <rect x="0" y="9" width="16" height="16" rx="2" stroke="var(--accent-teal)" stroke-width="0.9"/>
+          <rect x="80" y="-8" width="16" height="16" rx="2" stroke="var(--accent-amber)" stroke-width="0.9"/>
+          <rect x="110" y="40" width="16" height="16" rx="2" stroke="var(--accent-steel)" stroke-width="0.9"/>
+          <circle class="ambient-data-pulse" cx="48" cy="18" r="2.8" fill="var(--accent-amber)" stroke="none"/>
         </g>
       </g>
-      <g class="ambient-drift-reverse ambient-right" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.28">
-        <g transform="translate(1451 112)">
-          <ellipse cx="48" cy="10" rx="44" ry="10" stroke="var(--accent-steel)" stroke-width="1.2"/>
-          <path d="M4 10V82C4 95 23.7 102 48 102S92 95 92 82V10" stroke="var(--accent-steel)" stroke-width="1.2"/>
-          <path d="M4 34C4 47 23.7 54 48 54S92 47 92 34 M4 59C4 72 23.7 79 48 79S92 72 92 59" stroke="var(--accent-teal)" stroke-width="1"/>
-          <circle class="ambient-data-pulse" cx="77" cy="24" r="3" fill="var(--accent-amber)" stroke="none"/>
+    </svg>
+
+    <!-- Right Gutter: Storage, Cloud Architecture & BI Delivery (Cloud Data Engineering Focus) -->
+    <svg class="ambient-gutter-svg ambient-gutter-right" viewBox="0 0 160 840" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" focusable="false">
+      <!-- Continuous vertical cloud pipeline line connecting database, cloud lake & BI -->
+      <path class="ambient-flow-line" d="M 80 80 V 740" stroke="var(--border-subtle)" stroke-width="1" fill="none" opacity="0.5"/>
+      <circle class="ambient-pulse-travel-down-delayed" cx="80" cy="80" r="2.5" fill="var(--accent-amber)"/>
+
+      <g class="ambient-drift-reverse" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.32">
+        <!-- Node 1 (Top): Relational Database 3NF Cylinder -->
+        <g transform="translate(36 90)">
+          <ellipse cx="44" cy="9" rx="40" ry="9" stroke="var(--accent-steel)" stroke-width="1.1"/>
+          <path d="M4 9V74C4 86 21.9 92 44 92S84 86 84 74V9" stroke="var(--accent-steel)" stroke-width="1.1"/>
+          <path d="M4 31C4 43 21.9 49 44 49S84 43 84 31 M4 53C4 65 21.9 71 44 71S84 65 84 53" stroke="var(--accent-teal)" stroke-width="0.9"/>
+          <circle class="ambient-data-pulse" cx="70" cy="22" r="2.6" fill="var(--accent-amber)" stroke="none"/>
+          <line x1="0" y1="40" x2="44" y2="40" stroke="var(--border-subtle)" stroke-width="0.8" stroke-dasharray="2 4"/>
         </g>
-        <g transform="translate(1447 376)">
-          <path d="M27 48H80C94 48 98 28 84 22C82 6 60 1 49 14C34 7 20 18 22 31C5 34 8 48 27 48Z" stroke="var(--accent-teal)" stroke-width="1.2"/>
-          <path d="M51 48V73H11 M51 73H96V91" stroke="var(--accent-steel)" stroke-width="1.1"/>
-          <path d="M51 48V73H11 M51 73H96V91" stroke="var(--accent-amber)" stroke-width="1.4" stroke-dasharray="3 15" class="ambient-flow-line"/>
-          <circle cx="11" cy="73" r="4" stroke="var(--accent-steel)"/>
-          <circle class="ambient-data-pulse" cx="96" cy="91" r="4" fill="var(--accent-amber)" stroke="none"/>
-          <circle cx="51" cy="73" r="3" fill="var(--accent-teal)" stroke="none"/>
+
+        <!-- Node 2 (Middle): Cloud Storage & CDC Stream Broker -->
+        <g transform="translate(30 345)">
+          <path d="M25 44H75C88 44 92 26 78 20C76 6 56 1 45 13C32 6 18 16 20 28C4 31 7 44 25 44Z" stroke="var(--accent-teal)" stroke-width="1.1"/>
+          <path d="M48 44V68H10 M48 68H90V86" stroke="var(--accent-steel)" stroke-width="1"/>
+          <path d="M48 44V68H10 M48 68H90V86" stroke="var(--accent-amber)" stroke-width="1.3" stroke-dasharray="3 14" class="ambient-flow-line"/>
+          <circle cx="10" cy="68" r="3.5" stroke="var(--accent-steel)" stroke-width="0.8"/>
+          <circle class="ambient-data-pulse" cx="90" cy="86" r="3.5" fill="var(--accent-amber)" stroke="none"/>
+          <circle cx="48" cy="68" r="2.6" fill="var(--accent-teal)" stroke="none"/>
         </g>
-        <g transform="translate(1454 673)">
-          <path d="M0 89H104 M0 0V89" stroke="var(--border-strong)" stroke-width="1"/>
-          <path d="M0 22H104 M0 44H104 M0 66H104" stroke="var(--border-subtle)" stroke-width="0.8" stroke-dasharray="2 6"/>
-          <rect x="12" y="52" width="13" height="37" rx="1" fill="var(--accent-steel)" stroke="none" opacity="0.7"/>
-          <rect x="37" y="34" width="13" height="55" rx="1" fill="var(--accent-teal)" stroke="none" opacity="0.7"/>
-          <rect x="62" y="17" width="13" height="72" rx="1" fill="var(--accent-amber)" stroke="none" opacity="0.7"/>
-          <path d="M7 62L31 44L55 47L84 12L101 19" stroke="var(--accent-teal)" stroke-width="1.4" class="ambient-flow-line"/>
-          <circle class="ambient-data-pulse" cx="84" cy="12" r="3" fill="var(--accent-amber)" stroke="none"/>
+
+        <!-- Node 3 (Lower): BI Analytics Delivery & Threshold Matrix -->
+        <g transform="translate(28 620)">
+          <path d="M0 80H100 M0 0V80" stroke="var(--border-strong)" stroke-width="0.9"/>
+          <path d="M0 20H100 M0 40H100 M0 60H100" stroke="var(--border-subtle)" stroke-width="0.7" stroke-dasharray="2 5"/>
+          <rect x="10" y="48" width="12" height="32" rx="1" fill="var(--accent-steel)" stroke="none" opacity="0.6"/>
+          <rect x="34" y="32" width="12" height="48" rx="1" fill="var(--accent-teal)" stroke="none" opacity="0.6"/>
+          <rect x="58" y="16" width="12" height="64" rx="1" fill="var(--accent-amber)" stroke="none" opacity="0.6"/>
+          <path d="M6 56L28 40L50 43L76 11L94 18" stroke="var(--accent-teal)" stroke-width="1.3" class="ambient-flow-line"/>
+          <circle class="ambient-data-pulse" cx="76" cy="11" r="2.8" fill="var(--accent-amber)" stroke="none"/>
         </g>
       </g>
     </svg>
@@ -971,9 +997,9 @@
               </g>
 
               <!-- Top Title & Architecture Callout -->
-              <text x="42" y="33" font-size="9" fill="var(--text-muted)">SPEC // SYS-ARCH-DATA-FLOW</text>
-              <text x="500" y="33" font-size="9.5" font-weight="600" fill="var(--text-secondary)" text-anchor="middle">OPERATIONAL ANALYTICS PIPELINE: RAW CAPTURE → AUDIT ENGINE → DECISION</text>
-              <text x="958" y="33" font-size="9" fill="var(--status-ok-text)" text-anchor="end">SCALE: 1:1 REPRODUCIBLE</text>
+              <text x="42" y="33" font-size="9" fill="var(--text-muted)">SYNTHESIS // CORE-DATA-STACK</text>
+              <text x="500" y="33" font-size="9.5" font-weight="600" fill="var(--text-secondary)" text-anchor="middle">CROSS-PROJECT PIPELINE SYNTHESIS · MAPPING GST ENGINE, MINI ERP &amp; INSIGHTFLOW</text>
+              <text x="958" y="33" font-size="9" fill="var(--status-ok-text)" text-anchor="end">PATTERNS: END-TO-END</text>
 
               <!-- ========================================================================
                    STAGE CONNECTOR BUSES (Engineering orthogonal lines with pulse points)
@@ -1008,7 +1034,7 @@
                 <rect x="30" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="30" y1="70" x2="190" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="38" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 1 · RAW INGEST</text>
+                <text class="blueprint-stage-num" x="38" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 1 · INGEST (GST &amp; ERP)</text>
 
                 <!-- Stream A: Invoices -->
                 <rect x="38" y="78" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1053,7 +1079,7 @@
                 <rect x="230" y="46" width="165" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="230" y1="70" x2="395" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="238" y="62" font-size="9.5" font-weight="600" fill="var(--accent-amber)">STAGE 2 · TRANSFORM</text>
+                <text class="blueprint-stage-num" x="238" y="62" font-size="9.5" font-weight="600" fill="var(--accent-amber)">STAGE 2 · TRANSFORM (PYTHON ETL)</text>
 
                 <!-- Logic 1: Tax Head Routing -->
                 <rect x="238" y="78" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1085,7 +1111,7 @@
                 <rect x="435" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="435" y1="70" x2="595" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="443" y="62" font-size="9.5" font-weight="600" fill="var(--accent-steel)">STAGE 3 · SQL 3NF STORE</text>
+                <text class="blueprint-stage-num" x="443" y="62" font-size="9.5" font-weight="600" fill="var(--accent-steel)">STAGE 3 · SQL 3NF STORE (DB CORE)</text>
 
                 <!-- Cylinder icon + DB label -->
                 <g transform="translate(445, 78)">
@@ -1131,7 +1157,7 @@
                 <rect x="635" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="635" y1="70" x2="795" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="643" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 4 · BI ANALYTICS</text>
+                <text class="blueprint-stage-num" x="643" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 4 · BI ANALYTICS (RECON &amp; KPIS)</text>
 
                 <!-- Mini Visual 1: Tax Validation Segment Bar -->
                 <rect x="643" y="78" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1176,7 +1202,7 @@
                 <rect x="835" y="46" width="135" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="835" y1="70" x2="970" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="843" y="62" font-size="9.5" font-weight="600" fill="var(--accent-amber)">STAGE 5 · DECISIONS</text>
+                <text class="blueprint-stage-num" x="843" y="62" font-size="9" font-weight="600" fill="var(--accent-amber)">STAGE 5 · ACTION &amp; DECISION</text>
 
                 <!-- Action 1: ITC Claim -->
                 <rect x="843" y="78" width="119" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1236,7 +1262,7 @@
           </div>
         </div>
 
-        <p class="blueprint-disclaimer">Illustrative architecture connecting selected patterns from GST Invoice Automation and Mini ERP with planned InsightFlow concepts. This is not a single deployed end-to-end pipeline; InsightFlow remains in progress.</p>
+        <p class="blueprint-disclaimer"><strong>Architecture Context:</strong> Illustrative synthesis connecting architectural patterns from the GST Invoice Automation engine and Mini ERP system with planned InsightFlow pipeline concepts. This is a conceptual reference mapping shared data flow patterns across separate projects, not a single deployed end-to-end pipeline; InsightFlow remains in active development.</p>
 
         <div class="tier2-grid">
           <!-- InsightFlow -->

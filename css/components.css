@@ -1758,7 +1758,8 @@
 
 /* --------------------------------------------------------------------------
    Ambient data-engineering field
-   Decorative SVGs stay in wide-screen page gutters. They never intercept input.
+   Decorative technical SVGs restricted strictly to outer page gutters.
+   Never intercept input, never overlap content container.
    -------------------------------------------------------------------------- */
 .ambient-data-field {
   display: none;
@@ -1768,13 +1769,25 @@
   overflow: hidden;
   pointer-events: none;
   user-select: none;
-  opacity: 0.9;
 }
 
-.ambient-data-svg {
+.ambient-gutter-svg {
   display: block;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
   height: 100%;
+  max-width: 240px;
+}
+
+.ambient-gutter-left {
+  left: 0;
+  width: calc((100vw - var(--container-max-w)) / 2);
+}
+
+.ambient-gutter-right {
+  right: 0;
+  width: calc((100vw - var(--container-max-w)) / 2);
 }
 
 .ambient-drift-slow,
@@ -1792,7 +1805,7 @@
 }
 
 .ambient-flow-line {
-  stroke-dasharray: 3 15;
+  stroke-dasharray: 4 16;
   animation: ambient-flow 32s linear infinite;
 }
 
@@ -1800,6 +1813,15 @@
   transform-box: fill-box;
   transform-origin: center;
   animation: ambient-pulse 6.5s ease-in-out infinite;
+}
+
+/* Traveling data packets gliding down connecting pipelines */
+.ambient-pulse-travel-down {
+  animation: ambient-travel-down 18s linear infinite;
+}
+
+.ambient-pulse-travel-down-delayed {
+  animation: ambient-travel-down 22s linear 9s infinite;
 }
 
 @keyframes ambient-drift {
@@ -1813,17 +1835,36 @@
 }
 
 @keyframes ambient-flow {
-  to { stroke-dashoffset: -144; }
+  to { stroke-dashoffset: -160; }
 }
 
 @keyframes ambient-pulse {
-  0%, 100% { opacity: 0.45; }
-  50% { opacity: 0.95; }
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.85; }
 }
 
-@media (min-width: 1366px) {
+@keyframes ambient-travel-down {
+  0% { transform: translate3d(0, 0, 0); opacity: 0; }
+  8% { opacity: 0.85; }
+  92% { opacity: 0.85; }
+  100% { transform: translate3d(0, 640px, 0); opacity: 0; }
+}
+
+/* Activate on standard desktop & laptop widths with comfortable negative margins */
+@media (min-width: 1200px) {
   .ambient-data-field {
     display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-drift-slow,
+  .ambient-drift-reverse,
+  .ambient-flow-line,
+  .ambient-data-pulse,
+  .ambient-pulse-travel-down,
+  .ambient-pulse-travel-down-delayed {
+    animation: none !important;
   }
 }
 
