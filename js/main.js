@@ -3,14 +3,14 @@
  * Mobile navigation, table filters, config sync, accessible interactions.
  */
 document.addEventListener("DOMContentLoaded", () => {
+  initScrollProgress();
+  initPointerSpotlights();
+  initCopyrightYear();
   initMobileNav();
   initGstTableFilter();
   applySiteConfig();
   initScrollSpy();
   initBackToTop();
-  initScrollProgress();
-  initPointerSpotlights();
-  initCopyrightYear();
 });
 
 /**
@@ -361,7 +361,7 @@ function initPointerSpotlights() {
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
   const targets = document.querySelectorAll(
-    ".project-case-study, .tier2-card, .philosophy-card, " +
+    ".project-case-study, .tier2-card, .philosophy-card, .hero-status-panel, " +
     ".progression-step-card, .credential-card, .location-alignment-card, .internship-focus-card"
   );
 

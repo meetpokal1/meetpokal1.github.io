@@ -153,12 +153,11 @@
         </button>
       </div>
     </div>
+    <!-- Page reading progress indicator -->
+    <div class="reading-progress" aria-hidden="true">
+      <span class="reading-progress-fill" id="reading-progress-fill"></span>
+    </div>
   </header>
-
-  <!-- Page reading progress indicator -->
-  <div class="reading-progress" aria-hidden="true">
-    <span class="reading-progress-fill" id="reading-progress-fill"></span>
-  </div>
 
   <main id="main-content">
     <!-- Hero Section -->
@@ -166,18 +165,40 @@
       <div class="container">
                 <div class="hero-intro-layout">
           <div class="hero-copy">
-        <p class="hero-domain-note">Data Analyst &amp; BI Portfolio · SQL · Python · Excel · Power BI</p>
-        <h1 id="hero-title" class="hero-title">Reconciling messy data.<br>Modeling operational truth.</h1>
+            <p class="hero-domain-note">Data Analyst &amp; BI Portfolio · SQL · Python · Excel · Power BI</p>
+            <h1 id="hero-title" class="hero-title">Reconciling messy data.<br>Modeling operational truth.</h1>
+          </div>
+          <aside class="hero-status-panel spotlight-card" aria-label="Portfolio status">
+            <div class="hero-status-panel-head">
+              <div class="hero-status-window">
+                <span class="hero-window-dot hero-window-dot-amber"></span>
+                <span class="hero-window-dot hero-window-dot-teal"></span>
+                <span class="hero-window-dot hero-window-dot-muted"></span>
+                <span class="hero-status-code">PROFILE STATUS</span>
+              </div>
+              <span class="hero-status-state"><span class="hero-status-indicator"></span> OPEN TO INTERNSHIPS</span>
+            </div>
+            <table class="hero-status-table" aria-label="Professional profile summary">
+              <tbody>
+                <tr><th scope="row">FOCUS</th><td><span class="hero-table-dot"></span>Data Analyst / BI</td></tr>
+                <tr><th scope="row">STACK</th><td>Python · SQL · Excel · Power BI</td></tr>
+                <tr><th scope="row">REGION</th><td>Navi Mumbai / Mumbai</td></tr>
+                <tr><th scope="row">MODE</th><td>On-site · Hybrid · Remote</td></tr>
+              </tbody>
+            </table>
+            <div class="hero-status-panel-footer">
+              <span>PORTFOLIO // MP-DA</span><span class="hero-status-footer-mark">2026</span>
+            </div>
+          </aside>
+        </div>
 
         <p class="hero-lede">
           I build Python, Pandas, and SQL systems that audit transactional records, model inventory replenishment thresholds, and automate business reporting. <span class="muted-inline">Focused on verifiable data integrity, relational precision, and decision-ready outputs.</span>
         </p>
-
         <div class="availability-pill">
           <span class="status-dot"></span>
           <span>Navi Mumbai / Mumbai, Maharashtra · Available for Internships (On-site, Hybrid, Remote)</span>
         </div>
-
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">
             <span>Explore Case Studies ↓</span>
@@ -201,35 +222,7 @@
           </a>
         </div>
 
-          <aside class="hero-status-panel" aria-label="Portfolio focus and availability">
-            <div class="hero-status-panel-head">
-              <span class="hero-status-code">PROFILE / SNAPSHOT</span>
-              <span class="hero-status-state"><span class="hero-status-indicator"></span> OPEN TO INTERNSHIPS</span>
-            </div>
-            <dl class="hero-status-list">
-              <div>
-                <dt>ROLE FOCUS</dt>
-                <dd>Data Analyst · BI</dd>
-              </div>
-              <div>
-                <dt>CORE STACK</dt>
-                <dd>Python · SQL · Excel · Power BI</dd>
-              </div>
-              <div>
-                <dt>WORK</dt>
-                <dd>Data quality, reporting &amp; automation</dd>
-              </div>
-              <div>
-                <dt>REGION</dt>
-                <dd>Navi Mumbai · Mumbai</dd>
-              </div>
-            </dl>
-            <div class="hero-status-panel-footer">
-              <span>PORTFOLIO // MP-DA</span>
-              <span class="hero-status-footer-mark">01</span>
-            </div>
-          </aside>
-        </div>
+          
 
         <!-- Proof Strip (4-Up Horizontal Stat Grid) -->
         <div class="proof-strip" aria-label="Key Portfolio Proof Points">
