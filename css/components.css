@@ -174,7 +174,8 @@
   line-height: 1.65;
   color: var(--text-primary);
   max-width: var(--prose-max-w);
-  margin-bottom: var(--space-20);
+  margin-top: var(--space-16);
+  margin-bottom: 0;
 }
 
 .hero-lede .muted-inline {
@@ -2139,6 +2140,12 @@
   align-items: start;
   gap: var(--space-20);
   margin-bottom: var(--space-12);
+}
+
+.hero-intro-layout .hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .hero-copy { min-width: 0; }
