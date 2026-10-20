@@ -1572,3 +1572,250 @@
   }
 }
 
+
+
+/* ==========================================================================
+   Data Systems Blueprint & Schematic Linework
+   Engineered architectural visual showcasing end-to-end data pipelines.
+   ========================================================================== */
+
+.blueprint-card {
+  margin-top: var(--space-28);
+  margin-bottom: var(--space-36);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle); /* taste-skill-ignore */
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.blueprint-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  padding: var(--space-12) var(--space-20);
+  background: var(--bg-surface-subtle);
+  border-bottom: 1px solid var(--border-subtle); /* taste-skill-ignore */
+  font-family: var(--font-mono); /* taste-skill-ignore */
+  font-size: var(--fs-xs);
+}
+
+.blueprint-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.blueprint-spec-id {
+  color: var(--accent-amber);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.blueprint-svg text {
+  font-family: var(--font-mono); /* taste-skill-ignore */
+  text-rendering: geometricPrecision;
+}
+
+.blueprint-svg text.bp-sans {
+  font-family: var(--font-sans);
+}
+
+.blueprint-title-text {
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+.blueprint-meta-tags {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.blueprint-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--status-ok-text);
+  font-size: 11px;
+}
+
+.blueprint-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--status-ok-text);
+}
+
+.blueprint-scale-tag {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.blueprint-canvas-wrap {
+  width: 100%;
+  padding: var(--space-12);
+  background: var(--bg-canvas);
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blueprint-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 820px;
+}
+
+/* Restrained Hover & Schematic Interactions */
+.blueprint-node {
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: default;
+}
+
+.blueprint-node:hover rect.blueprint-box-bg {
+  stroke: var(--accent-amber);
+}
+
+.blueprint-node:hover text.blueprint-stage-num {
+  fill: var(--accent-amber);
+}
+
+.blueprint-bus-line {
+  stroke-dasharray: 4 3;
+  animation: blueprintFlow 20s linear infinite;
+}
+
+@keyframes blueprintFlow {
+  to {
+    stroke-dashoffset: -70;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blueprint-bus-line {
+    animation: none;
+    stroke-dasharray: none;
+  }
+}
+
+/* Blueprint Footer & Color Legend */
+.blueprint-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  padding: var(--space-8) var(--space-20);
+  background: var(--bg-surface-subtle);
+  border-top: 1px solid var(--border-subtle); /* taste-skill-ignore */
+  font-family: var(--font-mono); /* taste-skill-ignore */
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.blueprint-legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+}
+
+.blueprint-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blueprint-legend-color {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.blueprint-legend-teal {
+  background: var(--accent-teal);
+}
+
+.blueprint-legend-amber {
+  background: var(--accent-amber);
+}
+
+.blueprint-legend-steel {
+  background: var(--accent-steel);
+}
+
+.blueprint-legend-rose {
+  background: var(--accent-rose);
+}
+
+/* Subtle Hero Coordinate Datum Badge */
+.hero {
+  position: relative;
+}
+
+.hero-schematic-datum {
+  position: absolute;
+  top: var(--space-32);
+  right: var(--space-24);
+  pointer-events: none;
+  user-select: none;
+  border: 1px solid var(--border-subtle); /* taste-skill-ignore */
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  padding: 8px 12px;
+  font-family: var(--font-mono); /* taste-skill-ignore */
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.45;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+}
+
+.datum-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+.datum-spec-id {
+  color: var(--accent-amber);
+  font-weight: 600;
+}
+
+.datum-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--status-ok-text);
+}
+
+.datum-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--status-ok-text);
+}
+
+.datum-coords {
+  color: var(--text-secondary);
+  font-size: 10px;
+}
+
+.datum-flow {
+  color: var(--text-muted);
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .hero-schematic-datum {
+    display: none;
+  }
+}

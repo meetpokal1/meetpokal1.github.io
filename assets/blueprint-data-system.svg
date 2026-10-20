@@ -1,0 +1,304 @@
+<svg class="blueprint-svg" viewBox="0 0 1000 320" width="1000" height="320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technical schematic blueprint diagram showing the end-to-end data pipeline from raw data to Python transformation, SQL storage, BI analytics, and business decisions">
+  <defs>
+    <!-- Schematic hairline grid -->
+    <pattern id="bp-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--border-subtle)" stroke-width="0.5" stroke-opacity="0.35" />
+    </pattern>
+    <!-- Arrowhead markers -->
+    <marker id="bp-arrow-teal" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1 L 7 4 L 1 7 z" fill="var(--accent-teal)" />
+    </marker>
+    <marker id="bp-arrow-amber" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1 L 7 4 L 1 7 z" fill="var(--accent-amber)" />
+    </marker>
+    <marker id="bp-arrow-steel" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 1 L 7 4 L 1 7 z" fill="var(--accent-steel)" />
+    </marker>
+  </defs>
+
+  <!-- Technical Canvas Surface with Grid -->
+  <rect x="0" y="0" width="1000" height="320" fill="var(--bg-canvas)" />
+  <rect x="0" y="0" width="1000" height="320" fill="url(#bp-grid)" />
+
+  <!-- Outer Blueprint Border with Hairline Double Stroke -->
+  <rect x="8" y="8" width="984" height="304" fill="none" stroke="var(--border-subtle)" stroke-width="1" stroke-opacity="0.6" />
+  <rect x="12" y="12" width="976" height="296" fill="none" stroke="var(--border-subtle)" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="4 2" />
+
+  <!-- Corner Engineering Alignment Crosshairs -->
+  <g stroke="var(--accent-amber)" stroke-width="1" opacity="0.75">
+    <path d="M 18 24 L 30 24 M 24 18 L 24 30" />
+    <path d="M 970 24 L 982 24 M 976 18 L 976 30" />
+    <path d="M 18 296 L 30 296 M 24 290 L 24 302" />
+    <path d="M 970 296 L 982 296 M 976 290 L 976 302" />
+  </g>
+
+  <!-- Top Coordinate Scale & Dimension Line -->
+  <g stroke="var(--border-subtle)" stroke-width="0.75" opacity="0.5">
+    <line x1="40" y1="20" x2="960" y2="20" />
+    <line x1="40" y1="16" x2="40" y2="24" />
+    <line x1="230" y1="17" x2="230" y2="23" />
+    <line x1="430" y1="16" x2="430" y2="24" />
+    <line x1="630" y1="17" x2="630" y2="23" />
+    <line x1="830" y1="16" x2="830" y2="24" />
+    <line x1="960" y1="16" x2="960" y2="24" />
+  </g>
+  <g font-size="8" fill="var(--text-muted)" opacity="0.75" text-anchor="middle">
+    <text x="40" y="15">000</text>
+    <text x="230" y="15">250</text>
+    <text x="430" y="15">500</text>
+    <text x="630" y="15">750</text>
+    <text x="830" y="15">900</text>
+    <text x="960" y="15">1000</text>
+  </g>
+
+  <!-- Top Title & Architecture Callout -->
+  <text x="42" y="33" font-size="9" fill="var(--text-muted)">SPEC // SYS-ARCH-DATA-FLOW</text>
+  <text x="500" y="33" font-size="9.5" font-weight="600" fill="var(--text-secondary)" text-anchor="middle">OPERATIONAL ANALYTICS PIPELINE: RAW CAPTURE → AUDIT ENGINE → DECISION</text>
+  <text x="958" y="33" font-size="9" fill="var(--status-ok-text)" text-anchor="end">SCALE: 1:1 REPRODUCIBLE</text>
+
+  <!-- ========================================================================
+       STAGE CONNECTOR BUSES (Engineering orthogonal lines with pulse points)
+       ======================================================================== -->
+  <g class="blueprint-bus-group">
+    <!-- Bus 1 -> 2: Ingest to Transform -->
+    <path class="blueprint-bus-line" d="M 190 145 L 225 145" stroke="var(--accent-teal)" stroke-width="1.5" marker-end="url(#bp-arrow-teal)" />
+    <circle cx="207" cy="145" r="3" fill="var(--accent-teal)" />
+    <text x="207" y="139" font-size="7.5" fill="var(--text-muted)" text-anchor="middle">RAW_DATA</text>
+
+    <!-- Bus 2 -> 3: Transform to SQL -->
+    <path class="blueprint-bus-line" d="M 395 145 L 430 145" stroke="var(--accent-amber)" stroke-width="1.5" marker-end="url(#bp-arrow-amber)" />
+    <circle cx="412" cy="145" r="3" fill="var(--accent-amber)" />
+    <text x="412" y="139" font-size="7.5" fill="var(--text-muted)" text-anchor="middle">AUDITED_DF</text>
+
+    <!-- Bus 3 -> 4: SQL to Analytics -->
+    <path class="blueprint-bus-line" d="M 595 145 L 630 145" stroke="var(--accent-steel)" stroke-width="1.5" marker-end="url(#bp-arrow-steel)" />
+    <circle cx="612" cy="145" r="3" fill="var(--accent-steel)" />
+    <text x="612" y="139" font-size="7.5" fill="var(--text-muted)" text-anchor="middle">SQL_MART</text>
+
+    <!-- Bus 4 -> 5: Analytics to Decisions -->
+    <path class="blueprint-bus-line" d="M 795 145 L 830 145" stroke="var(--accent-teal)" stroke-width="1.5" marker-end="url(#bp-arrow-teal)" />
+    <circle cx="812" cy="145" r="3" fill="var(--accent-teal)" />
+    <text x="812" y="139" font-size="7.5" fill="var(--text-muted)" text-anchor="middle">ACTION_KPI</text>
+  </g>
+
+  <!-- ========================================================================
+       STAGE 1: INGESTION (Raw Data Inputs)
+       ======================================================================== -->
+  <g class="blueprint-node" id="bp-node-1">
+    <rect class="blueprint-box-bg" x="30" y="46" width="160" height="234" rx="4" fill="var(--bg-surface)" stroke="var(--border-subtle)" stroke-width="1" />
+    <rect x="30" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
+    <line x1="30" y1="70" x2="190" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
+    <text class="blueprint-stage-num" x="38" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 1 · RAW INGEST</text>
+
+    <!-- Stream A: Invoices -->
+    <rect x="38" y="78" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <g transform="translate(44, 88)" stroke="var(--accent-teal)" stroke-width="1" fill="none">
+      <rect x="0" y="0" width="12" height="14" rx="1" />
+      <line x1="3" y1="4" x2="9" y2="4" />
+      <line x1="3" y1="7" x2="9" y2="7" />
+      <line x1="3" y1="10" x2="7" y2="10" />
+    </g>
+    <text class="bp-sans" x="62" y="92" font-size="9.5" font-weight="600" fill="var(--text-primary)">CSV Invoices (10)</text>
+    <text x="62" y="104" font-size="8.5" fill="var(--accent-teal)">₹215.5K Batch Volume</text>
+    <text x="62" y="116" font-size="7.5" fill="var(--text-muted)">MH, KA, DL Multi-State</text>
+
+    <!-- Stream B: CDC Stream -->
+    <rect x="38" y="134" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <g transform="translate(44, 145)" stroke="var(--accent-amber)" stroke-width="1.2" fill="none">
+      <path d="M 3 2 L 0 5 L 3 8 M 9 2 L 12 5 L 9 8" />
+    </g>
+    <text class="bp-sans" x="62" y="148" font-size="9.5" font-weight="600" fill="var(--text-primary)">JSON CDC Events</text>
+    <text x="62" y="160" font-size="8.5" fill="var(--accent-amber)">Streaming Logs</text>
+    <text x="62" y="172" font-size="7.5" fill="var(--text-muted)">Schema-keyed payloads</text>
+
+    <!-- Stream C: Catalog Master -->
+    <rect x="38" y="190" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <g transform="translate(44, 201)" stroke="var(--accent-steel)" stroke-width="1" fill="none">
+      <ellipse cx="6" cy="3" rx="6" ry="2.5" />
+      <path d="M 0 3 v 7 c 0 1.4 2.7 2.5 6 2.5 s 6 -1.1 6 -2.5 v -7" />
+    </g>
+    <text class="bp-sans" x="62" y="204" font-size="9.5" font-weight="600" fill="var(--text-primary)">Item Master (6 SKUs)</text>
+    <text x="62" y="216" font-size="8.5" fill="var(--text-secondary)">Catalog &amp; Cost Baselines</text>
+    <text x="62" y="228" font-size="7.5" fill="var(--text-muted)">Thresholds &amp; Lead Times</text>
+
+    <!-- Stage 1 Footer Note -->
+    <text x="110" y="264" font-size="8" fill="var(--text-muted)" text-anchor="middle">RFC 4180 · UTF-8 Ingest</text>
+  </g>
+
+  <!-- ========================================================================
+       STAGE 2: TRANSFORM & AUDIT (Python & Pandas Engine)
+       ======================================================================== -->
+  <g class="blueprint-node" id="bp-node-2">
+    <rect class="blueprint-box-bg" x="230" y="46" width="165" height="234" rx="4" fill="var(--bg-surface)" stroke="var(--border-subtle)" stroke-width="1" />
+    <rect x="230" y="46" width="165" height="24" fill="var(--bg-surface-subtle)" />
+    <line x1="230" y1="70" x2="395" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
+
+    <text class="blueprint-stage-num" x="238" y="62" font-size="9.5" font-weight="600" fill="var(--accent-amber)">STAGE 2 · TRANSFORM</text>
+
+    <!-- Logic 1: Tax Head Routing -->
+    <rect x="238" y="78" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <text x="246" y="92" font-size="9" font-weight="600" fill="var(--accent-amber)">tax_routing_logic()</text>
+    <text x="246" y="104" font-size="8" fill="var(--text-secondary)">Intrastate → CGST + SGST</text>
+    <text x="246" y="116" font-size="8" fill="var(--text-secondary)">Interstate → IGST (9%/18%)</text>
+
+    <!-- Logic 2: Tolerance & Audit Math -->
+    <rect x="238" y="134" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <text x="246" y="148" font-size="9" font-weight="600" fill="var(--accent-amber)">verify_tolerance()</text>
+    <text x="246" y="160" font-size="8" fill="var(--text-primary)">|Expected - Actual| ≤ ₹0.50</text>
+    <text x="246" y="172" font-size="8" fill="var(--status-ok-text)">Verified: 89.2% | Flag: 10.8%</text>
+
+    <!-- Logic 3: Inventory Replenishment Logic -->
+    <rect x="238" y="190" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <text x="246" y="204" font-size="9" font-weight="600" fill="var(--accent-amber)">eval_reorder_trigger()</text>
+    <text x="246" y="216" font-size="8" fill="var(--text-secondary)">Available = Stock + Open_PO</text>
+    <text x="246" y="228" font-size="8" fill="var(--status-mismatch-text)">Trigger if Available &lt; Reorder</text>
+
+    <!-- Stage 2 Footer Note -->
+    <text x="312" y="264" font-size="8" fill="var(--text-muted)" text-anchor="middle">NumPy Vectorized · Deterministic</text>
+  </g>
+
+  <!-- ========================================================================
+       STAGE 3: SQL DATABASE (3NF Relational Data Store)
+       ======================================================================== -->
+  <g class="blueprint-node" id="bp-node-3">
+    <rect class="blueprint-box-bg" x="435" y="46" width="160" height="234" rx="4" fill="var(--bg-surface)" stroke="var(--border-subtle)" stroke-width="1" />
+    <rect x="435" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
+    <line x1="435" y1="70" x2="595" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
+
+    <text class="blueprint-stage-num" x="443" y="62" font-size="9.5" font-weight="600" fill="var(--accent-steel)">STAGE 3 · SQL 3NF STORE</text>
+
+    <!-- Cylinder icon + DB label -->
+    <g transform="translate(445, 78)">
+      <ellipse cx="12" cy="6" rx="10" ry="4" stroke="var(--accent-steel)" stroke-width="1" fill="none" />
+      <path d="M 2 6 v 14 c 0 2.2 4.5 4 10 4 s 10 -1.8 10 -4 v -14" stroke="var(--accent-steel)" stroke-width="1" fill="none" />
+      <path d="M 2 13 c 0 2.2 4.5 4 10 4 s 10 -1.8 10 -4" stroke="var(--accent-steel)" stroke-width="0.75" fill="none" opacity="0.5" />
+      <text class="bp-sans" x="28" y="12" font-size="9.5" font-weight="600" fill="var(--text-primary)">SQLite Core DB</text>
+      <text x="28" y="22" font-size="8" fill="var(--text-muted)">ACID Transactions</text>
+    </g>
+
+    <!-- Schema Entities Box -->
+    <rect x="443" y="108" width="144" height="130" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+
+    <!-- Table 1 -->
+    <text x="451" y="122" font-size="8.5" font-weight="600" fill="var(--accent-steel)">fact_invoices</text>
+    <text x="451" y="133" font-size="7.5" fill="var(--text-muted)">[PK] id  [FK] supplier_id</text>
+    <text x="451" y="143" font-size="7.5" fill="var(--text-secondary)">taxable_val, igst, flag</text>
+    <line x1="451" y1="148" x2="579" y2="148" stroke="var(--border-subtle)" stroke-width="0.5" />
+
+    <!-- Table 2 -->
+    <text x="451" y="160" font-size="8.5" font-weight="600" fill="var(--accent-steel)">dim_inventory</text>
+    <text x="451" y="171" font-size="7.5" fill="var(--text-muted)">[PK] sku_code</text>
+    <text x="451" y="181" font-size="7.5" fill="var(--text-secondary)">current_stock, reorder_lvl</text>
+    <line x1="451" y1="186" x2="579" y2="186" stroke="var(--border-subtle)" stroke-width="0.5" />
+
+    <!-- Table 3 -->
+    <text x="451" y="198" font-size="8.5" font-weight="600" fill="var(--accent-steel)">fact_purchase_orders</text>
+    <text x="451" y="209" font-size="7.5" fill="var(--text-muted)">[PK] po_no  [FK] sku_code</text>
+    <text x="451" y="219" font-size="7.5" fill="var(--text-secondary)">ordered_qty, status_code</text>
+
+    <!-- Relational link between tables -->
+    <path d="M 572 170 C 584 170 584 206 572 206" stroke="var(--accent-amber)" stroke-width="1" fill="none" stroke-dasharray="2 2" />
+
+    <!-- Stage 3 Footer Note -->
+    <text x="515" y="264" font-size="8" fill="var(--text-muted)" text-anchor="middle">Foreign Key Integrity Enforced</text>
+  </g>
+
+  <!-- ========================================================================
+       STAGE 4: BI ANALYTICS (Reconciliation & Performance Visuals)
+       ======================================================================== -->
+  <g class="blueprint-node" id="bp-node-4">
+    <rect class="blueprint-box-bg" x="635" y="46" width="160" height="234" rx="4" fill="var(--bg-surface)" stroke="var(--border-subtle)" stroke-width="1" />
+    <rect x="635" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
+    <line x1="635" y1="70" x2="795" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
+
+    <text class="blueprint-stage-num" x="643" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 4 · BI ANALYTICS</text>
+
+    <!-- Mini Visual 1: Tax Validation Segment Bar -->
+    <rect x="643" y="78" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <text class="bp-sans" x="651" y="91" font-size="8.5" font-weight="600" fill="var(--text-primary)">Tax Audit Rate (₹40,020)</text>
+    <!-- Stacked bar -->
+    <rect x="651" y="97" width="100" height="10" rx="2" fill="var(--accent-teal)" />
+    <rect x="753" y="97" width="26" height="10" rx="2" fill="var(--accent-rose)" />
+    <text x="651" y="118" font-size="7.5" fill="var(--accent-teal)">89.2% (₹35.7K)</text>
+    <text x="779" y="118" font-size="7.5" fill="var(--accent-rose)" text-anchor="end">10.8% (₹4.3K)</text>
+
+    <!-- Mini Visual 2: Geographic Ratio Mini Bar -->
+    <rect x="643" y="134" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <text class="bp-sans" x="651" y="147" font-size="8.5" font-weight="600" fill="var(--text-primary)">State Revenue Ratio</text>
+    <rect x="651" y="153" width="86" height="10" rx="2" fill="var(--text-primary)" />
+    <rect x="739" y="153" width="40" height="10" rx="2" fill="var(--accent-steel)" />
+    <text x="651" y="174" font-size="7.5" fill="var(--text-secondary)">MH 68.0% (₹146.5K)</text>
+    <text x="779" y="174" font-size="7.5" fill="var(--accent-steel)" text-anchor="end">Other 32%</text>
+
+    <!-- Mini Visual 3: Inventory Stock vs Threshold Pins -->
+    <rect x="643" y="190" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <text class="bp-sans" x="651" y="203" font-size="8.5" font-weight="600" fill="var(--text-primary)">6 SKUs Threshold Pins</text>
+    <!-- Threshold hairline -->
+    <line x1="651" y1="218" x2="779" y2="218" stroke="var(--accent-amber)" stroke-width="0.75" stroke-dasharray="2 2" />
+    <!-- 6 SKU pin indicators -->
+    <circle cx="658" cy="210" r="3" fill="var(--accent-teal)" />
+    <circle cx="678" cy="212" r="3" fill="var(--accent-teal)" />
+    <circle cx="698" cy="226" r="3" fill="var(--accent-rose)" />
+    <circle cx="718" cy="208" r="3" fill="var(--accent-teal)" />
+    <circle cx="738" cy="225" r="3" fill="var(--accent-rose)" />
+    <circle cx="758" cy="214" r="3" fill="var(--accent-teal)" />
+    <text x="651" y="232" font-size="7.5" fill="var(--text-muted)">4 OK · 2 Deficits flagged</text>
+
+    <!-- Stage 4 Footer Note -->
+    <text x="715" y="264" font-size="8" fill="var(--text-muted)" text-anchor="middle">Executive KPI Readiness</text>
+  </g>
+
+  <!-- ========================================================================
+       STAGE 5: BUSINESS ACTIONS & DECISIONS
+       ======================================================================== -->
+  <g class="blueprint-node" id="bp-node-5">
+    <rect class="blueprint-box-bg" x="835" y="46" width="135" height="234" rx="4" fill="var(--bg-surface)" stroke="var(--border-subtle)" stroke-width="1" />
+    <rect x="835" y="46" width="135" height="24" fill="var(--bg-surface-subtle)" />
+    <line x1="835" y1="70" x2="970" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
+
+    <text class="blueprint-stage-num" x="843" y="62" font-size="9.5" font-weight="600" fill="var(--accent-amber)">STAGE 5 · DECISIONS</text>
+
+    <!-- Action 1: ITC Claim -->
+    <rect x="843" y="78" width="119" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <text class="bp-sans" x="851" y="92" font-size="9" font-weight="600" fill="var(--text-primary)">Claim Tax Credit</text>
+    <text x="851" y="104" font-size="8.5" fill="var(--accent-teal)">₹35,700 Verified</text>
+    <g transform="translate(851, 110)">
+      <path d="M 0 3.5 L 2.5 6 L 7 1" stroke="var(--status-ok-text)" stroke-width="1.2" fill="none" />
+      <text x="11" y="6" font-size="7.5" fill="var(--status-ok-text)">GSTR-2B Ready</text>
+    </g>
+
+    <!-- Action 2: Vendor Dispute -->
+    <rect x="843" y="134" width="119" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <text class="bp-sans" x="851" y="148" font-size="9" font-weight="600" fill="var(--text-primary)">Audit Vendor Bills</text>
+    <text x="851" y="160" font-size="8.5" fill="var(--accent-rose)">2 Invoices Flagged</text>
+    <g transform="translate(851, 166)">
+      <path d="M 3.5 0.5 L 7 6.5 L 0 6.5 Z" stroke="var(--accent-rose)" stroke-width="0.8" fill="none" />
+      <line x1="3.5" y1="2.2" x2="3.5" y2="4.2" stroke="var(--accent-rose)" stroke-width="0.8" />
+      <circle cx="3.5" cy="5.4" r="0.4" fill="var(--accent-rose)" />
+      <text x="11" y="6" font-size="7.5" fill="var(--accent-rose)">₹4,320 Mismatch</text>
+    </g>
+
+    <!-- Action 3: Restock Trigger -->
+    <rect x="843" y="190" width="119" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
+    <text class="bp-sans" x="851" y="204" font-size="9" font-weight="600" fill="var(--text-primary)">Trigger Reorder</text>
+    <text x="851" y="216" font-size="8.5" fill="var(--accent-amber)">2 Purchase Orders</text>
+    <g transform="translate(851, 222)">
+      <path d="M 4 0.5 L 1.5 4 H 3.5 L 3 7 L 6 3.5 H 4 Z" fill="var(--accent-amber)" />
+      <text x="11" y="6" font-size="7.5" fill="var(--accent-amber)">Replenish Stock</text>
+    </g>
+
+    <!-- Stage 5 Status Indicator -->
+    <g transform="translate(851, 255)">
+      <circle cx="4" cy="4" r="3" fill="var(--status-ok-text)" />
+      <text x="12" y="7" font-size="8" font-weight="600" fill="var(--status-ok-text)">AUDIT ACTIVE</text>
+    </g>
+  </g>
+
+  <!-- Bottom Engineering Dimension & Spec Ticks -->
+  <g stroke="var(--border-subtle)" stroke-width="0.5" opacity="0.5">
+    <line x1="40" y1="298" x2="960" y2="298" />
+    <line x1="40" y1="294" x2="40" y2="302" />
+    <line x1="960" y1="294" x2="960" y2="302" />
+  </g>
+  <text x="500" y="307" font-size="8" fill="var(--text-muted)" text-anchor="middle">ENGINEERED SCHEMATIC // DATA SYSTEM ARCHITECTURE // SYSTEM REF: MP-ETL-2026</text>
+</svg>
