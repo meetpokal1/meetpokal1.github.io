@@ -292,13 +292,13 @@
             <div>
               <span class="project-relationship-tag project-relationship-tag--blueprint">Blueprint component · 01/03</span>
               <span class="case-domain-tag">Financial Data Auditing &amp; Tax Reconciliation</span>
-              <h3 id="title-gst" class="project-title">GST Invoice &amp; Ledger Automation: Multi-State Reconciliation Engine</h3>
+              <h3 id="title-gst" class="project-title">GST Invoice Validation &amp; Exception Review</h3>
             </div>
-            <span class="status-pill status-pill-ok">Core tool operational · Enhancements in draft PR #1</span>
+            <span class="status-pill status-pill-ok">Core checks + exception review queue</span>
           </div>
 
           <p class="project-problem">
-            <strong>Business Problem:</strong> In Indian commercial accounting, manual cross-checking between vendor invoices and accounting purchase ledgers is labor-intensive and prone to missed input tax credit, rounding errors, and wrong tax head classification. This project automates calculation verification across intra-state (CGST + SGST) and inter-state (IGST) invoices, flagging discrepancies before statutory ledger posting.
+            <strong>Business Problem:</strong> Checking invoice batches row by row can make tax amount and invoice-total discrepancies harder to spot. This Python tool validates required input fields, calculates expected tax splits under a clearly documented simplified same-state/different-state rule, and flags records for human review. Its exception-triage workflow adds a category, review-priority hint, and suggested next check so reviewers can focus on the source-document questions that matter.
           </p>
 
           <!-- KPI Metric Row -->
@@ -317,7 +317,7 @@
             </div>
             <div class="kpi-cell">
               <span class="kpi-num">₹4,320</span>
-              <span class="kpi-label">Flagged Tax (INV-1005 &amp; INV-1009)</span>
+              <span class="kpi-label">Expected GST on 2 Flagged Invoices</span>
             </div>
           </div>
 
@@ -525,10 +525,10 @@
           <!-- Method & Analytical Interpretation -->
           <div style="margin-bottom: var(--space-20);">
             <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary); margin-bottom: var(--space-12);">
-              <strong>Method &amp; Implementation:</strong> The Python engine applies vectorized Pandas logic to compute statutory tax splits based on buyer state relative to the supplier's home jurisdiction (Maharashtra). Records are categorized into Intra-State (equal 50/50 split between CGST and SGST) or Inter-State (100% IGST routing). Line-item rounding differences within a ₹0.50 threshold are evaluated automatically.
+              <strong>Method &amp; Implementation:</strong> The Python engine validates each invoice, applies explicit two-decimal money rounding, compares CGST/SGST/IGST and total amounts against a ₹0.02 tolerance, and categorizes exceptions. The added review queue puts likely tax-head allocation patterns ahead of amount-and-total discrepancies and provides a human-review prompt. These categories are workflow heuristics, not legal determinations.
             </p>
             <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary);">
-              <strong>Analytical Findings:</strong> In this 10-invoice batch, 8 invoices (₹185,500 turnover) reconcile with 0 discrepancy. Two records fail verification: <code>INV-1005</code> underreports total tax by ₹100; <code>INV-1009</code> totals ₹20,160 correctly but wrongly classifies ₹2,160 under intra-state CGST+SGST rather than IGST, which would lead to incorrect portal credit allocation if not caught.
+              <strong>Analytical Findings:</strong> In the synthetic 10-invoice batch, 8 records match the simplified checks and 2 require review. <code>INV-1005</code> reports IGST and invoice total ₹100 below the calculated values. <code>INV-1009</code> has the expected overall total but reports CGST/SGST where the simplified state comparison expects IGST. The output explains each difference and prioritizes the tax-head allocation pattern for review.
             </p>
           </div>
 
@@ -554,8 +554,8 @@
               <a href="https://github.com/meetpokal1/GST-Invoive-Automation" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
                 <span>View Repository ↗</span>
               </a>
-              <a href="https://github.com/meetpokal1/GST-Invoive-Automation/tree/portfolio/gst-validation-and-tests" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>PR #1 Test Branch ↗</span>
+              <a href="https://github.com/meetpokal1/GST-Invoive-Automation" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>View GST Review Queue ↗</span>
               </a>
             </div>
             <p class="project-note">
@@ -572,11 +572,11 @@
               <span class="case-domain-tag">Operational Data Modeling &amp; Stock Thresholds</span>
               <h3 id="title-minierp" class="project-title">Mini ERP Inventory System: Relational Stock Modeling &amp; Reorder Logic</h3>
             </div>
-            <span class="status-pill status-pill-ok">Demonstration Dataset · Streamlit UI</span>
+            <span class="status-pill status-pill-ok">Core workflow + inventory controls</span>
           </div>
 
           <p class="project-problem">
-            <strong>Business Problem:</strong> Without structured threshold detection and relational data modeling, small distribution businesses face frequent stockouts and unmonitored replenishment cycles. This project implements a normalized relational database in SQLite with automated threshold-breach flags and purchase order tracking.
+            <strong>Business Problem:</strong> A basic low-stock alert may still be misleading when a replenishment order is already on the way, and a physical stocktake has to be compared against system records. The core app maintains products, suppliers, purchase orders and stock movements; the application now includes purchase-order-aware replenishment planning and a physical-count review flow.
           </p>
 
           <!-- KPI Metric Row -->
@@ -814,7 +814,7 @@
           <!-- Method & Analytical Interpretation -->
           <div style="margin-bottom: var(--space-20);">
             <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary); margin-bottom: var(--space-12);">
-              <strong>Method &amp; Implementation:</strong> Built a relational SQLite database schema with normalized tables for Products, Inventory Ledgers, and Purchase Orders. The application calculates replenishment triggers in real time by evaluating current stock quantities against configurable reorder level thresholds, rendering a responsive Streamlit operations dashboard.
+              <strong>Method &amp; Implementation:</strong> The app uses SQLite tables for products, suppliers, purchase orders and stock movements, with a Streamlit interface for recording operations. The replenishment planner nets pending purchase-order quantities against on-hand stock before surfacing the remaining gap to a reorder threshold. A physical-count upload compares counted and recorded quantities and calculates variance for review.
             </p>
             <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary);">
               <strong>Analytical Observations:</strong> Three of the six seeded SKUs have breached their replenishment threshold. Open purchase orders are already recorded for SKU-002 (USB-C Cable, 25 units) and SKU-006 (External HDD, 10 units), while SKU-004 (Diamond Polishing Cloth, 5 in stock vs. 10 threshold) has no pending PO on record, representing an unaddressed stockout risk.
@@ -825,7 +825,7 @@
           <div class="recommendation-box">
             <strong>Operational Scope &amp; Recommendation:</strong>
             <p>
-              Automated threshold detection prevents inventory stockouts without holding excessive buffer stock. For immediate operational action, create a purchase order for SKU-004 before trade supply stock reaches zero.
+              In the seeded dataset, SKU-004 is below its configured threshold and has no pending purchase order recorded. The replenishment planner checks pending orders before suggesting another reorder and supports count-variance investigation; neither feature guarantees stockout prevention or replaces checking supplier delivery timing.
             </p>
           </div>
 
@@ -835,6 +835,8 @@
             <li class="tag-item">Streamlit</li>
             <li class="tag-item">Relational Modeling</li>
             <li class="tag-item">Threshold Analytics</li>
+            <li class="tag-item">Cycle Count Review</li>
+            <li class="tag-item">PO-Aware Replenishment</li>
           </ul>
 
           <!-- Deliverables & Source note -->
@@ -842,6 +844,9 @@
             <div class="deliverable-actions">
               <a href="https://github.com/meetpokal1/Mini-ERP-Inventory-System" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
                 <span>View Repository ↗</span>
+              </a>
+              <a href="https://github.com/meetpokal1/Mini-ERP-Inventory-System" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>View Inventory Controls ↗</span>
               </a>
             </div>
             <p class="project-note">
@@ -1091,7 +1096,7 @@
                 <!-- Logic 2: Tolerance & Audit Math -->
                 <rect x="238" y="134" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
                 <text x="246" y="148" font-size="9" font-weight="600" fill="var(--accent-amber)">verify_tolerance()</text>
-                <text x="246" y="160" font-size="8" fill="var(--text-primary)">|Expected - Actual| ≤ ₹0.50</text>
+                <text x="246" y="160" font-size="8" fill="var(--text-primary)">|Expected - Actual| ≤ ₹0.02</text>
                 <text x="246" y="172" font-size="8" fill="var(--status-ok-text)">Verified: 89.2% | Flag: 10.8%</text>
 
                 <!-- Logic 3: Inventory Replenishment Logic -->
