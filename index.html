@@ -906,7 +906,7 @@
                 <td><strong>PharmaGuard AI</strong></td>
                 <td class="matrix-cell-center"><span class="matrix-check" title="Complaint &amp; adverse event ingestion"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
                 <td class="matrix-cell-center"><span class="matrix-check" title="Terminology &amp; classification logic"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
+                <td class="matrix-cell-center"><span class="matrix-check" title="SQLite case register and create/update history"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
                 <td class="matrix-cell-center"><span class="matrix-check" title="Severity triage threshold scoring"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
                 <td class="matrix-cell-center"><span class="matrix-check" title="Complaint routing dashboard"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
               </tr>
@@ -1348,15 +1348,15 @@
           <article class="tier2-card" id="project-pharmaguard">
             <div class="tier2-card-header">
               <span class="project-relationship-tag project-relationship-tag--independent">Separate project · Outside blueprint</span>
-              <span class="status-pill status-pill-ok">Completed Pipeline Prototype</span>
-              <h3 class="tier2-card-title" style="margin-top: var(--space-8);">PharmaGuard AI: Adverse Event Triage</h3>
+              <span class="status-pill status-pill-ok">Complaint Workflow Prototype</span>
+              <h3 class="tier2-card-title" style="margin-top: var(--space-8);">PharmaGuard AI: Complaint Register &amp; Batch Signals</h3>
             </div>
             <p class="tier2-card-prose">
-              Automated pharmaceutical complaint categorization and adverse-event classification pipeline. Ingests patient feedback and service tickets, cleans unstructured narrative text, flags potential safety concerns, and routes records to QA compliance teams.
+              Collects complaint details from chat/PDF input, extracts structured fields with an LLM, applies transparent keyword-based severity heuristics, and persists case records in SQLite. Surfaces possible repeated product/batch reports and create/update history for human review; the signal does not confirm a defect or causality.
             </p>
             <div class="pipeline-preview-block">
               <div class="pipeline-preview-header">
-                <span class="pipeline-header-title">Triage &amp; Classification Flow</span>
+                <span class="pipeline-header-title">Intake, Case History &amp; Review Signals</span>
               </div>
               <div class="trace-steps-container">
                 <div class="trace-step">
@@ -1376,7 +1376,8 @@
             <div class="tier2-card-footer">
               <ul class="tag-list" style="margin: 0;" aria-label="PharmaGuard tags">
                 <li class="tag-item">NLP Triage</li>
-                <li class="tag-item">QA Routing</li>
+                <li class="tag-item">SQLite Case Register</li>
+                <li class="tag-item">Batch Signal Review</li>
               </ul>
               <a href="https://github.com/meetpokal1/PharmaGuard-AI" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
                 <span>View Repo ↗</span>
@@ -1388,15 +1389,15 @@
           <article class="tier2-card" id="project-dubpilot">
             <div class="tier2-card-header">
               <span class="project-relationship-tag project-relationship-tag--independent">Separate project · Outside blueprint</span>
-              <span class="status-pill status-pill-ok">CLI Automation Pipeline</span>
+              <span class="status-pill status-pill-ok">Resumable CLI Pipeline</span>
               <h3 class="tier2-card-title" style="margin-top: var(--space-8);">Dubpilot: Video Dubbing Pipeline</h3>
             </div>
             <p class="tier2-card-prose">
-              Modular command-line utility translating YouTube videos into English while preserving pacing and timeline synchronization. Orchestrates yt-dlp, FFmpeg audio extraction, OpenAI Whisper transcription, segment translation, and edge-tts time-stretching.
+              Translates video speech into English using timestamped transcription, translation, speech synthesis and FFmpeg muxing. The updated pipeline checkpoints completed stages, resumes interrupted jobs, reuses TTS clips only when text/voice/timing match, and trims generated audio tails that would overlap the next segment.
             </p>
             <div class="pipeline-preview-block">
               <div class="pipeline-preview-header">
-                <span class="pipeline-header-title">5-Stage Media Flow</span>
+                <span class="pipeline-header-title">Selected Pipeline Stages</span>
               </div>
               <div class="trace-steps-container">
                 <div class="trace-step">
@@ -1409,7 +1410,7 @@
                 </div>
                 <div class="trace-step">
                   <span class="trace-num">Stage 3</span>
-                  <div class="trace-body"><strong>Remux:</strong> edge-tts stretched to segment limits</div>
+                  <div class="trace-body"><strong>Remix:</strong> Time-adjust audio, trim overlaps, and mux</div>
                 </div>
               </div>
             </div>
@@ -1417,6 +1418,8 @@
               <ul class="tag-list" style="margin: 0;" aria-label="Dubpilot tags">
                 <li class="tag-item">Python</li>
                 <li class="tag-item">FFmpeg</li>
+                <li class="tag-item">Resume Checkpoints</li>
+                <li class="tag-item">TTS Clip Cache</li>
               </ul>
               <a href="https://github.com/meetpokal1/Dubpilot" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
                 <span>View Repo ↗</span>
