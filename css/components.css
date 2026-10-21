@@ -1046,29 +1046,12 @@
   margin-top: 2.5rem;
 }
 
-/* Keep the supporting cards readable before moving to a three-column row.
-   The third card is centered in the medium layout rather than left orphaned. */
-@media (min-width: 700px) {
-  .tier2-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .tier2-grid > .tier2-card:last-child {
-    grid-column: 1 / -1;
-    width: min(100%, 520px);
-    justify-self: center;
-  }
-}
-
+/* Stack the supporting-project cards until there is enough width for three
+   genuinely readable columns. This avoids a cramped 3-column layout and an
+   orphaned third card on tablet / compact desktop screens. */
 @media (min-width: 1120px) {
   .tier2-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .tier2-grid > .tier2-card:last-child {
-    grid-column: auto;
-    width: auto;
-    justify-self: stretch;
   }
 }
 
