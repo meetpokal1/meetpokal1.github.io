@@ -194,7 +194,7 @@
             <p class="hero-domain-note">Data Analyst &amp; BI Portfolio · SQL · Python · Excel · Power BI</p>
             <h1 id="hero-title" class="hero-title">Reconciling messy data.<br>Modeling operational truth.</h1>
             <p class="hero-lede">
-              I build Python, Pandas, and SQL systems that audit transactional records, model inventory replenishment thresholds, and automate business reporting. <span class="muted-inline">Focused on verifiable data integrity, relational precision, and decision-ready outputs.</span>
+              I use Python, Pandas, SQL, and analytical modelling to clean and validate data, uncover operational patterns, automate reporting, and turn results into actionable business decisions. <span class="muted-inline">From financial records to inventory workflows, with a focus on data quality and useful insights.</span>
             </p>
           </div>
           <aside class="hero-status-panel spotlight-card" aria-label="Portfolio status">
@@ -252,27 +252,27 @@
         <!-- Proof Strip (4-Up Horizontal Stat Grid) -->
         <div class="proof-strip" aria-label="Key Portfolio Proof Points">
           <div class="proof-item">
-            <span class="proof-num">₹215.5K</span>
-            <span class="proof-label">Batch Turnover Reconciled</span>
-            <span class="proof-desc">10-invoice multi-state test batch audited with Pandas logic</span>
-          </div>
-
-          <div class="proof-item">
-            <span class="proof-num">89.2%</span>
-            <span class="proof-label">Tax Validation Rate</span>
-            <span class="proof-desc">₹35,700 expected tax verified; ₹4,320 flagged for review</span>
+            <span class="proof-num">10 invoices</span>
+            <span class="proof-label">Batch Validation</span>
+            <span class="proof-desc">Two synthetic discrepancies surfaced for source-document review</span>
           </div>
 
           <div class="proof-item">
             <span class="proof-num">6 SKUs</span>
-            <span class="proof-label">Inventory Thresholds Tracked</span>
-            <span class="proof-desc">Seeded reorder triggers &amp; open PO tracking in SQLite</span>
+            <span class="proof-label">Inventory Modelled</span>
+            <span class="proof-desc">Stock thresholds, pending purchase orders, and physical-count variances</span>
           </div>
 
           <div class="proof-item">
-            <span class="proof-num">100%</span>
-            <span class="proof-label">Reproducible Codebases</span>
-            <span class="proof-desc">Auditable Python transformation scripts &amp; relational schemas</span>
+            <span class="proof-num">4-sheet</span>
+            <span class="proof-label">Excel Review Output</span>
+            <span class="proof-desc">Summary, invoice detail, mismatches, and prioritised review queue</span>
+          </div>
+
+          <div class="proof-item">
+            <span class="proof-num">CI tested</span>
+            <span class="proof-label">Business-Rule Safeguards</span>
+            <span class="proof-desc">pytest and GitHub Actions checks for tax logic and inventory controls</span>
           </div>
         </div>
       </div>
@@ -1040,7 +1040,7 @@
                 <rect x="30" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="30" y1="70" x2="190" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="38" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 1 · INGEST (GST &amp; ERP)</text>
+                <text class="blueprint-stage-num" x="38" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 1 · INGEST</text>
 
                 <!-- Stream A: Invoices -->
                 <rect x="38" y="78" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1085,7 +1085,7 @@
                 <rect x="230" y="46" width="165" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="230" y1="70" x2="395" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="238" y="62" font-size="9.5" font-weight="600" fill="var(--accent-amber)">STAGE 2 · TRANSFORM (PYTHON ETL)</text>
+                <text class="blueprint-stage-num" x="238" y="62" font-size="9.5" font-weight="600" fill="var(--accent-amber)">STAGE 2 · TRANSFORM</text>
 
                 <!-- Logic 1: Tax Head Routing -->
                 <rect x="238" y="78" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1106,7 +1106,7 @@
                 <text x="246" y="228" font-size="8" fill="var(--status-mismatch-text)">Trigger if Available &lt; Reorder</text>
 
                 <!-- Stage 2 Footer Note -->
-                <text x="312" y="264" font-size="8" fill="var(--text-muted)" text-anchor="middle">NumPy Vectorized · Deterministic</text>
+                <text x="312" y="264" font-size="8" fill="var(--text-muted)" text-anchor="middle">Python Rules · Decimal Rounding</text>
               </g>
 
               <!-- ========================================================================
@@ -1117,7 +1117,7 @@
                 <rect x="435" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="435" y1="70" x2="595" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="443" y="62" font-size="9.5" font-weight="600" fill="var(--accent-steel)">STAGE 3 · SQL 3NF STORE (DB CORE)</text>
+                <text class="blueprint-stage-num" x="443" y="62" font-size="9.5" font-weight="600" fill="var(--accent-steel)">STAGE 3 · SQL STORE</text>
 
                 <!-- Cylinder icon + DB label -->
                 <g transform="translate(445, 78)">
@@ -1163,7 +1163,7 @@
                 <rect x="635" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="635" y1="70" x2="795" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="643" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 4 · BI ANALYTICS (RECON &amp; KPIS)</text>
+                <text class="blueprint-stage-num" x="643" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 4 · BI ANALYTICS</text>
 
                 <!-- Mini Visual 1: Tax Validation Segment Bar -->
                 <rect x="643" y="78" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1208,7 +1208,7 @@
                 <rect x="835" y="46" width="135" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="835" y1="70" x2="970" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="843" y="62" font-size="9" font-weight="600" fill="var(--accent-amber)">STAGE 5 · ACTION &amp; DECISION</text>
+                <text class="blueprint-stage-num" x="843" y="62" font-size="9.5" font-weight="600" fill="var(--accent-amber)">STAGE 5 · ACTIONS</text>
 
                 <!-- Action 1: ITC Claim -->
                 <rect x="843" y="78" width="119" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
