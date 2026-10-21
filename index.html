@@ -298,7 +298,7 @@
           </div>
 
           <p class="project-problem">
-            <strong>Business Problem:</strong> Checking invoice batches row by row can make tax amount and invoice-total discrepancies harder to spot. This Python tool validates required input fields, calculates expected tax splits under a clearly documented simplified same-state/different-state rule, and flags records for human review. Its exception-triage enhancement adds a category, review-priority hint, and suggested next check so reviewers can focus on the source-document questions that matter.
+            <strong>Business Problem:</strong> Checking invoice batches row by row can make tax amount and invoice-total discrepancies harder to spot. This Python tool validates required input fields, calculates expected tax splits under a clearly documented simplified same-state/different-state rule, and flags records for human review. Its exception-triage workflow adds a category, review-priority hint, and suggested next check so reviewers can focus on the source-document questions that matter.
           </p>
 
           <!-- KPI Metric Row -->
@@ -576,7 +576,7 @@
           </div>
 
           <p class="project-problem">
-            <strong>Business Problem:</strong> A basic low-stock alert may still be misleading when a replenishment order is already on the way, and a physical stocktake has to be compared against system records. The core app maintains products, suppliers, purchase orders and stock movements; the enhancement branch adds purchase-order-aware replenishment planning and a physical-count review flow.
+            <strong>Business Problem:</strong> A basic low-stock alert may still be misleading when a replenishment order is already on the way, and a physical stocktake has to be compared against system records. The core app maintains products, suppliers, purchase orders and stock movements; the application now includes purchase-order-aware replenishment planning and a physical-count review flow.
           </p>
 
           <!-- KPI Metric Row -->
@@ -825,7 +825,7 @@
           <div class="recommendation-box">
             <strong>Operational Scope &amp; Recommendation:</strong>
             <p>
-              In the seeded dataset, SKU-004 is below its configured threshold and has no pending purchase order recorded. The enhancement under review checks pending orders before suggesting another reorder and supports count-variance investigation; neither feature guarantees stockout prevention or replaces checking supplier delivery timing.
+              In the seeded dataset, SKU-004 is below its configured threshold and has no pending purchase order recorded. The replenishment planner checks pending orders before suggesting another reorder and supports count-variance investigation; neither feature guarantees stockout prevention or replaces checking supplier delivery timing.
             </p>
           </div>
 
@@ -1096,7 +1096,7 @@
                 <!-- Logic 2: Tolerance & Audit Math -->
                 <rect x="238" y="134" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
                 <text x="246" y="148" font-size="9" font-weight="600" fill="var(--accent-amber)">verify_tolerance()</text>
-                <text x="246" y="160" font-size="8" fill="var(--text-primary)">|Expected - Actual| ≤ ₹0.50</text>
+                <text x="246" y="160" font-size="8" fill="var(--text-primary)">|Expected - Actual| ≤ ₹0.02</text>
                 <text x="246" y="172" font-size="8" fill="var(--status-ok-text)">Verified: 89.2% | Flag: 10.8%</text>
 
                 <!-- Logic 3: Inventory Replenishment Logic -->
