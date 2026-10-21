@@ -825,7 +825,7 @@
           <div class="recommendation-box">
             <strong>Operational Scope &amp; Recommendation:</strong>
             <p>
-              Automated threshold detection prevents inventory stockouts without holding excessive buffer stock. For immediate operational action, create a purchase order for SKU-004 before trade supply stock reaches zero.
+              In the seeded dataset, SKU-004 is below its configured threshold and has no pending purchase order recorded. The enhancement under review checks pending orders before suggesting another reorder and supports count-variance investigation; neither feature guarantees stockout prevention or replaces checking supplier delivery timing.
             </p>
           </div>
 
@@ -835,6 +835,8 @@
             <li class="tag-item">Streamlit</li>
             <li class="tag-item">Relational Modeling</li>
             <li class="tag-item">Threshold Analytics</li>
+            <li class="tag-item">Cycle Count Review</li>
+            <li class="tag-item">PO-Aware Replenishment</li>
           </ul>
 
           <!-- Deliverables & Source note -->
