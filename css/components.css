@@ -1053,6 +1053,23 @@
   .tier2-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  /* Align the nested stage-preview panels across the three-card desktop row.
+     The longest project summary establishes a shared minimum height, while
+     the preview panels absorb remaining space and the footers stay at the base. */
+  .tier2-card-prose {
+    min-height: 13rem;
+  }
+
+  .tier2-card .pipeline-preview-block {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+  }
+
+  .tier2-card .trace-steps-container {
+    flex: 1 0 auto;
+  }
 }
 
 .tier2-card {
