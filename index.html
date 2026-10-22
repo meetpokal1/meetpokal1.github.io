@@ -134,10 +134,9 @@
       </a>
 
       <!-- Primary Navigation -->
-      <nav aria-label="Primary navigation">
+      <nav class="nav-wrapper" aria-label="Primary navigation">
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#projects" class="nav-link">Case Studies</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#matrix" class="nav-link">Methods Matrix</a></li>
           <li><a href="#technical-systems" class="nav-link">Supporting Systems</a></li>
           <li><a href="#about" class="nav-link">Approach &amp; Skills</a></li>
@@ -1009,78 +1008,7 @@
     </section>
 
     <!-- Experience & Applied Work Section -->
-    <section id="experience" class="section" aria-labelledby="experience-heading">
-      <div class="container">
-        <div class="section-intro">
-          <h2 id="experience-heading">Project Experience / Applied Work</h2>
-          <p>Practical analytics engineering and software systems record derived strictly from verified open-source repositories and tested software builds.</p>
-        </div>
-
-        <div class="experience-layout">
-          <!-- Item 1: Flagship Analytics & Data Engineering -->
-          <div class="experience-card spotlight-card">
-            <div class="experience-card-header">
-              <div>
-                <h3 class="experience-role-title">Business Intelligence &amp; Data Pipeline Engineering</h3>
-                <span class="experience-org">InsightFlow (Flagship Analytics Platform)</span>
-              </div>
-              <div>
-                <span class="experience-date">2025 – Present</span>
-                <span class="experience-badge badge-applied" style="margin-left: 8px;">Flagship System</span>
-              </div>
-            </div>
-            <ul class="experience-bullets">
-              <li>Architected an end-to-end sales and inventory intelligence platform delivering automated data profiling, cleaning, dimensional modeling, and interactive reporting.</li>
-              <li>Engineered an automated 3-stage ETL data quality pipeline processing 9,000+ transactional records, handling customer deduplication, cross-field validation, and null remediation.</li>
-              <li>Designed star-schema relational analytical views in PostgreSQL and developed an interactive 4-page Streamlit analytics dashboard (Executive Overview, Sales &amp; Products, Inventory Intelligence, Customers &amp; Data Quality).</li>
-              <li>Covered all financial, margin, and replenishment calculations with 138 unit tests running in automated GitHub Actions continuous integration.</li>
-            </ul>
-          </div>
-
-          <!-- Item 2: Financial Reconciliation & Inventory ERP -->
-          <div class="experience-card spotlight-card">
-            <div class="experience-card-header">
-              <div>
-                <h3 class="experience-role-title">Financial Reconciliation &amp; Inventory Operations Systems</h3>
-                <span class="experience-org">GST Invoice Automation &amp; Mini ERP</span>
-              </div>
-              <div>
-                <span class="experience-date">2025 – Present</span>
-                <span class="experience-badge badge-applied" style="margin-left: 8px;">Applied Systems</span>
-              </div>
-            </div>
-            <ul class="experience-bullets">
-              <li><strong>GST Invoice &amp; Ledger Automation:</strong> Developed a Python audit pipeline validating state-level CGST, SGST, and IGST tax splits across multi-state invoice batches, identifying rounding discrepancies within ₹0.50 tolerance and automating formatted multi-sheet Excel workbooks.</li>
-              <li><strong>Mini ERP Inventory System:</strong> Designed a normalized 3NF SQLite database with replenishment coverage algorithms accounting for in-transit purchase orders and automated physical-count variance reconciliation.</li>
-              <li>Implemented automated ledger summary exports, margin variance tracking, and supplier order tracking to eliminate spreadsheet manual entry errors.</li>
-            </ul>
-          </div>
-
-          <!-- Item 3: Hardened AI Intake & Media Automation -->
-          <div class="experience-card spotlight-card">
-            <div class="experience-card-header">
-              <div>
-                <h3 class="experience-role-title">AI Process Automation &amp; System Hardening</h3>
-                <span class="experience-org">PharmaGuard AI &amp; Dubpilot</span>
-              </div>
-              <div>
-                <span class="experience-date">2025 – Present</span>
-                <span class="experience-badge badge-applied" style="margin-left: 8px;">Applied Systems</span>
-              </div>
-            </div>
-            <ul class="experience-bullets">
-              <li><strong>PharmaGuard AI:</strong> Built an AI-assisted pharmaceutical complaint triage platform combining LangGraph workflow routing, deterministic clinical severity heuristics, and 30-day repeated-batch defect anomaly alerts.</li>
-              <li>Hardened the intake gateway with 10MB PDF upload restrictions, binary magic-byte verification, strict path traversal defense, and deterministic offline LLM fallbacks covered by automated regression tests in GitHub Actions.</li>
-              <li><strong>Dubpilot:</strong> Developed a modular Python CLI video dubbing and audio synthesis pipeline with Whisper speech recognition, Edge-TTS synthesis, FFmpeg audio alignment, and JSON checkpoint recovery.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="experience-disclaimer">
-          <strong>Recruiter Note on Experience Integrity:</strong> This section documents practical technical implementation across five verified open-source codebases. Unverified employment history and formal certifications remain pending final CV release. Every system presented above is verifiable via public GitHub repositories, automated CI test suites, and live application captures.
-        </div>
-      </div>
-    </section>
+    <!-- Experience section reserved for future CV update -->
 
     <!-- Analytical Methods & Toolsets Matrix Section (Being Brute Inspiration) -->
     <section id="matrix" class="section matrix-section" aria-labelledby="matrix-heading">
@@ -1493,7 +1421,7 @@
           </div>
         </div>
 
-        <p class="blueprint-disclaimer"><strong>Architecture Context:</strong> Illustrative synthesis connecting architectural patterns from the GST Invoice Automation engine and Mini ERP system with InsightFlow analytics platform. This is a conceptual reference mapping shared data validation, relational persistence, and decision intelligence patterns across separate repositories.</p>
+        <p class="blueprint-disclaimer"><strong>Architecture Context:</strong> Conceptual data systems blueprint mapping shared data validation, relational persistence, and decision intelligence patterns across separate analytical projects.</p>
 
         <div class="tier2-grid">
 
@@ -1514,14 +1442,13 @@
                   <span class="window-dot dot-yellow"></span>
                   <span class="window-dot dot-green"></span>
                 </div>
-                <span class="browser-address">http://localhost:5173 · Case Register &amp; Signal Review</span>
+                <span class="browser-address">pharmaguard · Complaint Register &amp; Triage</span>
               </div>
               <div class="screenshot-img-wrap">
-                <img src="assets/images/projects/pharmaguard-complaint-register.png" alt="PharmaGuard AI complaint register interface runtime screenshot showing saved cases table and repeated-batch alerts" class="screenshot-img" loading="lazy" width="1440" height="950">
+                <img src="assets/images/projects/pharmaguard-complaint-register.png" alt="PharmaGuard AI complaint register interface showing saved cases table and repeated-batch alerts" class="screenshot-img" loading="lazy" width="1600" height="1200">
               </div>
               <figcaption class="screenshot-caption">
-                <span><strong>Runtime Interface:</strong> React frontend and FastAPI review endpoints displaying live KPI cards, persisted complaint register, and automated 30-day repeat-batch alerts.</span>
-                <span class="screenshot-badge">GENUINE RUNTIME CAPTURE</span>
+                Complaint triage and potential batch-quality signals.
               </figcaption>
             </div>
             <div class="pipeline-preview-block">
@@ -1561,34 +1488,70 @@
               <h3 class="tier2-card-title" style="margin-top: var(--space-8);">Dubpilot: Video Dubbing Pipeline</h3>
             </div>
             <p class="tier2-card-prose">
-              Modular command-line utility translating YouTube videos into English while preserving pacing and timeline synchronization. Orchestrates yt-dlp, FFmpeg audio extraction, OpenAI Whisper transcription, segment translation, and edge-tts time-stretching.
+              Modular command-line utility translating video media into English while preserving pacing and timeline synchronization. Features checkpoint recovery, timestamped segment transcription, and zero-drift audio remuxing.
             </p>
-            <div class="pipeline-preview-block">
-              <div class="pipeline-preview-header">
-                <span class="pipeline-header-title">5-Stage Media Flow</span>
+            <div class="project-screenshot-frame" style="margin-top: var(--space-12); margin-bottom: var(--space-16);">
+              <div class="browser-header-bar">
+                <div class="window-dots">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                </div>
+                <span class="browser-address">dubpilot · CLI Pipeline &amp; Checkpoint Engine</span>
               </div>
-              <div class="trace-steps-container">
-                <div class="trace-step">
-                  <span class="trace-num">Stage 1</span>
-                  <div class="trace-body"><strong>Extract:</strong> 16kHz mono audio via yt-dlp &amp; FFmpeg</div>
-                </div>
-                <div class="trace-step">
-                  <span class="trace-num">Stage 2</span>
-                  <div class="trace-body"><strong>Transcribe:</strong> Timestamped segments (Whisper)</div>
-                </div>
-                <div class="trace-step">
-                  <span class="trace-num">Stage 3</span>
-                  <div class="trace-body"><strong>Remux:</strong> edge-tts stretched to segment limits</div>
-                </div>
+              <div class="screenshot-img-wrap">
+                <img src="assets/images/projects/dubpilot-cli-pipeline.png" alt="Dubpilot CLI terminal execution output showing automated test suite passing and pipeline checkpoint logs" class="screenshot-img" loading="lazy" width="1600" height="950">
               </div>
+              <figcaption class="screenshot-caption">
+                Video dubbing workflow with recoverable processing stages.
+              </figcaption>
             </div>
             <div class="tier2-card-footer">
               <ul class="tag-list" style="margin: 0;" aria-label="Dubpilot tags">
                 <li class="tag-item">Python</li>
                 <li class="tag-item">FFmpeg</li>
+                <li class="tag-item">Whisper</li>
+                <li class="tag-item">CLI Automation</li>
               </ul>
               <a href="https://github.com/meetpokal1/Dubpilot" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
                 <span>View Repo ↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Invoice Vault -->
+          <article class="tier2-card" id="project-invoicevault">
+            <div class="tier2-card-header">
+              <span class="status-pill status-pill-ok">Web Application · Product Prototype</span>
+              <h3 class="tier2-card-title" style="margin-top: var(--space-8);">Invoice Vault: Client Invoice Organization</h3>
+            </div>
+            <p class="tier2-card-prose">
+              Organize invoice PDFs by client, date, work type and payment status. Built for small business operators to eliminate scattered files and streamline invoice retrieval through a centralized document vault.
+            </p>
+            <div class="project-screenshot-frame" style="margin-top: var(--space-12); margin-bottom: var(--space-16);">
+              <div class="browser-header-bar">
+                <div class="window-dots">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                </div>
+                <span class="browser-address">invoice-vault-shine.lovable.app · Document Vault</span>
+              </div>
+              <div class="screenshot-img-wrap">
+                <img src="assets/images/projects/invoice-vault-preview.png" alt="Invoice Vault application workspace login and invoice filing interface" class="screenshot-img" loading="lazy" width="1440" height="900">
+              </div>
+              <figcaption class="screenshot-caption">
+                Organize invoice PDFs by client, date, work type and payment status.
+              </figcaption>
+            </div>
+            <div class="tier2-card-footer">
+              <ul class="tag-list" style="margin: 0;" aria-label="Invoice Vault tags">
+                <li class="tag-item">PDF Vault</li>
+                <li class="tag-item">Invoice Management</li>
+                <li class="tag-item">Client Tracking</li>
+              </ul>
+              <a href="https://invoice-vault-shine.lovable.app" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>Explore App ↗</span>
               </a>
             </div>
           </article>

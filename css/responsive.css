@@ -3,7 +3,7 @@
    Mobile-first, tested for 360px, 768px and 1080px viewports
    ========================================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .nav-menu {
     display: none;
     position: absolute;

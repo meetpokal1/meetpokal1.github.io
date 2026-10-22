@@ -115,10 +115,26 @@ const SITE_CONFIG = {
       demoUrl: "",
       videoUrl: "",
       tags: ["Python", "FFmpeg", "Whisper", "Edge-TTS", "CLI Automation"],
-      summary: "Modular Python CLI media pipeline for speech recognition, translation, Edge-TTS audio synthesis, and FFmpeg timeline synchronization.",
+      summary: "Video dubbing workflow with recoverable processing stages.",
       problem: "Automated video dubbing pipelines frequently suffer from audio drift, desynchronization, and failure recovery issues across lengthy media streams.",
       approach: "Implemented JSON checkpoint state persistence with downstream invalidation and strict duration capping for seamless multi-speaker alignment.",
       note: "Command-line pipeline covered by automated test suite."
+    },
+    {
+      id: "invoice-vault",
+      title: "Invoice Vault",
+      category: "systems",
+      featured: false,
+      status: "Product Prototype",
+      statusType: "prototype",
+      repoUrl: "",
+      demoUrl: "https://invoice-vault-shine.lovable.app",
+      videoUrl: "",
+      tags: ["TypeScript", "React", "Supabase", "PDF Automation", "Invoicing"],
+      summary: "Organize invoice PDFs by client, date, work type and payment status.",
+      problem: "Small businesses struggle with disorganized invoice PDFs, manual filing across folders, and missing payment tracking.",
+      approach: "Centralized document repository with automated detail extraction, client filtering, and payment status tracking.",
+      note: "Interactive application prototype. Private workspace authentication required for document vaults."
     }
   ]
 };
