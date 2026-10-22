@@ -37,7 +37,7 @@ const SITE_CONFIG = {
       "Reporting Analyst Intern",
       "Business Analyst Intern"
     ],
-    availabilityStatus: "Open to small scoped freelance projects and analytics internships",
+    availabilityStatus: "Open to small freelance data projects and Data Analyst, BI, and Reporting roles or internships",
     longTermFocus: "Data Engineering, Cloud Infrastructure & Automated Pipelines"
   },
 
