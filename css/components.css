@@ -436,6 +436,36 @@
   margin-bottom: var(--space-12);
 }
 
+/* Real repository-owned project preview diagrams. Keep labels explicit so these are not mistaken for live-app screenshots. */
+.project-visual {
+  margin: var(--space-20) 0 var(--space-24);
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: #111827;
+}
+
+.project-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-visual figcaption {
+  padding: var(--space-8) var(--space-12);
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-snug);
+}
+
+.project-visual--compact {
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-16);
+}
+
 .case-domain-tag {
   font-family: var(--font-sans);
   font-size: var(--fs-xs);
