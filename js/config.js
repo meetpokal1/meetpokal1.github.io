@@ -9,22 +9,20 @@ const SITE_CONFIG = {
     title: "Data Analyst & Business Intelligence Candidate",
     focus: "Business Analytics • Workflow Automation • Data Reconciliation",
     githubUrl: "https://github.com/meetpokal1",
-    // Keep empty until verified. UI dynamically hides links when empty.
-    linkedinUrl: "https://www.linkedin.com/in/meetpokal", 
-    email: "meetpokalwork@gmail.com", 
-    phone: "+91 7304263532", // Formatted phone or international tel link
-    leetcodeUrl: "https://leetcode.com/u/Meetpokal/", // LeetCode profile URL
-    hackerrankUrl: "https://www.hackerrank.com/profile/meetpokalwork", // HackerRank profile URL
+    linkedinUrl: "https://www.linkedin.com/in/meetpokal",
+    email: "meetpokalwork@gmail.com",
+    phone: "+91 7304263532",
+    leetcodeUrl: "https://leetcode.com/u/Meetpokal/",
+    hackerrankUrl: "https://www.hackerrank.com/profile/meetpokalwork",
     resumeUrl: "assets/docs/Meet_Pokal_Data_Analyst_BI_Resume.pdf",
-    resumeAvailable: true, // Verified: authentic PDF present at assets/docs/Meet_Pokal_Resume.pdf
-    tableauPublicUrl: "", // Tableau Public profile/workbook URL when published
-    powerBiUrl: "" // Power BI portfolio/report URL when published
+    resumeAvailable: true,
+    tableauPublicUrl: "",
+    powerBiUrl: ""
   },
 
   credentials: {
-    // Deloitte Australia Data Analytics Job Simulation (Forage).
-    // Keep empty until shareable verification link is provided.
-    deloitteForageUrl: "" 
+    // Deloitte Australia Data Analytics Job Simulation (Forage)
+    deloitteForageUrl: ""
   },
 
   locationPreferences: {
@@ -43,11 +41,27 @@ const SITE_CONFIG = {
 
   projects: [
     {
+      id: "insightflow",
+      title: "InsightFlow — Sales & Inventory Analytics Platform",
+      category: "analytics",
+      featured: true,
+      status: "Operational • CI Passing",
+      statusType: "operational",
+      repoUrl: "https://github.com/meetpokal1/InsightFlow",
+      demoUrl: "", // Keep empty until public hosted Streamlit deployment URL is verified
+      videoUrl: "",
+      tags: ["Python", "PostgreSQL", "SQL Analytics", "FastAPI", "Streamlit", "Data Quality ETL"],
+      summary: "End-to-end sales and inventory intelligence platform: automated data cleaning pipeline, PostgreSQL dimensional schema, and interactive Streamlit analytics.",
+      problem: "Disjointed transactional CSV/Excel exports hide margin erosion, duplicate customer records, and stockout risks across multi-region retail operations.",
+      approach: "Built a 3-step Python pipeline (profiling, rule-based reconciliation, PostgreSQL loading) with 138 unit tests and interactive Streamlit dashboard.",
+      note: "Public repository with synthetic demo data and verified GitHub Actions CI suite. Live hosted demo URL pending custom subdomain verification."
+    },
+    {
       id: "gst-automation",
       title: "GST Invoice & Ledger Automation",
       category: "analytics",
       featured: true,
-      status: "Operational • PR in Review",
+      status: "Operational Prototype",
       statusType: "operational",
       repoUrl: "https://github.com/meetpokal1/GST-Invoive-Automation",
       demoUrl: "",
@@ -56,65 +70,55 @@ const SITE_CONFIG = {
       summary: "Automated reconciliation pipeline calculating CGST/SGST/IGST splits by state, applying rounding tolerances, and generating multi-sheet audit ledgers.",
       problem: "Manual spreadsheet checking between purchase ledgers and portal summaries causes calculation mismatches and missed input tax credits.",
       approach: "Engineered state-based tax split logic in Pandas, evaluated rounding differences within ₹0.50 tolerance, and created a Streamlit review tool.",
-      note: "Core pipeline operational. Additional validation rules and automated tests currently under review in draft PR #1."
+      note: "Core pipeline operational with synthetic demo data. Review prioritization assists human cross-checking."
     },
     {
-      id: "insightflow",
-      title: "InsightFlow — Sales & Inventory Analytics Platform",
-      category: "analytics",
+      id: "mini-erp",
+      title: "Mini ERP Inventory System",
+      category: "systems",
       featured: true,
-      status: "In Progress",
-      statusType: "in-progress",
-      repoUrl: "", // No fake URL; displayed as 'In Development'
+      status: "Operational Prototype",
+      statusType: "operational",
+      repoUrl: "https://github.com/meetpokal1/Mini-ERP-Inventory-System",
       demoUrl: "",
       videoUrl: "",
-      tags: ["Python", "SQL", "Relational Modeling", "Sales Analytics", "Inventory Velocity"],
-      summary: "In-development analytics platform modeling transactional sales, stock turnover velocity, and reorder triggers.",
-      problem: "Fragmented inventory tracking obscures stock turnover rates, causing stockouts and trapped capital.",
-      approach: "Designing relational star schema principles (fact_sales, dim_product, dim_warehouse), velocity formulas, and automated reorder alerts.",
-      note: "Active development. No repository or demo link published until first stable release."
+      tags: ["Python", "SQLite", "Streamlit", "Relational Database", "Inventory Controls"],
+      summary: "Local inventory management tool maintaining relational integrity across items, suppliers, purchase orders, and physical-count reconciliation.",
+      problem: "Spreadsheet inventory tracking loses stock velocity clarity, duplicate reorders occur while stock is in transit, and physical stocktakes lack automated reconciliation.",
+      approach: "Built 3NF SQLite schema, replenishment coverage formulas incorporating pending POs, and physical count variance analysis with unit price weighting.",
+      note: "Operational Streamlit prototype with seeded demo database."
     },
     {
       id: "pharmaguard-ai",
       title: "PharmaGuard AI",
       category: "systems",
       featured: false,
-      status: "Technical Project",
+      status: "Prototype · AI Triage Workflow",
       statusType: "prototype",
       repoUrl: "https://github.com/meetpokal1/PharmaGuard-AI",
       demoUrl: "",
       videoUrl: "",
-      tags: ["Python", "FastAPI", "React", "LangGraph", "Workflow Routing"],
-      summary: "Domain validation system using LangGraph cyclical state transitions and FastAPI Pydantic schema validation.",
-      note: "Source code available on GitHub."
-    },
-    {
-      id: "mini-erp",
-      title: "Mini ERP Inventory System",
-      category: "systems",
-      featured: false,
-      status: "Operational",
-      statusType: "operational",
-      repoUrl: "https://github.com/meetpokal1/Mini-ERP-Inventory-System",
-      demoUrl: "",
-      videoUrl: "",
-      tags: ["Python", "SQLite", "Streamlit", "Relational Database"],
-      summary: "Local inventory management tool maintaining relational integrity across items, suppliers, and transaction ledger logs.",
-      note: "Relational SQLite schema and Streamlit interface available on GitHub."
+      tags: ["Python", "FastAPI", "React", "LangGraph", "SQLite", "Workflow Routing"],
+      summary: "Pharmaceutical complaint triage workflow with LangGraph, Groq API, FastAPI backend, React UI, and repeat-batch anomaly signal detection.",
+      problem: "Unstructured complaints from emails and PDFs lack standardized triage, making it difficult to detect repeated quality defects across the same manufacturing batch.",
+      approach: "Combined LLM structured entity extraction with deterministic keyword severity rules, SQLite case persistence, and 30-day repeated-batch review signals.",
+      note: "Academic/internship prototype. Uses deterministic keyword severity and synthetic records; not a validated pharmacovigilance system."
     },
     {
       id: "dubpilot",
       title: "Dubpilot",
       category: "automation",
       featured: false,
-      status: "Automation Pipeline",
+      status: "CLI Automation Pipeline",
       statusType: "prototype",
       repoUrl: "https://github.com/meetpokal1/Dubpilot",
       demoUrl: "",
       videoUrl: "",
-      tags: ["Python", "CLI Scripting", "Subprocess Automation"],
-      summary: "Modular Python audio demuxing and synchronized media reconstruction script.",
-      note: "CLI pipeline architecture available on GitHub."
+      tags: ["Python", "FFmpeg", "Whisper", "Edge-TTS", "CLI Automation"],
+      summary: "Modular Python CLI media pipeline for speech recognition, translation, Edge-TTS audio synthesis, and FFmpeg timeline synchronization.",
+      problem: "Automated video dubbing pipelines frequently suffer from audio drift, desynchronization, and failure recovery issues across lengthy media streams.",
+      approach: "Implemented JSON checkpoint state persistence with downstream invalidation and strict duration capping for seamless multi-speaker alignment.",
+      note: "Command-line pipeline covered by automated test suite."
     }
   ]
 };
