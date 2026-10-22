@@ -73,12 +73,23 @@
   :root {
     --fs-3xl: 2rem;
     --fs-2xl: 1.6rem;
-    --space-64: 3rem;
+    --space-64: 2.5rem;
+    --space-48: 2rem;
   }
 
   .container {
     padding-left: var(--space-16);
     padding-right: var(--space-16);
+  }
+
+  .section {
+    padding-top: var(--space-32);
+    padding-bottom: var(--space-32);
+  }
+
+  .project-case-study {
+    padding: var(--space-20);
+    margin-bottom: var(--space-28);
   }
 
   .hero-actions {

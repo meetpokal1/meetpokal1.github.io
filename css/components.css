@@ -22,8 +22,9 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  gap: var(--space-20);
-  max-width: 1440px;
+  gap: var(--space-12);
+  width: 100%;
+  max-width: var(--container-max-w);
   margin: 0 auto;
   padding: 0 var(--space-24);
 }
@@ -69,7 +70,7 @@
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: var(--space-20);
+  gap: var(--space-16);
   list-style: none;
 }
 
@@ -416,7 +417,10 @@
   border-top: 3px solid var(--project-accent, var(--accent-teal));
   border-radius: var(--radius-md);
   padding: var(--space-32);
-  margin-bottom: var(--space-64);
+  margin-bottom: var(--space-36);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   box-sizing: border-box;
 }
 
@@ -517,9 +521,17 @@
 /* Evidence Layout Containers */
 .case-evidence-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-24);
-  margin-bottom: var(--space-28);
+  margin-bottom: var(--space-24);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.case-evidence-grid > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .evidence-subhead {
@@ -596,6 +608,8 @@
   padding: var(--space-20);
   box-sizing: border-box;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   overflow: hidden;
 }
 
@@ -640,8 +654,10 @@
 }
 
 .table-scroll-container {
+  display: block;
   width: 100%;
   max-width: 100%;
+  min-width: 0;
   overflow-x: auto;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
@@ -693,6 +709,10 @@
   border-radius: var(--radius-sm);
   padding: var(--space-20);
   box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
 }
 
 /* Ratio Split Bar */
@@ -957,16 +977,23 @@
    9. Analytical Methods & Toolsets Matrix Table (Being Brute Inspiration)
    -------------------------------------------------------------------------- */
 .matrix-section {
-  margin-top: var(--space-48);
-  margin-bottom: var(--space-64);
+  margin-top: var(--space-32);
+  margin-bottom: var(--space-36);
 }
 
 .matrix-container {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   overflow-x: auto;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   background-color: var(--bg-surface);
   margin-top: var(--space-20);
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 .matrix-table {
@@ -1038,14 +1065,17 @@
    -------------------------------------------------------------------------- */
 .tier2-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-24);
   margin-top: var(--space-24);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .tier2-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1053,10 +1083,15 @@
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: var(--space-24);
+  padding: var(--space-20);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
   transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
@@ -1280,6 +1315,24 @@
   font-weight: 500;
   color: var(--text-primary);
   line-height: 1;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.section--about .tech-icon-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.14);
+}
+
+.section--about .stage-current .tech-icon-pill:hover {
+  border-color: var(--accent-teal);
+}
+
+.section--about .stage-learning .tech-icon-pill:hover {
+  border-color: var(--accent-amber);
+}
+
+.section--about .stage-future .tech-icon-pill:hover {
+  border-color: var(--accent-steel);
 }
 
 .tech-svg-icon {
@@ -1493,11 +1546,89 @@
    14. Independent About & Competencies Section Shell (Being Brute Inspiration)
    -------------------------------------------------------------------------- */
 .section--about {
+  position: relative;
+  isolation: isolate;
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
-  padding-top: var(--space-64);
-  padding-bottom: var(--space-64);
+  padding-top: var(--space-48);
+  padding-bottom: var(--space-48);
+  overflow: hidden;
+}
+
+/* Blueprint-inspired analytics ambience: fine-grid field plus edge schematics */
+.about-blueprint-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.64;
+}
+
+.about-blueprint-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.about-blueprint-rail {
+  opacity: 0.56;
+}
+
+.about-blueprint-flow {
+  stroke-dasharray: 5 9;
+  animation: about-blueprint-dash 28s linear infinite;
+}
+
+.about-blueprint-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: about-blueprint-pulse 3.8s ease-in-out infinite;
+}
+
+.about-blueprint-pulse.delay-1 {
+  animation-delay: -1.25s;
+}
+
+.about-blueprint-pulse.delay-2 {
+  animation-delay: -2.5s;
+}
+
+#about > .container {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes about-blueprint-dash {
+  to { stroke-dashoffset: -112; }
+}
+
+@keyframes about-blueprint-pulse {
+  0%, 100% { opacity: 0.42; transform: scale(0.82); }
+  50% { opacity: 1; transform: scale(1.35); }
+}
+
+@media (max-width: 1100px) {
+  .about-blueprint-layer {
+    opacity: 0.24;
+  }
+  .about-blueprint-rail {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-blueprint-layer {
+    opacity: 0.16;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-blueprint-flow,
+  .about-blueprint-pulse {
+    animation: none !important;
+  }
 }
 
 .section--about .philosophy-card {
@@ -1597,6 +1728,10 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .blueprint-header {
@@ -1610,12 +1745,18 @@
   border-bottom: 1px solid var(--border-subtle); /* taste-skill-ignore */
   font-family: var(--font-mono); /* taste-skill-ignore */
   font-size: var(--fs-xs);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .blueprint-header-left {
   display: flex;
   align-items: center;
   gap: var(--space-8);
+  min-width: 0;
+  max-width: 100%;
 }
 
 .blueprint-spec-id {
@@ -1668,10 +1809,12 @@
 
 .blueprint-canvas-wrap {
   width: 100%;
+  max-width: 100%;
   padding: var(--space-12);
   background: var(--bg-canvas);
   position: relative;
   overflow-x: auto;
+  box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -2203,12 +2346,17 @@
   display: flex;
   align-items: center;
   gap: var(--space-8);
-  padding: 10px 14px;
+  padding: 8px 12px;
   background-color: var(--bg-surface-subtle);
   border-bottom: 1px solid var(--border-subtle);
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
   color: var(--text-muted);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .window-dots {
@@ -2236,7 +2384,9 @@
   border: 1px solid var(--border-subtle);
   font-size: 0.72rem;
   color: var(--text-muted);
-  max-width: 80%;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

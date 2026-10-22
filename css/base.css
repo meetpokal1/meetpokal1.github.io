@@ -43,6 +43,15 @@ body {
   background-color: var(--bg-canvas);
   color: var(--text-primary);
   font-family: var(--font-serif);
+  width: 100%;
+  max-width: 100%;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  flex: 1 0 auto;
 }
 
 /* Accessible Skip Navigation */
@@ -126,8 +135,8 @@ code, pre {
 }
 
 .section {
-  padding-top: var(--space-64);
-  padding-bottom: var(--space-64);
+  padding-top: var(--space-48);
+  padding-bottom: var(--space-48);
 }
 
 section[id], article[id] {

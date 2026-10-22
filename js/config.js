@@ -48,13 +48,13 @@ const SITE_CONFIG = {
       status: "Operational • CI Passing",
       statusType: "operational",
       repoUrl: "https://github.com/meetpokal1/InsightFlow",
-      demoUrl: "", // Keep empty until public hosted Streamlit deployment URL is verified
+      demoUrl: "https://insightflow-portfolio.streamlit.app/",
       videoUrl: "",
       tags: ["Python", "PostgreSQL", "SQL Analytics", "FastAPI", "Streamlit", "Data Quality ETL"],
       summary: "End-to-end sales and inventory intelligence platform: automated data cleaning pipeline, PostgreSQL dimensional schema, and interactive Streamlit analytics.",
       problem: "Disjointed transactional CSV/Excel exports hide margin erosion, duplicate customer records, and stockout risks across multi-region retail operations.",
       approach: "Built a 3-step Python pipeline (profiling, rule-based reconciliation, PostgreSQL loading) with 138 unit tests and interactive Streamlit dashboard.",
-      note: "Public repository with synthetic demo data and verified GitHub Actions CI suite. Live hosted demo URL pending custom subdomain verification."
+      note: "Public repository with synthetic demo data, verified GitHub Actions CI suite, and live deployed Streamlit Community Cloud demo."
     },
     {
       id: "gst-automation",
