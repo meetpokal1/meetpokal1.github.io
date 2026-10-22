@@ -947,8 +947,13 @@
 /* --------------------------------------------------------------------------
    9. Analytical Methods & Toolsets Matrix Table (Being Brute Inspiration)
    -------------------------------------------------------------------------- */
-/* Tighter, deliberate transitions between featured projects, the matrix, and supporting systems. */
+/* Keep the practical-work section present but give the featured case studies a closer, clearer follow-on. */
+#services {
+  padding-bottom: var(--space-24);
+}
+
 #projects {
+  padding-top: var(--space-24);
   padding-bottom: var(--space-24);
 }
 
