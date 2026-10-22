@@ -6,7 +6,7 @@
 const SITE_CONFIG = {
   profile: {
     name: "Meet Pokal",
-    title: "Data Analytics & Workflow Automation",
+    title: "Data Analyst & Business Intelligence Candidate",
     focus: "Business Analytics • Workflow Automation • Data Reconciliation",
     githubUrl: "https://github.com/meetpokal1",
     // Keep empty until verified. UI dynamically hides links when empty.
@@ -37,7 +37,7 @@ const SITE_CONFIG = {
       "Reporting Analyst Intern",
       "Business Analyst Intern"
     ],
-    availabilityStatus: "Open to small freelance data projects and Data Analyst, BI, and Reporting roles or internships",
+    availabilityStatus: "Actively pursuing internship opportunities",
     longTermFocus: "Data Engineering, Cloud Infrastructure & Automated Pipelines"
   },
 
