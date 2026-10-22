@@ -93,16 +93,16 @@ const SITE_CONFIG = {
       title: "PharmaGuard AI",
       category: "systems",
       featured: false,
-      status: "Prototype · AI Triage Workflow",
-      statusType: "prototype",
+      status: "Operational Prototype · Verified CI Passing",
+      statusType: "operational",
       repoUrl: "https://github.com/meetpokal1/PharmaGuard-AI",
       demoUrl: "",
       videoUrl: "",
-      tags: ["Python", "FastAPI", "React", "LangGraph", "SQLite", "Workflow Routing"],
-      summary: "Pharmaceutical complaint triage workflow with LangGraph, Groq API, FastAPI backend, React UI, and repeat-batch anomaly signal detection.",
+      tags: ["Python", "FastAPI", "React", "LangGraph", "SQLite", "Security Hardening"],
+      summary: "AI-assisted pharmaceutical complaint triage platform: LangGraph workflow engine, 10MB PDF upload validation, persistent SQLite case register, and 30-day repeat-batch signal detection.",
       problem: "Unstructured complaints from emails and PDFs lack standardized triage, making it difficult to detect repeated quality defects across the same manufacturing batch.",
-      approach: "Combined LLM structured entity extraction with deterministic keyword severity rules, SQLite case persistence, and 30-day repeated-batch review signals.",
-      note: "Academic/internship prototype. Uses deterministic keyword severity and synthetic records; not a validated pharmacovigilance system."
+      approach: "Combined LangGraph entity extraction with deterministic keyword severity rules, SQLite case persistence, and 30-day repeated-batch review signals covered by automated tests.",
+      note: "Open-source engineering project with automated test suite and live React/FastAPI interface. Demonstrates NLP triage, security hardening, and audit logging."
     },
     {
       id: "dubpilot",
