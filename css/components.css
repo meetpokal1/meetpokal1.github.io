@@ -2499,3 +2499,16 @@
   .reading-progress,
   .hero-status-panel { display: none !important; }
 }
+
+
+/* Small-scope service note: transparent expectations without a distracting callout box. */
+.service-disclaimer {
+  max-width: 88ch;
+  margin-top: var(--space-8);
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-prose);
+}
