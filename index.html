@@ -317,6 +317,11 @@
             <span class="status-pill status-pill-ok">Core checks + exception review queue</span>
           </div>
 
+          <figure class="project-visual">
+            <img src="assets/images/projects/gst-pipeline-preview.svg" alt="GST pipeline diagram showing Excel invoice and ledger inputs, Pandas validation, reconciliation checks, and a Streamlit review interface." loading="lazy" decoding="async" width="600" height="240">
+            <figcaption>Pipeline preview · Invoice validation through exception review</figcaption>
+          </figure>
+
           <p class="project-problem">
             <strong>Business Problem:</strong> Checking invoice batches row by row can make tax amount and invoice-total discrepancies harder to spot. This Python tool validates required input fields, calculates expected tax splits under a clearly documented simplified same-state/different-state rule, and flags records for human review. Its exception-triage workflow adds a category, review-priority hint, and suggested next check so reviewers can focus on the source-document questions that matter.
           </p>
@@ -594,6 +599,11 @@
             </div>
             <span class="status-pill status-pill-ok">Core workflow + inventory controls</span>
           </div>
+
+          <figure class="project-visual">
+            <img src="assets/images/projects/minierp-preview.svg" alt="Mini ERP architecture diagram showing a Streamlit interface, Python inventory service, and SQLite relational inventory ledger." loading="lazy" decoding="async" width="600" height="240">
+            <figcaption>System preview · Stock movement, validation, and relational inventory records</figcaption>
+          </figure>
 
           <p class="project-problem">
             <strong>Business Problem:</strong> A basic low-stock alert may still be misleading when a replenishment order is already on the way, and a physical stocktake has to be compared against system records. The core app maintains products, suppliers, purchase orders and stock movements; the application now includes purchase-order-aware replenishment planning and a physical-count review flow.
@@ -1333,6 +1343,10 @@
               <span class="status-pill status-pill-progress">Architecture Preview · In Active Development</span>
               <h3 class="tier2-card-title" style="margin-top: var(--space-8);">InsightFlow: Data Pipeline Architecture</h3>
             </div>
+            <figure class="project-visual project-visual--compact">
+              <img src="assets/images/projects/insightflow-preview.svg" alt="InsightFlow data-model diagram showing product and inventory dimensions, sales movement facts, and analytics views." loading="lazy" decoding="async" width="600" height="240">
+              <figcaption>Architecture preview · Dimensional model for sales and inventory analytics</figcaption>
+            </figure>
             <p class="tier2-card-prose">
               Scalable modular ETL architecture designed for batch and stream processing. Ingests transactional data, performs schema validation and deduplication, and prepares structured data marts for dimensional analytics and BI reporting.
             </p>
@@ -1371,6 +1385,10 @@
               <span class="status-pill status-pill-ok">Complaint Workflow Prototype</span>
               <h3 class="tier2-card-title" style="margin-top: var(--space-8);">PharmaGuard AI: Complaint Register &amp; Batch Signals</h3>
             </div>
+            <figure class="project-visual project-visual--compact">
+              <img src="assets/images/projects/pharmaguard-preview.svg" alt="PharmaGuard architecture diagram showing the React user interface, FastAPI service, and LangGraph review workflow." loading="lazy" decoding="async" width="600" height="240">
+              <figcaption>System preview · Structured complaint intake and human-review signals</figcaption>
+            </figure>
             <p class="tier2-card-prose">
               Collects complaint details from chat/PDF input, extracts structured fields with an LLM, applies transparent keyword-based severity heuristics, and persists case records in SQLite. Surfaces possible repeated product/batch reports and create/update history for human review; the signal does not confirm a defect or causality.
             </p>
@@ -1412,6 +1430,10 @@
               <span class="status-pill status-pill-ok">Resumable CLI Pipeline</span>
               <h3 class="tier2-card-title" style="margin-top: var(--space-8);">Dubpilot: Video Dubbing Pipeline</h3>
             </div>
+            <figure class="project-visual project-visual--compact">
+              <img src="assets/images/projects/dubpilot-preview.svg" alt="Dubpilot media-pipeline diagram showing source video, demuxing, audio and transcript processing, and final remuxing." loading="lazy" decoding="async" width="600" height="240">
+              <figcaption>Pipeline preview · Video processing, timed dubbing, and remuxing</figcaption>
+            </figure>
             <p class="tier2-card-prose">
               Translates video speech into English using timestamped transcription, translation, speech synthesis and FFmpeg muxing. The updated pipeline checkpoints completed stages, resumes interrupted jobs, reuses TTS clips only when text/voice/timing match, and trims generated audio tails that would overlap the next segment.
             </p>
