@@ -358,6 +358,50 @@
             </div>
           </div>
 
+          <!-- Power BI Enterprise BI Deliverable Strip -->
+          <div class="evidence-subhead" style="margin-top: var(--space-20);">
+            <span>Power BI Project (PBIP) Deliverable · 4 Interactive Pages (Desktop Bridge Captures)</span>
+          </div>
+          <div class="screenshot-gallery-strip" aria-label="InsightFlow Power BI PBIP Reports Gallery">
+            <div class="gallery-thumb-card">
+              <img src="assets/images/projects/insightflow-powerbi-executive.png" alt="InsightFlow Power BI Executive Profitability report showing ₹209M net revenue, ₹42M profit, 20.3% margin, and 24-month revenue trajectory" class="gallery-thumb-img" loading="lazy" width="800" height="600">
+              <div class="gallery-thumb-title">PBI: Executive Profitability</div>
+            </div>
+            <div class="gallery-thumb-card">
+              <img src="assets/images/projects/insightflow-powerbi-margin.png" alt="InsightFlow Power BI Margin Investigation report showing product profitability scatter and supplier margin rankings" class="gallery-thumb-img" loading="lazy" width="800" height="600">
+              <div class="gallery-thumb-title">PBI: Margin Investigation</div>
+            </div>
+            <div class="gallery-thumb-card">
+              <img src="assets/images/projects/insightflow-powerbi-inventory.png" alt="InsightFlow Power BI Inventory Decisions report showing stockout exposure, reorder requirements, and replenishment table" class="gallery-thumb-img" loading="lazy" width="800" height="600">
+              <div class="gallery-thumb-title">PBI: Inventory Decisions</div>
+            </div>
+            <div class="gallery-thumb-card">
+              <img src="assets/images/projects/insightflow-powerbi-integrity.png" alt="InsightFlow Power BI Data Integrity & Pipeline Assurance report showing 48K clean loaded records, 95.7% preservation rate, and reconciliation matrix" class="gallery-thumb-img" loading="lazy" width="800" height="600">
+              <div class="gallery-thumb-title">PBI: Data Pipeline Assurance</div>
+            </div>
+          </div>
+
+          <!-- Technical Model Architecture Supporting Evidence -->
+          <div class="evidence-subhead" style="margin-top: var(--space-20);">
+            <span>Semantic Model Architecture · Validated Star Schema (Power BI Desktop Model View)</span>
+          </div>
+          <div class="project-screenshot-frame" style="margin-top: var(--space-8);">
+            <div class="browser-header-bar">
+              <div class="window-dots">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+              </div>
+              <span class="browser-address">Power BI Desktop · Model View · Star Schema (6 Relationships, 0 Orphan Keys)</span>
+            </div>
+            <div class="screenshot-img-wrap">
+              <img src="assets/images/projects/insightflow-powerbi-model-architecture.png" alt="Power BI Desktop Model View showing validated star schema with Sales and Inventory fact tables, Product, Customer, Location, Date dimensions, and DataQualityReconciliation table" class="screenshot-img" loading="lazy" width="1600" height="1025">
+            </div>
+            <figcaption class="screenshot-caption">
+              <span>Model view showing two central fact tables (Sales &amp; Inventory), four single-direction dimensions (Customer, Product, Location, Date), and a type-safe DataQualityReconciliation audit entity.</span>
+            </figcaption>
+          </div>
+
           <!-- Method & Analytical Interpretation -->
           <div style="margin-top: var(--space-24); margin-bottom: var(--space-20);">
             <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary); margin-bottom: var(--space-12);">
@@ -378,6 +422,9 @@
 
           <ul class="tag-list" aria-label="Technologies used in InsightFlow">
             <li class="tag-item">Python</li>
+            <li class="tag-item">Power BI Desktop</li>
+            <li class="tag-item">DAX &amp; Tabular Modeling</li>
+            <li class="tag-item">Power BI Project (PBIP)</li>
             <li class="tag-item">PostgreSQL</li>
             <li class="tag-item">SQL Analytics</li>
             <li class="tag-item">FastAPI</li>
@@ -393,15 +440,18 @@
               <a href="https://insightflow-portfolio.streamlit.app/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
                 <span>Launch Live Demo ↗</span>
               </a>
+              <a href="https://github.com/meetpokal1/InsightFlow#power-bi-project-insightflowpbip" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>Explore Power BI Reports ↗</span>
+              </a>
               <a href="https://github.com/meetpokal1/InsightFlow" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>View Repository ↗</span>
+                <span>View Source Code ↗</span>
               </a>
               <a href="https://github.com/meetpokal1/InsightFlow/actions/runs/39824703774" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
                 <span>CI Build Passing (Run #3) ↗</span>
               </a>
             </div>
             <p class="project-note">
-              <strong>Data source &amp; demo note:</strong> All business records and financial figures are synthetic. The dashboard runs the real Python ingestion, cleaning, and validation pipeline. Hosted Streamlit Community Cloud demo tracks the repository's <code>main</code> branch.
+              <strong>Execution note:</strong> Power BI reports are authored in modern PBIP format and run locally via Microsoft Power BI Desktop on Windows. The hosted Streamlit Community Cloud demo tracks the repository's <code>main</code> branch and serves live interactive analytics on synthetic data without requiring desktop software.
             </p>
           </div>
         </article>
