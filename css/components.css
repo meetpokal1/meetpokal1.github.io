@@ -417,7 +417,7 @@
   border-top: 3px solid var(--project-accent, var(--accent-teal));
   border-radius: var(--radius-md);
   padding: var(--space-32);
-  margin-bottom: var(--space-36);
+  margin-bottom: var(--space-48);
   width: 100%;
   max-width: 100%;
   min-width: 0;
@@ -516,6 +516,45 @@
   font-size: var(--fs-xs);
   color: var(--text-muted);
   line-height: var(--lh-snug);
+}
+
+/* Balanced Project Overview Grid (GST & Mini ERP) */
+.project-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-20);
+  align-items: start;
+  margin-bottom: var(--space-24);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.project-summary-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  width: 100%;
+}
+
+.project-summary-col .project-problem {
+  margin-bottom: var(--space-20);
+}
+
+.project-summary-col .kpi-row {
+  margin-bottom: 0;
+}
+
+@media (min-width: 860px) {
+  .project-overview-grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: var(--space-28);
+  }
+
+  .project-overview-grid .project-screenshot-frame {
+    margin-bottom: 0;
+  }
 }
 
 /* Evidence Layout Containers */
@@ -2131,7 +2170,8 @@
 
 .hero-copy { min-width: 0; }
 .hero-copy .hero-domain-note { margin-bottom: var(--space-12); }
-.hero-copy .hero-title { margin-bottom: 0; }
+.hero-copy .hero-title { margin-bottom: var(--space-12); }
+.hero-copy .hero-lede { margin-bottom: 0; }
 
 .hero-status-panel {
   position: relative;

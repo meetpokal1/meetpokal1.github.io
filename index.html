@@ -194,6 +194,9 @@
           <div class="hero-copy">
             <p class="hero-domain-note">Data Analyst &amp; BI Portfolio · SQL · Python · Excel · Power BI</p>
             <h1 id="hero-title" class="hero-title">Reconciling messy data.<br>Modeling operational truth.</h1>
+            <p class="hero-lede">
+              I build Python, Pandas, and SQL systems that audit transactional records, model inventory replenishment thresholds, and automate business reporting. <span class="muted-inline">Focused on verifiable data integrity, relational precision, and decision-ready outputs.</span>
+            </p>
           </div>
           <aside class="hero-status-panel spotlight-card" aria-label="Portfolio status">
             <div class="hero-status-panel-head">
@@ -218,10 +221,6 @@
             </div>
           </aside>
         </div>
-
-        <p class="hero-lede">
-          I build Python, Pandas, and SQL systems that audit transactional records, model inventory replenishment thresholds, and automate business reporting. <span class="muted-inline">Focused on verifiable data integrity, relational precision, and decision-ready outputs.</span>
-        </p>
         <div class="availability-pill">
           <span class="status-dot"></span>
           <span>Navi Mumbai / Mumbai, Maharashtra · Available for Internships (On-site, Hybrid, Remote)</span>
@@ -417,46 +416,50 @@
             <span class="status-pill status-pill-ok">Core tool operational · Enhancements in draft PR #1</span>
           </div>
 
-          <p class="project-problem">
-            <strong>Business Problem:</strong> In Indian commercial accounting, manual cross-checking between vendor invoices and accounting purchase ledgers is labor-intensive and prone to missed input tax credit, rounding errors, and wrong tax head classification. This project automates calculation verification across intra-state (CGST + SGST) and inter-state (IGST) invoices, flagging discrepancies before statutory ledger posting.
-          </p>
+          <div class="project-overview-grid">
+            <div class="project-summary-col">
+              <p class="project-problem">
+                <strong>Business Problem:</strong> In Indian commercial accounting, manual cross-checking between vendor invoices and accounting purchase ledgers is labor-intensive and prone to missed input tax credit, rounding errors, and wrong tax head classification. This project automates calculation verification across intra-state (CGST + SGST) and inter-state (IGST) invoices, flagging discrepancies before statutory ledger posting.
+              </p>
 
-          <!-- KPI Metric Row -->
-          <div class="kpi-row" aria-label="GST Case Study Key Metrics">
-            <div class="kpi-cell">
-              <span class="kpi-num">₹215,500</span>
-              <span class="kpi-label">Batch Taxable Turnover (10 Invoices)</span>
-            </div>
-            <div class="kpi-cell">
-              <span class="kpi-num">8 / 10</span>
-              <span class="kpi-label">Invoices Fully Reconciled</span>
-            </div>
-            <div class="kpi-cell">
-              <span class="kpi-num">₹40,020</span>
-              <span class="kpi-label">Expected Total GST (Simplified Rules)</span>
-            </div>
-            <div class="kpi-cell">
-              <span class="kpi-num">₹4,320</span>
-              <span class="kpi-label">Flagged Tax (INV-1005 &amp; INV-1009)</span>
-            </div>
-          </div>
-
-          <!-- Technical Evidence: Real Runtime Browser Frame -->
-          <div class="project-screenshot-frame">
-            <div class="browser-header-bar">
-              <div class="window-dots">
-                <span class="window-dot dot-red"></span>
-                <span class="window-dot dot-yellow"></span>
-                <span class="window-dot dot-green"></span>
+              <!-- KPI Metric Row -->
+              <div class="kpi-row" aria-label="GST Case Study Key Metrics">
+                <div class="kpi-cell">
+                  <span class="kpi-num">₹215,500</span>
+                  <span class="kpi-label">Batch Taxable Turnover (10 Invoices)</span>
+                </div>
+                <div class="kpi-cell">
+                  <span class="kpi-num">8 / 10</span>
+                  <span class="kpi-label">Invoices Fully Reconciled</span>
+                </div>
+                <div class="kpi-cell">
+                  <span class="kpi-num">₹40,020</span>
+                  <span class="kpi-label">Expected Total GST (Simplified Rules)</span>
+                </div>
+                <div class="kpi-cell">
+                  <span class="kpi-num">₹4,320</span>
+                  <span class="kpi-label">Flagged Tax (INV-1005 &amp; INV-1009)</span>
+                </div>
               </div>
-              <span class="browser-address">gst-audit-workbench.local · Reconciliation Engine</span>
             </div>
-            <div class="screenshot-img-wrap">
-              <img src="assets/images/projects/gst-invoice-automation.png" alt="GST Invoice and Ledger Automation Streamlit application runtime screenshot showing batch reconciliation summary, 10 total invoices, 2 flagged mismatches, and 1 high-priority review item" class="screenshot-img" loading="lazy" width="1440" height="950">
+
+            <!-- Technical Evidence: Real Runtime Browser Frame -->
+            <div class="project-screenshot-frame">
+              <div class="browser-header-bar">
+                <div class="window-dots">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                </div>
+                <span class="browser-address">gst-audit-workbench.local · Reconciliation Engine</span>
+              </div>
+              <div class="screenshot-img-wrap">
+                <img src="assets/images/projects/gst-invoice-automation.png" alt="GST Invoice and Ledger Automation Streamlit application runtime screenshot showing batch reconciliation summary, 10 total invoices, 2 flagged mismatches, and 1 high-priority review item" class="screenshot-img" loading="lazy" width="1440" height="950">
+              </div>
+              <figcaption class="screenshot-caption">
+                <span>Batch reconciliation summary showing multi-state tax allocations, ₹0.50 rounding tolerance checks, and prioritized exception triage.</span>
+              </figcaption>
             </div>
-            <figcaption class="screenshot-caption">
-              <span>Batch reconciliation summary showing multi-state tax allocations, ₹0.50 rounding tolerance checks, and prioritized exception triage.</span>
-            </figcaption>
           </div>
 
           <!-- Technical Evidence: Visual Chart & Interactive Table -->
@@ -712,46 +715,50 @@
             <span class="status-pill status-pill-ok">Demonstration Dataset · Streamlit UI</span>
           </div>
 
-          <p class="project-problem">
-            <strong>Business Problem:</strong> Without structured threshold detection and relational data modeling, small distribution businesses face frequent stockouts and unmonitored replenishment cycles. This project implements a normalized relational database in SQLite with automated threshold-breach flags and purchase order tracking.
-          </p>
+          <div class="project-overview-grid">
+            <div class="project-summary-col">
+              <p class="project-problem">
+                <strong>Business Problem:</strong> Without structured threshold detection and relational data modeling, small distribution businesses face frequent stockouts and unmonitored replenishment cycles. This project implements a normalized relational database in SQLite with automated threshold-breach flags and purchase order tracking.
+              </p>
 
-          <!-- KPI Metric Row -->
-          <div class="kpi-row" aria-label="Mini ERP Key Metrics">
-            <div class="kpi-cell">
-              <span class="kpi-num">6 SKUs</span>
-              <span class="kpi-label">Active Seeded Catalog</span>
-            </div>
-            <div class="kpi-cell">
-              <span class="kpi-num">3 / 6</span>
-              <span class="kpi-label">SKUs Below Reorder Level</span>
-            </div>
-            <div class="kpi-cell">
-              <span class="kpi-num">35 units</span>
-              <span class="kpi-label">Seeded Open POs (PO #1 &amp; #2)</span>
-            </div>
-            <div class="kpi-cell">
-              <span class="kpi-num">SQLite 3NF</span>
-              <span class="kpi-label">Relational Data Integrity</span>
-            </div>
-          </div>
-
-          <!-- Technical Evidence: Real Runtime Browser Frame -->
-          <div class="project-screenshot-frame">
-            <div class="browser-header-bar">
-              <div class="window-dots">
-                <span class="window-dot dot-red"></span>
-                <span class="window-dot dot-yellow"></span>
-                <span class="window-dot dot-green"></span>
+              <!-- KPI Metric Row -->
+              <div class="kpi-row" aria-label="Mini ERP Key Metrics">
+                <div class="kpi-cell">
+                  <span class="kpi-num">6 SKUs</span>
+                  <span class="kpi-label">Active Seeded Catalog</span>
+                </div>
+                <div class="kpi-cell">
+                  <span class="kpi-num">3 / 6</span>
+                  <span class="kpi-label">SKUs Below Reorder Level</span>
+                </div>
+                <div class="kpi-cell">
+                  <span class="kpi-num">35 units</span>
+                  <span class="kpi-label">Seeded Open POs (PO #1 &amp; #2)</span>
+                </div>
+                <div class="kpi-cell">
+                  <span class="kpi-num">SQLite 3NF</span>
+                  <span class="kpi-label">Relational Data Integrity</span>
+                </div>
               </div>
-              <span class="browser-address">erp-inventory.local · Stock Analytics</span>
             </div>
-            <div class="screenshot-img-wrap">
-              <img src="assets/images/projects/minierp-inventory-dashboard.png" alt="Mini ERP Inventory System Streamlit interface runtime screenshot showing 6 SKUs, total stock value of ₹44,792, 3 low-stock alerts, and 2 pending purchase orders" class="screenshot-img" loading="lazy" width="1440" height="950">
+
+            <!-- Technical Evidence: Real Runtime Browser Frame -->
+            <div class="project-screenshot-frame">
+              <div class="browser-header-bar">
+                <div class="window-dots">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                </div>
+                <span class="browser-address">erp-inventory.local · Stock Analytics</span>
+              </div>
+              <div class="screenshot-img-wrap">
+                <img src="assets/images/projects/minierp-inventory-dashboard.png" alt="Mini ERP Inventory System Streamlit interface runtime screenshot showing 6 SKUs, total stock value of ₹44,792, 3 low-stock alerts, and 2 pending purchase orders" class="screenshot-img" loading="lazy" width="1440" height="950">
+              </div>
+              <figcaption class="screenshot-caption">
+                <span>Operational stock intelligence evaluating replenishment coverage, active purchase orders, and physical-count reconciliation variances.</span>
+              </figcaption>
             </div>
-            <figcaption class="screenshot-caption">
-              <span>Operational stock intelligence evaluating replenishment coverage, active purchase orders, and physical-count reconciliation variances.</span>
-            </figcaption>
           </div>
 
           <!-- Technical Evidence: Threshold Comparison Chart & Sample Inventory Table -->
@@ -1193,7 +1200,8 @@
                 <rect x="30" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="30" y1="70" x2="190" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="38" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 1 · INGEST (GST &amp; ERP)</text>
+                <text class="blueprint-stage-num" x="38" y="57" font-size="8.5" font-weight="600" fill="var(--accent-teal)">STAGE 1 · INGESTION</text>
+                <text x="38" y="66" font-size="7" fill="var(--text-muted)">Raw CSV, JSON &amp; Catalog</text>
 
                 <!-- Stream A: Invoices -->
                 <rect x="38" y="78" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1238,7 +1246,8 @@
                 <rect x="230" y="46" width="165" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="230" y1="70" x2="395" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="238" y="62" font-size="9.5" font-weight="600" fill="var(--accent-amber)">STAGE 2 · TRANSFORM (PYTHON ETL)</text>
+                <text class="blueprint-stage-num" x="238" y="57" font-size="8.5" font-weight="600" fill="var(--accent-amber)">STAGE 2 · TRANSFORM</text>
+                <text x="238" y="66" font-size="7" fill="var(--text-muted)">Python &amp; Pandas ETL</text>
 
                 <!-- Logic 1: Tax Head Routing -->
                 <rect x="238" y="78" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1270,7 +1279,8 @@
                 <rect x="435" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="435" y1="70" x2="595" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="443" y="62" font-size="9.5" font-weight="600" fill="var(--accent-steel)">STAGE 3 · SQL 3NF STORE (DB CORE)</text>
+                <text class="blueprint-stage-num" x="443" y="57" font-size="8.5" font-weight="600" fill="var(--accent-steel)">STAGE 3 · SQL STORE</text>
+                <text x="443" y="66" font-size="7" fill="var(--text-muted)">3NF Relational Schema</text>
 
                 <!-- Cylinder icon + DB label -->
                 <g transform="translate(445, 78)">
@@ -1316,7 +1326,8 @@
                 <rect x="635" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="635" y1="70" x2="795" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="643" y="62" font-size="9.5" font-weight="600" fill="var(--accent-teal)">STAGE 4 · BI ANALYTICS (RECON &amp; KPIS)</text>
+                <text class="blueprint-stage-num" x="643" y="57" font-size="8.5" font-weight="600" fill="var(--accent-teal)">STAGE 4 · BI ANALYTICS</text>
+                <text x="643" y="66" font-size="7" fill="var(--text-muted)">Reconciliation &amp; KPIs</text>
 
                 <!-- Mini Visual 1: Tax Validation Segment Bar -->
                 <rect x="643" y="78" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1361,7 +1372,8 @@
                 <rect x="835" y="46" width="135" height="24" fill="var(--bg-surface-subtle)" />
                 <line x1="835" y1="70" x2="970" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
 
-                <text class="blueprint-stage-num" x="843" y="62" font-size="9" font-weight="600" fill="var(--accent-amber)">STAGE 5 · ACTION &amp; DECISION</text>
+                <text class="blueprint-stage-num" x="843" y="57" font-size="8.5" font-weight="600" fill="var(--accent-amber)">STAGE 5 · DECISIONS</text>
+                <text x="843" y="66" font-size="7" fill="var(--text-muted)">Audit &amp; Restock Actions</text>
 
                 <!-- Action 1: ITC Claim -->
                 <rect x="843" y="78" width="119" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
@@ -1505,6 +1517,25 @@
               <figcaption class="screenshot-caption">
                 Video dubbing workflow with recoverable processing stages.
               </figcaption>
+            </div>
+            <div class="pipeline-preview-block">
+              <div class="pipeline-preview-header">
+                <span class="pipeline-header-title">Media Pipeline &amp; Checkpoint Flow</span>
+              </div>
+              <div class="trace-steps-container">
+                <div class="trace-step">
+                  <span class="trace-num">Stage 1</span>
+                  <div class="trace-body"><strong>Audio Extraction:</strong> 16 kHz mono WAV via FFmpeg</div>
+                </div>
+                <div class="trace-step">
+                  <span class="trace-num">Stage 2</span>
+                  <div class="trace-body"><strong>Transcription:</strong> Timestamped Whisper segments &amp; translation</div>
+                </div>
+                <div class="trace-step">
+                  <span class="trace-num">Stage 3</span>
+                  <div class="trace-body"><strong>Synthesis &amp; Mux:</strong> Edge-TTS speech sync + timeline remux</div>
+                </div>
+              </div>
             </div>
             <div class="tier2-card-footer">
               <ul class="tag-list" style="margin: 0;" aria-label="Dubpilot tags">
