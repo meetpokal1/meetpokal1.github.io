@@ -265,7 +265,7 @@
           </div>
 
           <div class="proof-item">
-            <span class="proof-num">138 Tests</span>
+            <span class="proof-num">233 Tests</span>
             <span class="proof-label">Passing CI Test Suite</span>
             <span class="proof-desc">Automated ingestion, cleaning, and analytics unit tests</span>
           </div>
@@ -283,8 +283,8 @@
     <section id="projects" class="section" aria-labelledby="case-studies-heading">
       <div class="container">
         <div class="section-intro">
-          <h2 id="case-studies-heading">Featured Analytics Case Studies</h2>
-          <p>Analytical solutions engineered end-to-end: multi-channel sales &amp; inventory intelligence, financial tax reconciliation, and operational stock modeling.</p>
+          <h2 id="case-studies-heading">Flagship Analytics Case Study</h2>
+          <p>One end-to-end retail analytics system, presented through business findings, verified dashboard evidence, operational recommendations, and its underlying data architecture.</p>
         </div>
 
         <!-- Case Study 1: InsightFlow (Lead Flagship) -->
@@ -292,36 +292,35 @@
           <div class="project-header-top">
             <div>
               <span class="case-domain-tag">Flagship Analytics &amp; Data Engineering Platform</span>
-              <h3 id="title-insightflow" class="project-title">InsightFlow: Multi-Channel Sales &amp; Inventory Intelligence Platform</h3>
+              <h3 id="title-insightflow" class="project-title">InsightFlow: Retail Profit &amp; Data Integrity Intelligence</h3>
             </div>
-            <span class="status-pill status-pill-ok">Operational · 138 CI Tests Passing · Published</span>
+            <span class="status-pill status-pill-ok">CI verified · 233 tests · Release cleanup merged</span>
           </div>
 
           <p class="project-problem">
-            <strong>Business Problem:</strong> Multi-region retail and wholesale operations frequently struggle with disjointed, inconsistent transactional CSV and Excel exports. Missing product categories, sign-flipped quantities, reversed unit costs, and unmerged duplicate customer records obscure gross margin health, hide regional demand shifts, and cause uncoordinated replenishment that traps working capital. InsightFlow automates ingestion profiling, cleans messy operational data, persists normalized star schema models in PostgreSQL, and delivers four decision-ready Streamlit intelligence workspaces.
+            <strong>Business Problem:</strong> Retail teams cannot reliably investigate margins or replenishment when CSV/XLSX exports contain malformed quantities, duplicate customers, and invalid relationships. InsightFlow reconciles the source data first, then delivers decision-ready sales, inventory, and data-quality analytics.
           </p>
 
-          <!-- KPI Metric Row -->
-          <div class="kpi-row" aria-label="InsightFlow Case Study Key Metrics">
+          <!-- Key evidence: synthetic dataset and automated verification -->
+          <div class="kpi-row" aria-label="InsightFlow Key Project Metrics">
             <div class="kpi-cell">
               <span class="kpi-num">₹20.90 Cr</span>
-              <span class="kpi-label">Audited Net Revenue (7,878 Orders)</span>
+              <span class="kpi-label">Net Revenue · Synthetic Data</span>
             </div>
             <div class="kpi-cell">
-              <span class="kpi-num">₹4.24 Cr</span>
-              <span class="kpi-label">Gross Profit (20.3% Margin)</span>
+              <span class="kpi-num">20.3%</span>
+              <span class="kpi-label">Overall Gross Margin</span>
             </div>
             <div class="kpi-cell">
-              <span class="kpi-num">60 SKUs</span>
-              <span class="kpi-label">8 Categories across 12 Suppliers</span>
+              <span class="kpi-num">449</span>
+              <span class="kpi-label">Product–Location Stock Positions</span>
             </div>
             <div class="kpi-cell">
-              <span class="kpi-num">138 Tests</span>
-              <span class="kpi-label">Automated Unit &amp; Pipeline Tests</span>
+              <span class="kpi-num">233</span>
+              <span class="kpi-label">Automated Tests Passing in CI</span>
             </div>
           </div>
 
-          <!-- Technical Evidence: Real Runtime Browser Frame -->
           <div class="project-screenshot-frame">
             <div class="browser-header-bar">
               <div class="window-dots">
@@ -329,1269 +328,217 @@
                 <span class="window-dot dot-yellow"></span>
                 <span class="window-dot dot-green"></span>
               </div>
-              <span class="browser-address">insightflow-portfolio.streamlit.app · Executive Overview</span>
+              <span class="browser-address">Power BI Desktop · Executive Profitability</span>
             </div>
             <div class="screenshot-img-wrap">
-              <img src="assets/images/projects/insightflow-executive-overview.png" alt="InsightFlow Executive Overview dashboard runtime screenshot showing net revenue of ₹20.90 Cr, gross profit of ₹4.24 Cr, monthly sales trajectory, regional share, and inventory status mix" class="screenshot-img" loading="lazy" width="1600" height="1200">
+              <a href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Executive%20Profitability.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size executive dashboard screenshot">
+                <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Executive%20Profitability.png" alt="InsightFlow Power BI Executive Profitability dashboard with net revenue, gross profit, margin, monthly revenue, and revenue by category. All figures are synthetic." class="screenshot-img" loading="lazy" width="1600" height="900">
+              </a>
             </div>
             <figcaption class="screenshot-caption">
-              <span>Executive Overview workspace displaying net revenue, monthly sales trajectory, regional share, and operational inventory signals.</span>
+              <span>01 / Executive Dashboard · Select to open full size. All figures are synthetic.</span>
             </figcaption>
           </div>
 
-          <!-- Multi-Screen Analytics Evidence Strip -->
-          <div class="evidence-subhead" style="margin-top: var(--space-20);">
-            <span>Core Analytical Workspaces (Captured from Live Application)</span>
-          </div>
-          <div class="screenshot-gallery-strip" aria-label="InsightFlow Analytical Workspaces Gallery">
-            <div class="gallery-thumb-card">
-              <img src="assets/images/projects/insightflow-sales-products.png" alt="InsightFlow Sales and Products workspace showing category margins, product profitability, and discount analysis" class="gallery-thumb-img" loading="lazy" width="800" height="600">
-              <div class="gallery-thumb-title">Sales &amp; Product Performance</div>
+          <section class="insightflow-outcomes" aria-label="Business questions answered by InsightFlow">
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">BUSINESS FINDING</span>
+              <h4>Revenue is not the same as profit</h4>
+              <p>Basmati Rice 5kg leads product revenue at about ₹1.65 Cr, yet its modeled gross margin is only 2.15% (about ₹3.54L gross profit).</p>
+            </article>
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">SCENARIO ANALYSIS</span>
+              <h4>Stress-test a pricing decision</h4>
+              <p>Under the stated model assumptions, a 3% price adjustment can tolerate up to a 58.3% unit-volume decline before gross profit falls below baseline. This is a scenario, not a forecast.</p>
+            </article>
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">OPERATIONAL ACTION</span>
+              <h4>Prioritize stock exposure</h4>
+              <p>40 stock positions are truly out of stock, 96 are below reorder, and the replenishment heuristic suggests 5,791 units at an estimated ₹9.66L cost.</p>
+            </article>
+          </section>
+
+          <details class="insightflow-disclosure">
+            <summary>Explore the data-quality pipeline and implementation details</summary>
+            <div class="insightflow-disclosure-content">
+              <p><strong>Data assurance:</strong> The current runtime reconciles 49,975 raw records to 47,814 clean records (95.7% preservation). Exact duplicates, quarantined rows, merged customer profiles, and clean-loaded rows are tracked so the 8-table conservation checks balance without an unexplained gap.</p>
+              <p><strong>Implementation:</strong> Python ingestion and deterministic cleaning → PostgreSQL relational star schema and analytical views → tested SQL and FastAPI endpoints → Power BI PBIP/TMDL report and a locally runnable Streamlit dashboard. The dataset is synthetic; the replenishment buffer is a transparent heuristic, not a demand-variance-optimized safety-stock model.</p>
             </div>
-            <div class="gallery-thumb-card">
-              <img src="assets/images/projects/insightflow-inventory-intelligence.png" alt="InsightFlow Inventory Intelligence workspace displaying stock position mix, inventory valuation, and priority review queue" class="gallery-thumb-img" loading="lazy" width="800" height="600">
-              <div class="gallery-thumb-title">Inventory Velocity &amp; Reorder Queue</div>
-            </div>
-            <div class="gallery-thumb-card">
-              <img src="assets/images/projects/insightflow-customers-data-quality.png" alt="InsightFlow Customers and Data Quality workspace showing RFM distribution and data quality audit log" class="gallery-thumb-img" loading="lazy" width="800" height="600">
-              <div class="gallery-thumb-title">Customers &amp; Quality Audit Log</div>
-            </div>
-          </div>
+          </details>
 
-          <!-- Method & Analytical Interpretation -->
-          <div style="margin-top: var(--space-24); margin-bottom: var(--space-20);">
-            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary); margin-bottom: var(--space-12);">
-              <strong>Pipeline Architecture &amp; Data Quality:</strong> Built a 3-step automated data quality pipeline (<code>scripts/run_pipeline.py</code>) that ingests 8 disparate tables, detects missing values and anomalies, and executes deterministic cleaning rules. The pipeline successfully validated 8,734 clean orders (rejecting 212 invalid records with documented rejection reasons), repaired 230 sign-flipped negative quantities, merged 40 duplicate customer profiles, and loaded clean star schema views into PostgreSQL.
-            </p>
-            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary);">
-              <strong>Analytical Findings &amp; Business Value:</strong> The unfiltered multi-year dataset reveals a 20.3% overall gross margin across ₹20.90 Cr net revenue. Inventory intelligence identifies critical stock imbalances—highlighting SKUs requiring priority reorder versus overstocked items binding liquidity. The RFM customer segmentation engine isolates the top revenue-contributing accounts, enabling targeted account management and churn risk mitigation.
-            </p>
-          </div>
-
-          <!-- Recommendation Callout Box -->
-          <div class="recommendation-box">
-            <strong>Business Intelligence &amp; Governance Insight:</strong>
-            <p>
-              Replacing unversioned Excel reports with an automated, test-backed pipeline eliminates manual cross-tab errors and guarantees reproducible reporting. Business leaders review clean, single-source-of-truth KPIs while analysts retain full auditability through the automated data quality rejection log.
-            </p>
-          </div>
-
-          <ul class="tag-list" aria-label="Technologies used in InsightFlow">
-            <li class="tag-item">Python</li>
-            <li class="tag-item">PostgreSQL</li>
-            <li class="tag-item">SQL Analytics</li>
-            <li class="tag-item">FastAPI</li>
-            <li class="tag-item">Streamlit</li>
-            <li class="tag-item">Pandas ETL</li>
-            <li class="tag-item">Data Quality Auditing</li>
-            <li class="tag-item">Star Schema Modeling</li>
-          </ul>
-
-          <!-- Deliverables & Source note -->
-          <div class="project-deliverables">
-            <div class="deliverable-actions">
-              <a href="https://insightflow-portfolio.streamlit.app/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>Launch Live Demo ↗</span>
-              </a>
-              <a href="https://github.com/meetpokal1/InsightFlow" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>View Repository ↗</span>
-              </a>
-              <a href="https://github.com/meetpokal1/InsightFlow/actions/runs/39824703774" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>CI Build Passing (Run #3) ↗</span>
-              </a>
-            </div>
-            <p class="project-note">
-              <strong>Data source &amp; demo note:</strong> All business records and financial figures are synthetic. The dashboard runs the real Python ingestion, cleaning, and validation pipeline. Hosted Streamlit Community Cloud demo tracks the repository's <code>main</code> branch.
-            </p>
-          </div>
-        </article>
-
-        <!-- Case Study 2: GST Invoice & Ledger Automation -->
-        <article class="project-case-study project--teal" id="project-gst" aria-labelledby="title-gst">
-          <div class="project-header-top">
-            <div>
-              <span class="case-domain-tag">Financial Data Auditing &amp; Tax Reconciliation</span>
-              <h3 id="title-gst" class="project-title">GST Invoice &amp; Ledger Automation: Multi-State Reconciliation Engine</h3>
-            </div>
-            <span class="status-pill status-pill-ok">Core tool operational · Enhancements in draft PR #1</span>
-          </div>
-
-          <div class="project-overview-grid">
-            <div class="project-summary-col">
-              <p class="project-problem">
-                <strong>Business Problem:</strong> In Indian commercial accounting, manual cross-checking between vendor invoices and accounting purchase ledgers is labor-intensive and prone to missed input tax credit, rounding errors, and wrong tax head classification. This project automates calculation verification across intra-state (CGST + SGST) and inter-state (IGST) invoices, flagging discrepancies before statutory ledger posting.
-              </p>
-
-              <!-- KPI Metric Row -->
-              <div class="kpi-row" aria-label="GST Case Study Key Metrics">
-                <div class="kpi-cell">
-                  <span class="kpi-num">₹215,500</span>
-                  <span class="kpi-label">Batch Taxable Turnover (10 Invoices)</span>
-                </div>
-                <div class="kpi-cell">
-                  <span class="kpi-num">8 / 10</span>
-                  <span class="kpi-label">Invoices Fully Reconciled</span>
-                </div>
-                <div class="kpi-cell">
-                  <span class="kpi-num">₹40,020</span>
-                  <span class="kpi-label">Expected Total GST (Simplified Rules)</span>
-                </div>
-                <div class="kpi-cell">
-                  <span class="kpi-num">₹4,320</span>
-                  <span class="kpi-label">Flagged Tax (INV-1005 &amp; INV-1009)</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Technical Evidence: Real Runtime Browser Frame -->
-            <div class="project-screenshot-frame">
-              <div class="browser-header-bar">
-                <div class="window-dots">
-                  <span class="window-dot dot-red"></span>
-                  <span class="window-dot dot-yellow"></span>
-                  <span class="window-dot dot-green"></span>
-                </div>
-                <span class="browser-address">gst-audit-workbench.local · Reconciliation Engine</span>
-              </div>
-              <div class="screenshot-img-wrap">
-                <img src="assets/images/projects/gst-invoice-automation.png" alt="GST Invoice and Ledger Automation Streamlit application runtime screenshot showing batch reconciliation summary, 10 total invoices, 2 flagged mismatches, and 1 high-priority review item" class="screenshot-img" loading="lazy" width="1440" height="950">
-              </div>
-              <figcaption class="screenshot-caption">
-                <span>Batch reconciliation summary showing multi-state tax allocations, ₹0.50 rounding tolerance checks, and prioritized exception triage.</span>
-              </figcaption>
-            </div>
-          </div>
-
-          <!-- Technical Evidence: Visual Chart & Interactive Table -->
-          <div class="case-evidence-grid">
-            <!-- Visualisation 1: Reconciliation Breakdown & Geography Split -->
-            <div class="chart-box">
-              <div class="evidence-subhead">
-                <span>Reconciliation Results: Volume &amp; Expected Tax Breakdown</span>
-              </div>
-              <p style="font-size: var(--fs-xs); color: var(--text-muted); margin-bottom: var(--space-8);">
-                Decoupled distribution of verified invoices vs. flagged exceptions across ₹40,020 expected tax and ₹215,500 taxable turnover.
-              </p>
-
-              <!-- Expected Tax Distribution -->
-              <div class="ratio-bar-wrap">
-                <div class="ratio-bar" role="img" aria-label="Expected Tax: Reconciled 89.2% (₹35,700), Flagged 10.8% (₹4,320)">
-                  <div class="ratio-segment reconciled" style="width: 89.2%;">
-                    <span>89.2% (₹35,700)</span>
-                  </div>
-                  <div class="ratio-segment flagged" style="width: 10.8%;">
-                    <span>10.8%</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Turnover Geography Distribution -->
-              <div class="ratio-bar-wrap" style="margin-top: var(--space-16);">
-                <div style="font-size: var(--fs-xs); color: var(--text-muted); margin-bottom: 4px;">
-                  Turnover by Geography (₹215,500 Total):
-                </div>
-                <div class="ratio-bar" role="img" aria-label="Taxable Turnover: Maharashtra 68.0% (₹146,500), Other States 32.0% (₹69,000)">
-                  <div class="ratio-segment mh-origin" style="width: 68%;">
-                    <span>Maharashtra 68.0% (₹146.5K)</span>
-                  </div>
-                  <div class="ratio-segment other-states" style="width: 32%;">
-                    <span>Other States 32.0% (₹69K)</span>
-                  </div>
-                </div>
-              </div>
-
-              <ul class="chart-legend" aria-hidden="true">
-                <li class="legend-item">
-                  <span class="legend-swatch reconciled"></span>
-                  <span>Reconciled Expected Tax (₹35,700 · 8 invoices)</span>
-                </li>
-                <li class="legend-item">
-                  <span class="legend-swatch flagged"></span>
-                  <span>Flagged Expected Tax (₹4,320 · 2 invoices: INV-1005 &amp; INV-1009)</span>
-                </li>
-                <li class="legend-item">
-                  <span class="legend-swatch mh-origin"></span>
-                  <span>Maharashtra (5 invoices · CGST + SGST)</span>
-                </li>
-                <li class="legend-item">
-                  <span class="legend-swatch other-states"></span>
-                  <span>Other States (5 invoices · IGST)</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Interactive Evidence: Sample Reconciliation Ledger (10 Invoices) -->
-            <div class="evidence-panel" data-ui="gst-workbench">
-              <div class="evidence-header">
-                <span class="evidence-heading">Sample Reconciliation Ledger (10 Invoices)</span>
-                <div class="filter-group" role="group" aria-label="Filter sample reconciliation rows">
-                  <button type="button" class="filter-btn active" data-filter="all">All (10)</button>
-                  <button type="button" class="filter-btn" data-filter="mismatch">Flagged (2)</button>
-                  <button type="button" class="filter-btn" data-filter="ok">Reconciled (8)</button>
-                </div>
-              </div>
-
-              <div class="table-scroll-container">
-                <table class="data-table">
-                  <thead>
-                    <tr>
-                      <th class="col-nowrap">Invoice No</th>
-                      <th>Customer Name</th>
-                      <th class="col-nowrap">State</th>
-                      <th class="col-nowrap">Taxable</th>
-                      <th class="col-nowrap">Rate</th>
-                      <th class="col-nowrap">Expected</th>
-                      <th class="col-nowrap">Reported</th>
-                      <th class="col-nowrap">Status</th>
-                      <th class="col-audit">Audit Note</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="ok-row">
-                      <td class="col-nowrap"><code>INV-1001</code></td>
-                      <td>Bluebird Retail</td>
-                      <td class="col-nowrap">Maharashtra</td>
-                      <td class="col-nowrap">₹10,000</td>
-                      <td class="col-nowrap">18%</td>
-                      <td class="col-nowrap">₹11,800</td>
-                      <td class="col-nowrap">₹11,800</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
-                      <td class="col-audit">Intra-state split (CGST ₹900, SGST ₹900) verified</td>
-                    </tr>
-                    <tr class="ok-row">
-                      <td class="col-nowrap"><code>INV-1002</code></td>
-                      <td>Northstar Traders</td>
-                      <td class="col-nowrap">Gujarat</td>
-                      <td class="col-nowrap">₹25,000</td>
-                      <td class="col-nowrap">18%</td>
-                      <td class="col-nowrap">₹29,500</td>
-                      <td class="col-nowrap">₹29,500</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
-                      <td class="col-audit">Inter-state supply (IGST ₹4,500) verified</td>
-                    </tr>
-                    <tr class="ok-row">
-                      <td class="col-nowrap"><code>INV-1003</code></td>
-                      <td>Coastal Mart</td>
-                      <td class="col-nowrap">Madhya Pradesh</td>
-                      <td class="col-nowrap">₹8,000</td>
-                      <td class="col-nowrap">5%</td>
-                      <td class="col-nowrap">₹8,400</td>
-                      <td class="col-nowrap">₹8,400</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
-                      <td class="col-audit">Inter-state supply (IGST ₹400) verified</td>
-                    </tr>
-                    <tr class="ok-row">
-                      <td class="col-nowrap"><code>INV-1004</code></td>
-                      <td>Metro Supplies</td>
-                      <td class="col-nowrap">Maharashtra</td>
-                      <td class="col-nowrap">₹45,000</td>
-                      <td class="col-nowrap">12%</td>
-                      <td class="col-nowrap">₹50,400</td>
-                      <td class="col-nowrap">₹50,400</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
-                      <td class="col-audit">Intra-state split (CGST ₹2,700, SGST ₹2,700) verified</td>
-                    </tr>
-                    <tr class="mismatch-row">
-                      <td class="col-nowrap"><code>INV-1005</code></td>
-                      <td>Sunrise Stores</td>
-                      <td class="col-nowrap">Karnataka</td>
-                      <td class="col-nowrap">₹12,000</td>
-                      <td class="col-nowrap">18%</td>
-                      <td class="col-nowrap">₹14,160</td>
-                      <td class="col-nowrap">₹14,060</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-mismatch">Mismatch</span></td>
-                      <td class="col-audit">Reported ₹14,060 vs Expected ₹14,160 (IGST underreported by ₹100)</td>
-                    </tr>
-                    <tr class="ok-row">
-                      <td class="col-nowrap"><code>INV-1006</code></td>
-                      <td>Apex Enterprises</td>
-                      <td class="col-nowrap">Maharashtra</td>
-                      <td class="col-nowrap">₹30,000</td>
-                      <td class="col-nowrap">18%</td>
-                      <td class="col-nowrap">₹35,400</td>
-                      <td class="col-nowrap">₹35,400</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
-                      <td class="col-audit">Intra-state split (CGST ₹2,700, SGST ₹2,700) verified</td>
-                    </tr>
-                    <tr class="ok-row">
-                      <td class="col-nowrap"><code>INV-1007</code></td>
-                      <td>Zenith Distributors</td>
-                      <td class="col-nowrap">Maharashtra</td>
-                      <td class="col-nowrap">₹11,500</td>
-                      <td class="col-nowrap">18%</td>
-                      <td class="col-nowrap">₹13,570</td>
-                      <td class="col-nowrap">₹13,570</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
-                      <td class="col-audit">Intra-state split (CGST ₹1,035, SGST ₹1,035) verified</td>
-                    </tr>
-                    <tr class="ok-row">
-                      <td class="col-nowrap"><code>INV-1008</code></td>
-                      <td>Pioneer Tech</td>
-                      <td class="col-nowrap">Delhi</td>
-                      <td class="col-nowrap">₹6,000</td>
-                      <td class="col-nowrap">18%</td>
-                      <td class="col-nowrap">₹7,080</td>
-                      <td class="col-nowrap">₹7,080</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
-                      <td class="col-audit">Inter-state supply (IGST ₹1,080) verified</td>
-                    </tr>
-                    <tr class="mismatch-row">
-                      <td class="col-nowrap"><code>INV-1009</code></td>
-                      <td>Value House</td>
-                      <td class="col-nowrap">Rajasthan</td>
-                      <td class="col-nowrap">₹18,000</td>
-                      <td class="col-nowrap">12%</td>
-                      <td class="col-nowrap">₹20,160</td>
-                      <td class="col-nowrap">₹20,160</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-mismatch">Mismatch</span></td>
-                      <td class="col-audit">Inter-state invoice: reported under CGST+SGST instead of IGST</td>
-                    </tr>
-                    <tr class="ok-row">
-                      <td class="col-nowrap"><code>INV-1010</code></td>
-                      <td>Prime Retail</td>
-                      <td class="col-nowrap">Maharashtra</td>
-                      <td class="col-nowrap">₹50,000</td>
-                      <td class="col-nowrap">18%</td>
-                      <td class="col-nowrap">₹59,000</td>
-                      <td class="col-nowrap">₹59,000</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">OK</span></td>
-                      <td class="col-audit">Intra-state split (CGST ₹4,500, SGST ₹4,500) verified</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <!-- Method & Analytical Interpretation -->
-          <div style="margin-bottom: var(--space-20);">
-            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary); margin-bottom: var(--space-12);">
-              <strong>Method &amp; Implementation:</strong> The Python engine applies vectorized Pandas logic to compute statutory tax splits based on buyer state relative to the supplier's home jurisdiction (Maharashtra). Records are categorized into Intra-State (equal 50/50 split between CGST and SGST) or Inter-State (100% IGST routing). Line-item rounding differences within a ₹0.50 threshold are evaluated automatically.
-            </p>
-            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary);">
-              <strong>Analytical Findings:</strong> In this 10-invoice batch, 8 invoices (₹185,500 turnover) reconcile with 0 discrepancy. Two records fail verification: <code>INV-1005</code> underreports total tax by ₹100; <code>INV-1009</code> totals ₹20,160 correctly but wrongly classifies ₹2,160 under intra-state CGST+SGST rather than IGST, which would lead to incorrect portal credit allocation if not caught.
-            </p>
-          </div>
-
-          <!-- Recommendation Callout Box -->
-          <div class="recommendation-box">
-            <strong>Operational Scope &amp; Recommendation:</strong>
-            <p>
-              Automated reconciliation flags potential tax head mismatches and math discrepancies prior to monthly return filing. The Python engine assists human review under simplified rules and does not replace professional statutory audit or guarantee statutory input-tax-credit eligibility.
-            </p>
-          </div>
-
-          <ul class="tag-list" aria-label="Technologies used in GST Automation">
-            <li class="tag-item">Python</li>
+          <h4 class="project-stack-heading">Tools &amp; Implementation Stack</h4>
+          <ul class="tag-list" aria-label="InsightFlow technologies">
+            <li class="tag-item">Python ETL</li>
             <li class="tag-item">Pandas</li>
-            <li class="tag-item">Tax Reconciliation</li>
-            <li class="tag-item">Excel Automation</li>
-            <li class="tag-item">Streamlit</li>
+            <li class="tag-item">PostgreSQL · Star Schema</li>
+            <li class="tag-item">SQL · 17 Analytics Queries</li>
+            <li class="tag-item">FastAPI · 6 Endpoints</li>
+            <li class="tag-item">Power BI · PBIP/TMDL</li>
+            <li class="tag-item">DAX Measures</li>
+            <li class="tag-item">Power Query (M)</li>
+            <li class="tag-item">Streamlit Dashboard</li>
+            <li class="tag-item">Excel Workpaper · openpyxl</li>
+            <li class="tag-item">Docker Compose</li>
+            <li class="tag-item">pytest · Ruff</li>
+            <li class="tag-item">GitHub Actions CI</li>
           </ul>
 
-          <!-- Deliverables & Source note -->
+          <!-- Project-specific technical evidence: these links are unique to InsightFlow's actual artifacts. -->
           <div class="project-deliverables">
             <div class="deliverable-actions">
-              <a href="https://github.com/meetpokal1/GST-Invoive-Automation" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>View Repository ↗</span>
-              </a>
-              <a href="https://github.com/meetpokal1/GST-Invoive-Automation/tree/portfolio/gst-validation-and-tests" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>PR #1 Test Branch ↗</span>
-              </a>
+              <a href="#insightflow-evidence" class="btn btn-primary btn-sm"><span>Explore the Other Four Views ↓</span></a>
+              <a href="https://github.com/meetpokal1/InsightFlow" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>View Repository ↗</span></a>
+              <a href="https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/dax_measures.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>DAX Measure Catalog ↗</span></a>
+              <a href="https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/power_query.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>Power Query Scripts ↗</span></a>
+              <a href="https://github.com/meetpokal1/InsightFlow/blob/main/documentation/data_quality.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>Data Prep &amp; QA Notes ↗</span></a>
             </div>
             <p class="project-note">
-              <strong>Data source:</strong> Demonstration batch of 10 sample invoices processed with simplified state-level tax rules.
+              <strong>Data source &amp; evidence note:</strong> All records and financial figures are synthetic. The links above open the real DAX measures, Power Query loading logic, and documented cleaning/quality rules. The dashboard can be run locally using the repository instructions; no hosted live demo is claimed.
             </p>
           </div>
         </article>
 
-        <!-- Case Study 2: Mini ERP Inventory System -->
-        <article class="project-case-study project--amber" id="project-minierp" aria-labelledby="title-minierp">
-          <div class="project-header-top">
-            <div>
-              <span class="case-domain-tag">Operational Data Modeling &amp; Stock Thresholds</span>
-              <h3 id="title-minierp" class="project-title">Mini ERP Inventory System: Relational Stock Modeling &amp; Reorder Logic</h3>
-            </div>
-            <span class="status-pill status-pill-ok">Demonstration Dataset · Streamlit UI</span>
-          </div>
-
-          <div class="project-overview-grid">
-            <div class="project-summary-col">
-              <p class="project-problem">
-                <strong>Business Problem:</strong> Without structured threshold detection and relational data modeling, small distribution businesses face frequent stockouts and unmonitored replenishment cycles. This project implements a normalized relational database in SQLite with automated threshold-breach flags and purchase order tracking.
-              </p>
-
-              <!-- KPI Metric Row -->
-              <div class="kpi-row" aria-label="Mini ERP Key Metrics">
-                <div class="kpi-cell">
-                  <span class="kpi-num">6 SKUs</span>
-                  <span class="kpi-label">Active Seeded Catalog</span>
-                </div>
-                <div class="kpi-cell">
-                  <span class="kpi-num">3 / 6</span>
-                  <span class="kpi-label">SKUs Below Reorder Level</span>
-                </div>
-                <div class="kpi-cell">
-                  <span class="kpi-num">35 units</span>
-                  <span class="kpi-label">Seeded Open POs (PO #1 &amp; #2)</span>
-                </div>
-                <div class="kpi-cell">
-                  <span class="kpi-num">SQLite 3NF</span>
-                  <span class="kpi-label">Relational Data Integrity</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Technical Evidence: Real Runtime Browser Frame -->
-            <div class="project-screenshot-frame">
-              <div class="browser-header-bar">
-                <div class="window-dots">
-                  <span class="window-dot dot-red"></span>
-                  <span class="window-dot dot-yellow"></span>
-                  <span class="window-dot dot-green"></span>
-                </div>
-                <span class="browser-address">erp-inventory.local · Stock Analytics</span>
-              </div>
-              <div class="screenshot-img-wrap">
-                <img src="assets/images/projects/minierp-inventory-dashboard.png" alt="Mini ERP Inventory System Streamlit interface runtime screenshot showing 6 SKUs, total stock value of ₹44,792, 3 low-stock alerts, and 2 pending purchase orders" class="screenshot-img" loading="lazy" width="1440" height="950">
-              </div>
-              <figcaption class="screenshot-caption">
-                <span>Operational stock intelligence evaluating replenishment coverage, active purchase orders, and physical-count reconciliation variances.</span>
-              </figcaption>
-            </div>
-          </div>
-
-          <!-- Technical Evidence: Threshold Comparison Chart & Sample Inventory Table -->
-          <div class="case-evidence-grid">
-            <!-- Visualisation 2: Stock on Hand vs. Reorder Level -->
-            <div class="chart-box">
-              <div class="evidence-subhead">
-                <span>Inventory Stock vs. Reorder Level (Seeded Catalog)</span>
-              </div>
-              <p style="font-size: var(--fs-xs); color: var(--text-muted); margin-bottom: var(--space-8);">
-                Stock on hand (horizontal bar) measured against reorder threshold pins. 3 items trigger automated replenishment flags.
-              </p>
-
-              <div class="threshold-chart-wrap">
-                <!-- Axis Scale Reference Ticks -->
-                <div class="threshold-axis-row" aria-hidden="true">
-                  <div class="threshold-axis-spacer-left"></div>
-                  <div class="threshold-axis-track">
-                    <span class="threshold-axis-tick" style="left: 0%;">0</span>
-                    <span class="threshold-axis-tick" style="left: 25%;">15</span>
-                    <span class="threshold-axis-tick" style="left: 50%;">30</span>
-                    <span class="threshold-axis-tick" style="left: 75%;">45</span>
-                    <span class="threshold-axis-tick" style="left: 100%;">60 units</span>
-                  </div>
-                  <div class="threshold-axis-spacer-right"></div>
-                </div>
-
-                <!-- SKU-001 -->
-                <div class="threshold-row" title="SKU-001: A4 Copier Paper (Ream) – Stock: 45 units, Reorder level: 20 units (+25 Surplus)">
-                  <div class="threshold-sku" title="A4 Copier Paper (Ream)">
-                    <code>SKU-001</code>
-                    <span class="threshold-sku-name">A4 Copier Paper (Ream)</span>
-                  </div>
-                  <div class="threshold-bar-track" aria-label="SKU-001: A4 Copier Paper (Ream), Stock: 45 units, Reorder level: 20 units">
-                    <div class="threshold-bar-fill ok" style="width: 75%;"></div>
-                    <div class="threshold-line-pin" style="left: 33.3%;" aria-hidden="true" title="Reorder level: 20"></div>
-                  </div>
-                  <div class="threshold-status-cell">
-                    <span class="threshold-status-badge" style="color: var(--status-ok-text);">+25 Surplus</span>
-                  </div>
-                </div>
-
-                <!-- SKU-002 -->
-                <div class="threshold-row" title="SKU-002: USB-C Cable 1m – Stock: 8 units, Reorder level: 15 units (-7 Deficit; Open PO #1 for 25 units)">
-                  <div class="threshold-sku" title="USB-C Cable 1m">
-                    <code>SKU-002</code>
-                    <span class="threshold-sku-name">USB-C Cable 1m</span>
-                  </div>
-                  <div class="threshold-bar-track" aria-label="SKU-002: USB-C Cable 1m, Stock: 8 units, Reorder level: 15 units">
-                    <div class="threshold-bar-fill alert" style="width: 13.3%;"></div>
-                    <div class="threshold-line-pin" style="left: 25%;" aria-hidden="true" title="Reorder level: 15"></div>
-                  </div>
-                  <div class="threshold-status-cell">
-                    <span class="threshold-status-badge" style="color: var(--status-mismatch-text);">-7 Deficit (PO #1: 25)</span>
-                  </div>
-                </div>
-
-                <!-- SKU-003 -->
-                <div class="threshold-row" title="SKU-003: Wireless Mouse – Stock: 30 units, Reorder level: 10 units (+20 Surplus)">
-                  <div class="threshold-sku" title="Wireless Mouse">
-                    <code>SKU-003</code>
-                    <span class="threshold-sku-name">Wireless Mouse</span>
-                  </div>
-                  <div class="threshold-bar-track" aria-label="SKU-003: Wireless Mouse, Stock: 30 units, Reorder level: 10 units">
-                    <div class="threshold-bar-fill ok" style="width: 50%;"></div>
-                    <div class="threshold-line-pin" style="left: 16.7%;" aria-hidden="true" title="Reorder level: 10"></div>
-                  </div>
-                  <div class="threshold-status-cell">
-                    <span class="threshold-status-badge" style="color: var(--status-ok-text);">+20 Surplus</span>
-                  </div>
-                </div>
-
-                <!-- SKU-004 -->
-                <div class="threshold-row" title="SKU-004: Diamond Polishing Cloth – Stock: 5 units, Reorder level: 10 units (-5 Deficit)">
-                  <div class="threshold-sku" title="Diamond Polishing Cloth">
-                    <code>SKU-004</code>
-                    <span class="threshold-sku-name">Diamond Polishing Cloth</span>
-                  </div>
-                  <div class="threshold-bar-track" aria-label="SKU-004: Diamond Polishing Cloth, Stock: 5 units, Reorder level: 10 units">
-                    <div class="threshold-bar-fill alert" style="width: 8.3%;"></div>
-                    <div class="threshold-line-pin" style="left: 16.7%;" aria-hidden="true" title="Reorder level: 10"></div>
-                  </div>
-                  <div class="threshold-status-cell">
-                    <span class="threshold-status-badge" style="color: var(--status-mismatch-text);">-5 Deficit</span>
-                  </div>
-                </div>
-
-                <!-- SKU-005 -->
-                <div class="threshold-row" title="SKU-005: Invoice Book (100 pages) – Stock: 60 units, Reorder level: 25 units (+35 Surplus)">
-                  <div class="threshold-sku" title="Invoice Book (100 pages)">
-                    <code>SKU-005</code>
-                    <span class="threshold-sku-name">Invoice Book (100 pages)</span>
-                  </div>
-                  <div class="threshold-bar-track" aria-label="SKU-005: Invoice Book (100 pages), Stock: 60 units, Reorder level: 25 units">
-                    <div class="threshold-bar-fill ok" style="width: 100%;"></div>
-                    <div class="threshold-line-pin" style="left: 41.7%;" aria-hidden="true" title="Reorder level: 25"></div>
-                  </div>
-                  <div class="threshold-status-cell">
-                    <span class="threshold-status-badge" style="color: var(--status-ok-text);">+35 Surplus</span>
-                  </div>
-                </div>
-
-                <!-- SKU-006 -->
-                <div class="threshold-row" title="SKU-006: External HDD 1TB – Stock: 3 units, Reorder level: 5 units (-2 Deficit; Open PO #2 for 10 units)">
-                  <div class="threshold-sku" title="External HDD 1TB">
-                    <code>SKU-006</code>
-                    <span class="threshold-sku-name">External HDD 1TB</span>
-                  </div>
-                  <div class="threshold-bar-track" aria-label="SKU-006: External HDD 1TB, Stock: 3 units, Reorder level: 5 units">
-                    <div class="threshold-bar-fill alert" style="width: 5%;"></div>
-                    <div class="threshold-line-pin" style="left: 8.3%;" aria-hidden="true" title="Reorder level: 5"></div>
-                  </div>
-                  <div class="threshold-status-cell">
-                    <span class="threshold-status-badge" style="color: var(--status-mismatch-text);">-2 Deficit (PO #2: 10)</span>
-                  </div>
-                </div>
-              </div>
-
-              <ul class="chart-legend" aria-hidden="true">
-                <li class="legend-item">
-                  <span class="legend-swatch reconciled"></span>
-                  <span>Stock on Hand (Above Reorder Level)</span>
-                </li>
-                <li class="legend-item">
-                  <span class="legend-swatch flagged"></span>
-                  <span>Stock on Hand (Below Reorder Level)</span>
-                </li>
-                <li class="legend-item">
-                  <span style="display: inline-block; width: 12px; height: 2px; background-color: var(--text-primary);"></span>
-                  <span>Vertical Pin = Reorder Level Threshold</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Table: Sample Inventory Ledger (6 SKUs) -->
-            <div class="evidence-panel" data-ui="minierp-ledger">
-              <div class="evidence-header">
-                <span class="evidence-heading">Sample Inventory Ledger (6 SKUs)</span>
-                <span class="status-pill status-pill-ok">Demonstration Dataset</span>
-              </div>
-              <div class="table-scroll-container">
-                <table class="data-table">
-                  <thead>
-                    <tr>
-                      <th class="col-nowrap">SKU</th>
-                      <th>Product Name</th>
-                      <th class="col-nowrap">Category</th>
-                      <th class="col-nowrap">Unit Price</th>
-                      <th class="col-nowrap">Quantity in Stock</th>
-                      <th class="col-nowrap">Reorder Level</th>
-                      <th class="col-nowrap">Inventory Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="col-nowrap"><code>SKU-001</code></td>
-                      <td>A4 Copier Paper (Ream)</td>
-                      <td class="col-nowrap">Office Supplies</td>
-                      <td class="col-nowrap">₹280.00</td>
-                      <td class="col-nowrap">45 units</td>
-                      <td class="col-nowrap">20 units</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">In Stock</span></td>
-                    </tr>
-                    <tr class="mismatch-row">
-                      <td class="col-nowrap"><code>SKU-002</code></td>
-                      <td>USB-C Cable 1m</td>
-                      <td class="col-nowrap">Electronics</td>
-                      <td class="col-nowrap">₹199.00</td>
-                      <td class="col-nowrap">8 units</td>
-                      <td class="col-nowrap">15 units</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-mismatch">Reorder Triggered</span></td>
-                    </tr>
-                    <tr>
-                      <td class="col-nowrap"><code>SKU-003</code></td>
-                      <td>Wireless Mouse</td>
-                      <td class="col-nowrap">Electronics</td>
-                      <td class="col-nowrap">₹550.00</td>
-                      <td class="col-nowrap">30 units</td>
-                      <td class="col-nowrap">10 units</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">In Stock</span></td>
-                    </tr>
-                    <tr class="mismatch-row">
-                      <td class="col-nowrap"><code>SKU-004</code></td>
-                      <td>Diamond Polishing Cloth</td>
-                      <td class="col-nowrap">Trade Supplies</td>
-                      <td class="col-nowrap">₹120.00</td>
-                      <td class="col-nowrap">5 units</td>
-                      <td class="col-nowrap">10 units</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-mismatch">Reorder Triggered</span></td>
-                    </tr>
-                    <tr>
-                      <td class="col-nowrap"><code>SKU-005</code></td>
-                      <td>Invoice Book (100 pages)</td>
-                      <td class="col-nowrap">Office Supplies</td>
-                      <td class="col-nowrap">₹65.00</td>
-                      <td class="col-nowrap">60 units</td>
-                      <td class="col-nowrap">25 units</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-ok">In Stock</span></td>
-                    </tr>
-                    <tr class="mismatch-row">
-                      <td class="col-nowrap"><code>SKU-006</code></td>
-                      <td>External HDD 1TB</td>
-                      <td class="col-nowrap">Electronics</td>
-                      <td class="col-nowrap">₹3,200.00</td>
-                      <td class="col-nowrap">3 units</td>
-                      <td class="col-nowrap">5 units</td>
-                      <td class="col-nowrap"><span class="status-pill status-pill-mismatch">Reorder Triggered</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <!-- Method & Analytical Interpretation -->
-          <div style="margin-bottom: var(--space-20);">
-            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary); margin-bottom: var(--space-12);">
-              <strong>Method &amp; Implementation:</strong> Built a relational SQLite database schema with normalized tables for Products, Inventory Ledgers, and Purchase Orders. The application calculates replenishment triggers in real time by evaluating current stock quantities against configurable reorder level thresholds, rendering a responsive Streamlit operations dashboard.
-            </p>
-            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary);">
-              <strong>Analytical Observations:</strong> Three of the six seeded SKUs have breached their replenishment threshold. Open purchase orders are already recorded for SKU-002 (USB-C Cable, 25 units) and SKU-006 (External HDD, 10 units), while SKU-004 (Diamond Polishing Cloth, 5 in stock vs. 10 threshold) has no pending PO on record, representing an unaddressed stockout risk.
-            </p>
-          </div>
-
-          <!-- Recommendation Callout Box -->
-          <div class="recommendation-box">
-            <strong>Operational Scope &amp; Recommendation:</strong>
-            <p>
-              Automated threshold detection prevents inventory stockouts without holding excessive buffer stock. For immediate operational action, create a purchase order for SKU-004 before trade supply stock reaches zero.
-            </p>
-          </div>
-
-          <ul class="tag-list" aria-label="Technologies used in Mini ERP">
-            <li class="tag-item">Python</li>
-            <li class="tag-item">SQLite</li>
-            <li class="tag-item">Streamlit</li>
-            <li class="tag-item">Relational Modeling</li>
-            <li class="tag-item">Threshold Analytics</li>
-          </ul>
-
-          <!-- Deliverables & Source note -->
-          <div class="project-deliverables">
-            <div class="deliverable-actions">
-              <a href="https://github.com/meetpokal1/Mini-ERP-Inventory-System" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>View Repository ↗</span>
-              </a>
-            </div>
-            <p class="project-note">
-              <strong>Data source:</strong> Illustrative inventory records are seeded from the project's demonstration dataset; stock levels are not live inventory.
-            </p>
-          </div>
-        </article>
       </div>
     </section>
 
-    <!-- Experience & Applied Work Section -->
-    <!-- Experience section reserved for future CV update -->
-
-    <!-- Analytical Methods & Toolsets Matrix Section (Being Brute Inspiration) -->
-    <section id="matrix" class="section matrix-section" aria-labelledby="matrix-heading">
+    <!-- InsightFlow five-part evidence gallery -->
+    <section id="insightflow-evidence" class="section matrix-section" aria-labelledby="insightflow-evidence-heading">
       <div class="container">
         <div class="section-intro">
-          <h2 id="matrix-heading">At a Glance: Analytical Methods Across Projects</h2>
-          <p>Cross-project comparison of data engineering, validation logic, relational schemas, and operational interfaces.</p>
+          <h2 id="insightflow-evidence-heading">Supporting Evidence</h2>
+          <p>The executive page is shown in the flagship card. Four supporting captures cover analysis, operational decisions, data assurance, and model architecture. Open any image to inspect it at full size.</p>
         </div>
-
-        <div class="matrix-container">
-          <table class="matrix-table" aria-label="Analytical methods and competencies comparison matrix">
-            <thead>
-              <tr>
-                <th scope="col">Project / System</th>
-                <th scope="col" class="matrix-cell-center">Data Ingestion &amp; Parsing</th>
-                <th scope="col" class="matrix-cell-center">Validation &amp; Business Rules</th>
-                <th scope="col" class="matrix-cell-center">Relational SQL Modeling</th>
-                <th scope="col" class="matrix-cell-center">Threshold &amp; Discrepancy Logic</th>
-                <th scope="col" class="matrix-cell-center">Operational Reporting / UI</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>GST Invoice &amp; Ledger Automation</strong></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="CSV &amp; Excel parsing"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Multi-state GST tax rules"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Tax head &amp; rounding discrepancy checks"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Excel workbooks &amp; Streamlit dashboard"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-              </tr>
-              <tr>
-                <td><strong>Mini ERP Inventory System</strong></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="SQLite seed data &amp; transaction logs"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Stock ledger constraints"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="3NF schema: Products, POs, Inventory"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Automated reorder level triggers"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Streamlit inventory dashboard"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-              </tr>
-              <tr>
-                <td><strong>InsightFlow (Pipeline Architecture)</strong></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Batch &amp; streaming ingestion concept"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Data quality validation gates"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Analytical warehouse dimensional schema"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Schema drift &amp; anomaly detection"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
-              </tr>
-              <tr>
-                <td><strong>PharmaGuard AI</strong></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Complaint &amp; adverse event ingestion"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Terminology &amp; classification logic"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Severity triage threshold scoring"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Complaint routing dashboard"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-              </tr>
-              <tr>
-                <td><strong>Dubpilot (Media Pipeline)</strong></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Audio/video extraction via yt-dlp &amp; FFmpeg"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Timeline segment boundary verification"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
-                <td class="matrix-cell-center"><span class="matrix-check" title="Duration drift &amp; atempo matching"><svg class="matrix-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 8 7 12 13 4"></polyline></svg><span class="sr-only">Included</span></span></td>
-                <td class="matrix-cell-center"><span class="matrix-dash" aria-hidden="true">-</span></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="insightflow-evidence-grid">
+          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Margin%20Investigation.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Margin Investigation screenshot">
+            <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">02 / STATISTICAL ANALYSIS</span><span aria-hidden="true">↗</span></div>
+            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Margin%20Investigation.png" alt="Power BI page showing product margin and price-sensitivity investigation" loading="lazy" width="1600" height="900"></div>
+            <div class="insightflow-evidence-body"><h3>Margin Investigation</h3><p>Product profitability and the modeled price-sensitivity scenario.</p></div>
+          </a>
+          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Inventory%20Decisions.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Inventory Decisions screenshot">
+            <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">03 / OPERATIONAL DECISIONS</span><span aria-hidden="true">↗</span></div>
+            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Inventory%20Decisions.png" alt="Power BI page showing inventory health, stockouts, reorder exposure, and replenishment queue" loading="lazy" width="1600" height="900"></div>
+            <div class="insightflow-evidence-body"><h3>Inventory Decisions</h3><p>Stockout exposure, reorder priorities, and estimated replenishment cost.</p></div>
+          </a>
+          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Data%20Integrity%20%26%20Pipeline%20Assurance.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Pipeline Assurance screenshot">
+            <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">04 / DATA ASSURANCE</span><span aria-hidden="true">↗</span></div>
+            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Data%20Integrity%20%26%20Pipeline%20Assurance.png" alt="Power BI page showing raw-to-clean record conservation and quality dispositions" loading="lazy" width="1600" height="900"></div>
+            <div class="insightflow-evidence-body"><h3>Pipeline Assurance</h3><p>Record conservation, deduplication, quarantines, and load outcomes.</p></div>
+          </a>
+          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Semantic%20Model%20Architecture.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Semantic Model screenshot">
+            <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">05 / MODEL ARCHITECTURE</span><span aria-hidden="true">↗</span></div>
+            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Semantic%20Model%20Architecture.png" alt="Power BI Desktop semantic model tables and relationships" loading="lazy" width="1600" height="900"></div>
+            <div class="insightflow-evidence-body"><h3>Semantic Model</h3><p>Relationships and the version-controlled semantic model.</p></div>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Supporting Technical Projects Section (Tier 2) -->
-    <section id="technical-systems" class="section" aria-labelledby="tech-systems-heading">
+<section id="technical-systems" class="section" aria-labelledby="tech-systems-heading">
       <div class="container">
         <div class="section-intro">
-          <h2 id="tech-systems-heading">Supporting Technical &amp; Engineering Systems</h2>
-          <p>Secondary engineering projects showcasing pipeline orchestration, classification algorithms, and media automation.</p>
+          <h2 id="tech-systems-heading">Engineering Architecture</h2>
+          <p>The high-level pipeline remains available without competing with the business story.</p>
         </div>
 
+        <details class="insightflow-disclosure insightflow-blueprint-disclosure">
+          <summary>Open the five-stage data systems blueprint</summary>
         <!-- Signature Data Systems Blueprint Showcase -->
         <div class="blueprint-card" id="systems-blueprint" data-ui="blueprint">
           <div class="blueprint-header">
             <div class="blueprint-header-left">
               <span class="blueprint-spec-id">SPEC // ENG-DS-01</span>
               <div class="blueprint-heading-copy">
-                <span class="blueprint-title-text">Cross-Project Data Systems Blueprint</span>
-                <span class="blueprint-subtitle-text">Conceptual flow across GST Invoice Automation, Mini ERP, and InsightFlow Analytics Platform</span>
+                <span class="blueprint-title-text">InsightFlow Data Systems Blueprint</span>
+                <span class="blueprint-subtitle-text">Python ingestion and validation → PostgreSQL analytical model → SQL and API consumers → Power BI reporting and business decisions</span>
               </div>
             </div>
             <div class="blueprint-meta-tags">
-              <span class="blueprint-status-indicator"><span class="blueprint-pulse-dot"></span> CONCEPTUAL MODEL</span>
-              <span class="blueprint-scale-tag">1:1 RELATIONAL MAPPING</span>
+              <span class="blueprint-status-indicator"><span class="blueprint-pulse-dot"></span> PROJECT ARCHITECTURE</span>
+              <span class="blueprint-scale-tag">END-TO-END DATA FLOW</span>
             </div>
           </div>
 
-          <div class="blueprint-canvas-wrap" aria-label="End-to-end data pipeline blueprint from raw ingestion to business decisions">
-            <svg class="blueprint-svg" viewBox="0 0 1000 320" width="1000" height="320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technical schematic blueprint diagram showing the end-to-end data pipeline from raw data to Python transformation, SQL storage, BI analytics, and business decisions">
+          <div class="blueprint-canvas-wrap" aria-label="Implemented InsightFlow architecture from messy source files to business decisions">
+            <svg class="blueprint-svg" viewBox="0 0 1000 320" width="1000" height="320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five-stage architecture: raw CSV and Excel files, Python ingestion and validation, PostgreSQL analytical model, SQL and API analytics with Power BI, then business decisions and data assurance">
               <defs>
-                <!-- Schematic hairline grid -->
-                <pattern id="bp-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--border-subtle)" stroke-width="0.5" stroke-opacity="0.35" />
-                </pattern>
-                <!-- Arrowhead markers -->
-                <marker id="bp-arrow-teal" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                  <path d="M 1 1 L 7 4 L 1 7 z" fill="var(--accent-teal)" />
-                </marker>
-                <marker id="bp-arrow-amber" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                  <path d="M 1 1 L 7 4 L 1 7 z" fill="var(--accent-amber)" />
-                </marker>
-                <marker id="bp-arrow-steel" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                  <path d="M 1 1 L 7 4 L 1 7 z" fill="var(--accent-steel)" />
-                </marker>
+                <pattern id="bp-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--border-subtle)" stroke-width="0.5" stroke-opacity="0.35"/></pattern>
+                <marker id="bp-arrow" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M 1 1 L 7 4 L 1 7 z" fill="var(--accent-amber)"/></marker>
               </defs>
-
-              <!-- Technical Canvas Surface with Grid -->
-              <rect x="0" y="0" width="1000" height="320" fill="var(--bg-canvas)" />
-              <rect x="0" y="0" width="1000" height="320" fill="url(#bp-grid)" />
-
-              <!-- Outer Blueprint Border with Hairline Double Stroke -->
-              <rect x="8" y="8" width="984" height="304" fill="none" stroke="var(--border-subtle)" stroke-width="1" stroke-opacity="0.6" />
-              <rect x="12" y="12" width="976" height="296" fill="none" stroke="var(--border-subtle)" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="4 2" />
-
-              <!-- Corner Engineering Alignment Crosshairs -->
+              <rect x="0" y="0" width="1000" height="320" fill="var(--bg-canvas)"/>
+              <rect x="0" y="0" width="1000" height="320" fill="url(#bp-grid)"/>
+              <rect x="8" y="8" width="984" height="304" fill="none" stroke="var(--border-subtle)" stroke-width="1" stroke-opacity="0.6"/>
+              <rect x="12" y="12" width="976" height="296" fill="none" stroke="var(--border-subtle)" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="4 2"/>
               <g stroke="var(--accent-amber)" stroke-width="1" opacity="0.75">
-                <path d="M 18 24 L 30 24 M 24 18 L 24 30" />
-                <path d="M 970 24 L 982 24 M 976 18 L 976 30" />
-                <path d="M 18 296 L 30 296 M 24 290 L 24 302" />
-                <path d="M 970 296 L 982 296 M 976 290 L 976 302" />
+                <path d="M 18 24 L 30 24 M 24 18 L 24 30"/><path d="M 970 24 L 982 24 M 976 18 L 976 30"/>
+                <path d="M 18 296 L 30 296 M 24 290 L 24 302"/><path d="M 970 296 L 982 296 M 976 290 L 976 302"/>
               </g>
-
-              <!-- Top Coordinate Scale & Dimension Line -->
-              <g stroke="var(--border-subtle)" stroke-width="0.75" opacity="0.5">
-                <line x1="40" y1="20" x2="960" y2="20" />
-                <line x1="40" y1="16" x2="40" y2="24" />
-                <line x1="230" y1="17" x2="230" y2="23" />
-                <line x1="430" y1="16" x2="430" y2="24" />
-                <line x1="630" y1="17" x2="630" y2="23" />
-                <line x1="830" y1="16" x2="830" y2="24" />
-                <line x1="960" y1="16" x2="960" y2="24" />
-              </g>
-              <g font-size="8" fill="var(--text-muted)" opacity="0.75" text-anchor="middle">
-                <text x="40" y="15">000</text>
-                <text x="230" y="15">250</text>
-                <text x="430" y="15">500</text>
-                <text x="630" y="15">750</text>
-                <text x="830" y="15">900</text>
-                <text x="960" y="15">1000</text>
-              </g>
-
-              <!-- Top Title & Architecture Callout -->
-              <text x="42" y="33" font-size="9" fill="var(--text-muted)">SYNTHESIS // CORE-DATA-STACK</text>
-              <text x="500" y="33" font-size="9.5" font-weight="600" fill="var(--text-secondary)" text-anchor="middle">CROSS-PROJECT PIPELINE SYNTHESIS · MAPPING GST ENGINE, MINI ERP &amp; INSIGHTFLOW</text>
-              <text x="958" y="33" font-size="9" fill="var(--status-ok-text)" text-anchor="end">PATTERNS: END-TO-END</text>
-
-              <!-- ========================================================================
-                   STAGE CONNECTOR BUSES (Engineering orthogonal lines with pulse points)
-                   ======================================================================== -->
-              <g class="blueprint-bus-group">
-                <!-- Bus 1 -> 2: Ingest to Transform -->
-                <path class="blueprint-bus-line" d="M 190 145 L 225 145" stroke="var(--accent-teal)" stroke-width="1.5" marker-end="url(#bp-arrow-teal)" />
-                <circle cx="207" cy="145" r="3" fill="var(--accent-teal)" />
-                <text x="207" y="139" font-size="7.5" fill="var(--text-muted)" text-anchor="middle">RAW_DATA</text>
-
-                <!-- Bus 2 -> 3: Transform to SQL -->
-                <path class="blueprint-bus-line" d="M 395 145 L 430 145" stroke="var(--accent-amber)" stroke-width="1.5" marker-end="url(#bp-arrow-amber)" />
-                <circle cx="412" cy="145" r="3" fill="var(--accent-amber)" />
-                <text x="412" y="139" font-size="7.5" fill="var(--text-muted)" text-anchor="middle">AUDITED_DF</text>
-
-                <!-- Bus 3 -> 4: SQL to Analytics -->
-                <path class="blueprint-bus-line" d="M 595 145 L 630 145" stroke="var(--accent-steel)" stroke-width="1.5" marker-end="url(#bp-arrow-steel)" />
-                <circle cx="612" cy="145" r="3" fill="var(--accent-steel)" />
-                <text x="612" y="139" font-size="7.5" fill="var(--text-muted)" text-anchor="middle">SQL_MART</text>
-
-                <!-- Bus 4 -> 5: Analytics to Decisions -->
-                <path class="blueprint-bus-line" d="M 795 145 L 830 145" stroke="var(--accent-teal)" stroke-width="1.5" marker-end="url(#bp-arrow-teal)" />
-                <circle cx="812" cy="145" r="3" fill="var(--accent-teal)" />
-                <text x="812" y="139" font-size="7.5" fill="var(--text-muted)" text-anchor="middle">ACTION_KPI</text>
-              </g>
-
-              <!-- ========================================================================
-                   STAGE 1: INGESTION (Raw Data Inputs)
-                   ======================================================================== -->
-              <g class="blueprint-node" id="bp-node-1">
-                <rect class="blueprint-box-bg" x="30" y="46" width="160" height="234" rx="4" fill="var(--bg-surface)" stroke="var(--border-subtle)" stroke-width="1" />
-                <rect x="30" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
-                <line x1="30" y1="70" x2="190" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
-
-                <text class="blueprint-stage-num" x="38" y="57" font-size="8.5" font-weight="600" fill="var(--accent-teal)">STAGE 1 · INGESTION</text>
-                <text x="38" y="66" font-size="7" fill="var(--text-muted)">Raw CSV, JSON &amp; Catalog</text>
-
-                <!-- Stream A: Invoices -->
-                <rect x="38" y="78" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <g transform="translate(44, 88)" stroke="var(--accent-teal)" stroke-width="1" fill="none">
-                  <rect x="0" y="0" width="12" height="14" rx="1" />
-                  <line x1="3" y1="4" x2="9" y2="4" />
-                  <line x1="3" y1="7" x2="9" y2="7" />
-                  <line x1="3" y1="10" x2="7" y2="10" />
-                </g>
-                <text class="bp-sans" x="62" y="92" font-size="9.5" font-weight="600" fill="var(--text-primary)">CSV Invoices (10)</text>
-                <text x="62" y="104" font-size="8.5" fill="var(--accent-teal)">₹215.5K Batch Volume</text>
-                <text x="62" y="116" font-size="7.5" fill="var(--text-muted)">MH, KA, DL Multi-State</text>
-
-                <!-- Stream B: CDC Stream -->
-                <rect x="38" y="134" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <g transform="translate(44, 145)" stroke="var(--accent-amber)" stroke-width="1.2" fill="none">
-                  <path d="M 3 2 L 0 5 L 3 8 M 9 2 L 12 5 L 9 8" />
-                </g>
-                <text class="bp-sans" x="62" y="148" font-size="9.5" font-weight="600" fill="var(--text-primary)">JSON CDC Events</text>
-                <text x="62" y="160" font-size="8.5" fill="var(--accent-amber)">Streaming Logs</text>
-                <text x="62" y="172" font-size="7.5" fill="var(--text-muted)">Schema-keyed payloads</text>
-
-                <!-- Stream C: Catalog Master -->
-                <rect x="38" y="190" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <g transform="translate(44, 201)" stroke="var(--accent-steel)" stroke-width="1" fill="none">
-                  <ellipse cx="6" cy="3" rx="6" ry="2.5" />
-                  <path d="M 0 3 v 7 c 0 1.4 2.7 2.5 6 2.5 s 6 -1.1 6 -2.5 v -7" />
-                </g>
-                <text class="bp-sans" x="62" y="204" font-size="9.5" font-weight="600" fill="var(--text-primary)">Item Master (6 SKUs)</text>
-                <text x="62" y="216" font-size="8.5" fill="var(--text-secondary)">Catalog &amp; Cost Baselines</text>
-                <text x="62" y="228" font-size="7.5" fill="var(--text-muted)">Thresholds &amp; Lead Times</text>
-
-                <!-- Stage 1 Footer Note -->
-                <text x="110" y="264" font-size="8" fill="var(--text-muted)" text-anchor="middle">RFC 4180 · UTF-8 Ingest</text>
-              </g>
-
-              <!-- ========================================================================
-                   STAGE 2: TRANSFORM & AUDIT (Python & Pandas Engine)
-                   ======================================================================== -->
-              <g class="blueprint-node" id="bp-node-2">
-                <rect class="blueprint-box-bg" x="230" y="46" width="165" height="234" rx="4" fill="var(--bg-surface)" stroke="var(--border-subtle)" stroke-width="1" />
-                <rect x="230" y="46" width="165" height="24" fill="var(--bg-surface-subtle)" />
-                <line x1="230" y1="70" x2="395" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
-
-                <text class="blueprint-stage-num" x="238" y="57" font-size="8.5" font-weight="600" fill="var(--accent-amber)">STAGE 2 · TRANSFORM</text>
-                <text x="238" y="66" font-size="7" fill="var(--text-muted)">Python &amp; Pandas ETL</text>
-
-                <!-- Logic 1: Tax Head Routing -->
-                <rect x="238" y="78" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <text x="246" y="92" font-size="9" font-weight="600" fill="var(--accent-amber)">tax_routing_logic()</text>
-                <text x="246" y="104" font-size="8" fill="var(--text-secondary)">Intrastate → CGST + SGST</text>
-                <text x="246" y="116" font-size="8" fill="var(--text-secondary)">Interstate → IGST (9%/18%)</text>
-
-                <!-- Logic 2: Tolerance & Audit Math -->
-                <rect x="238" y="134" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <text x="246" y="148" font-size="9" font-weight="600" fill="var(--accent-amber)">verify_tolerance()</text>
-                <text x="246" y="160" font-size="8" fill="var(--text-primary)">|Expected - Actual| ≤ ₹0.50</text>
-                <text x="246" y="172" font-size="8" fill="var(--status-ok-text)">Verified: 89.2% | Flag: 10.8%</text>
-
-                <!-- Logic 3: Inventory Replenishment Logic -->
-                <rect x="238" y="190" width="149" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <text x="246" y="204" font-size="9" font-weight="600" fill="var(--accent-amber)">eval_reorder_trigger()</text>
-                <text x="246" y="216" font-size="8" fill="var(--text-secondary)">Available = Stock + Open_PO</text>
-                <text x="246" y="228" font-size="8" fill="var(--status-mismatch-text)">Trigger if Available &lt; Reorder</text>
-
-                <!-- Stage 2 Footer Note -->
-                <text x="312" y="264" font-size="8" fill="var(--text-muted)" text-anchor="middle">NumPy Vectorized · Deterministic</text>
-              </g>
-
-              <!-- ========================================================================
-                   STAGE 3: SQL DATABASE (3NF Relational Data Store)
-                   ======================================================================== -->
-              <g class="blueprint-node" id="bp-node-3">
-                <rect class="blueprint-box-bg" x="435" y="46" width="160" height="234" rx="4" fill="var(--bg-surface)" stroke="var(--border-subtle)" stroke-width="1" />
-                <rect x="435" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
-                <line x1="435" y1="70" x2="595" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
-
-                <text class="blueprint-stage-num" x="443" y="57" font-size="8.5" font-weight="600" fill="var(--accent-steel)">STAGE 3 · SQL STORE</text>
-                <text x="443" y="66" font-size="7" fill="var(--text-muted)">3NF Relational Schema</text>
-
-                <!-- Cylinder icon + DB label -->
-                <g transform="translate(445, 78)">
-                  <ellipse cx="12" cy="6" rx="10" ry="4" stroke="var(--accent-steel)" stroke-width="1" fill="none" />
-                  <path d="M 2 6 v 14 c 0 2.2 4.5 4 10 4 s 10 -1.8 10 -4 v -14" stroke="var(--accent-steel)" stroke-width="1" fill="none" />
-                  <path d="M 2 13 c 0 2.2 4.5 4 10 4 s 10 -1.8 10 -4" stroke="var(--accent-steel)" stroke-width="0.75" fill="none" opacity="0.5" />
-                  <text class="bp-sans" x="28" y="12" font-size="9.5" font-weight="600" fill="var(--text-primary)">SQLite Core DB</text>
-                  <text x="28" y="22" font-size="8" fill="var(--text-muted)">ACID Transactions</text>
-                </g>
-
-                <!-- Schema Entities Box -->
-                <rect x="443" y="108" width="144" height="130" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-
-                <!-- Table 1 -->
-                <text x="451" y="122" font-size="8.5" font-weight="600" fill="var(--accent-steel)">fact_invoices</text>
-                <text x="451" y="133" font-size="7.5" fill="var(--text-muted)">[PK] id  [FK] supplier_id</text>
-                <text x="451" y="143" font-size="7.5" fill="var(--text-secondary)">taxable_val, igst, flag</text>
-                <line x1="451" y1="148" x2="579" y2="148" stroke="var(--border-subtle)" stroke-width="0.5" />
-
-                <!-- Table 2 -->
-                <text x="451" y="160" font-size="8.5" font-weight="600" fill="var(--accent-steel)">dim_inventory</text>
-                <text x="451" y="171" font-size="7.5" fill="var(--text-muted)">[PK] sku_code</text>
-                <text x="451" y="181" font-size="7.5" fill="var(--text-secondary)">current_stock, reorder_lvl</text>
-                <line x1="451" y1="186" x2="579" y2="186" stroke="var(--border-subtle)" stroke-width="0.5" />
-
-                <!-- Table 3 -->
-                <text x="451" y="198" font-size="8.5" font-weight="600" fill="var(--accent-steel)">fact_purchase_orders</text>
-                <text x="451" y="209" font-size="7.5" fill="var(--text-muted)">[PK] po_no  [FK] sku_code</text>
-                <text x="451" y="219" font-size="7.5" fill="var(--text-secondary)">ordered_qty, status_code</text>
-
-                <!-- Relational link between tables -->
-                <path d="M 572 170 C 584 170 584 206 572 206" stroke="var(--accent-amber)" stroke-width="1" fill="none" stroke-dasharray="2 2" />
-
-                <!-- Stage 3 Footer Note -->
-                <text x="515" y="264" font-size="8" fill="var(--text-muted)" text-anchor="middle">Foreign Key Integrity Enforced</text>
-              </g>
-
-              <!-- ========================================================================
-                   STAGE 4: BI ANALYTICS (Reconciliation & Performance Visuals)
-                   ======================================================================== -->
-              <g class="blueprint-node" id="bp-node-4">
-                <rect class="blueprint-box-bg" x="635" y="46" width="160" height="234" rx="4" fill="var(--bg-surface)" stroke="var(--border-subtle)" stroke-width="1" />
-                <rect x="635" y="46" width="160" height="24" fill="var(--bg-surface-subtle)" />
-                <line x1="635" y1="70" x2="795" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
-
-                <text class="blueprint-stage-num" x="643" y="57" font-size="8.5" font-weight="600" fill="var(--accent-teal)">STAGE 4 · BI ANALYTICS</text>
-                <text x="643" y="66" font-size="7" fill="var(--text-muted)">Reconciliation &amp; KPIs</text>
-
-                <!-- Mini Visual 1: Tax Validation Segment Bar -->
-                <rect x="643" y="78" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <text class="bp-sans" x="651" y="91" font-size="8.5" font-weight="600" fill="var(--text-primary)">Tax Audit Rate (₹40,020)</text>
-                <!-- Stacked bar -->
-                <rect x="651" y="97" width="100" height="10" rx="2" fill="var(--accent-teal)" />
-                <rect x="753" y="97" width="26" height="10" rx="2" fill="var(--accent-rose)" />
-                <text x="651" y="118" font-size="7.5" fill="var(--accent-teal)">89.2% (₹35.7K)</text>
-                <text x="779" y="118" font-size="7.5" fill="var(--accent-rose)" text-anchor="end">10.8% (₹4.3K)</text>
-
-                <!-- Mini Visual 2: Geographic Ratio Mini Bar -->
-                <rect x="643" y="134" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <text class="bp-sans" x="651" y="147" font-size="8.5" font-weight="600" fill="var(--text-primary)">State Revenue Ratio</text>
-                <rect x="651" y="153" width="86" height="10" rx="2" fill="var(--text-primary)" />
-                <rect x="739" y="153" width="40" height="10" rx="2" fill="var(--accent-steel)" />
-                <text x="651" y="174" font-size="7.5" fill="var(--text-secondary)">MH 68.0% (₹146.5K)</text>
-                <text x="779" y="174" font-size="7.5" fill="var(--accent-steel)" text-anchor="end">Other 32%</text>
-
-                <!-- Mini Visual 3: Inventory Stock vs Threshold Pins -->
-                <rect x="643" y="190" width="144" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <text class="bp-sans" x="651" y="203" font-size="8.5" font-weight="600" fill="var(--text-primary)">6 SKUs Threshold Pins</text>
-                <!-- Threshold hairline -->
-                <line x1="651" y1="218" x2="779" y2="218" stroke="var(--accent-amber)" stroke-width="0.75" stroke-dasharray="2 2" />
-                <!-- 6 SKU pin indicators -->
-                <circle cx="658" cy="210" r="3" fill="var(--accent-teal)" />
-                <circle cx="678" cy="212" r="3" fill="var(--accent-teal)" />
-                <circle cx="698" cy="226" r="3" fill="var(--accent-rose)" />
-                <circle cx="718" cy="208" r="3" fill="var(--accent-teal)" />
-                <circle cx="738" cy="225" r="3" fill="var(--accent-rose)" />
-                <circle cx="758" cy="214" r="3" fill="var(--accent-teal)" />
-                <text x="651" y="232" font-size="7.5" fill="var(--text-muted)">4 OK · 2 Deficits flagged</text>
-
-                <!-- Stage 4 Footer Note -->
-                <text x="715" y="264" font-size="8" fill="var(--text-muted)" text-anchor="middle">Executive KPI Readiness</text>
-              </g>
-
-              <!-- ========================================================================
-                   STAGE 5: BUSINESS ACTIONS & DECISIONS
-                   ======================================================================== -->
-              <g class="blueprint-node" id="bp-node-5">
-                <rect class="blueprint-box-bg" x="835" y="46" width="135" height="234" rx="4" fill="var(--bg-surface)" stroke="var(--border-subtle)" stroke-width="1" />
-                <rect x="835" y="46" width="135" height="24" fill="var(--bg-surface-subtle)" />
-                <line x1="835" y1="70" x2="970" y2="70" stroke="var(--border-subtle)" stroke-width="1" />
-
-                <text class="blueprint-stage-num" x="843" y="57" font-size="8.5" font-weight="600" fill="var(--accent-amber)">STAGE 5 · DECISIONS</text>
-                <text x="843" y="66" font-size="7" fill="var(--text-muted)">Audit &amp; Restock Actions</text>
-
-                <!-- Action 1: ITC Claim -->
-                <rect x="843" y="78" width="119" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <text class="bp-sans" x="851" y="92" font-size="9" font-weight="600" fill="var(--text-primary)">Claim Tax Credit</text>
-                <text x="851" y="104" font-size="8.5" fill="var(--accent-teal)">₹35,700 Verified</text>
-                <g transform="translate(851, 110)">
-                  <path d="M 0 3.5 L 2.5 6 L 7 1" stroke="var(--status-ok-text)" stroke-width="1.2" fill="none" />
-                  <text x="11" y="6" font-size="7.5" fill="var(--status-ok-text)">GSTR-2B Ready</text>
-                </g>
-
-                <!-- Action 2: Vendor Dispute -->
-                <rect x="843" y="134" width="119" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <text class="bp-sans" x="851" y="148" font-size="9" font-weight="600" fill="var(--text-primary)">Audit Vendor Bills</text>
-                <text x="851" y="160" font-size="8.5" fill="var(--accent-rose)">2 Invoices Flagged</text>
-                <g transform="translate(851, 166)">
-                  <path d="M 3.5 0.5 L 7 6.5 L 0 6.5 Z" stroke="var(--accent-rose)" stroke-width="0.8" fill="none" />
-                  <line x1="3.5" y1="2.2" x2="3.5" y2="4.2" stroke="var(--accent-rose)" stroke-width="0.8" />
-                  <circle cx="3.5" cy="5.4" r="0.4" fill="var(--accent-rose)" />
-                  <text x="11" y="6" font-size="7.5" fill="var(--accent-rose)">₹4,320 Mismatch</text>
-                </g>
-
-                <!-- Action 3: Restock Trigger -->
-                <rect x="843" y="190" width="119" height="48" rx="3" fill="var(--bg-surface-subtle)" stroke="var(--border-subtle)" stroke-width="0.5" />
-                <text class="bp-sans" x="851" y="204" font-size="9" font-weight="600" fill="var(--text-primary)">Trigger Reorder</text>
-                <text x="851" y="216" font-size="8.5" fill="var(--accent-amber)">2 Purchase Orders</text>
-                <g transform="translate(851, 222)">
-                  <path d="M 4 0.5 L 1.5 4 H 3.5 L 3 7 L 6 3.5 H 4 Z" fill="var(--accent-amber)" />
-                  <text x="11" y="6" font-size="7.5" fill="var(--accent-amber)">Replenish Stock</text>
-                </g>
-
-                <!-- Stage 5 Status Indicator -->
-                <g transform="translate(851, 255)">
-                  <circle cx="4" cy="4" r="3" fill="var(--status-ok-text)" />
-                  <text x="12" y="7" font-size="8" font-weight="600" fill="var(--status-ok-text)">AUDIT ACTIVE</text>
-                </g>
-              </g>
-
-              <!-- Bottom Engineering Dimension & Spec Ticks -->
-              <g stroke="var(--border-subtle)" stroke-width="0.5" opacity="0.5">
-                <line x1="40" y1="298" x2="960" y2="298" />
-                <line x1="40" y1="294" x2="40" y2="302" />
-                <line x1="960" y1="294" x2="960" y2="302" />
-              </g>
-              <text x="500" y="307" font-size="8" fill="var(--text-muted)" text-anchor="middle">ENGINEERED SCHEMATIC // DATA SYSTEM ARCHITECTURE // SYSTEM REF: MP-ETL-2026</text>
+              <text x="42" y="33" font-size="9" fill="var(--text-muted)">INSIGHTFLOW // DATA-LIFECYCLE-01</text>
+              <text x="500" y="49" font-size="9.5" font-weight="600" fill="var(--text-secondary)" text-anchor="middle">FROM MESSY FILES TO AUDITABLE BUSINESS DECISIONS</text>
+              <text x="958" y="33" font-size="9" fill="var(--status-ok-text)" text-anchor="end">IMPLEMENTED STACK</text>
+              <g>
+  <text x="104" y="88" font-size="8" fill="var(--accent-teal)" text-anchor="middle" letter-spacing="0.8">01 / SOURCE</text>
+  <rect x="24" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-teal)" stroke-width="1.2" stroke-opacity="0.7"/>
+  <path d="M 36 110 H 172" stroke="var(--accent-teal)" stroke-width="1" stroke-opacity="0.45"/>
+  <text x="104" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Raw files</text>
+  <text x="104" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">8 CSV / XLSX sources</text><text x="104" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Inconsistent fields</text><text x="104" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Duplicate / invalid rows</text>
+</g>
+<g>
+  <text x="302" y="88" font-size="8" fill="var(--accent-amber)" text-anchor="middle" letter-spacing="0.8">02 / TRANSFORM</text>
+  <rect x="222" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-amber)" stroke-width="1.2" stroke-opacity="0.7"/>
+  <path d="M 234 110 H 370" stroke="var(--accent-amber)" stroke-width="1" stroke-opacity="0.45"/>
+  <text x="302" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Python ETL</text>
+  <text x="302" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Profile and standardize</text><text x="302" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Validate keys and rules</text><text x="302" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Quarantine + merge log</text>
+</g>
+<g>
+  <text x="500" y="88" font-size="8" fill="var(--accent-steel)" text-anchor="middle" letter-spacing="0.8">03 / MODEL</text>
+  <rect x="420" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-steel)" stroke-width="1.2" stroke-opacity="0.7"/>
+  <path d="M 432 110 H 568" stroke="var(--accent-steel)" stroke-width="1" stroke-opacity="0.45"/>
+  <text x="500" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">PostgreSQL</text>
+  <text x="500" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Relational star schema</text><text x="500" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Constraints + indexes</text><text x="500" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Shared analytical views</text>
+</g>
+<g>
+  <text x="698" y="88" font-size="8" fill="var(--accent-rose)" text-anchor="middle" letter-spacing="0.8">04 / ANALYZE</text>
+  <rect x="618" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-rose)" stroke-width="1.2" stroke-opacity="0.7"/>
+  <path d="M 630 110 H 766" stroke="var(--accent-rose)" stroke-width="1" stroke-opacity="0.45"/>
+  <text x="698" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Analytics layer</text>
+  <text x="698" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">17 SQL questions</text><text x="698" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">FastAPI endpoints</text><text x="698" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Power BI + local dashboard</text>
+</g>
+<g>
+  <text x="896" y="88" font-size="8" fill="var(--accent-teal)" text-anchor="middle" letter-spacing="0.8">05 / DECIDE</text>
+  <rect x="816" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-teal)" stroke-width="1.2" stroke-opacity="0.7"/>
+  <path d="M 828 110 H 964" stroke="var(--accent-teal)" stroke-width="1" stroke-opacity="0.45"/>
+  <text x="896" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Business action</text>
+  <text x="896" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Margin investigation</text><text x="896" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Replenishment priorities</text><text x="896" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Data assurance trail</text>
+</g>
+              <path d="M 184 171 H 217" class="blueprint-bus-line" stroke="var(--accent-teal)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="200" cy="171" r="2.5" fill="var(--accent-teal)"/>
+<path d="M 382 171 H 415" class="blueprint-bus-line" stroke="var(--accent-amber)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="398" cy="171" r="2.5" fill="var(--accent-amber)"/>
+<path d="M 580 171 H 613" class="blueprint-bus-line" stroke="var(--accent-steel)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="596" cy="171" r="2.5" fill="var(--accent-steel)"/>
+<path d="M 778 171 H 811" class="blueprint-bus-line" stroke="var(--accent-rose)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="794" cy="171" r="2.5" fill="var(--accent-rose)"/>
+              <path d="M 75 270 H 925" stroke="var(--border-strong)" stroke-width="0.8" stroke-dasharray="3 5"/>
+              <text x="500" y="286" font-size="8.5" fill="var(--text-muted)" text-anchor="middle">CROSS-CUTTING CONTROLS · DATA CONTRACTS · AUTOMATED TESTS · KPI DEFINITIONS · REVIEWABLE EVIDENCE</text>
+              <text x="500" y="307" font-size="8" fill="var(--text-muted)" text-anchor="middle">INSIGHTFLOW // SYSTEM ARCHITECTURE // VERIFIED SOURCES</text>
             </svg>
           </div>
 
           <div class="blueprint-footer">
             <div class="blueprint-legend">
-              <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-teal"></span> Stage 1: Ingest</span>
-              <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-amber"></span> Stage 2: Transform</span>
-              <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-steel"></span> Stage 3: SQL Store</span>
-              <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-teal"></span> Stage 4: Analytics</span>
-              <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-rose"></span> Stage 5: Action</span>
+              <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-teal"></span> Source</span>
+              <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-amber"></span> Transform</span>
+              <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-steel"></span> Model</span>
+              <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-teal"></span> Analyze</span>
+              <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-rose"></span> Decide</span>
             </div>
-            <span>VECTORIZED / ACID ENFORCED</span>
+            <span>TESTED PIPELINE / SHARED KPI RULES</span>
           </div>
         </div>
 
-        <p class="blueprint-disclaimer"><strong>Architecture Context:</strong> Conceptual data systems blueprint mapping shared data validation, relational persistence, and decision intelligence patterns across separate analytical projects.</p>
+        <p class="blueprint-disclaimer"><strong>Architecture Context:</strong> A schematic of the InsightFlow implementation: Python ingestion and cleaning, PostgreSQL persistence and shared analytical views, SQL/API/BI consumers, and audit-ready quality evidence. The Streamlit interface is locally runnable; no hosted live demo is advertised.</p>
+        </details>
 
-        <div class="tier2-grid">
-
-
-          <!-- PharmaGuard AI -->
-          <article class="tier2-card" id="project-pharmaguard">
-            <div class="tier2-card-header">
-              <span class="status-pill status-pill-ok">Operational Prototype · AI Triage Workflow</span>
-              <h3 class="tier2-card-title" style="margin-top: var(--space-8);">PharmaGuard AI: Quality Defect &amp; Adverse Event Triage</h3>
-            </div>
-            <p class="tier2-card-prose">
-              Automated pharmaceutical complaint intake and quality triage platform. Combines LangGraph entity extraction, 10MB PDF security validation with magic-byte checks, deterministic clinical severity rules, persistent SQLite case storage, and 30-day repeated-batch anomaly signals.
-            </p>
-            <div class="project-screenshot-frame" style="margin-top: var(--space-12); margin-bottom: var(--space-16);">
-              <div class="browser-header-bar">
-                <div class="window-dots">
-                  <span class="window-dot dot-red"></span>
-                  <span class="window-dot dot-yellow"></span>
-                  <span class="window-dot dot-green"></span>
-                </div>
-                <span class="browser-address">pharmaguard · Complaint Register &amp; Triage</span>
-              </div>
-              <div class="screenshot-img-wrap">
-                <img src="assets/images/projects/pharmaguard-complaint-register.png" alt="PharmaGuard AI complaint register interface showing saved cases table and repeated-batch alerts" class="screenshot-img" loading="lazy" width="1600" height="1200">
-              </div>
-              <figcaption class="screenshot-caption">
-                Complaint triage and potential batch-quality signals.
-              </figcaption>
-            </div>
-            <div class="pipeline-preview-block">
-              <div class="pipeline-preview-header">
-                <span class="pipeline-header-title">Triage &amp; Classification Flow</span>
-              </div>
-              <div class="trace-steps-container">
-                <div class="trace-step">
-                  <span class="trace-num">Stage 1</span>
-                  <div class="trace-body"><strong>Ingest:</strong> Customer feedback &amp; support tickets</div>
-                </div>
-                <div class="trace-step">
-                  <span class="trace-num">Stage 2</span>
-                  <div class="trace-body"><strong>NLP Triage:</strong> Entity extraction &amp; severity scoring</div>
-                </div>
-                <div class="trace-step">
-                  <span class="trace-num">Stage 3</span>
-                  <div class="trace-body"><strong>Routing:</strong> Prioritized queues for medical review</div>
-                </div>
-              </div>
-            </div>
-            <div class="tier2-card-footer">
-              <ul class="tag-list" style="margin: 0;" aria-label="PharmaGuard tags">
-                <li class="tag-item">NLP Triage</li>
-                <li class="tag-item">QA Routing</li>
-              </ul>
-              <a href="https://github.com/meetpokal1/PharmaGuard-AI" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>View Repo ↗</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Dubpilot -->
-          <article class="tier2-card" id="project-dubpilot">
-            <div class="tier2-card-header">
-              <span class="status-pill status-pill-ok">CLI Automation Pipeline</span>
-              <h3 class="tier2-card-title" style="margin-top: var(--space-8);">Dubpilot: Video Dubbing Pipeline</h3>
-            </div>
-            <p class="tier2-card-prose">
-              Modular command-line utility translating video media into English while preserving pacing and timeline synchronization. Features checkpoint recovery, timestamped segment transcription, and zero-drift audio remuxing.
-            </p>
-            <div class="project-screenshot-frame" style="margin-top: var(--space-12); margin-bottom: var(--space-16);">
-              <div class="browser-header-bar">
-                <div class="window-dots">
-                  <span class="window-dot dot-red"></span>
-                  <span class="window-dot dot-yellow"></span>
-                  <span class="window-dot dot-green"></span>
-                </div>
-                <span class="browser-address">dubpilot · CLI Pipeline &amp; Checkpoint Engine</span>
-              </div>
-              <div class="screenshot-img-wrap">
-                <img src="assets/images/projects/dubpilot-cli-pipeline.png" alt="Dubpilot CLI terminal execution output showing automated test suite passing and pipeline checkpoint logs" class="screenshot-img" loading="lazy" width="1600" height="950">
-              </div>
-              <figcaption class="screenshot-caption">
-                Video dubbing workflow with recoverable processing stages.
-              </figcaption>
-            </div>
-            <div class="pipeline-preview-block">
-              <div class="pipeline-preview-header">
-                <span class="pipeline-header-title">Media Pipeline &amp; Checkpoint Flow</span>
-              </div>
-              <div class="trace-steps-container">
-                <div class="trace-step">
-                  <span class="trace-num">Stage 1</span>
-                  <div class="trace-body"><strong>Audio Extraction:</strong> 16 kHz mono WAV via FFmpeg</div>
-                </div>
-                <div class="trace-step">
-                  <span class="trace-num">Stage 2</span>
-                  <div class="trace-body"><strong>Transcription:</strong> Timestamped Whisper segments &amp; translation</div>
-                </div>
-                <div class="trace-step">
-                  <span class="trace-num">Stage 3</span>
-                  <div class="trace-body"><strong>Synthesis &amp; Mux:</strong> Edge-TTS speech sync + timeline remux</div>
-                </div>
-              </div>
-            </div>
-            <div class="tier2-card-footer">
-              <ul class="tag-list" style="margin: 0;" aria-label="Dubpilot tags">
-                <li class="tag-item">Python</li>
-                <li class="tag-item">FFmpeg</li>
-                <li class="tag-item">Whisper</li>
-                <li class="tag-item">CLI Automation</li>
-              </ul>
-              <a href="https://github.com/meetpokal1/Dubpilot" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>View Repo ↗</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Invoice Vault -->
-          <article class="tier2-card" id="project-invoicevault">
-            <div class="tier2-card-header">
-              <span class="status-pill status-pill-ok">Web Application · Product Prototype</span>
-              <h3 class="tier2-card-title" style="margin-top: var(--space-8);">Invoice Vault: Client Invoice Organization</h3>
-            </div>
-            <p class="tier2-card-prose">
-              Organize invoice PDFs by client, date, work type and payment status. Built for small business operators to eliminate scattered files and streamline invoice retrieval through a centralized document vault.
-            </p>
-            <div class="project-screenshot-frame" style="margin-top: var(--space-12); margin-bottom: var(--space-16);">
-              <div class="browser-header-bar">
-                <div class="window-dots">
-                  <span class="window-dot dot-red"></span>
-                  <span class="window-dot dot-yellow"></span>
-                  <span class="window-dot dot-green"></span>
-                </div>
-                <span class="browser-address">invoice-vault-shine.lovable.app · Document Vault</span>
-              </div>
-              <div class="screenshot-img-wrap">
-                <img src="assets/images/projects/invoice-vault-preview.png" alt="Invoice Vault application workspace login and invoice filing interface" class="screenshot-img" loading="lazy" width="1440" height="900">
-              </div>
-              <figcaption class="screenshot-caption">
-                Organize invoice PDFs by client, date, work type and payment status.
-              </figcaption>
-            </div>
-            <div class="tier2-card-footer">
-              <ul class="tag-list" style="margin: 0;" aria-label="Invoice Vault tags">
-                <li class="tag-item">PDF Vault</li>
-                <li class="tag-item">Invoice Management</li>
-                <li class="tag-item">Client Tracking</li>
-              </ul>
-              <a href="https://invoice-vault-shine.lovable.app" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-                <span>Explore App ↗</span>
-              </a>
-            </div>
-          </article>
-        </div>
       </div>
     </section>
 
-    <!-- Background, Approach & Skills Section -->
-    <section id="about" class="section section--about" aria-labelledby="about-heading">
+<section id="about" class="section section--about" aria-labelledby="about-heading">
       <div class="about-blueprint-layer" aria-hidden="true">
         <svg class="about-blueprint-svg" viewBox="0 0 1440 1600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -1677,7 +624,7 @@
           <div class="philosophy-card">
             <h3>Actionable Business Recommendations</h3>
             <p>
-              Metrics must lead to operational decisions. Whether flagging misallocated tax heads before monthly filing or surfacing stockout risks across inventory SKUs, technical outputs must translate directly into tangible operational actions.
+              Metrics must lead to operational decisions. Whether identifying low-margin products or surfacing stockout and replenishment risks, technical outputs must translate into clear operational choices.
             </p>
           </div>
         </div>
@@ -1692,9 +639,9 @@
           <!-- Stage 1: Used in Projects -->
           <div class="progression-step-card stage-current">
             <span class="progression-stage-tag">Used in Projects</span>
-            <h4 class="progression-step-title">Data Cleaning &amp; Scripting</h4>
+            <h4 class="progression-step-title">Data Engineering &amp; Analytics Delivery</h4>
             <p class="progression-step-desc">
-              Applied in personal project codebases for transactional data manipulation, automated reconciliation rules, and relational schemas.
+              Applied in InsightFlow across Python/Pandas cleaning, PostgreSQL and SQL modeling, API and dashboard delivery, Excel assurance, and automated quality checks.
             </p>
             <ul class="tech-icon-group">
               <li class="tech-icon-pill">
@@ -1707,7 +654,7 @@
               </li>
               <li class="tech-icon-pill">
                 <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                <span>SQL (SQLite)</span>
+                <span>SQL · PostgreSQL · SQLite</span>
               </li>
               <li class="tech-icon-pill">
                 <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
@@ -1715,6 +662,24 @@
               </li>
               <li class="tech-icon-pill">
                 <span>Streamlit UI</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>FastAPI</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>Excel Assurance · openpyxl</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>Docker Compose</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>pytest</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>Ruff</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>GitHub Actions CI</span>
               </li>
               <li class="tech-icon-pill">
                 <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="6" y1="9" x2="6" y2="15"/><path d="M18 15a9 9 0 0 0-9-9"/></svg>
@@ -1725,15 +690,21 @@
 
           <!-- Stage 2: Currently Learning -->
           <div class="progression-step-card stage-learning">
-            <span class="progression-stage-tag">Currently Learning</span>
+            <span class="progression-stage-tag">Applied + Developing</span>
             <h4 class="progression-step-title">BI Tools &amp; Dimensional Modeling</h4>
             <p class="progression-step-desc">
-              Active study focused on business KPI definition, star schema data modeling, and reporting dashboard best practices.
+              Applied in InsightFlow through a version-controlled Power BI report, DAX measures, Power Query loading scripts, and star-schema reporting; continuing to build deeper BI modeling and visual-design skills.
             </p>
             <ul class="tech-icon-group">
               <li class="tech-icon-pill">
                 <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="13" width="4" height="8" rx="1"/><rect x="9" y="8" width="4" height="13" rx="1"/><rect x="15" y="3" width="4" height="18" rx="1"/></svg>
-                <span>Power BI (Learning)</span>
+                <span>Power BI · PBIP</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>DAX Measures</span>
+              </li>
+              <li class="tech-icon-pill">
+                <span>Power Query (M)</span>
               </li>
               <li class="tech-icon-pill">
                 <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="11" y="2" width="2" height="6"/><rect x="9" y="4" width="6" height="2"/><rect x="11" y="16" width="2" height="6"/><rect x="9" y="18" width="6" height="2"/><rect x="3" y="11" width="6" height="2"/><rect x="5" y="9" width="2" height="6"/><rect x="15" y="11" width="6" height="2"/><rect x="17" y="9" width="2" height="6"/><circle cx="12" cy="12" r="2"/></svg>
@@ -1824,7 +795,7 @@
               Transforming inconsistent, manual Excel workbooks and multi-vendor CSV exports into standardized, clean datasets. Eliminating repetitive manual copy-pasting through robust, maintainable Python scripts.
             </p>
             <div>
-              <span class="service-deliverable">Python · Pandas · OpenPyXL · CSV/Excel</span>
+              <span class="service-deliverable">Python · Pandas · openpyxl · CSV/Excel</span>
             </div>
           </div>
 

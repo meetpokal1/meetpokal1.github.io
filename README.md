@@ -22,22 +22,15 @@ portfolio/
 │   ├── theme.js                    # Light/Dark mode logic & system sync
 │   └── main.js                     # Mobile menu, scrollspy, dynamic config injection
 └── assets/
-    ├── docs/
-    │   └── Meet_Pokal_Resume.pdf   # Place your PDF résumé here
-    └── images/
-        └── projects/               # High-contrast SVG architecture diagrams / screenshots
-            ├── insightflow-preview.svg
-            ├── gst-pipeline-preview.svg
-            ├── pharmaguard-preview.svg
-            ├── minierp-preview.svg
-            └── dubpilot-preview.svg
+    └── docs/
+        └── Meet_Pokal_Resume.pdf   # Place your PDF résumé here
 ```
 
 ---
 
 ## ⚙️ Updating Your Details (Single Source of Truth)
 
-All personal links, project URLs, and visibility flags are centralized in **[`js/config.js`](file:///C:/Users/Meet%20Pokal/.gemini/antigravity/scratch/portfolio/js/config.js)**. You do not need to touch the HTML to change links or hide elements.
+All personal links, project URLs, and visibility flags are centralized in **[`js/config.js`](js/config.js)**. You do not need to touch the HTML to change links or hide elements.
 
 ### Adding your LinkedIn Profile
 Open `js/config.js` and set:
@@ -69,21 +62,28 @@ resumeAvailable: true
 ```
 *The website will automatically switch the button from "Available on Request" to an active download link.*
 
-### Updating InsightFlow when Repository is Ready
-In `js/config.js`, update the `insightflow` entry:
-```javascript
-repoUrl: "https://github.com/meetpokal1/InsightFlow"
-```
+### InsightFlow — Featured Case Study
+The homepage now features InsightFlow as the sole project while the portfolio is focused on the flagship analytics case study.
+
+- Source repository: [meetpokal1/InsightFlow](https://github.com/meetpokal1/InsightFlow)
+- Genuine runtime captures: [Streamlit screenshots](https://github.com/meetpokal1/InsightFlow/tree/main/screenshots/runtime)
+- Genuine Power BI captures: [Power BI screenshots](https://github.com/meetpokal1/InsightFlow/tree/main/screenshots/powerbi)
+- Project-specific proof links open the [DAX Measure Catalog](https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/dax_measures.md), [Power Query scripts](https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/power_query.md), and [data-preparation/QA notes](https://github.com/meetpokal1/InsightFlow/blob/main/documentation/data_quality.md).
+- The applied stack spans Python/Pandas, PostgreSQL/SQL, FastAPI, Power BI PBIP/TMDL with DAX and Power Query, Streamlit, an Excel/openpyxl assurance workpaper, Docker Compose, pytest/Ruff, and GitHub Actions CI. These are listed because the repository contains corresponding implementation or verification artifacts.
+- The Streamlit interface is locally runnable. The portfolio does not advertise a hosted live demo unless public access is verified.
+
+The reusable [Project Evidence Standard](PROJECT_EVIDENCE_STANDARD.md) defines how future projects should show a truthful, functional technology stack and a small set of project-specific evidence links.
 
 ---
 
-## 🖼️ Replacing Preview Diagrams with Real Screenshots
+## 🖼️ Project Evidence Screenshots
 
-When you take screenshots or record Loom videos of your applications:
-1. Save the screenshot image (e.g. `gst-dashboard.png`) in `assets/images/projects/`.
-2. In `index.html`, simply replace the `<img src="assets/images/projects/gst-pipeline-preview.svg" ...>` tag with your real image.
+The portfolio uses the genuine screenshots maintained in the [InsightFlow repository](https://github.com/meetpokal1/InsightFlow), rather than old UI mockups. The source of truth stays with the project so the page reflects the latest verified captures.
 
----
+- [Power BI report pages and semantic-model architecture](https://github.com/meetpokal1/InsightFlow/tree/main/screenshots/powerbi)
+- [Local Streamlit runtime screenshots and QA results](https://github.com/meetpokal1/InsightFlow/tree/main/screenshots/runtime)
+
+The executive screenshot appears in the flagship card, with four supporting Power BI captures in a compact gallery. The architecture schematic is collapsed by default. All screenshots open at full size in a separate tab; they do not imply that a public hosted Streamlit demo is available.
 
 ## 🚀 Local Preview & Testing
 
