@@ -69,7 +69,7 @@ The homepage now features InsightFlow as the sole project while the portfolio is
 - Genuine runtime captures: [Streamlit screenshots](https://github.com/meetpokal1/InsightFlow/tree/main/screenshots/runtime)
 - Genuine Power BI captures: [Power BI screenshots](https://github.com/meetpokal1/InsightFlow/tree/main/screenshots/powerbi)
 - Project-specific proof links open the [DAX Measure Catalog](https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/dax_measures.md), [Power Query scripts](https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/power_query.md), and [data-preparation/QA notes](https://github.com/meetpokal1/InsightFlow/blob/main/documentation/data_quality.md).
-- The applied stack spans Python/Pandas, PostgreSQL/SQL, FastAPI, Power BI PBIP/TMDL with DAX and Power Query, Streamlit, an Excel/OpenPyXL assurance workpaper, Docker Compose, pytest/Ruff, and GitHub Actions CI. These are listed because the repository contains corresponding implementation or verification artifacts.
+- The applied stack spans Python/Pandas, PostgreSQL/SQL, FastAPI, Power BI PBIP/TMDL with DAX and Power Query, Streamlit, an Excel/openpyxl assurance workpaper, Docker Compose, pytest/Ruff, and GitHub Actions CI. These are listed because the repository contains corresponding implementation or verification artifacts.
 - The Streamlit interface is locally runnable. The portfolio does not advertise a hosted live demo unless public access is verified.
 
 The reusable [Project Evidence Standard](PROJECT_EVIDENCE_STANDARD.md) defines how future projects should show a truthful, functional technology stack and a small set of project-specific evidence links.
