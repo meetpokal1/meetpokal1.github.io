@@ -13,6 +13,16 @@ This is the reusable portfolio rule for InsightFlow and every project added afte
 - Keep the project-specific links in a wrapping action row so the card still works on mobile. Do not add a long wall of implementation text to the homepage; put depth in the repository documentation.
 - For synthetic or simulated data, disclose that clearly near the result. Separate a scenario, heuristic, or estimate from a measured real-world outcome.
 
+## Tech stack presentation
+
+A credible project should show the tools that make the end-to-end workflow substantial, not only the headline language and dashboard. **Do not understate a real stack, and do not inflate it.**
+
+- Map the stack by what each layer does: data preparation, storage/querying, analytical modeling, reporting or application delivery, and testing/deployment.
+- Include a tool in the project's stack when it is genuinely used in the code, project configuration, model, workpaper, test suite, or CI workflow. A package appearing in a requirements file alone is not enough evidence of meaningful use.
+- In the portfolio's skills section, distinguish "used in projects" from "currently learning" or "future direction." A tool used in a project can be listed as applied experience without implying expert-level mastery.
+- Prefer a readable set of functional tags over an indiscriminate wall of logos. When the stack is broad, make the primary layers clear and let direct evidence links prove the detail.
+- Screenshots should prove the quality of the analysis, report, application, or controls. Merely listing more tools does not make a screenshot or project stronger.
+
 ## Evidence menu by project type
 
 Choose only the best 2–3 links for each project, not every item in a category.
