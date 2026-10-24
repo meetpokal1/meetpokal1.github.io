@@ -500,7 +500,7 @@
           <!-- Project-specific technical evidence: these links are unique to InsightFlow's actual artifacts. -->
           <div class="project-deliverables">
             <div class="deliverable-actions">
-              <a href=\"#insightflow-evidence\" class=\"btn btn-primary btn-sm\"><span>View Power BI Models &amp; Architecture &darr;</span></a>
+              <a href="#insightflow-evidence" class="btn btn-primary btn-sm"><span>View Power BI Models &amp; Architecture &darr;</span></a>
               <a href="https://github.com/meetpokal1/InsightFlow" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>View Repository ↗</span></a>
               <a href="https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/dax_measures.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>DAX Measure Catalog ↗</span></a>
               <a href="https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/power_query.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>Power Query Scripts ↗</span></a>
@@ -510,14 +510,10 @@
               <strong>Data source &amp; evidence note:</strong> All records and financial figures are synthetic. The links above open the real DAX measures, Power Query loading logic, and documented cleaning/quality rules. The dashboard can be run locally using the repository instructions; no hosted live demo is claimed.
             </p>
           </div>
-        </article>
 
-      </div>
-    </section>
-
-    <!-- InsightFlow Power BI and Semantic Model Evidence -->
-    <section id="insightflow-evidence" class="section matrix-section" aria-labelledby="insightflow-evidence-heading">
-      <div class="container">
+          <!-- Power BI and architecture evidence are part of the InsightFlow case-study card. -->
+          <section id="insightflow-evidence" class="insightflow-embedded-section" aria-labelledby="insightflow-evidence-heading">
+            <div class="insightflow-embedded-inner">
         <div class="section-intro">
           <h2 id="insightflow-evidence-heading">Power BI &amp; Semantic Model Evidence</h2>
           <p>In addition to the primary Python/Streamlit runtime, InsightFlow includes a version-controlled Power BI Desktop (PBIP) semantic model with 27 DAX measures and clean star-schema relationships.</p>
@@ -600,11 +596,11 @@
             </div>
           </div>
         </details>
-      </div>
-    </section>
+            </div>
+          </section>
 
-<section id="technical-systems" class="section" aria-labelledby="tech-systems-heading">
-      <div class="container">
+          <section id="technical-systems" class="insightflow-embedded-section insightflow-architecture-section" aria-labelledby="tech-systems-heading">
+            <div class="insightflow-embedded-inner">
         <div class="section-intro">
           <h2 id="tech-systems-heading">Engineering Architecture</h2>
           <p>The high-level pipeline remains available without competing with the business story.</p>
@@ -704,6 +700,10 @@
 
         <p class="blueprint-disclaimer"><strong>Architecture Context:</strong> A schematic of the InsightFlow implementation: Python ingestion and cleaning, PostgreSQL persistence and shared analytical views, SQL/API/BI consumers, and audit-ready quality evidence. The Streamlit interface is locally runnable; no hosted live demo is advertised.</p>
         </details>
+
+            </div>
+          </section>
+        </article>
 
       </div>
     </section>
