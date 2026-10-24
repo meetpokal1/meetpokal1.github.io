@@ -298,30 +298,29 @@
           </div>
 
           <p class="project-problem">
-            <strong>Business Problem:</strong> Retail and wholesale teams often receive inconsistent CSV and Excel exports with duplicate customer profiles, malformed values, invalid relationships, and stock records that are difficult to reconcile. That makes margins harder to trust, replenishment harder to prioritize, and data changes harder to explain. InsightFlow builds a repeatable Python cleaning and validation pipeline, models the cleaned data in PostgreSQL, exposes tested SQL and API analytics, and presents decision evidence through a four-page Power BI report plus a locally runnable Streamlit dashboard.
+            <strong>Business Problem:</strong> Retail teams cannot reliably investigate margins or replenishment when CSV/XLSX exports contain malformed quantities, duplicate customers, and invalid relationships. InsightFlow reconciles the source data first, then delivers decision-ready sales, inventory, and data-quality analytics.
           </p>
 
-          <!-- KPI Metric Row -->
-          <div class="kpi-row" aria-label="InsightFlow Case Study Key Metrics">
+          <!-- Key evidence: synthetic dataset and automated verification -->
+          <div class="kpi-row" aria-label="InsightFlow Key Project Metrics">
             <div class="kpi-cell">
               <span class="kpi-num">₹20.90 Cr</span>
-              <span class="kpi-label">Audited Net Revenue (7,878 Orders)</span>
+              <span class="kpi-label">Net Revenue · Synthetic Data</span>
             </div>
             <div class="kpi-cell">
-              <span class="kpi-num">₹4.24 Cr</span>
-              <span class="kpi-label">Gross Profit (20.3% Margin)</span>
+              <span class="kpi-num">20.3%</span>
+              <span class="kpi-label">Overall Gross Margin</span>
             </div>
             <div class="kpi-cell">
-              <span class="kpi-num">60 SKUs</span>
-              <span class="kpi-label">8 Categories across 12 Suppliers</span>
+              <span class="kpi-num">449</span>
+              <span class="kpi-label">Product–Location Stock Positions</span>
             </div>
             <div class="kpi-cell">
-              <span class="kpi-num">233 Tests</span>
-              <span class="kpi-label">Automated Unit &amp; Pipeline Tests</span>
+              <span class="kpi-num">233</span>
+              <span class="kpi-label">Automated Tests Passing in CI</span>
             </div>
           </div>
 
-          <!-- Technical Evidence: Real Runtime Browser Frame -->
           <div class="project-screenshot-frame">
             <div class="browser-header-bar">
               <div class="window-dots">
@@ -329,68 +328,57 @@
                 <span class="window-dot dot-yellow"></span>
                 <span class="window-dot dot-green"></span>
               </div>
-              <span class="browser-address">InsightFlow · Executive Overview</span>
+              <span class="browser-address">Power BI Desktop · Executive Profitability</span>
             </div>
             <div class="screenshot-img-wrap">
-              <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/01_executive_overview.png" alt="InsightFlow Executive Overview dashboard runtime screenshot showing net revenue of ₹20.90 Cr, gross profit of ₹4.24 Cr, monthly sales trajectory, regional share, and inventory status mix" class="screenshot-img" loading="lazy" width="1600" height="1200">
+              <a href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Executive%20Profitability.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size executive dashboard screenshot">
+                <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Executive%20Profitability.png" alt="InsightFlow Power BI Executive Profitability dashboard with net revenue, gross profit, margin, monthly revenue, and revenue by category. All figures are synthetic." class="screenshot-img" loading="lazy" width="1600" height="900">
+              </a>
             </div>
             <figcaption class="screenshot-caption">
-              <span>Executive Overview workspace displaying net revenue, monthly sales trajectory, regional share, and operational inventory signals.</span>
+              <span>01 / Executive Dashboard · Select to open full size. All figures are synthetic.</span>
             </figcaption>
           </div>
 
-          <!-- Multi-Screen Analytics Evidence Strip -->
-          <div class="evidence-subhead" style="margin-top: var(--space-20);">
-            <span>Core Analytical Workspaces (Captured from Live Application)</span>
-          </div>
-          <div class="screenshot-gallery-strip" aria-label="InsightFlow Analytical Workspaces Gallery">
-            <div class="gallery-thumb-card">
-              <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/02_sales_and_products.png" alt="InsightFlow Sales and Products workspace showing category margins, product profitability, and discount analysis" class="gallery-thumb-img" loading="lazy" width="800" height="600">
-              <div class="gallery-thumb-title">Sales &amp; Product Performance</div>
-            </div>
-            <div class="gallery-thumb-card">
-              <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/03_inventory_intelligence.png" alt="InsightFlow Inventory Intelligence workspace displaying stock position mix, inventory valuation, and priority review queue" class="gallery-thumb-img" loading="lazy" width="800" height="600">
-              <div class="gallery-thumb-title">Inventory Velocity &amp; Reorder Queue</div>
-            </div>
-            <div class="gallery-thumb-card">
-              <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/04_customers_and_data_quality.png" alt="InsightFlow Customers and Data Quality workspace showing RFM distribution and data quality audit log" class="gallery-thumb-img" loading="lazy" width="800" height="600">
-              <div class="gallery-thumb-title">Customers &amp; Quality Audit Log</div>
-            </div>
-          </div>
+          <section class="insightflow-outcomes" aria-label="Business questions answered by InsightFlow">
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">BUSINESS FINDING</span>
+              <h4>Revenue is not the same as profit</h4>
+              <p>Basmati Rice 5kg leads product revenue at about ₹1.65 Cr, yet its modeled gross margin is only 2.15% (about ₹3.54L gross profit).</p>
+            </article>
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">SCENARIO ANALYSIS</span>
+              <h4>Stress-test a pricing decision</h4>
+              <p>Under the stated model assumptions, a 3% price adjustment can tolerate up to a 58.3% unit-volume decline before gross profit falls below baseline. This is a scenario, not a forecast.</p>
+            </article>
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">OPERATIONAL ACTION</span>
+              <h4>Prioritize stock exposure</h4>
+              <p>40 stock positions are truly out of stock, 96 are below reorder, and the replenishment heuristic suggests 5,791 units at an estimated ₹9.66L cost.</p>
+            </article>
+          </section>
 
-          <!-- Method & Analytical Interpretation -->
-          <div style="margin-top: var(--space-24); margin-bottom: var(--space-20);">
-            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary); margin-bottom: var(--space-12);">
-              <strong>Pipeline Architecture &amp; Data Quality:</strong> Built a 3-step automated data quality pipeline (<code>scripts/run_pipeline.py</code>) that ingests 8 disparate tables, detects missing values and anomalies, and executes deterministic cleaning rules. The pipeline successfully validated 8,734 clean orders (rejecting 212 invalid records with documented rejection reasons), repaired 230 sign-flipped negative quantities, merged 40 duplicate customer profiles, and loaded clean star schema views into PostgreSQL.
-            </p>
-            <p style="font-size: 0.95rem; line-height: var(--lh-prose); color: var(--text-secondary);">
-              <strong>Analytical Findings &amp; Business Value:</strong> The unfiltered multi-year dataset reveals a 20.3% overall gross margin across ₹20.90 Cr net revenue. Inventory intelligence identifies critical stock imbalances—highlighting SKUs requiring priority reorder versus overstocked items binding liquidity. The RFM customer segmentation engine isolates the top revenue-contributing accounts, enabling targeted account management and churn risk mitigation.
-            </p>
-          </div>
+          <details class="insightflow-disclosure">
+            <summary>Explore the data-quality pipeline and implementation details</summary>
+            <div class="insightflow-disclosure-content">
+              <p><strong>Data assurance:</strong> The current runtime reconciles 49,975 raw records to 47,814 clean records (95.7% preservation). Exact duplicates, quarantined rows, merged customer profiles, and clean-loaded rows are tracked so the 8-table conservation checks balance without an unexplained gap.</p>
+              <p><strong>Implementation:</strong> Python ingestion and deterministic cleaning → PostgreSQL relational star schema and analytical views → tested SQL and FastAPI endpoints → Power BI PBIP/TMDL report and a locally runnable Streamlit dashboard. The dataset is synthetic; the replenishment buffer is a transparent heuristic, not a demand-variance-optimized safety-stock model.</p>
+            </div>
+          </details>
 
-          <!-- Recommendation Callout Box -->
-          <div class="recommendation-box">
-            <strong>Business Intelligence &amp; Governance Insight:</strong>
-            <p>
-              Replacing unversioned Excel reports with an automated, test-backed pipeline eliminates manual cross-tab errors and guarantees reproducible reporting. Business leaders review clean, single-source-of-truth KPIs while analysts retain full auditability through the automated data quality rejection log.
-            </p>
-          </div>
-
-          <ul class="tag-list" aria-label="Technologies used in InsightFlow">
-            <li class="tag-item">Python</li>
+          <ul class="tag-list" aria-label="InsightFlow technologies">
+            <li class="tag-item">Python ETL</li>
             <li class="tag-item">PostgreSQL</li>
-            <li class="tag-item">SQL Analytics</li>
+            <li class="tag-item">SQL</li>
             <li class="tag-item">FastAPI</li>
+            <li class="tag-item">Power BI · PBIP/TMDL</li>
             <li class="tag-item">Streamlit</li>
-            <li class="tag-item">Pandas ETL</li>
-            <li class="tag-item">Data Quality Auditing</li>
-            <li class="tag-item">Star Schema Modeling</li>
-          </ul>
+          </ul>     </ul>
 
           <!-- Deliverables & Source note -->
           <div class="project-deliverables">
             <div class="deliverable-actions">
-              <a href="#insightflow-evidence" class="btn btn-primary btn-sm"><span>View Verified Screenshots ↓</span></a>
+              <a href="#insightflow-evidence" class="btn btn-primary btn-sm"><span>Explore the Other Four Views ↓</span></a>
               <a href="https://github.com/meetpokal1/InsightFlow" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>View Repository ↗</span></a>
               <a href="https://github.com/meetpokal1/InsightFlow/actions/workflows/tests.yml" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>View CI Checks ↗</span></a>
             </div>
@@ -407,47 +395,43 @@
     <section id="insightflow-evidence" class="section matrix-section" aria-labelledby="insightflow-evidence-heading">
       <div class="container">
         <div class="section-intro">
-          <h2 id="insightflow-evidence-heading">Five Views of One Analytics System</h2>
-          <p>Explore the executive view, analytical method, operational decision, data assurance, and model architecture. These screenshots are direct captures from the current project deliverables; the underlying retail data is synthetic.</p>
+          <h2 id="insightflow-evidence-heading">Supporting Evidence</h2>
+          <p>The executive page is shown in the flagship card. Four supporting captures cover analysis, operational decisions, data assurance, and model architecture. Open any image to inspect it at full size.</p>
         </div>
         <div class="insightflow-evidence-grid">
-          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Executive%20Profitability.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Executive Dashboard screenshot">
-            <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">01 / EXECUTIVE DASHBOARD</span><span aria-hidden="true">↗</span></div>
-            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Executive%20Profitability.png" alt="Genuine Power BI Desktop capture of InsightFlow Executive Profitability, with revenue, gross profit, margin, and trend visuals" loading="lazy" width="1600" height="900"></div>
-            <div class="insightflow-evidence-body"><h3>Executive Dashboard</h3><p>Net revenue ₹20.90 Cr, gross profit ₹4.24 Cr, and 20.3% gross margin in the synthetic dataset.</p><span>Open full screenshot ↗</span></div>
-          </a>
-          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Margin%20Investigation.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Statistical Analysis screenshot">
+          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Margin%20Investigation.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Margin Investigation screenshot">
             <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">02 / STATISTICAL ANALYSIS</span><span aria-hidden="true">↗</span></div>
-            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Margin%20Investigation.png" alt="Genuine Power BI Desktop capture of margin investigation, supplier margins, and price sensitivity analysis" loading="lazy" width="1600" height="900"></div>
-            <div class="insightflow-evidence-body"><h3>Statistical Analysis</h3><p>Investigate revenue-versus-profit differences and stress-test the flagship product’s margin under a modelled price scenario.</p><span>Open full screenshot ↗</span></div>
+            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Margin%20Investigation.png" alt="Power BI page showing product margin and price-sensitivity investigation" loading="lazy" width="1600" height="900"></div>
+            <div class="insightflow-evidence-body"><h3>Margin Investigation</h3><p>Product profitability and the modeled price-sensitivity scenario.</p></div>
           </a>
-          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Inventory%20Decisions.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Operational Decisions screenshot">
+          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Inventory%20Decisions.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Inventory Decisions screenshot">
             <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">03 / OPERATIONAL DECISIONS</span><span aria-hidden="true">↗</span></div>
-            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Inventory%20Decisions.png" alt="Genuine Power BI Desktop capture of stock-health distribution and priority inventory replenishment queue" loading="lazy" width="1600" height="900"></div>
-            <div class="insightflow-evidence-body"><h3>Operational Decisions</h3><p>Review 449 stock positions, 40 true stockouts, 96 positions below reorder, and ₹9.66L in suggested replenishment capital.</p><span>Open full screenshot ↗</span></div>
+            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Inventory%20Decisions.png" alt="Power BI page showing inventory health, stockouts, reorder exposure, and replenishment queue" loading="lazy" width="1600" height="900"></div>
+            <div class="insightflow-evidence-body"><h3>Inventory Decisions</h3><p>Stockout exposure, reorder priorities, and estimated replenishment cost.</p></div>
           </a>
-          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Data%20Integrity%20%26%20Pipeline%20Assurance.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Data Assurance screenshot">
+          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Data%20Integrity%20%26%20Pipeline%20Assurance.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Pipeline Assurance screenshot">
             <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">04 / DATA ASSURANCE</span><span aria-hidden="true">↗</span></div>
-            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Data%20Integrity%20%26%20Pipeline%20Assurance.png" alt="Genuine Power BI Desktop capture of entity-level record conservation and pipeline data assurance" loading="lazy" width="1600" height="900"></div>
-            <div class="insightflow-evidence-body"><h3>Data Assurance</h3><p>Reconcile 49,975 raw records to 47,814 clean records while recording duplicates, quarantined rows, and merged profiles.</p><span>Open full screenshot ↗</span></div>
+            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Data%20Integrity%20%26%20Pipeline%20Assurance.png" alt="Power BI page showing raw-to-clean record conservation and quality dispositions" loading="lazy" width="1600" height="900"></div>
+            <div class="insightflow-evidence-body"><h3>Pipeline Assurance</h3><p>Record conservation, deduplication, quarantines, and load outcomes.</p></div>
           </a>
-          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Semantic%20Model%20Architecture.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Model Architecture screenshot">
+          <a class="insightflow-evidence-card" href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Semantic%20Model%20Architecture.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Semantic Model screenshot">
             <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">05 / MODEL ARCHITECTURE</span><span aria-hidden="true">↗</span></div>
-            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Semantic%20Model%20Architecture.png" alt="Genuine Power BI Desktop capture of the InsightFlow semantic model tables and relationships" loading="lazy" width="1600" height="900"></div>
-            <div class="insightflow-evidence-body"><h3>Model Architecture</h3><p>Inspect the version-controlled PBIP report, semantic model, relationships, and DAX definitions in the source repository.</p><span>Open full screenshot ↗</span></div>
+            <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/powerbi/Semantic%20Model%20Architecture.png" alt="Power BI Desktop semantic model tables and relationships" loading="lazy" width="1600" height="900"></div>
+            <div class="insightflow-evidence-body"><h3>Semantic Model</h3><p>Relationships and the version-controlled semantic model.</p></div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Supporting Technical Projects Section (Tier 2) -->
-    <section id="technical-systems" class="section" aria-labelledby="tech-systems-heading">
+<section id="technical-systems" class="section" aria-labelledby="tech-systems-heading">
       <div class="container">
         <div class="section-intro">
-          <h2 id="tech-systems-heading">InsightFlow System Architecture</h2>
-          <p>A single end-to-end view of how messy source records become validated, modeled, and decision-ready outputs.</p>
+          <h2 id="tech-systems-heading">Engineering Architecture</h2>
+          <p>The high-level pipeline remains available without competing with the business story.</p>
         </div>
 
+        <details class="insightflow-disclosure insightflow-blueprint-disclosure">
+          <summary>Open the five-stage data systems blueprint</summary>
         <!-- Signature Data Systems Blueprint Showcase -->
         <div class="blueprint-card" id="systems-blueprint" data-ui="blueprint">
           <div class="blueprint-header">
@@ -539,6 +523,7 @@
         </div>
 
         <p class="blueprint-disclaimer"><strong>Architecture Context:</strong> A schematic of the InsightFlow implementation: Python ingestion and cleaning, PostgreSQL persistence and shared analytical views, SQL/API/BI consumers, and audit-ready quality evidence. The Streamlit interface is locally runnable; no hosted live demo is advertised.</p>
+        </details>
 
       </div>
     </section>

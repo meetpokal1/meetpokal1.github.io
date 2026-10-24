@@ -79,7 +79,7 @@ The portfolio uses the genuine screenshots maintained in the [InsightFlow reposi
 - [Power BI report pages and semantic-model architecture](https://github.com/meetpokal1/InsightFlow/tree/main/screenshots/powerbi)
 - [Local Streamlit runtime screenshots and QA results](https://github.com/meetpokal1/InsightFlow/tree/main/screenshots/runtime)
 
-The portfolio links to the full-size screenshots, which open in a separate tab. These captures demonstrate the interface; they do not imply that a public hosted Streamlit demo is available.
+The executive screenshot appears in the flagship card, with four supporting Power BI captures in a compact gallery. The architecture schematic is collapsed by default. All screenshots open at full size in a separate tab; they do not imply that a public hosted Streamlit demo is available.
 
 ## 🚀 Local Preview & Testing
 
