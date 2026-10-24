@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   applySiteConfig();
   initScrollSpy();
   initBackToTop();
+  initLightbox();
 });
 
 /**
@@ -385,4 +386,124 @@ function initPointerSpotlights() {
 function initCopyrightYear() {
   const year = document.getElementById("copyright-year");
   if (year) year.textContent = String(new Date().getFullYear());
+}
+
+
+/**
+ * Accessible modal lightbox for project screenshots and evidence
+ */
+function initLightbox() {
+  const modal = document.getElementById("image-lightbox");
+  if (!modal) return;
+
+  const backdrop = modal.querySelector(".lightbox-backdrop");
+  const closeBtn = document.getElementById("lightbox-close");
+  const prevBtn = document.getElementById("lightbox-prev");
+  const nextBtn = document.getElementById("lightbox-next");
+  const imgEl = document.getElementById("lightbox-img");
+  const titleEl = document.getElementById("lightbox-title");
+  const captionEl = document.getElementById("lightbox-caption");
+  const counterEl = document.getElementById("lightbox-counter");
+  const sourceLinkEl = document.getElementById("lightbox-source-link");
+
+  const triggers = Array.from(document.querySelectorAll('[data-lightbox="insightflow"]'));
+  if (triggers.length === 0) return;
+
+  // Build items array from triggers
+  const galleryItems = triggers.map((trigger) => ({
+    trigger,
+    src: trigger.getAttribute("href") || trigger.dataset.src,
+    title: trigger.dataset.title || trigger.getAttribute("aria-label") || "",
+    caption: trigger.dataset.caption || "",
+    alt: trigger.querySelector("img")?.getAttribute("alt") || trigger.dataset.title || "Screenshot preview",
+  }));
+
+  let currentIndex = 0;
+  let lastActiveElement = null;
+
+  function renderItem(index) {
+    if (index < 0 || index >= galleryItems.length) return;
+    currentIndex = index;
+    const item = galleryItems[index];
+
+    imgEl.src = item.src;
+    imgEl.alt = item.alt;
+    titleEl.textContent = item.title;
+    captionEl.textContent = item.caption;
+    counterEl.textContent = `${index + 1} / ${galleryItems.length}`;
+    if (sourceLinkEl) {
+      sourceLinkEl.href = item.src;
+    }
+
+    // Preload next and previous images
+    const nextIdx = (index + 1) % galleryItems.length;
+    const prevIdx = (index - 1 + galleryItems.length) % galleryItems.length;
+    new Image().src = galleryItems[nextIdx].src;
+    new Image().src = galleryItems[prevIdx].src;
+  }
+
+  function openLightbox(index) {
+    lastActiveElement = document.activeElement;
+    renderItem(index);
+    modal.removeAttribute("hidden");
+    modal.classList.add("is-active");
+    document.body.style.overflow = "hidden";
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeLightbox() {
+    modal.classList.remove("is-active");
+    modal.setAttribute("hidden", "true");
+    document.body.style.overflow = "";
+    if (lastActiveElement && typeof lastActiveElement.focus === "function") {
+      lastActiveElement.focus();
+    }
+  }
+
+  function showNext() {
+    renderItem((currentIndex + 1) % galleryItems.length);
+  }
+
+  function showPrev() {
+    renderItem((currentIndex - 1 + galleryItems.length) % galleryItems.length);
+  }
+
+  triggers.forEach((trigger, index) => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      openLightbox(index);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+  if (backdrop) backdrop.addEventListener("click", closeLightbox);
+  if (nextBtn) nextBtn.addEventListener("click", showNext);
+  if (prevBtn) prevBtn.addEventListener("click", showPrev);
+
+  document.addEventListener("keydown", (e) => {
+    if (!modal.classList.contains("is-active")) return;
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closeLightbox();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      showNext();
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      showPrev();
+    } else if (e.key === "Tab") {
+      // Focus trap within modal
+      const focusables = modal.querySelectorAll('button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (focusables.length === 0) return;
+      const firstEl = focusables[0];
+      const lastEl = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === firstEl) {
+        e.preventDefault();
+        lastEl.focus();
+      } else if (!e.shiftKey && document.activeElement === lastEl) {
+        e.preventDefault();
+        firstEl.focus();
+      }
+    }
+  });
 }
