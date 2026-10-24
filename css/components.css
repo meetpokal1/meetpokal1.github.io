@@ -408,6 +408,19 @@
   border-color: var(--border-strong);
 }
 
+/* A quiet label makes the richer project stack explicit without adding another card. */
+.project-stack-heading {
+  margin-top: var(--space-20);
+  margin-bottom: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: var(--lh-snug);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
 /* --------------------------------------------------------------------------
    6. Case Study Project Block (Tier 1 Featured Projects)
    -------------------------------------------------------------------------- */
