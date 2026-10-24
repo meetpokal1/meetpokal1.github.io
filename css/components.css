@@ -3264,3 +3264,64 @@
   .lightbox-modal, .runtime-thumb-card, .runtime-thumb-img-wrap img { transition: none; }
   .lightbox-nav-btn:hover { transform: translateY(-50%); }
 }
+
+
+/* InsightFlow: keep BI evidence and engineering architecture inside the flagship card. */
+.project-case-study > .insightflow-embedded-section {
+  width: 100%;
+  min-width: 0;
+  margin-top: var(--space-32);
+  padding-top: var(--space-24);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.project-case-study > .insightflow-embedded-section + .insightflow-embedded-section {
+  margin-top: var(--space-24);
+  padding-top: var(--space-24);
+}
+
+.project-case-study .insightflow-embedded-inner {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.project-case-study .insightflow-embedded-section .section-intro {
+  max-width: var(--prose-max-w);
+  margin: 0 0 var(--space-20);
+}
+
+.project-case-study .insightflow-embedded-section .section-intro h2 {
+  margin-bottom: var(--space-8);
+}
+
+.project-case-study .insightflow-embedded-section .section-intro p {
+  margin-bottom: 0;
+}
+
+.project-case-study .insightflow-pbi-disclosure,
+.project-case-study .insightflow-blueprint-disclosure {
+  margin: 0;
+}
+
+.project-case-study .insightflow-embedded-section .blueprint-card {
+  margin: 0 0 var(--space-16);
+}
+
+.project-case-study .insightflow-embedded-section .blueprint-disclaimer {
+  margin: 0 0 var(--space-8);
+}
+
+@media (max-width: 640px) {
+  .project-case-study > .insightflow-embedded-section {
+    margin-top: var(--space-24);
+    padding-top: var(--space-20);
+  }
+
+  .project-case-study > .insightflow-embedded-section + .insightflow-embedded-section {
+    margin-top: var(--space-20);
+    padding-top: var(--space-20);
+  }
+}
