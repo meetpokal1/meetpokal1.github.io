@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollSpy();
   initBackToTop();
   initLightbox();
+  initPbiToggleButton();
 });
 
 /**
@@ -506,4 +507,48 @@ function initLightbox() {
       }
     }
   });
+}
+
+
+/**
+ * Wire the Power BI & Architecture action button and navbar links to expandable disclosures
+ */
+function initPbiToggleButton() {
+  const btn = document.getElementById("btn-toggle-pbi");
+  const pbiDisclosure = document.getElementById("insightflow-pbi-disclosure");
+  if (btn && pbiDisclosure) {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      pbiDisclosure.open = true;
+      btn.setAttribute("aria-expanded", "true");
+
+      const nav = document.querySelector(".site-header");
+      const navH = nav ? nav.offsetHeight : 60;
+      const y = pbiDisclosure.getBoundingClientRect().top + window.pageYOffset - navH - 16;
+      window.scrollTo({ top: y, behavior: "smooth" });
+
+      const summary = pbiDisclosure.querySelector("summary");
+      if (summary) summary.focus({ preventScroll: true });
+    });
+
+    pbiDisclosure.addEventListener("toggle", () => {
+      btn.setAttribute("aria-expanded", String(pbiDisclosure.open));
+    });
+  }
+
+  // Handle navbar link to #technical-systems
+  const navSystemsLink = document.querySelector('a[href="#technical-systems"]');
+  const blueprintDisclosure = document.getElementById("technical-systems");
+  if (navSystemsLink && blueprintDisclosure) {
+    navSystemsLink.addEventListener("click", () => {
+      blueprintDisclosure.open = true;
+      const nav = document.querySelector(".site-header");
+      const navH = nav ? nav.offsetHeight : 60;
+      setTimeout(() => {
+        const y = blueprintDisclosure.getBoundingClientRect().top + window.pageYOffset - navH - 16;
+        window.scrollTo({ top: y, behavior: "smooth" });
+        blueprintDisclosure.querySelector("summary")?.focus({ preventScroll: true });
+      }, 60);
+    });
+  }
 }

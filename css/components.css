@@ -3264,3 +3264,59 @@
   .lightbox-modal, .runtime-thumb-card, .runtime-thumb-img-wrap img { transition: none; }
   .lightbox-nav-btn:hover { transform: translateY(-50%); }
 }
+
+
+/* --------------------------------------------------------------------------
+   Hero Analytical Mission Statement (Replaces 4-up metric strip)
+   -------------------------------------------------------------------------- */
+.hero-mission-statement {
+  margin-top: var(--space-28);
+  padding: var(--space-16) var(--space-24);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-amber);
+  border-radius: var(--radius-md);
+  max-width: 820px;
+}
+.hero-mission-text {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--fs-base);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+  letter-spacing: 0.01em;
+}
+@media (max-width: 640px) {
+  .hero-mission-statement {
+    margin-top: var(--space-20);
+    padding: var(--space-12) var(--space-16);
+  }
+  .hero-mission-text {
+    font-size: var(--fs-sm);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Contained Disclosures Spacing & Toggle Button
+   -------------------------------------------------------------------------- */
+.insightflow-pbi-disclosure,
+.insightflow-blueprint-disclosure {
+  margin: var(--space-16) 0;
+}
+.insightflow-blueprint-disclosure .blueprint-card {
+  margin: var(--space-12) 0 var(--space-16);
+  width: 100%;
+  box-sizing: border-box;
+}
+.insightflow-blueprint-disclosure .blueprint-disclaimer {
+  margin: 0 0 var(--space-16);
+  font-family: var(--font-serif);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  line-height: var(--lh-base);
+}
+#btn-toggle-pbi {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-sans);
+}
