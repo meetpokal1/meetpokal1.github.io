@@ -1,0 +1,237 @@
+name: Temporary Resume Viewer Browser QA
+
+on:
+  push:
+    branches:
+      - qa/resume-viewer-smoke
+
+permissions:
+  contents: read
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright
+        run: npm install --no-save playwright
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Test resume viewer at desktop and mobile sizes
+        run: |
+          mkdir -p test-results
+          node <<'NODE'
+          const assert = require('node:assert/strict');
+          const fs = require('node:fs/promises');
+          const { spawn } = require('node:child_process');
+          const { chromium } = require('playwright');
+
+          const ORIGIN = 'http://127.0.0.1:4173';
+          const PDF_PATH = '/assets/docs/Meet_Pokal_Data_Analyst_BI_Resume.pdf';
+          const server = spawn('python3', ['-m', 'http.server', '4173', '--bind', '127.0.0.1'], {
+            stdio: 'ignore',
+            detached: false
+          });
+          let browser;
+
+          async function waitForServer() {
+            for (let i = 0; i < 50; i += 1) {
+              try {
+                const response = await fetch(ORIGIN);
+                if (response.ok) return;
+              } catch (_) {}
+              await new Promise(resolve => setTimeout(resolve, 200));
+            }
+            throw new Error('Local portfolio server did not start');
+          }
+
+          async function openAndClose(page, opener, closeHow, waitForPdfLoad, expectedFocusId) {
+            await opener.scrollIntoViewIfNeeded();
+            const beforeScroll = await page.evaluate(() => window.scrollY);
+            if (waitForPdfLoad) {
+              await page.locator('#resume-viewer-frame').evaluate(frame => {
+                frame.dataset.qaLoad = 'waiting';
+                frame.addEventListener('load', () => {
+                  frame.dataset.qaLoad = 'loaded';
+                }, { once: true });
+              });
+            }
+
+            await opener.click();
+            const modal = page.locator('#resume-viewer');
+            await modal.waitFor({ state: 'visible', timeout: 5000 });
+            assert.equal(await modal.getAttribute('aria-modal'), 'true', 'modal must expose aria-modal');
+            assert.equal(await page.locator('#resume-viewer-title').innerText(), 'Meet Pokal — Resume');
+            assert.equal(await page.locator('#resume-viewer-close').evaluate(el => document.activeElement === el), true,
+              'focus should move to the close button');
+            assert.equal(await page.locator('#resume-viewer').evaluate(el => el.classList.contains('is-active')), true);
+
+            const frameSrc = await page.locator('#resume-viewer-frame').getAttribute('src');
+            assert(frameSrc && frameSrc.includes(PDF_PATH), 'iframe should point to the real resume PDF');
+            assert(frameSrc.includes('zoom=page-width'), 'PDF preview should request a readable fit-to-width zoom');
+
+            const lock = await page.evaluate(() => ({
+              position: document.body.style.position,
+              top: document.body.style.top,
+              overflow: document.documentElement.style.overflow
+            }));
+            assert.equal(lock.position, 'fixed', 'background body must be locked');
+            assert.equal(lock.overflow, 'hidden', 'document scrolling must be locked');
+            assert.equal(lock.top, '-' + beforeScroll + 'px', 'body lock should preserve the current scroll offset');
+
+            const frameBox = await page.locator('#resume-viewer-frame').boundingBox();
+            assert(frameBox && frameBox.width > 100 && frameBox.height > 100, 'PDF iframe should have a real visible area');
+
+            if (waitForPdfLoad) {
+              await page.waitForFunction(() => {
+                const frame = document.getElementById('resume-viewer-frame');
+                return frame && frame.dataset.qaLoad === 'loaded';
+              }, { timeout: 12000 }).catch(() => {
+                throw new Error('Resume iframe did not emit a load event in Chromium');
+              });
+              await page.screenshot({ path: 'test-results/resume-viewer-desktop.png', fullPage: false });
+            }
+
+            if (closeHow === 'escape') {
+              await page.keyboard.press('Escape');
+            } else {
+              await page.locator('#resume-viewer-close').click();
+            }
+            await page.waitForFunction(() => document.getElementById('resume-viewer').hasAttribute('hidden'));
+            const after = await page.evaluate(() => ({
+              scrollY: window.scrollY,
+              activeId: document.activeElement && document.activeElement.id
+            }));
+            assert(Math.abs(after.scrollY - beforeScroll) <= 2,
+              'closing should restore the same page scroll position (before=' + beforeScroll + ', after=' + after.scrollY + ')');
+            if (expectedFocusId) {
+              assert.equal(after.activeId, expectedFocusId, 'focus should return to the expected opener/control');
+            } else {
+              assert.equal(after.activeId, opener.getAttribute('id') || '', 'focus should return to the link that opened the viewer');
+            }
+          }
+
+          (async () => {
+            try {
+              await waitForServer();
+              const browser = await chromium.launch({ headless: true });
+              const page = await browser.newPage({ viewport: { width: 1365, height: 900 }, acceptDownloads: true });
+              const pageErrors = [];
+              page.on('pageerror', error => pageErrors.push(error.message));
+              await page.goto(ORIGIN, { waitUntil: 'networkidle' });
+
+              const allLinkCount = await page.locator('[data-config="resume"]').count();
+              assert.equal(allLinkCount, 4, 'expected the four existing resume links, including mobile navigation');
+
+              const pdfResponse = await page.request.get(ORIGIN + PDF_PATH);
+              assert.equal(pdfResponse.status(), 200, 'resume PDF request should return HTTP 200');
+              assert.match(pdfResponse.headers()['content-type'] || '', /application\/pdf/i, 'resume response must be a PDF');
+              const pdfBytes = await pdfResponse.body();
+              assert.equal(pdfBytes.subarray(0, 5).toString(), '%PDF-', 'response must contain a real PDF, not HTML');
+
+              const desktopVisible = [];
+              for (let i = 0; i < allLinkCount; i += 1) {
+                const link = page.locator('[data-config="resume"]').nth(i);
+                if (await link.isVisible()) desktopVisible.push(i);
+              }
+              assert(desktopVisible.length >= 3, 'desktop should show the hero, navbar and contact resume entry points');
+
+              for (let i = 0; i < desktopVisible.length; i += 1) {
+                const idx = desktopVisible[i];
+                const link = page.locator('[data-config="resume"]').nth(idx);
+                await openAndClose(page, link, idx === desktopVisible[0] ? 'escape' : 'button', i === 0, null);
+              }
+
+              // The viewer's download icon should download the exact served PDF bytes.
+              const firstVisibleLink = page.locator('[data-config="resume"]').nth(desktopVisible[0]);
+              await firstVisibleLink.scrollIntoViewIfNeeded();
+              await firstVisibleLink.click();
+              await page.locator('#resume-viewer').waitFor({ state: 'visible' });
+              const [download] = await Promise.all([
+                page.waitForEvent('download'),
+                page.locator('#resume-viewer-download').click()
+              ]);
+              assert.equal(download.suggestedFilename(), 'Meet_Pokal_Data_Analyst_BI_Resume.pdf');
+              const downloadPath = await download.path();
+              const downloaded = await fs.readFile(downloadPath);
+              assert.equal(downloaded.length, pdfBytes.length, 'download should match the original PDF byte length');
+              assert.equal(downloaded.subarray(0, 5).toString(), '%PDF-');
+              await page.keyboard.press('Escape');
+              await page.waitForFunction(() => document.getElementById('resume-viewer').hasAttribute('hidden'));
+
+              // Mobile-sized viewport: visible controls, full-screen modal, and all accessible entry points.
+              await page.setViewportSize({ width: 390, height: 844 });
+              await page.goto(ORIGIN, { waitUntil: 'networkidle' });
+              const mobileCount = await page.locator('[data-config="resume"]').count();
+              for (let i = 0; i < mobileCount; i += 1) {
+                const link = page.locator('[data-config="resume"]').nth(i);
+                if (!(await link.isVisible())) continue;
+                await openAndClose(page, link, 'button', false, null);
+                const box = await link.boundingBox();
+                assert(box, 'mobile resume link should have a layout box');
+              }
+
+              await page.locator('#mobile-menu-toggle').click();
+              const mobileMenuResume = page.locator('#nav-menu [data-config="resume"]');
+              await mobileMenuResume.waitFor({ state: 'visible' });
+              await openAndClose(page, mobileMenuResume, 'button', false, 'mobile-menu-toggle');
+
+              // No horizontal overflow/clipped controls in the full-screen mobile viewer.
+              await page.locator('#hero-title').scrollIntoViewIfNeeded();
+              const heroResume = page.locator('#hero-title').locator('xpath=ancestor::*[contains(@class,"hero")]').locator('[data-config="resume"]').first();
+              await heroResume.scrollIntoViewIfNeeded();
+              await heroResume.click();
+              await page.locator('#resume-viewer').waitFor({ state: 'visible' });
+              const layout = await page.evaluate(() => {
+                const modal = document.querySelector('.resume-viewer-dialog').getBoundingClientRect();
+                const iframe = document.querySelector('#resume-viewer-frame').getBoundingClientRect();
+                const buttons = [...document.querySelectorAll('.resume-viewer-header-actions > *')].map(el => {
+                  const r = el.getBoundingClientRect();
+                  return { left: r.left, right: r.right, width: r.width };
+                });
+                return { viewportWidth: window.innerWidth, modal: { left: modal.left, right: modal.right, width: modal.width }, iframe: { left: iframe.left, right: iframe.right, width: iframe.width }, buttons };
+              });
+              assert(layout.modal.left >= -1 && layout.modal.right <= layout.viewportWidth + 1, 'mobile viewer should fit the viewport');
+              assert(layout.iframe.left >= -1 && layout.iframe.right <= layout.viewportWidth + 1, 'PDF iframe should not clip horizontally');
+              assert(layout.buttons.every(b => b.left >= -1 && b.right <= layout.viewportWidth + 1), 'header controls should fit the mobile viewport');
+              await page.screenshot({ path: 'test-results/resume-viewer-mobile.png', fullPage: false });
+              await page.keyboard.press('Escape');
+              await page.waitForFunction(() => document.getElementById('resume-viewer').hasAttribute('hidden'));
+
+              assert.deepEqual(pageErrors, [], 'page should not produce JavaScript errors');
+              console.log(JSON.stringify({
+                result: 'PASS',
+                desktopEntryPointsTested: desktopVisible.length,
+                totalResumeLinks: allLinkCount,
+                mobileVisibleEntryPointsTested: 'all visible plus collapsed mobile-navigation link',
+                pdfHttpStatus: pdfResponse.status(),
+                pdfContentType: pdfResponse.headers()['content-type'],
+                pdfBytes: pdfBytes.length,
+                downloadBytes: downloaded.length,
+                pageErrors
+              }, null, 2));
+              await browser.close();
+            } catch (error) {
+              console.error(error && error.stack || error);
+              process.exitCode = 1;
+            } finally {
+              server.kill('SIGTERM');
+            }
+          })();
+          NODE
+
+      - name: Upload QA screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-viewer-browser-qa-screenshots
+          path: test-results/*.png
+          if-no-files-found: ignore
