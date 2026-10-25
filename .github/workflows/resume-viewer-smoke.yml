@@ -22,8 +22,8 @@ jobs:
       - name: Install Playwright
         run: npm install --no-save playwright
 
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+      - name: Check preinstalled Chrome
+        run: google-chrome --version
 
       - name: Test resume viewer at desktop and mobile sizes
         run: |
@@ -122,7 +122,7 @@ jobs:
           (async () => {
             try {
               await waitForServer();
-              const browser = await chromium.launch({ headless: true });
+              const browser = await chromium.launch({ headless: true, executablePath: '/usr/bin/google-chrome', args: ['--no-sandbox'] });
               const page = await browser.newPage({ viewport: { width: 1365, height: 900 }, acceptDownloads: true });
               const pageErrors = [];
               page.on('pageerror', error => pageErrors.push(error.message));
