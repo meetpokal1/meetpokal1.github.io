@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initGstTableFilter();
   applySiteConfig();
+  initResumeViewer();
   initScrollSpy();
   initBackToTop();
   initLightbox();
@@ -652,5 +653,172 @@ function initTableauSwitcher() {
         switchTab(targetIndex, true);
       }
     });
+  });
+}
+
+
+/**
+ * Shared accessible PDF viewer used by every existing resume link.
+ * Uses the browser's native PDF renderer; no PDF library or canvas recreation.
+ */
+function initResumeViewer() {
+  const modal = document.getElementById("resume-viewer");
+  if (!modal) return;
+
+  const dialog = modal.querySelector(".resume-viewer-dialog");
+  const frame = document.getElementById("resume-viewer-frame");
+  const closeBtn = document.getElementById("resume-viewer-close");
+  const downloadBtn = document.getElementById("resume-viewer-download");
+  const openBtn = document.getElementById("resume-viewer-open");
+  const directLink = document.getElementById("resume-viewer-direct");
+  const backdrop = modal.querySelector("[data-resume-close]");
+  const openers = Array.from(document.querySelectorAll('[data-config="resume"]'));
+  const body = document.body;
+  const root = document.documentElement;
+  const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+
+  if (!dialog || !frame || !closeBtn || openers.length === 0) return;
+
+  let isOpen = false;
+  let returnFocusElement = null;
+  let savedScrollY = 0;
+  let savedBodyStyles = null;
+  let savedRootOverflow = "";
+  let savedInertStates = [];
+
+  function getPdfUrl(trigger) {
+    const configuredUrl =
+      typeof SITE_CONFIG !== "undefined" &&
+      SITE_CONFIG.profile &&
+      SITE_CONFIG.profile.resumeUrl;
+    return trigger.getAttribute("href") || configuredUrl || "";
+  }
+
+  function lockBackground() {
+    savedScrollY = window.scrollY || root.scrollTop || 0;
+    savedBodyStyles = {
+      position: body.style.position,
+      top: body.style.top,
+      width: body.style.width,
+      overflow: body.style.overflow
+    };
+    savedRootOverflow = root.style.overflow;
+
+    body.style.position = "fixed";
+    body.style.top = "-" + savedScrollY + "px";
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+    root.style.overflow = "hidden";
+
+    savedInertStates = Array.from(body.children)
+      .filter((element) => element !== modal)
+      .map((element) => ({ element, inert: element.inert }));
+    savedInertStates.forEach(({ element }) => {
+      element.inert = true;
+    });
+  }
+
+  function unlockBackground() {
+    savedInertStates.forEach(({ element, inert }) => {
+      element.inert = inert;
+    });
+    savedInertStates = [];
+
+    if (savedBodyStyles) {
+      body.style.position = savedBodyStyles.position;
+      body.style.top = savedBodyStyles.top;
+      body.style.width = savedBodyStyles.width;
+      body.style.overflow = savedBodyStyles.overflow;
+    }
+    root.style.overflow = savedRootOverflow;
+    window.scrollTo(0, savedScrollY);
+  }
+
+  function openViewer(trigger) {
+    const pdfUrl = getPdfUrl(trigger);
+    if (!pdfUrl) return;
+
+    const cleanUrl = pdfUrl.split("#")[0];
+    const fileName = cleanUrl.split("/").pop().split("?")[0] || "Meet_Pokal_Resume.pdf";
+    const previewUrl = cleanUrl + "#view=fith&zoom=page-width";
+
+    returnFocusElement =
+      trigger.closest("#nav-menu") && mobileMenuToggle ? mobileMenuToggle : trigger;
+
+    downloadBtn.href = cleanUrl;
+    downloadBtn.download = fileName;
+    openBtn.href = cleanUrl;
+    directLink.href = cleanUrl;
+
+    if (frame.dataset.source !== previewUrl) {
+      frame.src = previewUrl;
+      frame.dataset.source = previewUrl;
+    }
+
+    lockBackground();
+    modal.removeAttribute("hidden");
+    modal.classList.add("is-active");
+    isOpen = true;
+    closeBtn.focus({ preventScroll: true });
+  }
+
+  function closeViewer() {
+    if (!isOpen) return;
+    isOpen = false;
+    modal.classList.remove("is-active");
+    modal.setAttribute("hidden", "true");
+    unlockBackground();
+
+    if (returnFocusElement && typeof returnFocusElement.focus === "function") {
+      returnFocusElement.focus({ preventScroll: true });
+    }
+    returnFocusElement = null;
+  }
+
+  openers.forEach((trigger) => {
+    trigger.setAttribute("aria-haspopup", "dialog");
+    trigger.addEventListener("click", (event) => {
+      const pdfUrl = getPdfUrl(trigger);
+      if (!pdfUrl) return;
+      event.preventDefault();
+      openViewer(trigger);
+    });
+  });
+
+  closeBtn.addEventListener("click", closeViewer);
+  if (backdrop) backdrop.addEventListener("click", closeViewer);
+
+  document.addEventListener("keydown", (event) => {
+    if (!isOpen) return;
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeViewer();
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+
+    const focusable = Array.from(
+      modal.querySelectorAll('button:not([disabled]), a[href], iframe, [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => {
+      return !element.hasAttribute("hidden") && element.getAttribute("aria-hidden") !== "true";
+    });
+
+    if (focusable.length === 0) {
+      event.preventDefault();
+      closeBtn.focus();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && (document.activeElement === first || document.activeElement === dialog)) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   });
 }
