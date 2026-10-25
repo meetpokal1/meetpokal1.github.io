@@ -293,7 +293,7 @@
             </div>
             <div class="kpi-cell">
               <span class="kpi-num">-0.0360</span>
-              <span class="kpi-label">Onion TWFE Arrival Elasticity (p &lt; 0.001)</span>
+              <span class="kpi-label">Onion TWFE Arrival Elasticity (p &lt; 0.05)</span>
             </div>
             <div class="kpi-cell">
               <span class="kpi-num">27,420</span>
@@ -310,7 +310,7 @@
                       data-index="0"
                       data-src="assets/marketpulse/tableau/01_dashboard1_market_pulse.png"
                       data-address="Tableau Public &middot; Dashboard 1 &middot; Market Pulse"
-                      data-caption="01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 3 states (Maharashtra, Karnataka, Gujarat), commodity comparisons, and arrival volume context across 1.48M observations."
+                      data-caption="01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 6 states (Maharashtra, Karnataka, Andhra Pradesh, Telangana, Tamil Nadu, Kerala), commodity comparisons, and arrival volume context across 1.48M observations."
                       data-title="Tableau Public &middot; Dashboard 1: Market Pulse">
                 <span class="tab-index">01 / OVERVIEW</span>
                 <span class="tab-label">Market Pulse</span>
@@ -323,7 +323,7 @@
                       data-index="1"
                       data-src="assets/marketpulse/tableau/02_dashboard2_spread_lab.png"
                       data-address="Tableau Public &middot; Dashboard 2 &middot; Spread Lab"
-                      data-caption="02 / Spread Lab &middot; Spatial arbitrage corridor (Lasalgaon vs Mumbai), transportation friction threshold band (&#8377;120/Qtl), and margin inversion analysis (-&#8377;157.76/Qtl mean spread)."
+                      data-caption="02 / Spread Lab &middot; Spatial arbitrage corridor (Lasalgaon vs Mumbai), modeled baseline freight band (~&#8377;120/Qtl), and margin inversion analysis (-&#8377;157.76/Qtl mean spread across 507 trading days)."
                       data-title="Tableau Public &middot; Dashboard 2: Spread Lab">
                 <span class="tab-index">02 / ARBITRAGE</span>
                 <span class="tab-label">Spread Lab</span>
@@ -336,11 +336,11 @@
                       data-index="2"
                       data-src="assets/marketpulse/tableau/03_dashboard3_arrival_price_research.png"
                       data-address="Tableau Public &middot; Dashboard 3 &middot; Arrival–Price Research"
-                      data-caption="03 / Arrival–Price Research &middot; Econometric panel analysis, seasonal variety confounding isolation, and non-linear LOESS vs TWFE elasticity (-0.0360 true elasticity)."
+                      data-caption="03 / Arrival–Price Research &middot; Econometric panel analysis, two-way fixed effects (TWFE) market and month controls, and estimated reduced-form arrival&ndash;price elasticity (-0.0360, p &lt; 0.05)."
                       data-title="Tableau Public &middot; Dashboard 3: Arrival–Price Research">
                 <span class="tab-index">03 / ECONOMETRICS</span>
                 <span class="tab-label">Arrival–Price Panel</span>
-                <span class="tab-sub">TWFE elasticity &amp; variety control</span>
+                <span class="tab-sub">TWFE elasticity &amp; fixed effects</span>
               </button>
 
               <!-- Tab 4 -->
@@ -349,7 +349,7 @@
                       data-index="3"
                       data-src="assets/marketpulse/tableau/04_dashboard4_reliability_forensics.png"
                       data-address="Tableau Public &middot; Dashboard 4 &middot; Reliability Forensics"
-                      data-caption="04 / Reliability Forensics &middot; Data quality audit, 27,420 frozen price streaks, 74 quarantined non-positive price anomalies, and 99.995% clean data gate."
+                      data-caption="04 / Reliability Forensics &middot; Data quality audit, 27,420 unchanged price streaks (&ge; 7 days, max 518 days), 74 quarantined exceptions (70 low-price scale errors, 4 zero arrivals), and 99.995% clean data gate."
                       data-title="Tableau Public &middot; Dashboard 4: Reliability Forensics">
                 <span class="tab-index">04 / AUDIT &amp; QA</span>
                 <span class="tab-label">Reliability Forensics</span>
@@ -378,7 +378,7 @@
                    data-lightbox-target="marketpulse-tableau"
                    data-index="0"
                    data-title="Tableau Public &middot; Dashboard 1: Market Pulse"
-                   data-caption="01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 3 states (Maharashtra, Karnataka, Gujarat), commodity comparisons, and arrival volume context across 1.48M observations."
+                   data-caption="01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 6 states (Maharashtra, Karnataka, Andhra Pradesh, Telangana, Tamil Nadu, Kerala), commodity comparisons, and arrival volume context across 1.48M observations."
                    target="_blank" rel="noopener noreferrer"
                    aria-label="Open Tableau Dashboard 1 in viewer">
                   <img src="assets/marketpulse/tableau/01_dashboard1_market_pulse.png"
@@ -388,7 +388,7 @@
                 </a>
               </div>
               <figcaption class="screenshot-caption" id="tableau-preview-caption">
-                <span class="caption-text">01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 3 states (Maharashtra, Karnataka, Gujarat), commodity comparisons, and arrival volume context across 1.48M observations. Select to enlarge.</span>
+                <span class="caption-text">01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 6 states (Maharashtra, Karnataka, Andhra Pradesh, Telangana, Tamil Nadu, Kerala), commodity comparisons, and arrival volume context across 1.48M observations. Select to enlarge.</span>
                 <span class="screenshot-badge">Tableau 2026.2 Packaged Extract</span>
               </figcaption>
             </div>
@@ -398,19 +398,19 @@
               <a href="assets/marketpulse/tableau/01_dashboard1_market_pulse.png"
                  data-lightbox="marketpulse-tableau" data-index="0"
                  data-title="Tableau Public &middot; Dashboard 1: Market Pulse"
-                 data-caption="01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 3 states (Maharashtra, Karnataka, Gujarat), commodity comparisons, and arrival volume context across 1.48M observations."></a>
+                 data-caption="01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 6 states (Maharashtra, Karnataka, Andhra Pradesh, Telangana, Tamil Nadu, Kerala), commodity comparisons, and arrival volume context across 1.48M observations."></a>
               <a href="assets/marketpulse/tableau/02_dashboard2_spread_lab.png"
                  data-lightbox="marketpulse-tableau" data-index="1"
                  data-title="Tableau Public &middot; Dashboard 2: Spread Lab"
-                 data-caption="02 / Spread Lab &middot; Spatial arbitrage corridor (Lasalgaon vs Mumbai), transportation friction threshold band (&#8377;120/Qtl), and margin inversion analysis (-&#8377;157.76/Qtl mean spread)."></a>
+                 data-caption="02 / Spread Lab &middot; Spatial arbitrage corridor (Lasalgaon vs Mumbai), modeled baseline freight band (~&#8377;120/Qtl), and margin inversion analysis (-&#8377;157.76/Qtl mean spread across 507 trading days)."></a>
               <a href="assets/marketpulse/tableau/03_dashboard3_arrival_price_research.png"
                  data-lightbox="marketpulse-tableau" data-index="2"
                  data-title="Tableau Public &middot; Dashboard 3: Arrival–Price Research"
-                 data-caption="03 / Arrival–Price Research &middot; Econometric panel analysis, seasonal variety confounding isolation, and non-linear LOESS vs TWFE elasticity (-0.0360 true elasticity)."></a>
+                 data-caption="03 / Arrival–Price Research &middot; Econometric panel analysis, two-way fixed effects (TWFE) market and month controls, and estimated reduced-form arrival&ndash;price elasticity (-0.0360, p &lt; 0.05)."></a>
               <a href="assets/marketpulse/tableau/04_dashboard4_reliability_forensics.png"
                  data-lightbox="marketpulse-tableau" data-index="3"
                  data-title="Tableau Public &middot; Dashboard 4: Reliability Forensics"
-                 data-caption="04 / Reliability Forensics &middot; Data quality audit, 27,420 frozen price streaks, 74 quarantined non-positive price anomalies, and 99.995% clean data gate."></a>
+                 data-caption="04 / Reliability Forensics &middot; Data quality audit, 27,420 unchanged price streaks (&ge; 7 days, max 518 days), 74 quarantined exceptions (70 low-price scale errors, 4 zero arrivals), and 99.995% clean data gate."></a>
             </div>
           </div>
 
@@ -419,17 +419,17 @@
             <article class="insightflow-outcome">
               <span class="insightflow-outcome-kicker">SPATIAL ARBITRAGE FINDING</span>
               <h4>Terminal markets trade at persistent discounts to farm-gate hubs</h4>
-              <p>The Lasalgaon-to-Mumbai onion corridor exhibits a mean spread of -&#8377;157.76/Qtl, inverted on 64.2% of trading days. Naive spatial arbitrage fails because Mumbai arrivals reflect mixed grades and delayed arrivals rather than direct farm-gate parity, making simple spread trading unprofitable without grade standardization.</p>
+              <p>The Lasalgaon-to-Mumbai onion corridor exhibits a mean spread of -&#8377;157.76/Qtl across 507 overlapping trading days, inverted on 74.75% of days (379 days). Observed price spreads alone do not imply profitable physical arbitrage: Mumbai wholesale quotes reflect cultivar heterogeneity (generic mixed grades vs. Lasalgaon export-grade Unhali/Red), arrival timing lags, and handling frictions rather than direct farm-gate parity.</p>
             </article>
             <article class="insightflow-outcome">
-              <span class="insightflow-outcome-kicker">ECONOMETRIC REHABILITATION</span>
-              <h4>Controlling variety confounding restores downward-sloping demand</h4>
-              <p>Naive pooled OLS suggested a counter-intuitive positive arrival elasticity (+0.089), driven by seasonal shifts toward premium varieties during high-arrival months. Controlling for mandi and variety fixed effects (TWFE) and LOESS non-linearities isolates the true downward-sloping price elasticity of -0.0360 (p &lt; 0.001).</p>
+              <span class="insightflow-outcome-kicker">ECONOMETRIC SPECIFICATION</span>
+              <h4>Two-Way Fixed Effects estimates an inelastic spot price response</h4>
+              <p>A pooled OLS regression estimates an arrival&ndash;price coefficient of -0.1008 across 197,941 observations. Introducing Two-Way Fixed Effects (TWFE) to control for unobserved mandi-specific characteristics and calendar-month time shocks across 394 market clusters yields an estimated reduced-form arrival&ndash;price elasticity of -0.0360 (cluster-robust SE = 0.0183, t = -1.96, p &lt; 0.05, 95% CI [-0.0720, -0.0001]). This indicates an inelastic short-run spot price response (&lt; 0.4% price reaction to a 10% arrival shift), refuting assumptions of massive spot price collapse.</p>
             </article>
             <article class="insightflow-outcome">
               <span class="insightflow-outcome-kicker">RELIABILITY FORENSICS</span>
-              <h4>Zero-variance reporting masks underlying wholesale volatility</h4>
-              <p>Forensic audit of 1,481,324 rows identified 27,420 frozen price observations where mandis carried forward identical modal prices for up to 14 days without trading. DuckDB data quality gates quarantined 74 non-positive price anomalies, establishing an audit-clean 99.995% analytical foundation for Tableau Public.</p>
+              <h4>Unchanged price streaks reflect administrative boards and price stickiness</h4>
+              <p>Forensic audit of 1,481,324 observations identified 27,420 streak instances where mandis reported identical modal prices across seven or more consecutive trading dates (median: 11 days, max: 518 days). Rather than evidence that no trading occurred, 69.2% of streaks stem from administrative price ceilings and 29.5% from local price stickiness. DuckDB quality gates quarantined 74 defective records (70 low-price scale errors below &#8377;10/Qtl and 4 zero-arrival entries), preserving 1,481,250 valid observations (99.995% conservation rate) for analytical modeling.</p>
             </article>
           </section>
 
@@ -446,7 +446,7 @@
                    data-lightbox="marketpulse-streamlit"
                    data-index="0"
                    data-title="Streamlit Runtime &middot; Mandi Market Explorer"
-                   data-caption="Interactive spatial and temporal market explorer filtering 1.48M wholesale records across Maharashtra, Karnataka, and Gujarat with commodity variety breakdowns."
+                   data-caption="Interactive spatial and temporal market explorer filtering 1.48M wholesale records across six western and southern states (Maharashtra, Karnataka, Andhra Pradesh, Telangana, Tamil Nadu, Kerala) with commodity variety breakdowns."
                    target="_blank" rel="noopener noreferrer"
                    aria-label="Open Market Explorer in viewer">
                   <div class="runtime-thumb-head">
@@ -470,7 +470,7 @@
                    data-lightbox="marketpulse-streamlit"
                    data-index="1"
                    data-title="Streamlit Runtime &middot; Spatial Spread Intelligence"
-                   data-caption="Corridor spread tracking between primary producing mandis (Lasalgaon) and terminal consumption centers (Mumbai), with dynamic freight cost bands."
+                   data-caption="Corridor spread tracking between primary producing mandis (Lasalgaon) and terminal consumption centers (Mumbai), evaluated against modeled baseline freight costs (~&#8377;120/Qtl)."
                    target="_blank" rel="noopener noreferrer"
                    aria-label="Open Spatial Spread Intelligence in viewer">
                   <div class="runtime-thumb-head">
@@ -494,7 +494,7 @@
                    data-lightbox="marketpulse-streamlit"
                    data-index="2"
                    data-title="Streamlit Runtime &middot; Arrival–Price Econometric Panel"
-                   data-caption="Two-way fixed effects (TWFE) and LOESS non-linear regression isolating true negative price elasticity (-0.0360) from seasonal variety confounding."
+                   data-caption="Two-way fixed effects (TWFE) and non-parametric LOESS visualization estimating reduced-form arrival&ndash;price elasticity (-0.0360, p &lt; 0.05) with market and time controls."
                    target="_blank" rel="noopener noreferrer"
                    aria-label="Open Arrival–Price Econometric Panel in viewer">
                   <div class="runtime-thumb-head">
@@ -518,7 +518,7 @@
                    data-lightbox="marketpulse-streamlit"
                    data-index="3"
                    data-title="Streamlit Runtime &middot; Mandi Reliability Lab"
-                   data-caption="Empirical reporting hygiene forensics detecting 27,420 frozen price streaks (stale reporting) and isolating reporting latency patterns."
+                   data-caption="Empirical reporting hygiene forensics auditing 27,420 unchanged price streak instances (&ge; 7 consecutive trading dates, max 518 days) across administrative and stickiness categories."
                    target="_blank" rel="noopener noreferrer"
                    aria-label="Open Mandi Reliability Lab in viewer">
                   <div class="runtime-thumb-head">
@@ -673,9 +673,9 @@
           <details class="insightflow-disclosure" id="marketpulse-methodology-disclosure">
             <summary>Explore the data-quality audit, data contract, and econometric methodology</summary>
             <div class="insightflow-disclosure-content">
-              <p><strong>Dataset provenance &amp; hygiene:</strong> The dataset comprises 1,481,324 daily wholesale observations across Maharashtra, Karnataka, and Gujarat (30 Aug 2024 &ndash; 28 Sep 2026) with verified SHA-256 (<code>DA8E4435D7B63693C406401E0FA3B1F084FD1010F650598BA5030715A57ED6A4</code>). DuckDB zero-copy data quality gates audited 27,420 frozen price streaks and quarantined 74 non-positive price anomalies, establishing an audit-clean 99.995% analytical foundation.</p>
+              <p><strong>Dataset provenance &amp; hygiene:</strong> The dataset comprises 1,481,324 daily wholesale observations across six western and southern states&mdash;Maharashtra, Karnataka, Andhra Pradesh, Telangana, Tamil Nadu, and Kerala (30 Aug 2024 &ndash; 28 Sep 2026)&mdash;with verified SHA-256 (<code>DA8E4435D7B63693C406401E0FA3B1F084FD1010F650598BA5030715A57ED6A4</code>). DuckDB zero-copy data quality gates audited 27,420 unchanged price streaks (&ge; 7 days, max 518 days) and quarantined 74 exceptions (70 unit-scale low-price reporting errors below &#8377;10/Qtl and 4 zero-arrival records), establishing an audit-clean 99.9950% valid analytical foundation (1,481,250 rows).</p>
               <p><strong>Reproducible data contract:</strong> The Tableau deliverable is powered by six typed, deterministically sorted analytical extracts governed by an explicit manifest and verified by 26 passing automated pytest tests. The regression suite validates record conservation, monotonic date coverage, price non-negativity, and corridor relationship integrity.</p>
-              <p><strong>Econometric methodology:</strong> Naive pooled OLS regressions yield a spurious positive arrival elasticity (+0.089) due to seasonal variety mix shifts. Applying two-way fixed effects (TWFE) with mandi-level and time-level dummy variables and LOESS non-linear smoothing recovers the true downward-sloping price elasticity of -0.0360 (p &lt; 0.001).</p>
+              <p><strong>Econometric methodology:</strong> Pooled OLS estimates an arrival&ndash;price coefficient of -0.1008 on 197,941 Onion observations. Applying a Two-Way Fixed Effects (TWFE) model with market entity fixed effects and calendar-month time fixed effects across 394 market clusters yields an estimated reduced-form arrival&ndash;price elasticity of -0.0360 (cluster-robust SE = 0.0183, t = -1.96, p &lt; 0.05, 95% CI [-0.0720, -0.0001]). This observational reduced-form estimate reflects short-run within-market spot price clearing rather than structural demand elasticity, refuting hypotheses of extreme short-run price collapse.</p>
             </div>
           </details>
 
@@ -708,7 +708,7 @@
               </button>
             </div>
             <p class="project-note">
-              <strong>Tableau Public &amp; data provenance note:</strong> The live link opens the published Tableau Public workbook. Note on Tableau Public presentation: The online service renders one dashboard tab at a time in the web viewer; downloading the packaged workbook (<code>marketpulse_india.twbx</code>) and opening it locally in Tableau Desktop reveals all four interactive dashboards and associated worksheets. All 1,481,324 wholesale observations are derived from official Agmarknet mandi returns (Aug 2024 &ndash; Sep 2026), validated via reproducible DuckDB pipeline with 26 automated regression tests. The Streamlit research suite is a verified repository deliverable; no hosted Streamlit web URL is advertised.
+              <strong>Tableau Public &amp; data provenance note:</strong> The live link opens the published Tableau Public workbook. Note on Tableau Public presentation: The online service renders one dashboard tab at a time in the web viewer; downloading the packaged workbook (<code>marketpulse_india.twbx</code>) and opening it locally in Tableau Desktop reveals all four interactive dashboards and associated worksheets. All 1,481,324 wholesale observations are derived from official Agmarknet mandi returns across six western and southern states (Aug 2024 &ndash; Sep 2026), validated via reproducible DuckDB pipeline with 26 automated regression tests. The Streamlit research suite is a verified repository deliverable; no hosted Streamlit web URL is advertised.
             </p>
           </div>
         </article>
