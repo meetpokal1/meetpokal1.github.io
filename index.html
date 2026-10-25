@@ -267,6 +267,428 @@
           <p>Two end-to-end data intelligence systems, presented through verified analytics deliverables, empirical econometric findings, interactive runtime galleries, and production architectures.</p>
         </div>
 
+        <!-- Case Study 2: InsightFlow (Retail Analytics Platform) -->
+        <article class="project-case-study project--steel" id="project-insightflow" aria-labelledby="title-insightflow">
+          <div class="project-header-top">
+            <div>
+              <span class="case-domain-tag">Flagship Analytics &amp; Data Engineering Platform</span>
+              <h3 id="title-insightflow" class="project-title">InsightFlow: Retail Profit &amp; Data Integrity Intelligence</h3>
+            </div>
+            <span class="status-pill status-pill-ok">CI verified &middot; 234 tests &middot; Release cleanup merged</span>
+          </div>
+
+          <p class="project-problem">
+            <strong>Business Problem:</strong> Retail teams cannot reliably investigate margins or replenishment when CSV/XLSX exports contain malformed quantities, duplicate customers, and invalid relationships. InsightFlow reconciles the source data first, then delivers decision-ready sales, inventory, and data-quality analytics.
+          </p>
+
+          <!-- Structured Business Value & Decision Application -->
+          <div class="project-business-value">
+            <div class="business-value-grid">
+              <div class="business-value-col">
+                <span class="business-value-kicker">WHO IT IS FOR</span>
+                <p>Retail operations managers, category and inventory planners, sales managers, and BI teams reconciling multi-source transactional data.</p>
+              </div>
+              <div class="business-value-col">
+                <span class="business-value-kicker">HOW TEAMS USE IT</span>
+                <p>Pinpoint products where top-line revenue hides negative margins, stress-test break-even volume tolerance (e.g. 58.3% buffer) before pricing changes, and rank stockout replenishment exceptions.</p>
+              </div>
+              <div class="business-value-col">
+                <span class="business-value-kicker">DECISION BENEFIT &amp; BOUNDARIES</span>
+                <p>Replaces manual spreadsheet cross-checks with auditable, tested metrics. Caveat: Records and financials are synthetic; simulations depend on model assumptions; replenishment follows transparent heuristics.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key evidence: synthetic dataset and automated verification -->
+          <div class="kpi-row" aria-label="InsightFlow Key Project Metrics">
+            <div class="kpi-cell">
+              <span class="kpi-num">&#8377;20.90 Cr</span>
+              <span class="kpi-label">Net Revenue &middot; Synthetic Data</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">20.3%</span>
+              <span class="kpi-label">Overall Gross Margin</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">449</span>
+              <span class="kpi-label">Product–Location Stock Positions</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">234</span>
+              <span class="kpi-label">Automated Tests Passing in CI</span>
+            </div>
+          </div>
+
+          <div class="project-screenshot-frame">
+            <div class="browser-header-bar">
+              <div class="window-dots">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+              </div>
+              <span class="browser-address">Streamlit Analytics Runtime &middot; Executive Overview</span>
+            </div>
+            <div class="screenshot-img-wrap">
+              <a href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/01_executive_overview.png"
+                 class="screenshot-lightbox-trigger"
+                 data-lightbox="insightflow"
+                 data-index="0"
+                 data-title="Streamlit Analytics Runtime &middot; Executive Overview"
+                 data-caption="Live KPI strip (&#8377;209.03M Net Revenue, 20.3% Gross Margin, &#8377;42.36M GP, 7,878 Orders), monthly revenue trend, and category composition."
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Open Streamlit Executive Overview in viewer">
+                <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/01_executive_overview.png"
+                     alt="InsightFlow Streamlit Executive Overview dashboard with net revenue &#8377;209.03M, gross profit &#8377;42.36M, margin 20.3%, 7,878 orders, monthly revenue trend, and category composition. All figures are synthetic."
+                     class="screenshot-img" loading="lazy" width="1600" height="900">
+              </a>
+            </div>
+            <figcaption class="screenshot-caption">
+              <span>01 / Streamlit Executive Overview &middot; Live KPI strip (&#8377;209.03M revenue, 20.3% margin), monthly trajectory, and category composition. Select to open full size.</span>
+            </figcaption>
+          </div>
+
+          <!-- Secondary Runtime Gallery (4 Views) -->
+          <div class="runtime-gallery" aria-label="Streamlit runtime application views">
+            <div class="runtime-gallery-header">
+              <span class="runtime-gallery-kicker">ANALYTICS RUNTIME VIEWS</span>
+              <span class="runtime-gallery-hint">Select any capture to enlarge in viewer</span>
+            </div>
+            <div class="runtime-gallery-grid">
+              <!-- 02: Sales & Products -->
+              <a class="runtime-thumb-card screenshot-lightbox-trigger"
+                 href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/02_sales_and_products.png"
+                 data-lightbox="insightflow"
+                 data-index="1"
+                 data-title="Streamlit Runtime &middot; Sales &amp; Category Margins"
+                 data-caption="Product-level revenue and margin breakdown. Identifies high-revenue low-margin items such as Basmati Rice 5kg (&#8377;16.53M revenue at 2.15% margin)."
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Open Sales and Category Margins in viewer">
+                <div class="runtime-thumb-head">
+                  <span class="runtime-thumb-tag">02 / SALES &amp; MARGINS</span>
+                  <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
+                </div>
+                <div class="runtime-thumb-img-wrap">
+                  <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/02_sales_and_products.png"
+                       alt="InsightFlow Sales and Products view showing SKU margin analysis"
+                       loading="lazy" width="800" height="450">
+                </div>
+                <div class="runtime-thumb-body">
+                  <h4>Sales &amp; Margin Dilution</h4>
+                  <p>Product profit leak analysis &amp; SKU revenue share</p>
+                </div>
+              </a>
+
+              <!-- 03: Price Simulator -->
+              <a class="runtime-thumb-card screenshot-lightbox-trigger"
+                 href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/02_price_sensitivity_simulator.png"
+                 data-lightbox="insightflow"
+                 data-index="2"
+                 data-title="Streamlit Runtime &middot; Price Sensitivity Simulator"
+                 data-caption="What-if elasticity simulator showing how a 3% price adjustment on Basmati Rice can tolerate up to a 58.3% unit volume decline before gross profit drops below baseline."
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Open Price Sensitivity Simulator in viewer">
+                <div class="runtime-thumb-head">
+                  <span class="runtime-thumb-tag">03 / SIMULATOR</span>
+                  <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
+                </div>
+                <div class="runtime-thumb-img-wrap">
+                  <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/02_price_sensitivity_simulator.png"
+                       alt="InsightFlow Price Sensitivity Simulator showing 58.3% break-even volume drop buffer"
+                       loading="lazy" width="800" height="450">
+                </div>
+                <div class="runtime-thumb-body">
+                  <h4>Price Sensitivity Simulator</h4>
+                  <p>What-if modeling with 58.3% break-even buffer</p>
+                </div>
+              </a>
+
+              <!-- 04: Inventory Intelligence -->
+              <a class="runtime-thumb-card screenshot-lightbox-trigger"
+                 href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/03_inventory_intelligence.png"
+                 data-lightbox="insightflow"
+                 data-index="3"
+                 data-title="Streamlit Runtime &middot; Inventory Decisions"
+                 data-caption="Real-time stockout exposure (40 stockouts, 96 below reorder, ~&#8377;2.25 Cr / &#8377;22.49M stock value) with operational indicator badges and &#8377;9.66L replenishment queue."
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Open Inventory Intelligence in viewer">
+                <div class="runtime-thumb-head">
+                  <span class="runtime-thumb-tag">04 / INVENTORY</span>
+                  <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
+                </div>
+                <div class="runtime-thumb-img-wrap">
+                  <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/03_inventory_intelligence.png"
+                       alt="InsightFlow Inventory Intelligence view with stockout alerts and operational badges"
+                       loading="lazy" width="800" height="450">
+                </div>
+                <div class="runtime-thumb-body">
+                  <h4>Inventory Decisions</h4>
+                  <p>Stockout exposure (40) &amp; replenishment priorities</p>
+                </div>
+              </a>
+
+              <!-- 05: Customers & Data Quality -->
+              <a class="runtime-thumb-card screenshot-lightbox-trigger"
+                 href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/04_customers_and_data_quality.png"
+                 data-lightbox="insightflow"
+                 data-index="4"
+                 data-title="Streamlit Runtime &middot; Customers &amp; Data Quality"
+                 data-caption="Pipeline data reconciliation verifying 49,975 raw records to 47,814 clean records (95.7% conservation rate) across 8 balance checks."
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Open Customers and Data Quality in viewer">
+                <div class="runtime-thumb-head">
+                  <span class="runtime-thumb-tag">05 / DATA QUALITY</span>
+                  <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
+                </div>
+                <div class="runtime-thumb-img-wrap">
+                  <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/04_customers_and_data_quality.png"
+                       alt="InsightFlow Customers and Data Quality view showing record conservation and deduplication"
+                       loading="lazy" width="800" height="450">
+                </div>
+                <div class="runtime-thumb-body">
+                  <h4>Customer &amp; Data Quality</h4>
+                  <p>95.7% retention &amp; 8 conservation balance checks</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <section class="insightflow-outcomes" aria-label="Business questions answered by InsightFlow">
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">BUSINESS FINDING</span>
+              <h4>Revenue is not the same as profit</h4>
+              <p>Basmati Rice 5kg leads product revenue at about &#8377;1.65 Cr, yet its modeled gross margin is only 2.15% (about &#8377;3.54L gross profit).</p>
+            </article>
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">SCENARIO ANALYSIS</span>
+              <h4>Stress-test a pricing decision</h4>
+              <p>Under the stated model assumptions, a 3% price adjustment can tolerate up to a 58.3% unit-volume decline before gross profit falls below baseline. This is a scenario, not a forecast.</p>
+            </article>
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">OPERATIONAL ACTION</span>
+              <h4>Prioritize stock exposure</h4>
+              <p>40 stock positions are truly out of stock, 96 are below reorder, and the replenishment heuristic suggests 5,791 units at an estimated &#8377;9.66L cost.</p>
+            </article>
+          </section>
+
+          <!-- Power BI PBIP Reports & Dimensional Semantic Model -->
+          <details class="insightflow-disclosure insightflow-pbi-disclosure" id="insightflow-pbi-disclosure">
+            <summary id="pbi-disclosure-summary">View Power BI PBIP Reports &amp; Dimensional Semantic Model (5 Views)</summary>
+            <div class="insightflow-disclosure-content">
+              <p class="pbi-disclosure-desc">Inspect genuine report pages and semantic model architecture captured directly from Power BI Desktop. Select any view to examine full size in the interactive viewer.</p>
+              <div class="insightflow-evidence-grid">
+                <!-- Card 1: Executive Profitability (index 5) -->
+                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
+                   href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Executive%20Profitability.png"
+                   data-lightbox="insightflow"
+                   data-index="5"
+                   data-title="Power BI PBIP &middot; Executive Profitability"
+                   data-caption="Executive dashboard in Power BI Desktop showing monthly revenue trajectories, gross profit margins, and category contribution."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open full-size Executive Profitability screenshot">
+                  <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">06 / POWER BI EXECUTIVE</span><span aria-hidden="true">&#x2922;</span></div>
+                  <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Executive%20Profitability.png" alt="Power BI Executive Profitability dashboard" loading="lazy" width="1600" height="900"></div>
+                  <div class="insightflow-evidence-body"><h3>Executive Profitability</h3><p>Power BI report page with monthly revenue and margin analysis.</p></div>
+                </a>
+
+                <!-- Card 2: Margin Investigation (index 6) -->
+                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
+                   href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Margin%20Investigation.png"
+                   data-lightbox="insightflow"
+                   data-index="6"
+                   data-title="Power BI PBIP &middot; Margin Investigation"
+                   data-caption="Deep dive into margin compression across product categories and SKU-level profitability drivers."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open full-size Margin Investigation screenshot">
+                  <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">07 / MARGIN INVESTIGATION</span><span aria-hidden="true">&#x2922;</span></div>
+                  <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Margin%20Investigation.png" alt="Power BI page showing product margin and price-sensitivity investigation" loading="lazy" width="1600" height="900"></div>
+                  <div class="insightflow-evidence-body"><h3>Margin Investigation</h3><p>Product profitability and the modeled price-sensitivity scenario.</p></div>
+                </a>
+
+                <!-- Card 3: Inventory Decisions (index 7) -->
+                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
+                   href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Inventory%20Decisions.png"
+                   data-lightbox="insightflow"
+                   data-index="7"
+                   data-title="Power BI PBIP &middot; Inventory Decisions"
+                   data-caption="Warehouse and store replenishment prioritization, stockout exposure analysis, and safety-stock recommendations."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open full-size Inventory Decisions screenshot">
+                  <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">08 / INVENTORY DECISIONS</span><span aria-hidden="true">&#x2922;</span></div>
+                  <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Inventory%20Decisions.png" alt="Power BI page showing inventory health, stockouts, reorder exposure, and replenishment queue" loading="lazy" width="1600" height="900"></div>
+                  <div class="insightflow-evidence-body"><h3>Inventory Decisions</h3><p>Stockout exposure, reorder priorities, and estimated replenishment cost.</p></div>
+                </a>
+
+                <!-- Card 4: Pipeline Assurance (index 8) -->
+                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
+                   href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Data%20Integrity%20and%20Pipeline%20Assurance.png"
+                   data-lightbox="insightflow"
+                   data-index="8"
+                   data-title="Power BI PBIP &middot; Data Integrity &amp; Pipeline Assurance"
+                   data-caption="Audit verification view confirming exact record conservation, quarantined records, deduplication, and relational integrity."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open full-size Pipeline Assurance screenshot">
+                  <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">09 / DATA ASSURANCE</span><span aria-hidden="true">&#x2922;</span></div>
+                  <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Data%20Integrity%20and%20Pipeline%20Assurance.png" alt="Power BI page showing raw-to-clean record conservation and quality dispositions" loading="lazy" width="1600" height="900"></div>
+                  <div class="insightflow-evidence-body"><h3>Pipeline Assurance</h3><p>Record conservation, deduplication, quarantines, and load outcomes.</p></div>
+                </a>
+
+                <!-- Card 5: Semantic Model Architecture (index 9) -->
+                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
+                   href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Semantic%20Model%20Architecture.png"
+                   data-lightbox="insightflow"
+                   data-index="9"
+                   data-title="Power BI PBIP &middot; Semantic Model Architecture"
+                   data-caption="Version-controlled PBIP/TMDL semantic model diagram showcasing the star schema: fact tables, dimension tables, and 1-to-many relationships."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open full-size Semantic Model screenshot">
+                  <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">10 / MODEL ARCHITECTURE</span><span aria-hidden="true">&#x2922;</span></div>
+                  <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Semantic%20Model%20Architecture.png" alt="Power BI Desktop semantic model tables and relationships" loading="lazy" width="1600" height="900"></div>
+                  <div class="insightflow-evidence-body"><h3>Semantic Model</h3><p>Relationships and the version-controlled semantic model.</p></div>
+                </a>
+              </div>
+            </div>
+          </details>
+
+          <!-- Engineering Architecture: Data Systems Blueprint -->
+          <details class="insightflow-disclosure insightflow-blueprint-disclosure" id="technical-systems">
+            <summary id="blueprint-disclosure-summary">Open the five-stage data systems blueprint</summary>
+            <div class="insightflow-disclosure-content">
+              <div class="blueprint-card" id="systems-blueprint" data-ui="blueprint">
+                <div class="blueprint-header">
+                  <div class="blueprint-header-left">
+                    <span class="blueprint-spec-id">SPEC // ENG-DS-01</span>
+                    <div class="blueprint-heading-copy">
+                      <span class="blueprint-title-text">InsightFlow Data Systems Blueprint</span>
+                      <span class="blueprint-subtitle-text">Python ingestion and validation → PostgreSQL analytical model → SQL and API consumers → Power BI reporting and business decisions</span>
+                    </div>
+                  </div>
+                  <div class="blueprint-meta-tags">
+                    <span class="blueprint-status-indicator"><span class="blueprint-pulse-dot"></span> PROJECT ARCHITECTURE</span>
+                    <span class="blueprint-scale-tag">END-TO-END DATA FLOW</span>
+                  </div>
+                </div>
+
+                <div class="blueprint-canvas-wrap" aria-label="Implemented InsightFlow architecture from messy source files to business decisions">
+                  <svg class="blueprint-svg" viewBox="0 0 1000 320" width="1000" height="320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five-stage architecture: raw CSV and Excel files, Python ingestion and validation, PostgreSQL analytical model, SQL and API analytics with Power BI, then business decisions and data assurance">
+                    <defs>
+                      <pattern id="bp-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--border-subtle)" stroke-width="0.5" stroke-opacity="0.35"/></pattern>
+                      <marker id="bp-arrow" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M 1 1 L 7 4 L 1 7 z" fill="var(--accent-amber)"/></marker>
+                    </defs>
+                    <rect x="0" y="0" width="1000" height="320" fill="var(--bg-canvas)"/>
+                    <rect x="0" y="0" width="1000" height="320" fill="url(#bp-grid)"/>
+                    <rect x="8" y="8" width="984" height="304" fill="none" stroke="var(--border-subtle)" stroke-width="1" stroke-opacity="0.6"/>
+                    <rect x="12" y="12" width="976" height="296" fill="none" stroke="var(--border-subtle)" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="4 2"/>
+                    <g stroke="var(--accent-amber)" stroke-width="1" opacity="0.75">
+                      <path d="M 18 24 L 30 24 M 24 18 L 24 30"/><path d="M 970 24 L 982 24 M 976 18 L 976 30"/>
+                      <path d="M 18 296 L 30 296 M 24 290 L 24 302"/><path d="M 970 296 L 982 296 M 976 290 L 976 302"/>
+                    </g>
+                    <text x="42" y="33" font-size="9" fill="var(--text-muted)">INSIGHTFLOW // DATA-LIFECYCLE-01</text>
+                    <text x="500" y="49" font-size="9.5" font-weight="600" fill="var(--text-secondary)" text-anchor="middle">FROM MESSY FILES TO AUDITABLE BUSINESS DECISIONS</text>
+                    <text x="958" y="33" font-size="9" fill="var(--status-ok-text)" text-anchor="end">IMPLEMENTED STACK</text>
+                    <g>
+                      <text x="104" y="88" font-size="8" fill="var(--accent-teal)" text-anchor="middle" letter-spacing="0.8">01 / SOURCE</text>
+                      <rect x="24" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-teal)" stroke-width="1.2" stroke-opacity="0.7"/>
+                      <path d="M 36 110 H 172" stroke="var(--accent-teal)" stroke-width="1" stroke-opacity="0.45"/>
+                      <text x="104" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Raw files</text>
+                      <text x="104" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">8 CSV / XLSX sources</text><text x="104" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Inconsistent fields</text><text x="104" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Duplicate / invalid rows</text>
+                    </g>
+                    <g>
+                      <text x="302" y="88" font-size="8" fill="var(--accent-amber)" text-anchor="middle" letter-spacing="0.8">02 / TRANSFORM</text>
+                      <rect x="222" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-amber)" stroke-width="1.2" stroke-opacity="0.7"/>
+                      <path d="M 234 110 H 370" stroke="var(--accent-amber)" stroke-width="1" stroke-opacity="0.45"/>
+                      <text x="302" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Python ETL</text>
+                      <text x="302" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Profile and standardize</text><text x="302" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Validate keys and rules</text><text x="302" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Quarantine + merge log</text>
+                    </g>
+                    <g>
+                      <text x="500" y="88" font-size="8" fill="var(--accent-steel)" text-anchor="middle" letter-spacing="0.8">03 / MODEL</text>
+                      <rect x="420" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-steel)" stroke-width="1.2" stroke-opacity="0.7"/>
+                      <path d="M 432 110 H 568" stroke="var(--accent-steel)" stroke-width="1" stroke-opacity="0.45"/>
+                      <text x="500" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">PostgreSQL</text>
+                      <text x="500" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Relational star schema</text><text x="500" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Constraints + indexes</text><text x="500" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Shared analytical views</text>
+                    </g>
+                    <g>
+                      <text x="698" y="88" font-size="8" fill="var(--accent-rose)" text-anchor="middle" letter-spacing="0.8">04 / ANALYZE</text>
+                      <rect x="618" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-rose)" stroke-width="1.2" stroke-opacity="0.7"/>
+                      <path d="M 630 110 H 766" stroke="var(--accent-rose)" stroke-width="1" stroke-opacity="0.45"/>
+                      <text x="698" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Analytics layer</text>
+                      <text x="698" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">17 SQL questions</text><text x="698" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">FastAPI endpoints</text><text x="698" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Power BI + local dashboard</text>
+                    </g>
+                    <g>
+                      <text x="896" y="88" font-size="8" fill="var(--accent-teal)" text-anchor="middle" letter-spacing="0.8">05 / DECIDE</text>
+                      <rect x="816" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-teal)" stroke-width="1.2" stroke-opacity="0.7"/>
+                      <path d="M 828 110 H 964" stroke="var(--accent-teal)" stroke-width="1" stroke-opacity="0.45"/>
+                      <text x="896" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Business action</text>
+                      <text x="896" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Margin investigation</text><text x="896" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Replenishment priorities</text><text x="896" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Data assurance trail</text>
+                    </g>
+                    <path d="M 184 171 H 217" class="blueprint-bus-line" stroke="var(--accent-teal)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="200" cy="171" r="2.5" fill="var(--accent-teal)"/>
+                    <path d="M 382 171 H 415" class="blueprint-bus-line" stroke="var(--accent-amber)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="398" cy="171" r="2.5" fill="var(--accent-amber)"/>
+                    <path d="M 580 171 H 613" class="blueprint-bus-line" stroke="var(--accent-steel)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="596" cy="171" r="2.5" fill="var(--accent-steel)"/>
+                    <path d="M 778 171 H 811" class="blueprint-bus-line" stroke="var(--accent-rose)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="794" cy="171" r="2.5" fill="var(--accent-rose)"/>
+                    <path d="M 75 270 H 925" stroke="var(--border-strong)" stroke-width="0.8" stroke-dasharray="3 5"/>
+                    <text x="500" y="286" font-size="8.5" fill="var(--text-muted)" text-anchor="middle">CROSS-CUTTING CONTROLS · DATA CONTRACTS · AUTOMATED TESTS · KPI DEFINITIONS · REVIEWABLE EVIDENCE</text>
+                    <text x="500" y="307" font-size="8" fill="var(--text-muted)" text-anchor="middle">INSIGHTFLOW // SYSTEM ARCHITECTURE // VERIFIED SOURCES</text>
+                  </svg>
+                </div>
+
+                <div class="blueprint-footer">
+                  <div class="blueprint-legend">
+                    <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-teal"></span> Source</span>
+                    <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-amber"></span> Transform</span>
+                    <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-steel"></span> Model</span>
+                    <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-teal"></span> Analyze</span>
+                    <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-rose"></span> Decide</span>
+                  </div>
+                  <span>TESTED PIPELINE / SHARED KPI RULES</span>
+                </div>
+              </div>
+
+              <p class="blueprint-disclaimer"><strong>Architecture Context:</strong> A schematic of the InsightFlow implementation: Python ingestion and cleaning, PostgreSQL persistence and shared analytical views, SQL/API/BI consumers, and audit-ready quality evidence. The Streamlit interface is locally runnable; no hosted live demo is advertised.</p>
+            </div>
+          </details>
+
+          <!-- Data Assurance & Quality Pipeline Details -->
+          <details class="insightflow-disclosure" id="insightflow-quality-disclosure">
+            <summary>Explore the data-quality pipeline and implementation details</summary>
+            <div class="insightflow-disclosure-content">
+              <p><strong>Data assurance:</strong> The current runtime reconciles 49,975 raw records to 47,814 clean records (95.7% preservation). Exact duplicates, quarantined rows, merged customer profiles, and clean-loaded rows are tracked so the 8-table conservation checks balance without an unexplained gap, verified by 234 automated tests (162 unit tests + 72 integration tests).</p>
+              <p><strong>Implementation:</strong> Python ingestion and deterministic cleaning → PostgreSQL relational star schema and analytical views → tested SQL and FastAPI endpoints → Power BI PBIP/TMDL report and a locally runnable Streamlit dashboard. The dataset is synthetic; the replenishment buffer is a transparent heuristic, not a demand-variance-optimized safety-stock model.</p>
+            </div>
+          </details>
+
+          <h4 class="project-stack-heading">Tools &amp; Implementation Stack</h4>
+          <ul class="tag-list" aria-label="InsightFlow technologies">
+            <li class="tag-item">Python ETL</li>
+            <li class="tag-item">Pandas</li>
+            <li class="tag-item">PostgreSQL &middot; Star Schema</li>
+            <li class="tag-item">SQL &middot; 17 Analytics Queries</li>
+            <li class="tag-item">FastAPI &middot; 6 Endpoints</li>
+            <li class="tag-item">Power BI &middot; PBIP/TMDL</li>
+            <li class="tag-item">DAX Measures</li>
+            <li class="tag-item">Power Query (M)</li>
+            <li class="tag-item">Streamlit Dashboard</li>
+            <li class="tag-item">Excel Workpaper &middot; openpyxl</li>
+            <li class="tag-item">Docker Compose</li>
+            <li class="tag-item">pytest &middot; Ruff</li>
+            <li class="tag-item">GitHub Actions CI</li>
+          </ul>
+
+          <!-- Technical Proof Links & Deliverables -->
+          <div class="project-deliverables">
+            <div class="deliverable-actions">
+              <button type="button" class="btn btn-primary btn-sm" id="btn-toggle-pbi" aria-expanded="false" aria-controls="insightflow-pbi-disclosure">
+                <span>View Power BI Models &amp; Architecture &darr;</span>
+              </button>
+              <a href="https://github.com/meetpokal1/InsightFlow" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>View Repository ↗</span></a>
+              <a href="https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/dax_measures.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>DAX Measure Catalog ↗</span></a>
+              <a href="https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/power_query.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>Power Query Scripts ↗</span></a>
+              <a href="https://github.com/meetpokal1/InsightFlow/blob/main/documentation/data_quality.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>Data Prep &amp; QA Notes ↗</span></a>
+            </div>
+            <p class="project-note">
+              <strong>Data source &amp; evidence note:</strong> All records and financial figures are synthetic. The links above open the real DAX measures, Power Query loading logic, and documented cleaning/quality rules. The dashboard can be run locally using the repository instructions; no hosted live demo is claimed.
+            </p>
+          </div>
+        </article>
+
         <!-- Case Study 1: MarketPulse India (Tableau & Mandi Econometrics) -->
         <article class="project-case-study project--amber" id="project-marketpulse" aria-labelledby="title-marketpulse">
           <div class="project-header-top">
@@ -691,7 +1113,7 @@
           <details class="insightflow-disclosure" id="marketpulse-methodology-disclosure">
             <summary>Explore the data-quality audit, data contract, and econometric methodology</summary>
             <div class="insightflow-disclosure-content">
-              <p><strong>Dataset provenance &amp; hygiene:</strong> The dataset comprises 1,481,324 daily wholesale observations across six western and southern states&mdash;Maharashtra, Karnataka, Andhra Pradesh, Telangana, Tamil Nadu, and Kerala (30 Aug 2024 &ndash; 28 Sep 2026)&mdash;with verified SHA-256 (<code>DA8E4435D7B63693C406401E0FA3B1F084FD1010F650598BA5030715A57ED6A4</code>). DuckDB zero-copy data quality gates audited 27,420 unchanged price streaks (&ge; 7 days, max 518 days) and quarantined 74 exceptions (70 unit-scale low-price reporting errors below &#8377;10/Qtl and 4 zero-arrival records), establishing an audit-clean 99.9950% valid analytical foundation (1,481,250 rows).</p>
+              <p><strong>Dataset provenance &amp; hygiene:</strong> The dataset comprises 1,481,324 daily wholesale observations across six western and southern states&mdash;Maharashtra, Karnataka, Andhra Pradesh, Telangana, Tamil Nadu, and Kerala (30 Aug 2024 &ndash; 28 Sep 2026). DuckDB zero-copy data quality gates audited 27,420 unchanged price streaks (&ge; 7 days, max 518 days) and quarantined 74 exceptions (70 unit-scale low-price reporting errors below &#8377;10/Qtl and 4 zero-arrival records), establishing an audit-clean 99.9950% valid analytical foundation (1,481,250 rows).</p>
               <p><strong>Reproducible data contract:</strong> The Tableau deliverable is powered by six typed, deterministically sorted analytical extracts governed by an explicit manifest and verified by 26 passing automated pytest tests. The regression suite validates record conservation, monotonic date coverage, price non-negativity, and corridor relationship integrity.</p>
               <p><strong>Econometric methodology:</strong> Pooled OLS estimates an arrival&ndash;price coefficient of -0.1008 on 197,941 Onion observations. Applying a Two-Way Fixed Effects (TWFE) model with market entity fixed effects and calendar-month time fixed effects across 394 market clusters yields an estimated reduced-form arrival&ndash;price elasticity of -0.0360 (cluster-robust SE = 0.0183, t = -1.96, p &lt; 0.05, 95% CI [-0.0720, -0.0001]). This observational reduced-form estimate reflects short-run within-market spot price clearing rather than structural demand elasticity, refuting hypotheses of extreme short-run price collapse.</p>
             </div>
@@ -746,428 +1168,6 @@
             </div>
             <p class="project-note">
               <strong>Tableau Public &amp; source repository note:</strong> The live link opens the published Tableau Public workbook. The online service renders one dashboard tab at a time in the web viewer; downloading the packaged workbook (<code>marketpulse_india.twbx</code>) and opening it locally in Tableau Desktop reveals all four interactive dashboards and associated worksheets. All 1,481,324 wholesale observations are derived from official Agmarknet mandi returns across six western and southern states (Aug 2024 &ndash; Sep 2026). The links above connect directly to the verified public GitHub repository containing the reproducible DuckDB pipeline, 26 automated regression tests, econometric models (Statsmodels TWFE), and 6 Streamlit workspaces.
-            </p>
-          </div>
-        </article>
-
-        <!-- Case Study 2: InsightFlow (Retail Analytics Platform) -->
-        <article class="project-case-study project--steel" id="project-insightflow" aria-labelledby="title-insightflow">
-          <div class="project-header-top">
-            <div>
-              <span class="case-domain-tag">Flagship Analytics &amp; Data Engineering Platform</span>
-              <h3 id="title-insightflow" class="project-title">InsightFlow: Retail Profit &amp; Data Integrity Intelligence</h3>
-            </div>
-            <span class="status-pill status-pill-ok">CI verified &middot; 234 tests &middot; Release cleanup merged</span>
-          </div>
-
-          <p class="project-problem">
-            <strong>Business Problem:</strong> Retail teams cannot reliably investigate margins or replenishment when CSV/XLSX exports contain malformed quantities, duplicate customers, and invalid relationships. InsightFlow reconciles the source data first, then delivers decision-ready sales, inventory, and data-quality analytics.
-          </p>
-
-          <!-- Structured Business Value & Decision Application -->
-          <div class="project-business-value">
-            <div class="business-value-grid">
-              <div class="business-value-col">
-                <span class="business-value-kicker">WHO IT IS FOR</span>
-                <p>Retail operations managers, category and inventory planners, sales managers, and BI teams reconciling multi-source transactional data.</p>
-              </div>
-              <div class="business-value-col">
-                <span class="business-value-kicker">HOW TEAMS USE IT</span>
-                <p>Pinpoint products where top-line revenue hides negative margins, stress-test break-even volume tolerance (e.g. 58.3% buffer) before pricing changes, and rank stockout replenishment exceptions.</p>
-              </div>
-              <div class="business-value-col">
-                <span class="business-value-kicker">DECISION BENEFIT &amp; BOUNDARIES</span>
-                <p>Replaces manual spreadsheet cross-checks with auditable, tested metrics. Caveat: Records and financials are synthetic; simulations depend on model assumptions; replenishment follows transparent heuristics.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Key evidence: synthetic dataset and automated verification -->
-          <div class="kpi-row" aria-label="InsightFlow Key Project Metrics">
-            <div class="kpi-cell">
-              <span class="kpi-num">&#8377;20.90 Cr</span>
-              <span class="kpi-label">Net Revenue &middot; Synthetic Data</span>
-            </div>
-            <div class="kpi-cell">
-              <span class="kpi-num">20.3%</span>
-              <span class="kpi-label">Overall Gross Margin</span>
-            </div>
-            <div class="kpi-cell">
-              <span class="kpi-num">449</span>
-              <span class="kpi-label">Product–Location Stock Positions</span>
-            </div>
-            <div class="kpi-cell">
-              <span class="kpi-num">234</span>
-              <span class="kpi-label">Automated Tests Passing in CI</span>
-            </div>
-          </div>
-
-          <div class="project-screenshot-frame">
-            <div class="browser-header-bar">
-              <div class="window-dots">
-                <span class="window-dot dot-red"></span>
-                <span class="window-dot dot-yellow"></span>
-                <span class="window-dot dot-green"></span>
-              </div>
-              <span class="browser-address">Streamlit Analytics Runtime &middot; Executive Overview</span>
-            </div>
-            <div class="screenshot-img-wrap">
-              <a href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/01_executive_overview.png"
-                 class="screenshot-lightbox-trigger"
-                 data-lightbox="insightflow"
-                 data-index="0"
-                 data-title="Streamlit Analytics Runtime &middot; Executive Overview"
-                 data-caption="Live KPI strip (&#8377;209.03M Net Revenue, 20.3% Gross Margin, &#8377;42.36M GP, 7,878 Orders), monthly revenue trend, and category composition."
-                 target="_blank" rel="noopener noreferrer"
-                 aria-label="Open Streamlit Executive Overview in viewer">
-                <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/01_executive_overview.png"
-                     alt="InsightFlow Streamlit Executive Overview dashboard with net revenue &#8377;209.03M, gross profit &#8377;42.36M, margin 20.3%, 7,878 orders, monthly revenue trend, and category composition. All figures are synthetic."
-                     class="screenshot-img" loading="lazy" width="1600" height="900">
-              </a>
-            </div>
-            <figcaption class="screenshot-caption">
-              <span>01 / Streamlit Executive Overview &middot; Live KPI strip (&#8377;209.03M revenue, 20.3% margin), monthly trajectory, and category composition. Select to open full size.</span>
-            </figcaption>
-          </div>
-
-          <!-- Secondary Runtime Gallery (4 Views) -->
-          <div class="runtime-gallery" aria-label="Streamlit runtime application views">
-            <div class="runtime-gallery-header">
-              <span class="runtime-gallery-kicker">ANALYTICS RUNTIME VIEWS</span>
-              <span class="runtime-gallery-hint">Select any capture to enlarge in viewer</span>
-            </div>
-            <div class="runtime-gallery-grid">
-              <!-- 02: Sales & Products -->
-              <a class="runtime-thumb-card screenshot-lightbox-trigger"
-                 href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/02_sales_and_products.png"
-                 data-lightbox="insightflow"
-                 data-index="1"
-                 data-title="Streamlit Runtime &middot; Sales &amp; Category Margins"
-                 data-caption="Product-level revenue and margin breakdown. Identifies high-revenue low-margin items such as Basmati Rice 5kg (&#8377;16.53M revenue at 2.15% margin)."
-                 target="_blank" rel="noopener noreferrer"
-                 aria-label="Open Sales and Category Margins in viewer">
-                <div class="runtime-thumb-head">
-                  <span class="runtime-thumb-tag">02 / SALES &amp; MARGINS</span>
-                  <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
-                </div>
-                <div class="runtime-thumb-img-wrap">
-                  <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/02_sales_and_products.png"
-                       alt="InsightFlow Sales and Products view showing SKU margin analysis"
-                       loading="lazy" width="800" height="450">
-                </div>
-                <div class="runtime-thumb-body">
-                  <h4>Sales &amp; Margin Dilution</h4>
-                  <p>Product profit leak analysis &amp; SKU revenue share</p>
-                </div>
-              </a>
-
-              <!-- 03: Price Simulator -->
-              <a class="runtime-thumb-card screenshot-lightbox-trigger"
-                 href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/02_price_sensitivity_simulator.png"
-                 data-lightbox="insightflow"
-                 data-index="2"
-                 data-title="Streamlit Runtime &middot; Price Sensitivity Simulator"
-                 data-caption="What-if elasticity simulator showing how a 3% price adjustment on Basmati Rice can tolerate up to a 58.3% unit volume decline before gross profit drops below baseline."
-                 target="_blank" rel="noopener noreferrer"
-                 aria-label="Open Price Sensitivity Simulator in viewer">
-                <div class="runtime-thumb-head">
-                  <span class="runtime-thumb-tag">03 / SIMULATOR</span>
-                  <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
-                </div>
-                <div class="runtime-thumb-img-wrap">
-                  <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/02_price_sensitivity_simulator.png"
-                       alt="InsightFlow Price Sensitivity Simulator showing 58.3% break-even volume drop buffer"
-                       loading="lazy" width="800" height="450">
-                </div>
-                <div class="runtime-thumb-body">
-                  <h4>Price Sensitivity Simulator</h4>
-                  <p>What-if modeling with 58.3% break-even buffer</p>
-                </div>
-              </a>
-
-              <!-- 04: Inventory Intelligence -->
-              <a class="runtime-thumb-card screenshot-lightbox-trigger"
-                 href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/03_inventory_intelligence.png"
-                 data-lightbox="insightflow"
-                 data-index="3"
-                 data-title="Streamlit Runtime &middot; Inventory Decisions"
-                 data-caption="Real-time stockout exposure (40 stockouts, 96 below reorder, ~&#8377;2.25 Cr / &#8377;22.49M stock value) with operational indicator badges and &#8377;9.66L replenishment queue."
-                 target="_blank" rel="noopener noreferrer"
-                 aria-label="Open Inventory Intelligence in viewer">
-                <div class="runtime-thumb-head">
-                  <span class="runtime-thumb-tag">04 / INVENTORY</span>
-                  <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
-                </div>
-                <div class="runtime-thumb-img-wrap">
-                  <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/03_inventory_intelligence.png"
-                       alt="InsightFlow Inventory Intelligence view with stockout alerts and operational badges"
-                       loading="lazy" width="800" height="450">
-                </div>
-                <div class="runtime-thumb-body">
-                  <h4>Inventory Decisions</h4>
-                  <p>Stockout exposure (40) &amp; replenishment priorities</p>
-                </div>
-              </a>
-
-              <!-- 05: Customers & Data Quality -->
-              <a class="runtime-thumb-card screenshot-lightbox-trigger"
-                 href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/04_customers_and_data_quality.png"
-                 data-lightbox="insightflow"
-                 data-index="4"
-                 data-title="Streamlit Runtime &middot; Customers &amp; Data Quality"
-                 data-caption="Pipeline data reconciliation verifying 49,975 raw records to 47,814 clean records (95.7% conservation rate) across 8 balance checks."
-                 target="_blank" rel="noopener noreferrer"
-                 aria-label="Open Customers and Data Quality in viewer">
-                <div class="runtime-thumb-head">
-                  <span class="runtime-thumb-tag">05 / DATA QUALITY</span>
-                  <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
-                </div>
-                <div class="runtime-thumb-img-wrap">
-                  <img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/runtime/04_customers_and_data_quality.png"
-                       alt="InsightFlow Customers and Data Quality view showing record conservation and deduplication"
-                       loading="lazy" width="800" height="450">
-                </div>
-                <div class="runtime-thumb-body">
-                  <h4>Customer &amp; Data Quality</h4>
-                  <p>95.7% retention &amp; 8 conservation balance checks</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <section class="insightflow-outcomes" aria-label="Business questions answered by InsightFlow">
-            <article class="insightflow-outcome">
-              <span class="insightflow-outcome-kicker">BUSINESS FINDING</span>
-              <h4>Revenue is not the same as profit</h4>
-              <p>Basmati Rice 5kg leads product revenue at about &#8377;1.65 Cr, yet its modeled gross margin is only 2.15% (about &#8377;3.54L gross profit).</p>
-            </article>
-            <article class="insightflow-outcome">
-              <span class="insightflow-outcome-kicker">SCENARIO ANALYSIS</span>
-              <h4>Stress-test a pricing decision</h4>
-              <p>Under the stated model assumptions, a 3% price adjustment can tolerate up to a 58.3% unit-volume decline before gross profit falls below baseline. This is a scenario, not a forecast.</p>
-            </article>
-            <article class="insightflow-outcome">
-              <span class="insightflow-outcome-kicker">OPERATIONAL ACTION</span>
-              <h4>Prioritize stock exposure</h4>
-              <p>40 stock positions are truly out of stock, 96 are below reorder, and the replenishment heuristic suggests 5,791 units at an estimated &#8377;9.66L cost.</p>
-            </article>
-          </section>
-
-          <!-- Power BI PBIP Reports & Dimensional Semantic Model -->
-          <details class="insightflow-disclosure insightflow-pbi-disclosure" id="insightflow-pbi-disclosure">
-            <summary id="pbi-disclosure-summary">View Power BI PBIP Reports &amp; Dimensional Semantic Model (5 Views)</summary>
-            <div class="insightflow-disclosure-content">
-              <p class="pbi-disclosure-desc">Inspect genuine report pages and semantic model architecture captured directly from Power BI Desktop. Select any view to examine full size in the interactive viewer.</p>
-              <div class="insightflow-evidence-grid">
-                <!-- Card 1: Executive Profitability (index 5) -->
-                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
-                   href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Executive%20Profitability.png"
-                   data-lightbox="insightflow"
-                   data-index="5"
-                   data-title="Power BI PBIP &middot; Executive Profitability"
-                   data-caption="Executive dashboard in Power BI Desktop showing monthly revenue trajectories, gross profit margins, and category contribution."
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="Open full-size Executive Profitability screenshot">
-                  <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">06 / POWER BI EXECUTIVE</span><span aria-hidden="true">&#x2922;</span></div>
-                  <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Executive%20Profitability.png" alt="Power BI Executive Profitability dashboard" loading="lazy" width="1600" height="900"></div>
-                  <div class="insightflow-evidence-body"><h3>Executive Profitability</h3><p>Power BI report page with monthly revenue and margin analysis.</p></div>
-                </a>
-
-                <!-- Card 2: Margin Investigation (index 6) -->
-                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
-                   href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Margin%20Investigation.png"
-                   data-lightbox="insightflow"
-                   data-index="6"
-                   data-title="Power BI PBIP &middot; Margin Investigation"
-                   data-caption="Deep dive into margin compression across product categories and SKU-level profitability drivers."
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="Open full-size Margin Investigation screenshot">
-                  <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">07 / MARGIN INVESTIGATION</span><span aria-hidden="true">&#x2922;</span></div>
-                  <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Margin%20Investigation.png" alt="Power BI page showing product margin and price-sensitivity investigation" loading="lazy" width="1600" height="900"></div>
-                  <div class="insightflow-evidence-body"><h3>Margin Investigation</h3><p>Product profitability and the modeled price-sensitivity scenario.</p></div>
-                </a>
-
-                <!-- Card 3: Inventory Decisions (index 7) -->
-                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
-                   href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Inventory%20Decisions.png"
-                   data-lightbox="insightflow"
-                   data-index="7"
-                   data-title="Power BI PBIP &middot; Inventory Decisions"
-                   data-caption="Warehouse and store replenishment prioritization, stockout exposure analysis, and safety-stock recommendations."
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="Open full-size Inventory Decisions screenshot">
-                  <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">08 / INVENTORY DECISIONS</span><span aria-hidden="true">&#x2922;</span></div>
-                  <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Inventory%20Decisions.png" alt="Power BI page showing inventory health, stockouts, reorder exposure, and replenishment queue" loading="lazy" width="1600" height="900"></div>
-                  <div class="insightflow-evidence-body"><h3>Inventory Decisions</h3><p>Stockout exposure, reorder priorities, and estimated replenishment cost.</p></div>
-                </a>
-
-                <!-- Card 4: Pipeline Assurance (index 8) -->
-                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
-                   href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Data%20Integrity%20and%20Pipeline%20Assurance.png"
-                   data-lightbox="insightflow"
-                   data-index="8"
-                   data-title="Power BI PBIP &middot; Data Integrity &amp; Pipeline Assurance"
-                   data-caption="Audit verification view confirming exact record conservation, quarantined records, deduplication, and relational integrity."
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="Open full-size Pipeline Assurance screenshot">
-                  <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">09 / DATA ASSURANCE</span><span aria-hidden="true">&#x2922;</span></div>
-                  <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Data%20Integrity%20and%20Pipeline%20Assurance.png" alt="Power BI page showing raw-to-clean record conservation and quality dispositions" loading="lazy" width="1600" height="900"></div>
-                  <div class="insightflow-evidence-body"><h3>Pipeline Assurance</h3><p>Record conservation, deduplication, quarantines, and load outcomes.</p></div>
-                </a>
-
-                <!-- Card 5: Semantic Model Architecture (index 9) -->
-                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
-                   href="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Semantic%20Model%20Architecture.png"
-                   data-lightbox="insightflow"
-                   data-index="9"
-                   data-title="Power BI PBIP &middot; Semantic Model Architecture"
-                   data-caption="Version-controlled PBIP/TMDL semantic model diagram showcasing the star schema: fact tables, dimension tables, and 1-to-many relationships."
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="Open full-size Semantic Model screenshot">
-                  <div class="insightflow-evidence-card-head"><span class="insightflow-evidence-index">10 / MODEL ARCHITECTURE</span><span aria-hidden="true">&#x2922;</span></div>
-                  <div class="insightflow-evidence-image"><img src="https://raw.githubusercontent.com/meetpokal1/InsightFlow/main/screenshots/Semantic%20Model%20Architecture.png" alt="Power BI Desktop semantic model tables and relationships" loading="lazy" width="1600" height="900"></div>
-                  <div class="insightflow-evidence-body"><h3>Semantic Model</h3><p>Relationships and the version-controlled semantic model.</p></div>
-                </a>
-              </div>
-            </div>
-          </details>
-
-          <!-- Engineering Architecture: Data Systems Blueprint -->
-          <details class="insightflow-disclosure insightflow-blueprint-disclosure" id="technical-systems">
-            <summary id="blueprint-disclosure-summary">Open the five-stage data systems blueprint</summary>
-            <div class="insightflow-disclosure-content">
-              <div class="blueprint-card" id="systems-blueprint" data-ui="blueprint">
-                <div class="blueprint-header">
-                  <div class="blueprint-header-left">
-                    <span class="blueprint-spec-id">SPEC // ENG-DS-01</span>
-                    <div class="blueprint-heading-copy">
-                      <span class="blueprint-title-text">InsightFlow Data Systems Blueprint</span>
-                      <span class="blueprint-subtitle-text">Python ingestion and validation → PostgreSQL analytical model → SQL and API consumers → Power BI reporting and business decisions</span>
-                    </div>
-                  </div>
-                  <div class="blueprint-meta-tags">
-                    <span class="blueprint-status-indicator"><span class="blueprint-pulse-dot"></span> PROJECT ARCHITECTURE</span>
-                    <span class="blueprint-scale-tag">END-TO-END DATA FLOW</span>
-                  </div>
-                </div>
-
-                <div class="blueprint-canvas-wrap" aria-label="Implemented InsightFlow architecture from messy source files to business decisions">
-                  <svg class="blueprint-svg" viewBox="0 0 1000 320" width="1000" height="320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five-stage architecture: raw CSV and Excel files, Python ingestion and validation, PostgreSQL analytical model, SQL and API analytics with Power BI, then business decisions and data assurance">
-                    <defs>
-                      <pattern id="bp-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="var(--border-subtle)" stroke-width="0.5" stroke-opacity="0.35"/></pattern>
-                      <marker id="bp-arrow" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M 1 1 L 7 4 L 1 7 z" fill="var(--accent-amber)"/></marker>
-                    </defs>
-                    <rect x="0" y="0" width="1000" height="320" fill="var(--bg-canvas)"/>
-                    <rect x="0" y="0" width="1000" height="320" fill="url(#bp-grid)"/>
-                    <rect x="8" y="8" width="984" height="304" fill="none" stroke="var(--border-subtle)" stroke-width="1" stroke-opacity="0.6"/>
-                    <rect x="12" y="12" width="976" height="296" fill="none" stroke="var(--border-subtle)" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="4 2"/>
-                    <g stroke="var(--accent-amber)" stroke-width="1" opacity="0.75">
-                      <path d="M 18 24 L 30 24 M 24 18 L 24 30"/><path d="M 970 24 L 982 24 M 976 18 L 976 30"/>
-                      <path d="M 18 296 L 30 296 M 24 290 L 24 302"/><path d="M 970 296 L 982 296 M 976 290 L 976 302"/>
-                    </g>
-                    <text x="42" y="33" font-size="9" fill="var(--text-muted)">INSIGHTFLOW // DATA-LIFECYCLE-01</text>
-                    <text x="500" y="49" font-size="9.5" font-weight="600" fill="var(--text-secondary)" text-anchor="middle">FROM MESSY FILES TO AUDITABLE BUSINESS DECISIONS</text>
-                    <text x="958" y="33" font-size="9" fill="var(--status-ok-text)" text-anchor="end">IMPLEMENTED STACK</text>
-                    <g>
-                      <text x="104" y="88" font-size="8" fill="var(--accent-teal)" text-anchor="middle" letter-spacing="0.8">01 / SOURCE</text>
-                      <rect x="24" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-teal)" stroke-width="1.2" stroke-opacity="0.7"/>
-                      <path d="M 36 110 H 172" stroke="var(--accent-teal)" stroke-width="1" stroke-opacity="0.45"/>
-                      <text x="104" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Raw files</text>
-                      <text x="104" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">8 CSV / XLSX sources</text><text x="104" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Inconsistent fields</text><text x="104" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Duplicate / invalid rows</text>
-                    </g>
-                    <g>
-                      <text x="302" y="88" font-size="8" fill="var(--accent-amber)" text-anchor="middle" letter-spacing="0.8">02 / TRANSFORM</text>
-                      <rect x="222" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-amber)" stroke-width="1.2" stroke-opacity="0.7"/>
-                      <path d="M 234 110 H 370" stroke="var(--accent-amber)" stroke-width="1" stroke-opacity="0.45"/>
-                      <text x="302" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Python ETL</text>
-                      <text x="302" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Profile and standardize</text><text x="302" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Validate keys and rules</text><text x="302" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Quarantine + merge log</text>
-                    </g>
-                    <g>
-                      <text x="500" y="88" font-size="8" fill="var(--accent-steel)" text-anchor="middle" letter-spacing="0.8">03 / MODEL</text>
-                      <rect x="420" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-steel)" stroke-width="1.2" stroke-opacity="0.7"/>
-                      <path d="M 432 110 H 568" stroke="var(--accent-steel)" stroke-width="1" stroke-opacity="0.45"/>
-                      <text x="500" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">PostgreSQL</text>
-                      <text x="500" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Relational star schema</text><text x="500" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Constraints + indexes</text><text x="500" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Shared analytical views</text>
-                    </g>
-                    <g>
-                      <text x="698" y="88" font-size="8" fill="var(--accent-rose)" text-anchor="middle" letter-spacing="0.8">04 / ANALYZE</text>
-                      <rect x="618" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-rose)" stroke-width="1.2" stroke-opacity="0.7"/>
-                      <path d="M 630 110 H 766" stroke="var(--accent-rose)" stroke-width="1" stroke-opacity="0.45"/>
-                      <text x="698" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Analytics layer</text>
-                      <text x="698" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">17 SQL questions</text><text x="698" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">FastAPI endpoints</text><text x="698" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Power BI + local dashboard</text>
-                    </g>
-                    <g>
-                      <text x="896" y="88" font-size="8" fill="var(--accent-teal)" text-anchor="middle" letter-spacing="0.8">05 / DECIDE</text>
-                      <rect x="816" y="99" width="160" height="145" rx="3" fill="var(--bg-surface)" stroke="var(--accent-teal)" stroke-width="1.2" stroke-opacity="0.7"/>
-                      <path d="M 828 110 H 964" stroke="var(--accent-teal)" stroke-width="1" stroke-opacity="0.45"/>
-                      <text x="896" y="130" font-family="var(--font-sans)" font-size="11.5" font-weight="600" fill="var(--text-primary)" text-anchor="middle">Business action</text>
-                      <text x="896" y="158" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Margin investigation</text><text x="896" y="176" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Replenishment priorities</text><text x="896" y="194" font-family="var(--font-sans)" font-size="8.3" fill="var(--text-secondary)" text-anchor="middle">Data assurance trail</text>
-                    </g>
-                    <path d="M 184 171 H 217" class="blueprint-bus-line" stroke="var(--accent-teal)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="200" cy="171" r="2.5" fill="var(--accent-teal)"/>
-                    <path d="M 382 171 H 415" class="blueprint-bus-line" stroke="var(--accent-amber)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="398" cy="171" r="2.5" fill="var(--accent-amber)"/>
-                    <path d="M 580 171 H 613" class="blueprint-bus-line" stroke="var(--accent-steel)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="596" cy="171" r="2.5" fill="var(--accent-steel)"/>
-                    <path d="M 778 171 H 811" class="blueprint-bus-line" stroke="var(--accent-rose)" stroke-width="1.6" marker-end="url(#bp-arrow)"/><circle cx="794" cy="171" r="2.5" fill="var(--accent-rose)"/>
-                    <path d="M 75 270 H 925" stroke="var(--border-strong)" stroke-width="0.8" stroke-dasharray="3 5"/>
-                    <text x="500" y="286" font-size="8.5" fill="var(--text-muted)" text-anchor="middle">CROSS-CUTTING CONTROLS · DATA CONTRACTS · AUTOMATED TESTS · KPI DEFINITIONS · REVIEWABLE EVIDENCE</text>
-                    <text x="500" y="307" font-size="8" fill="var(--text-muted)" text-anchor="middle">INSIGHTFLOW // SYSTEM ARCHITECTURE // VERIFIED SOURCES</text>
-                  </svg>
-                </div>
-
-                <div class="blueprint-footer">
-                  <div class="blueprint-legend">
-                    <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-teal"></span> Source</span>
-                    <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-amber"></span> Transform</span>
-                    <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-steel"></span> Model</span>
-                    <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-teal"></span> Analyze</span>
-                    <span class="blueprint-legend-item"><span class="blueprint-legend-color blueprint-legend-rose"></span> Decide</span>
-                  </div>
-                  <span>TESTED PIPELINE / SHARED KPI RULES</span>
-                </div>
-              </div>
-
-              <p class="blueprint-disclaimer"><strong>Architecture Context:</strong> A schematic of the InsightFlow implementation: Python ingestion and cleaning, PostgreSQL persistence and shared analytical views, SQL/API/BI consumers, and audit-ready quality evidence. The Streamlit interface is locally runnable; no hosted live demo is advertised.</p>
-            </div>
-          </details>
-
-          <!-- Data Assurance & Quality Pipeline Details -->
-          <details class="insightflow-disclosure" id="insightflow-quality-disclosure">
-            <summary>Explore the data-quality pipeline and implementation details</summary>
-            <div class="insightflow-disclosure-content">
-              <p><strong>Data assurance:</strong> The current runtime reconciles 49,975 raw records to 47,814 clean records (95.7% preservation). Exact duplicates, quarantined rows, merged customer profiles, and clean-loaded rows are tracked so the 8-table conservation checks balance without an unexplained gap, verified by 234 automated tests (162 unit tests + 72 integration tests).</p>
-              <p><strong>Implementation:</strong> Python ingestion and deterministic cleaning → PostgreSQL relational star schema and analytical views → tested SQL and FastAPI endpoints → Power BI PBIP/TMDL report and a locally runnable Streamlit dashboard. The dataset is synthetic; the replenishment buffer is a transparent heuristic, not a demand-variance-optimized safety-stock model.</p>
-            </div>
-          </details>
-
-          <h4 class="project-stack-heading">Tools &amp; Implementation Stack</h4>
-          <ul class="tag-list" aria-label="InsightFlow technologies">
-            <li class="tag-item">Python ETL</li>
-            <li class="tag-item">Pandas</li>
-            <li class="tag-item">PostgreSQL &middot; Star Schema</li>
-            <li class="tag-item">SQL &middot; 17 Analytics Queries</li>
-            <li class="tag-item">FastAPI &middot; 6 Endpoints</li>
-            <li class="tag-item">Power BI &middot; PBIP/TMDL</li>
-            <li class="tag-item">DAX Measures</li>
-            <li class="tag-item">Power Query (M)</li>
-            <li class="tag-item">Streamlit Dashboard</li>
-            <li class="tag-item">Excel Workpaper &middot; openpyxl</li>
-            <li class="tag-item">Docker Compose</li>
-            <li class="tag-item">pytest &middot; Ruff</li>
-            <li class="tag-item">GitHub Actions CI</li>
-          </ul>
-
-          <!-- Technical Proof Links & Deliverables -->
-          <div class="project-deliverables">
-            <div class="deliverable-actions">
-              <button type="button" class="btn btn-primary btn-sm" id="btn-toggle-pbi" aria-expanded="false" aria-controls="insightflow-pbi-disclosure">
-                <span>View Power BI Models &amp; Architecture &darr;</span>
-              </button>
-              <a href="https://github.com/meetpokal1/InsightFlow" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>View Repository ↗</span></a>
-              <a href="https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/dax_measures.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>DAX Measure Catalog ↗</span></a>
-              <a href="https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/power_query.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>Power Query Scripts ↗</span></a>
-              <a href="https://github.com/meetpokal1/InsightFlow/blob/main/documentation/data_quality.md" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer"><span>Data Prep &amp; QA Notes ↗</span></a>
-            </div>
-            <p class="project-note">
-              <strong>Data source &amp; evidence note:</strong> All records and financial figures are synthetic. The links above open the real DAX measures, Power Query loading logic, and documented cleaning/quality rules. The dashboard can be run locally using the repository instructions; no hosted live demo is claimed.
             </p>
           </div>
         </article>
