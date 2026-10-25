@@ -3638,3 +3638,169 @@
   border: none;
   font-family: var(--font-sans);
 }
+
+/* --------------------------------------------------------------------------
+   MarketPulse India: Amber Case Study Accent & Disclosures
+   -------------------------------------------------------------------------- */
+.project--amber .insightflow-disclosure > summary::after {
+  color: var(--accent-amber);
+}
+.project--amber .insightflow-disclosure > summary:focus-visible {
+  outline-color: var(--accent-amber);
+}
+
+/* --------------------------------------------------------------------------
+   Tableau Public Dashboard Interactive Switcher (MarketPulse India)
+   -------------------------------------------------------------------------- */
+.tableau-switcher {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-bottom: var(--space-20);
+}
+
+.tableau-switcher-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+}
+
+@media (max-width: 960px) {
+  .tableau-switcher-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .tableau-switcher-nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tableau-tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 10px 14px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  color: var(--text-secondary);
+}
+
+.tableau-tab-btn:hover {
+  background-color: var(--bg-surface-subtle);
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+.tableau-tab-btn.is-active,
+.tableau-tab-btn[aria-selected="true"] {
+  background-color: var(--bg-surface-subtle);
+  border-color: var(--accent-amber);
+  color: var(--text-primary);
+  box-shadow: 0 0 12px rgba(234, 176, 74, 0.16);
+}
+
+.tableau-tab-btn .tab-index {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent-amber);
+  letter-spacing: 0.06em;
+}
+
+.tableau-tab-btn .tab-label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: inherit;
+  line-height: var(--lh-snug);
+}
+
+.tableau-tab-btn .tab-sub {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  line-height: 1.25;
+  margin-top: 2px;
+}
+
+.tableau-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(234, 176, 74, 0.12);
+  border: 1px solid rgba(234, 176, 74, 0.35);
+  color: var(--accent-amber);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: auto;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.tableau-live-badge:hover {
+  background-color: var(--accent-amber);
+  color: var(--bg-canvas);
+  border-color: var(--accent-amber);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   MarketPulse India Grids: 6-Up Streamlit & 3-Up Diagrams
+   -------------------------------------------------------------------------- */
+.marketpulse-runtime-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 960px) {
+  .marketpulse-runtime-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .marketpulse-runtime-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.marketpulse-diagrams-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .marketpulse-diagrams-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .marketpulse-diagrams-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.diagram-image-container {
+  background-color: #0b1118;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.diagram-image-container img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+}

@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBackToTop();
   initLightbox();
   initPbiToggleButton();
+  initTableauSwitcher();
 });
 
 /**
@@ -392,6 +393,7 @@ function initCopyrightYear() {
 
 /**
  * Accessible modal lightbox for project screenshots and evidence
+ * Generalized for InsightFlow and MarketPulse India gallery groups.
  */
 function initLightbox() {
   const modal = document.getElementById("image-lightbox");
@@ -407,18 +409,7 @@ function initLightbox() {
   const counterEl = document.getElementById("lightbox-counter");
   const sourceLinkEl = document.getElementById("lightbox-source-link");
 
-  const triggers = Array.from(document.querySelectorAll('[data-lightbox="insightflow"]'));
-  if (triggers.length === 0) return;
-
-  // Build items array from triggers
-  const galleryItems = triggers.map((trigger) => ({
-    trigger,
-    src: trigger.getAttribute("href") || trigger.dataset.src,
-    title: trigger.dataset.title || trigger.getAttribute("aria-label") || "",
-    caption: trigger.dataset.caption || "",
-    alt: trigger.querySelector("img")?.getAttribute("alt") || trigger.dataset.title || "Screenshot preview",
-  }));
-
+  let galleryItems = [];
   let currentIndex = 0;
   let lastActiveElement = null;
 
@@ -437,15 +428,38 @@ function initLightbox() {
     }
 
     // Preload next and previous images
-    const nextIdx = (index + 1) % galleryItems.length;
-    const prevIdx = (index - 1 + galleryItems.length) % galleryItems.length;
-    new Image().src = galleryItems[nextIdx].src;
-    new Image().src = galleryItems[prevIdx].src;
+    if (galleryItems.length > 1) {
+      const nextIdx = (index + 1) % galleryItems.length;
+      const prevIdx = (index - 1 + galleryItems.length) % galleryItems.length;
+      if (galleryItems[nextIdx]?.src) new Image().src = galleryItems[nextIdx].src;
+      if (galleryItems[prevIdx]?.src) new Image().src = galleryItems[prevIdx].src;
+    }
   }
 
-  function openLightbox(index) {
+  function openLightbox(groupName, initialIndexOrTrigger) {
     lastActiveElement = document.activeElement;
-    renderItem(index);
+
+    // Collect all triggers matching this group
+    const groupTriggers = Array.from(document.querySelectorAll(`[data-lightbox="${groupName}"]`));
+    if (groupTriggers.length === 0) return;
+
+    galleryItems = groupTriggers.map((t) => ({
+      trigger: t,
+      src: t.getAttribute("href") || t.dataset.src,
+      title: t.dataset.title || t.getAttribute("aria-label") || "",
+      caption: t.dataset.caption || "",
+      alt: t.querySelector("img")?.getAttribute("alt") || t.dataset.title || "Screenshot preview",
+    }));
+
+    let idx = 0;
+    if (typeof initialIndexOrTrigger === "number") {
+      idx = Math.max(0, Math.min(initialIndexOrTrigger, galleryItems.length - 1));
+    } else if (initialIndexOrTrigger) {
+      idx = groupTriggers.indexOf(initialIndexOrTrigger);
+      if (idx === -1) idx = 0;
+    }
+
+    renderItem(idx);
     modal.removeAttribute("hidden");
     modal.classList.add("is-active");
     document.body.style.overflow = "hidden";
@@ -462,18 +476,24 @@ function initLightbox() {
   }
 
   function showNext() {
+    if (galleryItems.length === 0) return;
     renderItem((currentIndex + 1) % galleryItems.length);
   }
 
   function showPrev() {
+    if (galleryItems.length === 0) return;
     renderItem((currentIndex - 1 + galleryItems.length) % galleryItems.length);
   }
 
-  triggers.forEach((trigger, index) => {
-    trigger.addEventListener("click", (e) => {
-      e.preventDefault();
-      openLightbox(index);
-    });
+  // Delegated click handler for triggers (supports direct triggers and preview switcher anchors)
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest("[data-lightbox], [data-lightbox-target]");
+    if (!trigger) return;
+
+    e.preventDefault();
+    const groupName = trigger.dataset.lightboxTarget || trigger.dataset.lightbox || "default";
+    const explicitIdx = trigger.dataset.index !== undefined ? parseInt(trigger.dataset.index, 10) : undefined;
+    openLightbox(groupName, explicitIdx !== undefined ? explicitIdx : trigger);
   });
 
   if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
@@ -509,32 +529,37 @@ function initLightbox() {
   });
 }
 
-
 /**
- * Wire the Power BI & Architecture action button and navbar links to expandable disclosures
+ * Wire expandable disclosure action buttons and navbar anchors
  */
 function initPbiToggleButton() {
-  const btn = document.getElementById("btn-toggle-pbi");
-  const pbiDisclosure = document.getElementById("insightflow-pbi-disclosure");
-  if (btn && pbiDisclosure) {
+  function wireDisclosure(btnId, disclosureId) {
+    const btn = document.getElementById(btnId);
+    const disclosure = document.getElementById(disclosureId);
+    if (!btn || !disclosure) return;
+
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      pbiDisclosure.open = true;
+      disclosure.open = true;
       btn.setAttribute("aria-expanded", "true");
 
       const nav = document.querySelector(".site-header");
       const navH = nav ? nav.offsetHeight : 60;
-      const y = pbiDisclosure.getBoundingClientRect().top + window.pageYOffset - navH - 16;
+      const y = disclosure.getBoundingClientRect().top + window.pageYOffset - navH - 16;
       window.scrollTo({ top: y, behavior: "smooth" });
 
-      const summary = pbiDisclosure.querySelector("summary");
+      const summary = disclosure.querySelector("summary");
       if (summary) summary.focus({ preventScroll: true });
     });
 
-    pbiDisclosure.addEventListener("toggle", () => {
-      btn.setAttribute("aria-expanded", String(pbiDisclosure.open));
+    disclosure.addEventListener("toggle", () => {
+      btn.setAttribute("aria-expanded", String(disclosure.open));
     });
   }
+
+  wireDisclosure("btn-toggle-pbi", "insightflow-pbi-disclosure");
+  wireDisclosure("btn-toggle-mp-streamlit", "marketpulse-streamlit-disclosure");
+  wireDisclosure("btn-toggle-mp-arch", "marketpulse-arch-disclosure");
 
   // Handle navbar link to #technical-systems
   const navSystemsLink = document.querySelector('a[href="#technical-systems"]');
@@ -551,4 +576,80 @@ function initPbiToggleButton() {
       }, 60);
     });
   }
+}
+
+/**
+ * Accessible interactive switcher for MarketPulse India's 4 Tableau Public dashboards
+ */
+function initTableauSwitcher() {
+  const switcher = document.querySelector('[data-ui="tableau-switcher"]');
+  if (!switcher) return;
+
+  const tabBtns = Array.from(switcher.querySelectorAll(".tableau-tab-btn"));
+  const previewImg = document.getElementById("tableau-preview-img");
+  const previewLightbox = document.getElementById("tableau-preview-lightbox");
+  const browserAddress = document.getElementById("tableau-browser-address");
+  const captionText = switcher.querySelector(".caption-text");
+
+  if (tabBtns.length === 0 || !previewImg || !previewLightbox) return;
+
+  function switchTab(index, shouldFocus = false) {
+    if (index < 0 || index >= tabBtns.length) return;
+    const btn = tabBtns[index];
+
+    tabBtns.forEach((b, i) => {
+      const isTarget = i === index;
+      b.classList.toggle("is-active", isTarget);
+      b.setAttribute("aria-selected", String(isTarget));
+      b.setAttribute("tabindex", isTarget ? "0" : "-1");
+    });
+
+    const src = btn.dataset.src;
+    const address = btn.dataset.address;
+    const caption = btn.dataset.caption;
+    const title = btn.dataset.title;
+
+    if (previewImg) {
+      previewImg.src = src;
+      previewImg.alt = title;
+    }
+    if (browserAddress && address) {
+      browserAddress.textContent = address;
+    }
+    if (captionText && caption) {
+      captionText.textContent = caption;
+    }
+    if (previewLightbox) {
+      previewLightbox.href = src;
+      previewLightbox.dataset.title = title;
+      previewLightbox.dataset.caption = caption;
+      previewLightbox.dataset.index = String(index);
+    }
+
+    if (shouldFocus) {
+      btn.focus();
+    }
+  }
+
+  tabBtns.forEach((btn, index) => {
+    btn.addEventListener("click", () => switchTab(index));
+
+    btn.addEventListener("keydown", (e) => {
+      let targetIndex = -1;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        targetIndex = (index + 1) % tabBtns.length;
+      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        targetIndex = (index - 1 + tabBtns.length) % tabBtns.length;
+      } else if (e.key === "Home") {
+        targetIndex = 0;
+      } else if (e.key === "End") {
+        targetIndex = tabBtns.length - 1;
+      }
+
+      if (targetIndex !== -1) {
+        e.preventDefault();
+        switchTab(targetIndex, true);
+      }
+    });
+  });
 }

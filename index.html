@@ -263,11 +263,457 @@
     <section id="projects" class="section" aria-labelledby="case-studies-heading">
       <div class="container">
         <div class="section-intro">
-          <h2 id="case-studies-heading">Flagship Analytics Case Study</h2>
-          <p>One end-to-end retail analytics system, presented through business findings, verified dashboard evidence, operational recommendations, and its underlying data architecture.</p>
+          <h2 id="case-studies-heading">Flagship Analytics Case Studies</h2>
+          <p>Two end-to-end data intelligence systems, presented through verified analytics deliverables, empirical econometric findings, interactive runtime galleries, and production architectures.</p>
         </div>
 
-        <!-- Case Study 1: InsightFlow (Lead Flagship) -->
+        <!-- Case Study 1: MarketPulse India (Tableau & Mandi Econometrics) -->
+        <article class="project-case-study project--amber" id="project-marketpulse" aria-labelledby="title-marketpulse">
+          <div class="project-header-top">
+            <div>
+              <span class="case-domain-tag">Commodity Market Intelligence &amp; Econometric Platform</span>
+              <h3 id="title-marketpulse" class="project-title">MarketPulse India: Wholesale Commodity Price Intelligence &amp; Mandi Econometrics</h3>
+            </div>
+            <span class="status-pill status-pill-ok">CI verified &middot; 26 tests &middot; Published on Tableau Public</span>
+          </div>
+
+          <p class="project-problem">
+            <strong>Market Problem:</strong> Agricultural wholesale prices across India exhibit extreme spatial dispersion, severe reporting friction, and apparent elasticity paradoxes. Without accounting for variety confounding, transport friction, and frozen-price reporting habits across 1.48M records, market participants and policymakers make decisions on distorted market signals. MarketPulse India resolves these discrepancies through reproducible DuckDB pipelines, panel econometrics, an interactive Streamlit research lab, and a published Tableau Public intelligence suite.
+          </p>
+
+          <!-- Key evidence metrics: 1.48M rows, spatial spreads, panel elasticity, and reporting forensics -->
+          <div class="kpi-row" aria-label="MarketPulse India Key Project Metrics">
+            <div class="kpi-cell">
+              <span class="kpi-num">1.48M</span>
+              <span class="kpi-label">Wholesale Agmarknet Records (2024&ndash;2026)</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">-&#8377;157.76/Qtl</span>
+              <span class="kpi-label">Lasalgaon&ndash;Mumbai Mean Spread (Inverted)</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">-0.0360</span>
+              <span class="kpi-label">Onion TWFE Arrival Elasticity (p &lt; 0.001)</span>
+            </div>
+            <div class="kpi-cell">
+              <span class="kpi-num">27,420</span>
+              <span class="kpi-label">Audited Frozen Price Streaks (Hygiene Gate)</span>
+            </div>
+          </div>
+
+          <!-- Primary Feature: Interactive Tableau Public Dashboards Switcher (Reverse Image Hierarchy) -->
+          <div class="tableau-switcher" data-ui="tableau-switcher">
+            <div class="tableau-switcher-nav" role="tablist" aria-label="Tableau Public Dashboard Views">
+              <!-- Tab 1 -->
+              <button type="button" role="tab" class="tableau-tab-btn is-active" id="tab-mp-dash-1"
+                      aria-selected="true" aria-controls="tableau-panel-preview" tabindex="0"
+                      data-index="0"
+                      data-src="assets/marketpulse/tableau/01_dashboard1_market_pulse.png"
+                      data-address="Tableau Public &middot; Dashboard 1 &middot; Market Pulse"
+                      data-caption="01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 3 states (Maharashtra, Karnataka, Gujarat), commodity comparisons, and arrival volume context across 1.48M observations."
+                      data-title="Tableau Public &middot; Dashboard 1: Market Pulse">
+                <span class="tab-index">01 / OVERVIEW</span>
+                <span class="tab-label">Market Pulse</span>
+                <span class="tab-sub">Macro trends &amp; state volume</span>
+              </button>
+
+              <!-- Tab 2 -->
+              <button type="button" role="tab" class="tableau-tab-btn" id="tab-mp-dash-2"
+                      aria-selected="false" aria-controls="tableau-panel-preview" tabindex="-1"
+                      data-index="1"
+                      data-src="assets/marketpulse/tableau/02_dashboard2_spread_lab.png"
+                      data-address="Tableau Public &middot; Dashboard 2 &middot; Spread Lab"
+                      data-caption="02 / Spread Lab &middot; Spatial arbitrage corridor (Lasalgaon vs Mumbai), transportation friction threshold band (&#8377;120/Qtl), and margin inversion analysis (-&#8377;157.76/Qtl mean spread)."
+                      data-title="Tableau Public &middot; Dashboard 2: Spread Lab">
+                <span class="tab-index">02 / ARBITRAGE</span>
+                <span class="tab-label">Spread Lab</span>
+                <span class="tab-sub">Corridor spreads &amp; friction bands</span>
+              </button>
+
+              <!-- Tab 3 -->
+              <button type="button" role="tab" class="tableau-tab-btn" id="tab-mp-dash-3"
+                      aria-selected="false" aria-controls="tableau-panel-preview" tabindex="-1"
+                      data-index="2"
+                      data-src="assets/marketpulse/tableau/03_dashboard3_arrival_price_research.png"
+                      data-address="Tableau Public &middot; Dashboard 3 &middot; Arrival–Price Research"
+                      data-caption="03 / Arrival–Price Research &middot; Econometric panel analysis, seasonal variety confounding isolation, and non-linear LOESS vs TWFE elasticity (-0.0360 true elasticity)."
+                      data-title="Tableau Public &middot; Dashboard 3: Arrival–Price Research">
+                <span class="tab-index">03 / ECONOMETRICS</span>
+                <span class="tab-label">Arrival–Price Panel</span>
+                <span class="tab-sub">TWFE elasticity &amp; variety control</span>
+              </button>
+
+              <!-- Tab 4 -->
+              <button type="button" role="tab" class="tableau-tab-btn" id="tab-mp-dash-4"
+                      aria-selected="false" aria-controls="tableau-panel-preview" tabindex="-1"
+                      data-index="3"
+                      data-src="assets/marketpulse/tableau/04_dashboard4_reliability_forensics.png"
+                      data-address="Tableau Public &middot; Dashboard 4 &middot; Reliability Forensics"
+                      data-caption="04 / Reliability Forensics &middot; Data quality audit, 27,420 frozen price streaks, 74 quarantined non-positive price anomalies, and 99.995% clean data gate."
+                      data-title="Tableau Public &middot; Dashboard 4: Reliability Forensics">
+                <span class="tab-index">04 / AUDIT &amp; QA</span>
+                <span class="tab-label">Reliability Forensics</span>
+                <span class="tab-sub">Frozen streaks &amp; data gate audit</span>
+              </button>
+            </div>
+
+            <!-- Active Dashboard Preview Frame -->
+            <div class="project-screenshot-frame" id="tableau-panel-preview" role="tabpanel" aria-labelledby="tab-mp-dash-1">
+              <div class="browser-header-bar">
+                <div class="window-dots">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                </div>
+                <span class="browser-address" id="tableau-browser-address">Tableau Public &middot; Dashboard 1 &middot; Market Pulse</span>
+                <a href="https://public.tableau.com/app/profile/meet.pokal/viz/MarketPulseIndiaEssentialCommodityPriceIntelligence_/Dashboard1-MarketPulse"
+                   target="_blank" rel="noopener noreferrer" class="tableau-live-badge" title="Open live workbook on Tableau Public">
+                  <span>Live on Tableau Public ↗</span>
+                </a>
+              </div>
+              <div class="screenshot-img-wrap">
+                <a href="assets/marketpulse/tableau/01_dashboard1_market_pulse.png"
+                   class="screenshot-lightbox-trigger"
+                   id="tableau-preview-lightbox"
+                   data-lightbox-target="marketpulse-tableau"
+                   data-index="0"
+                   data-title="Tableau Public &middot; Dashboard 1: Market Pulse"
+                   data-caption="01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 3 states (Maharashtra, Karnataka, Gujarat), commodity comparisons, and arrival volume context across 1.48M observations."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Tableau Dashboard 1 in viewer">
+                  <img src="assets/marketpulse/tableau/01_dashboard1_market_pulse.png"
+                       id="tableau-preview-img"
+                       alt="Tableau Public Dashboard 1 &mdash; Market Pulse showing wholesale commodity price dynamics across Indian mandis"
+                       class="screenshot-img" loading="lazy" width="1308" height="858">
+                </a>
+              </div>
+              <figcaption class="screenshot-caption" id="tableau-preview-caption">
+                <span class="caption-text">01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 3 states (Maharashtra, Karnataka, Gujarat), commodity comparisons, and arrival volume context across 1.48M observations. Select to enlarge.</span>
+                <span class="screenshot-badge">Tableau 2026.2 Packaged Extract</span>
+              </figcaption>
+            </div>
+
+            <!-- Hidden gallery anchors allowing Lightbox to navigate all 4 Tableau dashboards -->
+            <div class="tableau-hidden-gallery" style="display:none;" aria-hidden="true">
+              <a href="assets/marketpulse/tableau/01_dashboard1_market_pulse.png"
+                 data-lightbox="marketpulse-tableau" data-index="0"
+                 data-title="Tableau Public &middot; Dashboard 1: Market Pulse"
+                 data-caption="01 / Market Pulse &middot; Wholesale mandi macro price dynamics, modal trends across 3 states (Maharashtra, Karnataka, Gujarat), commodity comparisons, and arrival volume context across 1.48M observations."></a>
+              <a href="assets/marketpulse/tableau/02_dashboard2_spread_lab.png"
+                 data-lightbox="marketpulse-tableau" data-index="1"
+                 data-title="Tableau Public &middot; Dashboard 2: Spread Lab"
+                 data-caption="02 / Spread Lab &middot; Spatial arbitrage corridor (Lasalgaon vs Mumbai), transportation friction threshold band (&#8377;120/Qtl), and margin inversion analysis (-&#8377;157.76/Qtl mean spread)."></a>
+              <a href="assets/marketpulse/tableau/03_dashboard3_arrival_price_research.png"
+                 data-lightbox="marketpulse-tableau" data-index="2"
+                 data-title="Tableau Public &middot; Dashboard 3: Arrival–Price Research"
+                 data-caption="03 / Arrival–Price Research &middot; Econometric panel analysis, seasonal variety confounding isolation, and non-linear LOESS vs TWFE elasticity (-0.0360 true elasticity)."></a>
+              <a href="assets/marketpulse/tableau/04_dashboard4_reliability_forensics.png"
+                 data-lightbox="marketpulse-tableau" data-index="3"
+                 data-title="Tableau Public &middot; Dashboard 4: Reliability Forensics"
+                 data-caption="04 / Reliability Forensics &middot; Data quality audit, 27,420 frozen price streaks, 74 quarantined non-positive price anomalies, and 99.995% clean data gate."></a>
+            </div>
+          </div>
+
+          <!-- Empirical Business Findings & Econometric Insights -->
+          <section class="insightflow-outcomes" aria-label="Empirical commodity market findings">
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">SPATIAL ARBITRAGE FINDING</span>
+              <h4>Terminal markets trade at persistent discounts to farm-gate hubs</h4>
+              <p>The Lasalgaon-to-Mumbai onion corridor exhibits a mean spread of -&#8377;157.76/Qtl, inverted on 64.2% of trading days. Naive spatial arbitrage fails because Mumbai arrivals reflect mixed grades and delayed arrivals rather than direct farm-gate parity, making simple spread trading unprofitable without grade standardization.</p>
+            </article>
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">ECONOMETRIC REHABILITATION</span>
+              <h4>Controlling variety confounding restores downward-sloping demand</h4>
+              <p>Naive pooled OLS suggested a counter-intuitive positive arrival elasticity (+0.089), driven by seasonal shifts toward premium varieties during high-arrival months. Controlling for mandi and variety fixed effects (TWFE) and LOESS non-linearities isolates the true downward-sloping price elasticity of -0.0360 (p &lt; 0.001).</p>
+            </article>
+            <article class="insightflow-outcome">
+              <span class="insightflow-outcome-kicker">RELIABILITY FORENSICS</span>
+              <h4>Zero-variance reporting masks underlying wholesale volatility</h4>
+              <p>Forensic audit of 1,481,324 rows identified 27,420 frozen price observations where mandis carried forward identical modal prices for up to 14 days without trading. DuckDB data quality gates quarantined 74 non-positive price anomalies, establishing an audit-clean 99.995% analytical foundation for Tableau Public.</p>
+            </article>
+          </section>
+
+          <!-- Expandable Streamlit Evidence Gallery (Native '+' Disclosure Pattern) -->
+          <details class="insightflow-disclosure marketpulse-disclosure" id="marketpulse-streamlit-disclosure">
+            <summary id="mp-streamlit-summary">Explore Streamlit Empirical Research Workspaces (6 Dedicated Views)</summary>
+            <div class="insightflow-disclosure-content">
+              <p class="pbi-disclosure-desc">Inspect authentic runtime captures from the six Streamlit research workspaces, providing deep-dive econometrics, spatial arbitrage modeling, and procurement simulation. Select any view to examine full size in the interactive viewer.</p>
+              
+              <div class="runtime-gallery-grid marketpulse-runtime-grid" aria-label="Streamlit analytical runtime workspaces">
+                <!-- 01: Market Explorer -->
+                <a class="runtime-thumb-card screenshot-lightbox-trigger"
+                   href="assets/marketpulse/streamlit/01_market_explorer.png"
+                   data-lightbox="marketpulse-streamlit"
+                   data-index="0"
+                   data-title="Streamlit Runtime &middot; Mandi Market Explorer"
+                   data-caption="Interactive spatial and temporal market explorer filtering 1.48M wholesale records across Maharashtra, Karnataka, and Gujarat with commodity variety breakdowns."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Market Explorer in viewer">
+                  <div class="runtime-thumb-head">
+                    <span class="runtime-thumb-tag">01 / MARKET EXPLORER</span>
+                    <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
+                  </div>
+                  <div class="runtime-thumb-img-wrap">
+                    <img src="assets/marketpulse/streamlit/01_market_explorer.png"
+                         alt="Streamlit Market Explorer workspace showing wholesale mandi price trends and filters"
+                         loading="lazy" width="1440" height="960">
+                  </div>
+                  <div class="runtime-thumb-body">
+                    <h4>Market Explorer</h4>
+                    <p>Multi-mandi price discovery, variety filters &amp; modal price trends</p>
+                  </div>
+                </a>
+
+                <!-- 02: Price Intelligence & Spreads -->
+                <a class="runtime-thumb-card screenshot-lightbox-trigger"
+                   href="assets/marketpulse/streamlit/02_price_intelligence_spreads.png"
+                   data-lightbox="marketpulse-streamlit"
+                   data-index="1"
+                   data-title="Streamlit Runtime &middot; Spatial Spread Intelligence"
+                   data-caption="Corridor spread tracking between primary producing mandis (Lasalgaon) and terminal consumption centers (Mumbai), with dynamic freight cost bands."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Spatial Spread Intelligence in viewer">
+                  <div class="runtime-thumb-head">
+                    <span class="runtime-thumb-tag">02 / SPREAD INTELLIGENCE</span>
+                    <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
+                  </div>
+                  <div class="runtime-thumb-img-wrap">
+                    <img src="assets/marketpulse/streamlit/02_price_intelligence_spreads.png"
+                         alt="Streamlit Price Intelligence view showing corridor spread distribution and freight boundaries"
+                         loading="lazy" width="1440" height="960">
+                  </div>
+                  <div class="runtime-thumb-body">
+                    <h4>Spatial Spread Intelligence</h4>
+                    <p>Inter-mandi arbitrage corridors &amp; transportation cost boundaries</p>
+                  </div>
+                </a>
+
+                <!-- 03: Arrival–Price Econometric Panel -->
+                <a class="runtime-thumb-card screenshot-lightbox-trigger"
+                   href="assets/marketpulse/streamlit/03_arrival_price_panel.png"
+                   data-lightbox="marketpulse-streamlit"
+                   data-index="2"
+                   data-title="Streamlit Runtime &middot; Arrival–Price Econometric Panel"
+                   data-caption="Two-way fixed effects (TWFE) and LOESS non-linear regression isolating true negative price elasticity (-0.0360) from seasonal variety confounding."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Arrival–Price Econometric Panel in viewer">
+                  <div class="runtime-thumb-head">
+                    <span class="runtime-thumb-tag">03 / ECONOMETRIC PANEL</span>
+                    <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
+                  </div>
+                  <div class="runtime-thumb-img-wrap">
+                    <img src="assets/marketpulse/streamlit/03_arrival_price_panel.png"
+                         alt="Streamlit Arrival-Price Econometric Panel with TWFE regression coefficients and LOESS curves"
+                         loading="lazy" width="1440" height="960">
+                  </div>
+                  <div class="runtime-thumb-body">
+                    <h4>Arrival–Price Econometrics</h4>
+                    <p>Panel regression, TWFE elasticity (-0.0360) &amp; variety mix control</p>
+                  </div>
+                </a>
+
+                <!-- 04: Mandi Reliability Lab -->
+                <a class="runtime-thumb-card screenshot-lightbox-trigger"
+                   href="assets/marketpulse/streamlit/04_data_reliability_lab.png"
+                   data-lightbox="marketpulse-streamlit"
+                   data-index="3"
+                   data-title="Streamlit Runtime &middot; Mandi Reliability Lab"
+                   data-caption="Empirical reporting hygiene forensics detecting 27,420 frozen price streaks (stale reporting) and isolating reporting latency patterns."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Mandi Reliability Lab in viewer">
+                  <div class="runtime-thumb-head">
+                    <span class="runtime-thumb-tag">04 / RELIABILITY LAB</span>
+                    <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
+                  </div>
+                  <div class="runtime-thumb-img-wrap">
+                    <img src="assets/marketpulse/streamlit/04_data_reliability_lab.png"
+                         alt="Streamlit Mandi Reliability Lab showing frozen price streaks and zero-variance audit"
+                         loading="lazy" width="1440" height="960">
+                  </div>
+                  <div class="runtime-thumb-body">
+                    <h4>Mandi Reliability Forensics</h4>
+                    <p>27,420 frozen price streaks audited &amp; reporting latency forensics</p>
+                  </div>
+                </a>
+
+                <!-- 05: Decision Simulator -->
+                <a class="runtime-thumb-card screenshot-lightbox-trigger"
+                   href="assets/marketpulse/streamlit/05_decision_simulator_exercised.png"
+                   data-lightbox="marketpulse-streamlit"
+                   data-index="4"
+                   data-title="Streamlit Runtime &middot; Procurement Decision Simulator"
+                   data-caption="Interactive spatial procurement simulator modeling freight costs, arrival volume sensitivity, and expected gross margins for wholesale buyers."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Procurement Decision Simulator in viewer">
+                  <div class="runtime-thumb-head">
+                    <span class="runtime-thumb-tag">05 / DECISION SIMULATOR</span>
+                    <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
+                  </div>
+                  <div class="runtime-thumb-img-wrap">
+                    <img src="assets/marketpulse/streamlit/05_decision_simulator_exercised.png"
+                         alt="Streamlit Decision Simulator showing spatial trade sensitivity and freight cost buffers"
+                         loading="lazy" width="1440" height="960">
+                  </div>
+                  <div class="runtime-thumb-body">
+                    <h4>Procurement Decision Simulator</h4>
+                    <p>Spatial trade margin optimization &amp; freight cost sensitivity modeling</p>
+                  </div>
+                </a>
+
+                <!-- 06: Research Briefing Generator -->
+                <a class="runtime-thumb-card screenshot-lightbox-trigger"
+                   href="assets/marketpulse/streamlit/06_research_brief.png"
+                   data-lightbox="marketpulse-streamlit"
+                   data-index="5"
+                   data-title="Streamlit Runtime &middot; Automated Research Briefing"
+                   data-caption="Automated policy and trade research briefing generator synthesizing econometric findings, corridor spreads, and mandi data reliability."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Automated Research Briefing in viewer">
+                  <div class="runtime-thumb-head">
+                    <span class="runtime-thumb-tag">06 / RESEARCH BRIEF</span>
+                    <span class="runtime-thumb-icon" aria-hidden="true">&#x2922;</span>
+                  </div>
+                  <div class="runtime-thumb-img-wrap">
+                    <img src="assets/marketpulse/streamlit/06_research_brief.png"
+                         alt="Streamlit Research Brief generator producing synthesized commodity intelligence reports"
+                         loading="lazy" width="1440" height="960">
+                  </div>
+                  <div class="runtime-thumb-body">
+                    <h4>Automated Research Briefing</h4>
+                    <p>Executive synthesis, econometric findings &amp; policy brief generation</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </details>
+
+          <!-- Engineering Architecture: Data Systems & Analytical Mart Blueprints -->
+          <details class="insightflow-disclosure marketpulse-blueprint-disclosure" id="marketpulse-arch-disclosure">
+            <summary id="mp-arch-summary">Open Data Pipeline &amp; Analytical Mart Architecture (3 Blueprints)</summary>
+            <div class="insightflow-disclosure-content">
+              <p class="pbi-disclosure-desc">Architectural blueprints illustrating zero-copy DuckDB ingestion, analytical data product generation, and the Tableau Public workbook suite. Select any blueprint to examine full size.</p>
+
+              <div class="insightflow-evidence-grid marketpulse-diagrams-grid">
+                <!-- Blueprint 1 -->
+                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
+                   href="assets/marketpulse/diagrams/01_end_to_end_pipeline_architecture.svg"
+                   data-lightbox="marketpulse-diagrams"
+                   data-index="0"
+                   data-title="MarketPulse Architecture &middot; End-to-End Pipeline &amp; Ingestion"
+                   data-caption="End-to-end data pipeline from 1.48M Agmarknet records through DuckDB zero-copy ingestion, data quality gate (74 quarantined), to downstream analytical engines."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open End-to-End Pipeline Architecture diagram">
+                  <div class="insightflow-evidence-card-head">
+                    <span class="insightflow-evidence-index">BLUEPRINT 01 // DATA PIPELINE</span>
+                    <span aria-hidden="true">&#x2922;</span>
+                  </div>
+                  <div class="diagram-image-container">
+                    <img src="assets/marketpulse/diagrams/01_end_to_end_pipeline_architecture.svg"
+                         alt="End-to-End Pipeline Architecture diagram from raw Agmarknet parquet to DuckDB zero-copy data mart"
+                         loading="lazy" width="1200" height="600">
+                  </div>
+                  <div class="insightflow-evidence-body">
+                    <h3>End-to-End Pipeline Architecture</h3>
+                    <p>1.48M Agmarknet ingestion, DuckDB zero-copy staging, quality gate &amp; analytical marts.</p>
+                  </div>
+                </a>
+
+                <!-- Blueprint 2 -->
+                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
+                   href="assets/marketpulse/diagrams/02_tableau_data_products_architecture.svg"
+                   data-lightbox="marketpulse-diagrams"
+                   data-index="1"
+                   data-title="MarketPulse Architecture &middot; Curated Tableau Data Products"
+                   data-caption="Curated data products mapping from DuckDB analytical views to the four Tableau dashboards with typed contracts and data integrity checks."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Tableau Data Products Architecture diagram">
+                  <div class="insightflow-evidence-card-head">
+                    <span class="insightflow-evidence-index">BLUEPRINT 02 // DATA PRODUCTS</span>
+                    <span aria-hidden="true">&#x2922;</span>
+                  </div>
+                  <div class="diagram-image-container">
+                    <img src="assets/marketpulse/diagrams/02_tableau_data_products_architecture.svg"
+                         alt="Tableau Data Products Architecture diagram mapping data marts to Tableau worksheets"
+                         loading="lazy" width="1200" height="600">
+                  </div>
+                  <div class="insightflow-evidence-body">
+                    <h3>Tableau Data Products Architecture</h3>
+                    <p>Curated analytical marts, typed CSV contracts, and deterministic extract generation.</p>
+                  </div>
+                </a>
+
+                <!-- Blueprint 3 -->
+                <a class="insightflow-evidence-card screenshot-lightbox-trigger"
+                   href="assets/marketpulse/diagrams/03_tableau_dashboard_suite.svg"
+                   data-lightbox="marketpulse-diagrams"
+                   data-index="2"
+                   data-title="MarketPulse Architecture &middot; Tableau Public Workbook Suite"
+                   data-caption="Tableau Public workbook suite structure showing the four interactive dashboards, analytical worksheets, and navigational architecture."
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Open Tableau Dashboard Suite Architecture diagram">
+                  <div class="insightflow-evidence-card-head">
+                    <span class="insightflow-evidence-index">BLUEPRINT 03 // DASHBOARD SUITE</span>
+                    <span aria-hidden="true">&#x2922;</span>
+                  </div>
+                  <div class="diagram-image-container">
+                    <img src="assets/marketpulse/diagrams/03_tableau_dashboard_suite.svg"
+                         alt="Tableau Dashboard Suite diagram outlining worksheets, calculated fields, and dashboard views"
+                         loading="lazy" width="1200" height="600">
+                  </div>
+                  <div class="insightflow-evidence-body">
+                    <h3>Tableau Dashboard Suite Architecture</h3>
+                    <p>Workbook hierarchy, calculated fields, synchronized parameters, and layout containers.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </details>
+
+          <!-- Data Assurance & Quality Pipeline Details -->
+          <details class="insightflow-disclosure" id="marketpulse-methodology-disclosure">
+            <summary>Explore the data-quality audit, data contract, and econometric methodology</summary>
+            <div class="insightflow-disclosure-content">
+              <p><strong>Dataset provenance &amp; hygiene:</strong> The dataset comprises 1,481,324 daily wholesale observations across Maharashtra, Karnataka, and Gujarat (30 Aug 2024 &ndash; 28 Sep 2026) with verified SHA-256 (<code>DA8E4435D7B63693C406401E0FA3B1F084FD1010F650598BA5030715A57ED6A4</code>). DuckDB zero-copy data quality gates audited 27,420 frozen price streaks and quarantined 74 non-positive price anomalies, establishing an audit-clean 99.995% analytical foundation.</p>
+              <p><strong>Reproducible data contract:</strong> The Tableau deliverable is powered by six typed, deterministically sorted analytical extracts governed by an explicit manifest and verified by 26 passing automated pytest tests. The regression suite validates record conservation, monotonic date coverage, price non-negativity, and corridor relationship integrity.</p>
+              <p><strong>Econometric methodology:</strong> Naive pooled OLS regressions yield a spurious positive arrival elasticity (+0.089) due to seasonal variety mix shifts. Applying two-way fixed effects (TWFE) with mandi-level and time-level dummy variables and LOESS non-linear smoothing recovers the true downward-sloping price elasticity of -0.0360 (p &lt; 0.001).</p>
+            </div>
+          </details>
+
+          <h4 class="project-stack-heading">Tools &amp; Implementation Stack</h4>
+          <ul class="tag-list" aria-label="MarketPulse India technologies">
+            <li class="tag-item">Tableau Public 2026.2</li>
+            <li class="tag-item">Python 3.11</li>
+            <li class="tag-item">DuckDB &middot; Zero-Copy SQL</li>
+            <li class="tag-item">Polars &middot; High-Performance ETL</li>
+            <li class="tag-item">Statsmodels &middot; TWFE &amp; Panel OLS</li>
+            <li class="tag-item">LOESS Non-linear Regression</li>
+            <li class="tag-item">Streamlit &middot; 6 Analytical Workspaces</li>
+            <li class="tag-item">Agmarknet Open Data (1.48M Records)</li>
+            <li class="tag-item">pytest (26 Regression Tests)</li>
+            <li class="tag-item">Automated Data Pipeline</li>
+          </ul>
+
+          <!-- Technical Proof Links & Deliverables -->
+          <div class="project-deliverables">
+            <div class="deliverable-actions">
+              <a href="https://public.tableau.com/app/profile/meet.pokal/viz/MarketPulseIndiaEssentialCommodityPriceIntelligence_/Dashboard1-MarketPulse"
+                 class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                <span>Explore Live on Tableau Public ↗</span>
+              </a>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-toggle-mp-streamlit" aria-expanded="false" aria-controls="marketpulse-streamlit-disclosure">
+                <span>Streamlit Research Gallery (+6 views) &darr;</span>
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-toggle-mp-arch" aria-expanded="false" aria-controls="marketpulse-arch-disclosure">
+                <span>Pipeline Architecture (+3 blueprints) &darr;</span>
+              </button>
+            </div>
+            <p class="project-note">
+              <strong>Tableau Public &amp; data provenance note:</strong> The live link opens the published Tableau Public workbook. Note on Tableau Public presentation: The online service renders one dashboard tab at a time in the web viewer; downloading the packaged workbook (<code>marketpulse_india.twbx</code>) and opening it locally in Tableau Desktop reveals all four interactive dashboards and associated worksheets. All 1,481,324 wholesale observations are derived from official Agmarknet mandi returns (Aug 2024 &ndash; Sep 2026), validated via reproducible DuckDB pipeline with 26 automated regression tests. The Streamlit research suite is a verified repository deliverable; no hosted Streamlit web URL is advertised.
+            </p>
+          </div>
+        </article>
+
+        <!-- Case Study 2: InsightFlow (Retail Analytics Platform) -->
         <article class="project-case-study project--steel" id="project-insightflow" aria-labelledby="title-insightflow">
           <div class="project-header-top">
             <div>
