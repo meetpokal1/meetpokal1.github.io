@@ -560,6 +560,7 @@ function initPbiToggleButton() {
   wireDisclosure("btn-toggle-pbi", "insightflow-pbi-disclosure");
   wireDisclosure("btn-toggle-mp-streamlit", "marketpulse-streamlit-disclosure");
   wireDisclosure("btn-toggle-mp-arch", "marketpulse-arch-disclosure");
+  wireDisclosure("btn-toggle-mp-methodology", "marketpulse-methodology-disclosure");
 
   // Handle navbar link to #technical-systems
   const navSystemsLink = document.querySelector('a[href="#technical-systems"]');

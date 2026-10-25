@@ -253,7 +253,7 @@
         <!-- Supporting Problem Focus Statement -->
         <div class="hero-mission-statement" aria-label="Analytical Focus">
           <p class="hero-mission-text">
-            Turning complex business data into decision-ready insights through reliable data pipelines, rigorous analysis, and practical solutions to real operational problems.
+            Focused on data reconciliation, reproducible analytical pipelines, and decision-support dashboards—helping teams audit source data, diagnose operational exceptions, and evaluate margin trade-offs before taking action.
           </p>
         </div>
       </div>
@@ -280,6 +280,24 @@
           <p class="project-problem">
             <strong>Market Problem:</strong> Agricultural wholesale prices across India exhibit extreme spatial dispersion, severe reporting friction, and apparent elasticity paradoxes. Without accounting for variety confounding, transport friction, and frozen-price reporting habits across 1.48M records, market participants and policymakers make decisions on distorted market signals. MarketPulse India evaluates these discrepancies through reproducible DuckDB pipelines, panel econometrics, an interactive Streamlit scenario lab, and a published Tableau Public intelligence suite.
           </p>
+
+          <!-- Structured Business Value & Decision Application -->
+          <div class="project-business-value">
+            <div class="business-value-grid">
+              <div class="business-value-col">
+                <span class="business-value-kicker">WHO IT IS FOR</span>
+                <p>Commodity traders, wholesale procurement teams, agricultural analysts, and supply-chain researchers evaluating mandi pricing across states.</p>
+              </div>
+              <div class="business-value-col">
+                <span class="business-value-kicker">HOW TEAMS USE IT</span>
+                <p>Screen candidate sourcing corridors, evaluate spatial price spreads against modeled freight buffers (&#8377;120/Qtl baseline), and filter out frozen-price reporting artifacts before committing capital.</p>
+              </div>
+              <div class="business-value-col">
+                <span class="business-value-kicker">DECISION BENEFIT &amp; BOUNDARIES</span>
+                <p>Prioritizes high-conviction procurement investigations and prevents decisions based on distorted quotes. Caveat: Spreads are not automatic arbitrage; freight is modeled; and panel findings are observational.</p>
+              </div>
+            </div>
+          </div>
 
           <!-- Key evidence metrics: 1.48M rows, spatial spreads, panel elasticity, and reporting forensics -->
           <div class="kpi-row" aria-label="MarketPulse India Key Project Metrics">
@@ -706,9 +724,12 @@
               <button type="button" class="btn btn-secondary btn-sm" id="btn-toggle-mp-arch" aria-expanded="false" aria-controls="marketpulse-arch-disclosure">
                 <span>Pipeline Architecture (+3 blueprints) &darr;</span>
               </button>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-toggle-mp-methodology" aria-expanded="false" aria-controls="marketpulse-methodology-disclosure">
+                <span>Data Contract &amp; QA Rules &darr;</span>
+              </button>
             </div>
             <p class="project-note">
-              <strong>Tableau Public &amp; data provenance note:</strong> The live link opens the published Tableau Public workbook. Note on Tableau Public presentation: The online service renders one dashboard tab at a time in the web viewer; downloading the packaged workbook (<code>marketpulse_india.twbx</code>) and opening it locally in Tableau Desktop reveals all four interactive dashboards and associated worksheets. All 1,481,324 wholesale observations are derived from official Agmarknet mandi returns across six western and southern states (Aug 2024 &ndash; Sep 2026), validated via reproducible DuckDB pipeline with 26 automated regression tests. The Streamlit research suite is a verified repository deliverable; no hosted Streamlit web URL is advertised.
+              <strong>Tableau Public &amp; local pipeline deliverables:</strong> The live link opens the published Tableau Public workbook. Note on Tableau Public presentation: The online service renders one dashboard tab at a time in the web viewer; downloading the packaged workbook (<code>marketpulse_india.twbx</code>) and opening it locally in Tableau Desktop reveals all four interactive dashboards and associated worksheets. All 1,481,324 wholesale observations are derived from official Agmarknet mandi returns across six western and southern states (Aug 2024 &ndash; Sep 2026). The reproducible DuckDB pipeline, 26 automated regression tests, econometric models (Statsmodels TWFE), and 6 Streamlit workspaces are verified repository deliverables currently held in the local development workspace.
             </p>
           </div>
         </article>
@@ -726,6 +747,24 @@
           <p class="project-problem">
             <strong>Business Problem:</strong> Retail teams cannot reliably investigate margins or replenishment when CSV/XLSX exports contain malformed quantities, duplicate customers, and invalid relationships. InsightFlow reconciles the source data first, then delivers decision-ready sales, inventory, and data-quality analytics.
           </p>
+
+          <!-- Structured Business Value & Decision Application -->
+          <div class="project-business-value">
+            <div class="business-value-grid">
+              <div class="business-value-col">
+                <span class="business-value-kicker">WHO IT IS FOR</span>
+                <p>Retail operations managers, category and inventory planners, sales managers, and BI teams reconciling multi-source transactional data.</p>
+              </div>
+              <div class="business-value-col">
+                <span class="business-value-kicker">HOW TEAMS USE IT</span>
+                <p>Pinpoint products where top-line revenue hides negative margins, stress-test break-even volume tolerance (e.g. 58.3% buffer) before pricing changes, and rank stockout replenishment exceptions.</p>
+              </div>
+              <div class="business-value-col">
+                <span class="business-value-kicker">DECISION BENEFIT &amp; BOUNDARIES</span>
+                <p>Replaces manual spreadsheet cross-checks with auditable, tested metrics. Caveat: Records and financials are synthetic; simulations depend on model assumptions; replenishment follows transparent heuristics.</p>
+              </div>
+            </div>
+          </div>
 
           <!-- Key evidence: synthetic dataset and automated verification -->
           <div class="kpi-row" aria-label="InsightFlow Key Project Metrics">
@@ -1078,7 +1117,7 @@
           <details class="insightflow-disclosure" id="insightflow-quality-disclosure">
             <summary>Explore the data-quality pipeline and implementation details</summary>
             <div class="insightflow-disclosure-content">
-              <p><strong>Data assurance:</strong> The current runtime reconciles 49,975 raw records to 47,814 clean records (95.7% preservation). Exact duplicates, quarantined rows, merged customer profiles, and clean-loaded rows are tracked so the 8-table conservation checks balance without an unexplained gap.</p>
+              <p><strong>Data assurance:</strong> The current runtime reconciles 49,975 raw records to 47,814 clean records (95.7% preservation). Exact duplicates, quarantined rows, merged customer profiles, and clean-loaded rows are tracked so the 8-table conservation checks balance without an unexplained gap, verified by 234 automated tests (162 unit tests + 72 integration tests).</p>
               <p><strong>Implementation:</strong> Python ingestion and deterministic cleaning → PostgreSQL relational star schema and analytical views → tested SQL and FastAPI endpoints → Power BI PBIP/TMDL report and a locally runnable Streamlit dashboard. The dataset is synthetic; the replenishment buffer is a transparent heuristic, not a demand-variance-optimized safety-stock model.</p>
             </div>
           </details>
@@ -1206,9 +1245,9 @@
               </div>
               <h4 class="approach-step-title">Frame the Decision</h4>
               <p class="approach-step-desc">
-                Define the business question, stakeholders, relevant metrics, and what a useful answer would change.
+                Define the business decision, key operational metrics, and the trade-offs or risks that determine action.
               </p>
-              <span class="approach-step-evidence">e.g. Basmati Rice margin vs. volume trade-off</span>
+              <span class="approach-step-evidence">InsightFlow: Unit margin vs. sales volume trade-offs &middot; MarketPulse: Sourcing corridor viability &amp; freight friction</span>
             </div>
 
             <!-- Stage 02: Audit the Data -->
@@ -1219,9 +1258,9 @@
               </div>
               <h4 class="approach-step-title">Audit the Data</h4>
               <p class="approach-step-desc">
-                Check completeness, duplicates, inconsistencies, suspicious values, and the limitations of source records before trusting the results.
+                Audit source reliability, field definitions, duplicate entries, missing records, anomalies, and reporting constraints before trusting results.
               </p>
-              <span class="approach-step-evidence">e.g. POS vs. ERP discrepancy detection</span>
+              <span class="approach-step-evidence">InsightFlow: POS vs. ERP discrepancy detection &middot; MarketPulse: Agmarknet unchanged price streak forensics (27,420 streaks)</span>
             </div>
 
             <!-- Stage 03: Engineer the Workflow -->
@@ -1232,9 +1271,9 @@
               </div>
               <h4 class="approach-step-title">Engineer the Workflow</h4>
               <p class="approach-step-desc">
-                Build repeatable transformations, SQL models, and analytical datasets instead of relying on fragile manual work.
+                Build reproducible transformations, relational SQL schemas, analytical datasets, and automated validation gates instead of fragile manual work.
               </p>
-              <span class="approach-step-evidence">e.g. Git-tracked PBIP &amp; Python ETL pipelines</span>
+              <span class="approach-step-evidence">InsightFlow: Python ETL &amp; Git-tracked PBIP star schema &middot; MarketPulse: Zero-copy DuckDB quality pipeline &amp; Tableau extracts</span>
             </div>
 
             <!-- Stage 04: Investigate the Evidence -->
@@ -1245,9 +1284,9 @@
               </div>
               <h4 class="approach-step-title">Investigate the Evidence</h4>
               <p class="approach-step-desc">
-                Explore performance, distributions, trends, discrepancies, and risks with the analytical methods appropriate to the question.
+                Explore performance drivers, distributions, trends, spatial spreads, and counterfactual scenario sensitivity using empirical methods.
               </p>
-              <span class="approach-step-evidence">e.g. 58.3% volume buffer break-even simulation</span>
+              <span class="approach-step-evidence">InsightFlow: Break-even volume sensitivity simulation &middot; MarketPulse: Lasalgaon–Mumbai spread &amp; TWFE panel elasticity</span>
             </div>
 
             <!-- Stage 05: Deliver & Validate -->
@@ -1258,9 +1297,9 @@
               </div>
               <h4 class="approach-step-title">Deliver &amp; Validate</h4>
               <p class="approach-step-desc">
-                Produce decision-ready outputs and test key calculations so users can understand where the results came from.
+                Deliver decision-ready dashboards, traceable calculation workpapers, stated analytical boundaries, and regression-tested outputs.
               </p>
-              <span class="approach-step-evidence">e.g. 162 passing tests &amp; openpyxl workpapers</span>
+              <span class="approach-step-evidence">InsightFlow: 234 automated tests (162 unit + 72 integration) &amp; workpapers &middot; MarketPulse: 26 regression tests &amp; 4-dashboard Tableau suite</span>
             </div>
           </div>
         </div>
@@ -1272,14 +1311,14 @@
           <p>Audited against genuine project code, documentation, test suites, and models.</p>
         </div>
 
-        <div class="competencies-grid">
-          <!-- Category 1: Data & Programming -->
+                <div class="competencies-grid">
+          <!-- Category 1: Data Programming & SQL -->
           <div class="competency-card competency-card--programming spotlight-card">
             <div class="competency-card-header">
               <span class="competency-badge">Core Foundation</span>
-              <h4 class="competency-title">Data &amp; Programming</h4>
+              <h4 class="competency-title">Data Programming &amp; SQL</h4>
               <p class="competency-desc">
-                Programmatic data cleaning, robust transformations, relational SQL querying, and reproducible analytical scripts.
+                Programmatic data cleaning, zero-copy transformations, relational and OLAP SQL querying, and reproducible analytical pipelines.
               </p>
             </div>
 
@@ -1296,19 +1335,27 @@
                   <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="#336791" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
                 </span>
                 <span>SQL</span>
-                <span class="skill-pill-meta">PostgreSQL &middot; SQLite</span>
+                <span class="skill-pill-meta">PostgreSQL &middot; DuckDB</span>
+              </li>
+              <li class="skill-pill">
+                <span class="skill-icon" aria-hidden="true">
+                  <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="#fff100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+                </span>
+                <span>DuckDB</span>
+                <span class="skill-pill-meta">Zero-Copy SQL</span>
+              </li>
+              <li class="skill-pill">
+                <span class="skill-icon" aria-hidden="true">
+                  <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="#2496ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </span>
+                <span>Polars</span>
+                <span class="skill-pill-meta">High-Speed ETL</span>
               </li>
               <li class="skill-pill">
                 <span class="skill-icon" aria-hidden="true">
                   <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="4" height="18" rx="1" fill="#150458"/><rect x="10" y="8" width="4" height="13" rx="1" fill="#e70488"/><rect x="17" y="13" width="4" height="8" rx="1" fill="#00d1b2"/></svg>
                 </span>
-                <span>Pandas</span>
-              </li>
-              <li class="skill-pill">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="#4dabcf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 7v10l8 4V11"/><path d="M20 7v10l-8 4"/></svg>
-                </span>
-                <span>NumPy</span>
+                <span>Pandas &amp; NumPy</span>
               </li>
               <li class="skill-pill">
                 <span class="skill-icon" aria-hidden="true">
@@ -1320,24 +1367,24 @@
                 <span class="skill-icon" aria-hidden="true">
                   <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                 </span>
-                <span>Data Cleaning &amp; Transformation</span>
+                <span>Data Cleaning &amp; Normalization</span>
               </li>
             </ul>
 
             <div class="competency-proof-footer">
               <p class="competency-proof-text">
-                <strong>Applied in InsightFlow:</strong> Multi-vendor raw CSV profiling, transactional data cleaning, relational normalization, and NumPy-based elasticity modeling.
+                <strong>Applied across projects:</strong> Zero-copy DuckDB SQL gates and Polars ETL processing 1.48M rows in MarketPulse; multi-vendor transactional cleaning, relational star schema normalization, and NumPy modeling in InsightFlow.
               </p>
             </div>
           </div>
 
-          <!-- Category 2: Analytics & Business Intelligence -->
+          <!-- Category 2: BI, Semantic Models & KPI Analytics -->
           <div class="competency-card competency-card--bi spotlight-card">
             <div class="competency-card-header">
               <span class="competency-badge">Decision Delivery</span>
-              <h4 class="competency-title">Analytics &amp; Business Intelligence</h4>
+              <h4 class="competency-title">BI, Semantic Models &amp; KPI Analytics</h4>
               <p class="competency-desc">
-                Star-schema dimensional modeling, version-controlled Power BI reporting, production DAX formulas, and actionable KPI drill-downs.
+                Star-schema dimensional modeling, version-controlled reporting, verified calculations, and actionable operational drill-downs.
               </p>
             </div>
 
@@ -1348,6 +1395,13 @@
                 </span>
                 <span>Power BI</span>
                 <span class="skill-pill-meta">PBIP Git-Tracked</span>
+              </li>
+              <li class="skill-pill">
+                <span class="skill-icon" aria-hidden="true">
+                  <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="#e97627"><rect x="11" y="2" width="2" height="6"/><rect x="9" y="4" width="6" height="2"/><rect x="11" y="16" width="2" height="6"/><rect x="9" y="18" width="6" height="2"/><rect x="3" y="11" width="6" height="2"/><rect x="5" y="9" width="2" height="6"/><rect x="15" y="11" width="6" height="2"/><rect x="17" y="9" width="2" height="6"/><circle cx="12" cy="12" r="2"/></svg>
+                </span>
+                <span>Tableau Public</span>
+                <span class="skill-pill-meta">4-Dashboard Suite</span>
               </li>
               <li class="skill-pill">
                 <span class="skill-icon" aria-hidden="true">
@@ -1374,6 +1428,7 @@
                   <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="#ff4b4b"><polygon points="12,2 2,19 7,19 12,10 17,19 22,19"/></svg>
                 </span>
                 <span>Streamlit UI</span>
+                <span class="skill-pill-meta">Analytical Labs</span>
               </li>
               <li class="skill-pill">
                 <span class="skill-icon" aria-hidden="true">
@@ -1385,31 +1440,24 @@
                 <span class="skill-icon" aria-hidden="true">
                   <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
                 </span>
-                <span>Inventory &amp; Stockout Analytics</span>
-              </li>
-              <li class="skill-pill">
-                <span class="skill-icon" aria-hidden="true">
-                  <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="#e97627"><rect x="11" y="2" width="2" height="6"/><rect x="9" y="4" width="6" height="2"/><rect x="11" y="16" width="2" height="6"/><rect x="9" y="18" width="6" height="2"/><rect x="3" y="11" width="6" height="2"/><rect x="5" y="9" width="2" height="6"/><rect x="15" y="11" width="6" height="2"/><rect x="17" y="9" width="2" height="6"/><circle cx="12" cy="12" r="2"/></svg>
-                </span>
-                <span>Tableau</span>
-                <span class="skill-pill-meta">Applied Study</span>
+                <span>Spatial Spread &amp; Inventory Analytics</span>
               </li>
             </ul>
 
             <div class="competency-proof-footer">
               <p class="competency-proof-text">
-                <strong>Applied in InsightFlow:</strong> 5-page Power BI desktop project with 29 active DAX formulas, interactive Streamlit decision dashboard, and category-level margin leakage diagnosis.
+                <strong>Applied across projects:</strong> 4-dashboard Tableau Public commodity suite and 6 interactive Streamlit scenario workspaces in MarketPulse; 5-page Power BI desktop report with 29 DAX measures and category margin diagnostics in InsightFlow.
               </p>
             </div>
           </div>
 
-          <!-- Category 3: Data Quality & Engineering -->
+          <!-- Category 3: Data Quality, Testing & Modeling -->
           <div class="competency-card competency-card--engineering spotlight-card">
             <div class="competency-card-header">
               <span class="competency-badge">Integrity &amp; Assurance</span>
-              <h4 class="competency-title">Data Quality &amp; Engineering</h4>
+              <h4 class="competency-title">Data Quality, Testing &amp; Modeling</h4>
               <p class="competency-desc">
-                Mathematical reconciliation, discrepancy auditing, automated test suites, and auditable workpaper documentation.
+                Mathematical reconciliation, discrepancy auditing, automated regression suites, econometric modeling, and auditable workpaper documentation.
               </p>
             </div>
 
@@ -1431,7 +1479,14 @@
                   <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="#0a9edc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.5l-4.5 9A2 2 0 0 0 7.3 21h9.4a2 2 0 0 0 1.8-2.5L14 9.5V2h-4z"/><line x1="8.5" y1="14" x2="15.5" y2="14"/></svg>
                 </span>
                 <span>pytest</span>
-                <span class="skill-pill-meta">162 Passing Tests</span>
+                <span class="skill-pill-meta">260 Tests Total Across Projects</span>
+              </li>
+              <li class="skill-pill">
+                <span class="skill-icon" aria-hidden="true">
+                  <svg class="tech-svg-icon" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+                </span>
+                <span>Statsmodels</span>
+                <span class="skill-pill-meta">TWFE Panel Econometrics</span>
               </li>
               <li class="skill-pill">
                 <span class="skill-icon" aria-hidden="true">
@@ -1457,7 +1512,7 @@
 
             <div class="competency-proof-footer">
               <p class="competency-proof-text">
-                <strong>Applied in InsightFlow:</strong> 6.4x faster reconciliation engine, automated openpyxl workpaper generator, and 162 unit tests verifying calculation integrity.
+                <strong>Applied across projects:</strong> 26 automated regression tests and typed data contracts in MarketPulse; 234 automated tests (162 unit tests + 72 integration tests), 8-table reconciliation, and automated workpapers in InsightFlow.
               </p>
             </div>
           </div>
@@ -1491,50 +1546,52 @@
           <span class="case-domain-tag">Secondary Availability &middot; Scoped Deliverables</span>
           <h2 id="services-heading">Applied Analytics &amp; Reporting Services</h2>
           <p class="services-intro-compact">
-            While prioritizing Data Analyst and BI internship opportunities, I’m selectively available for well-defined analytics projects—from cleaning unreliable spreadsheets to automating recurring reports and building dashboards that help teams act on their data.
+            While prioritizing Data Analyst and BI internship opportunities, I’m selectively available for well-defined analytics projects—helping teams audit source data, automate recurring reporting, and build decision models that inform operational actions.
           </p>
         </div>
 
         <div class="services-grid">
-          <!-- Service 1: Spreadsheet Cleanup & Pipeline Automation -->
+          <!-- Service 1: Data Quality, Reconciliation & Exception Auditing -->
           <div class="service-card spotlight-card service-card--teal">
             <div class="service-card-top">
               <div class="service-icon-wrap service-icon--teal" aria-hidden="true">
                 <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
                 </svg>
               </div>
-              <span class="service-scope-tag">Automation &middot; Scoped Work</span>
+              <span class="service-scope-tag">Integrity &middot; Exception Auditing</span>
             </div>
 
-            <h3 class="service-card-title">Spreadsheet Cleanup &amp; Pipeline Automation</h3>
+            <h3 class="service-card-title">Data Quality, Reconciliation &amp; Exception Auditing</h3>
 
             <p class="service-card-desc">
-              Turn inconsistent Excel workbooks and multi-source CSV exports into standardized, validated datasets. Automate repeatable cleaning, formatting, merging, and reporting workflows to reduce manual effort and make the process easier to reproduce.
+              Address inconsistent exports, multi-system reporting mismatches (POS, ERP, inventory, billing), and unvalidated source data. Build cross-source validation queries and structured discrepancy logs so teams can trust their baseline numbers before publishing KPIs.
             </p>
 
             <div class="service-deliverables-block">
               <span class="service-deliverables-title">Typical Deliverables</span>
               <ul class="service-deliverables-list">
-                <li>Standardized, clean datasets ready for analysis</li>
-                <li>Repeatable Python scripts for automated processing</li>
-                <li>Configurable validation and formatting rules</li>
-                <li>Documented output workpapers and run notes</li>
+                <li>Cross-source comparison and reconciliation queries</li>
+                <li>Structured discrepancy logs and quarantined exception schedules</li>
+                <li>Automated data validation rules and key consistency checks</li>
+                <li>Traceable mathematical audit workpapers in Excel (openpyxl)</li>
               </ul>
             </div>
 
             <div class="service-card-footer">
               <div class="service-tools-strip">
+                <span class="service-tool-pill">SQL</span>
                 <span class="service-tool-pill">Python</span>
-                <span class="service-tool-pill">Pandas</span>
+                <span class="service-tool-pill">DuckDB</span>
                 <span class="service-tool-pill">openpyxl</span>
-                <span class="service-tool-pill">CSV / Excel</span>
+                <span class="service-tool-pill">Data Contracts</span>
               </div>
               <a href="#contact" class="service-action-link">Discuss a Scoped Project &rarr;</a>
             </div>
           </div>
 
-          <!-- Service 2: Business Intelligence & Decision Dashboards -->
+          <!-- Service 2: Business Intelligence, Semantic Models & Decision Dashboards -->
           <div class="service-card spotlight-card service-card--steel">
             <div class="service-card-top">
               <div class="service-icon-wrap service-icon--steel" aria-hidden="true">
@@ -1548,69 +1605,68 @@
               <span class="service-scope-tag">BI &middot; Operational KPIs</span>
             </div>
 
-            <h3 class="service-card-title">Business Intelligence &amp; Decision Dashboards</h3>
+            <h3 class="service-card-title">Business Intelligence, Semantic Models &amp; Decision Dashboards</h3>
 
             <p class="service-card-desc">
-              Build focused dashboards that surface KPIs, trends, category-level performance, and operational exceptions—helping stakeholders investigate what changed, where performance is slipping, and what needs attention.
+              Transition from fragile, manual spreadsheets to maintainable dimensional models and interactive reports. Surface executive KPIs, category-level trends, and operational exceptions so stakeholders can investigate performance changes and take timely action.
             </p>
 
             <div class="service-deliverables-block">
               <span class="service-deliverables-title">Typical Deliverables</span>
               <ul class="service-deliverables-list">
-                <li>Executive and operational KPI summary views</li>
-                <li>Star-schema dimensional models with DAX formulas</li>
-                <li>Operational exception flags and category drill-downs</li>
-                <li>Interactive interfaces in Power BI or Streamlit</li>
+                <li>Star-schema dimensional data models and verified relationships</li>
+                <li>Documented, verified DAX measures and Power Query ETL logic</li>
+                <li>Executive KPI summaries and category exception drill-downs</li>
+                <li>Interactive dashboards in Power BI or Tableau Public/Desktop</li>
               </ul>
             </div>
 
             <div class="service-card-footer">
               <div class="service-tools-strip">
                 <span class="service-tool-pill">Power BI</span>
+                <span class="service-tool-pill">Tableau</span>
                 <span class="service-tool-pill">DAX</span>
                 <span class="service-tool-pill">Power Query</span>
-                <span class="service-tool-pill">Excel</span>
                 <span class="service-tool-pill">Streamlit</span>
               </div>
               <a href="#contact" class="service-action-link">Discuss a Scoped Project &rarr;</a>
             </div>
           </div>
 
-          <!-- Service 3: Data Reconciliation & Exception Analysis -->
+          <!-- Service 3: Operational KPI Analysis & Scenario Decision Support -->
           <div class="service-card spotlight-card service-card--amber">
             <div class="service-card-top">
               <div class="service-icon-wrap service-icon--amber" aria-hidden="true">
                 <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  <polyline points="9 12 11 14 15 10"/>
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                 </svg>
               </div>
-              <span class="service-scope-tag">Integrity &middot; Exception Analysis</span>
+              <span class="service-scope-tag">Modeling &middot; Scenario Planning</span>
             </div>
 
-            <h3 class="service-card-title">Data Reconciliation &amp; Exception Analysis</h3>
+            <h3 class="service-card-title">Operational KPI Analysis &amp; Scenario Decision Support</h3>
 
             <p class="service-card-desc">
-              Compare sales, purchase, tax, or inventory records using configurable validation rules. Flag mismatches, missing records, duplicates, and unusual values, then produce structured exception reports that make investigation and follow-up easier.
+              Help operations, merchandising, or sourcing teams evaluate pricing, gross margin trade-offs, stockout risks, or transport costs through transparent analytical models. Provide decision-makers with structured scenario analysis before committing resources.
             </p>
 
             <div class="service-deliverables-block">
               <span class="service-deliverables-title">Typical Deliverables</span>
               <ul class="service-deliverables-list">
-                <li>Cross-source comparison and reconciliation queries</li>
-                <li>Structured discrepancy logs and exception schedules</li>
-                <li>Tolerance threshold checks and anomaly flags</li>
-                <li>Traceable mathematical audit schedule documentation</li>
+                <li>Gross margin vs. sales volume sensitivity models</li>
+                <li>Break-even volume tolerance and pricing scenario tools</li>
+                <li>Inventory stockout risk and replenishment prioritization logic</li>
+                <li>Documented assumption registers and methodology walk-throughs</li>
               </ul>
             </div>
 
             <div class="service-card-footer">
               <div class="service-tools-strip">
-                <span class="service-tool-pill">SQL</span>
                 <span class="service-tool-pill">Python</span>
-                <span class="service-tool-pill">Data Validation</span>
-                <span class="service-tool-pill">Reconciliation</span>
-                <span class="service-tool-pill">Exceptions</span>
+                <span class="service-tool-pill">Statsmodels</span>
+                <span class="service-tool-pill">SQL</span>
+                <span class="service-tool-pill">Excel / openpyxl</span>
+                <span class="service-tool-pill">Scenario Labs</span>
               </div>
               <a href="#contact" class="service-action-link">Discuss a Scoped Project &rarr;</a>
             </div>
