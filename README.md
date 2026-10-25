@@ -62,17 +62,29 @@ resumeAvailable: true
 ```
 *The website will automatically switch the button from "Available on Request" to an active download link.*
 
-### InsightFlow — Featured Case Study
-The homepage now features InsightFlow as the sole project while the portfolio is focused on the flagship analytics case study.
+### Flagship Analytics Case Studies
 
+The portfolio presents two end-to-end data intelligence case studies: **MarketPulse India** and **InsightFlow**.
+
+#### 1. MarketPulse India — Wholesale Commodity Price Intelligence
+- Source repository: [meetpokal1/MarketPulseIndia](https://github.com/meetpokal1/MarketPulseIndia)
+- Live interactive dashboards: [Tableau Public Multi-Dashboard Suite](https://public.tableau.com/app/profile/meet.pokal/viz/MarketPulseIndiaEssentialCommodityPriceIntelligence_/Dashboard1-MarketPulse)
+- Verified implementation evidence:
+  - [Tableau Data Contract & QA Rules](https://github.com/meetpokal1/MarketPulseIndia/blob/main/documentation/TABLEAU_DATA_CONTRACT.md)
+  - [Reproducible Data Cleaning & Transformation Pipeline](https://github.com/meetpokal1/MarketPulseIndia/blob/main/src/cleaning/pipeline.py)
+  - [Econometric Panel Methodology (Statsmodels TWFE)](https://github.com/meetpokal1/MarketPulseIndia/blob/main/documentation/METHODOLOGY.md)
+  - [Automated Regression Tests (26 passing tests)](https://github.com/meetpokal1/MarketPulseIndia/tree/main/tests)
+- The applied stack spans DuckDB zero-copy SQL, Polars ETL, Python 3.11, Statsmodels, Tableau Public 2026.2, Streamlit scenario lab, and 26 automated pytest regression tests across 1.48M AGMARKNET wholesale records.
+
+#### 2. InsightFlow — Retail Profit & Data Integrity Intelligence
 - Source repository: [meetpokal1/InsightFlow](https://github.com/meetpokal1/InsightFlow)
 - Genuine runtime captures: [Streamlit screenshots](https://github.com/meetpokal1/InsightFlow/tree/main/screenshots/runtime)
 - Genuine Power BI captures: [Power BI screenshots](https://github.com/meetpokal1/InsightFlow/tree/main/screenshots/powerbi)
 - Project-specific proof links open the [DAX Measure Catalog](https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/dax_measures.md), [Power Query scripts](https://github.com/meetpokal1/InsightFlow/blob/main/powerbi/power_query.md), and [data-preparation/QA notes](https://github.com/meetpokal1/InsightFlow/blob/main/documentation/data_quality.md).
-- The applied stack spans Python/Pandas, PostgreSQL/SQL, FastAPI, Power BI PBIP/TMDL with DAX and Power Query, Streamlit, an Excel/openpyxl assurance workpaper, Docker Compose, pytest/Ruff, and GitHub Actions CI. These are listed because the repository contains corresponding implementation or verification artifacts.
+- The applied stack spans Python/Pandas, PostgreSQL/SQL, FastAPI, Power BI PBIP/TMDL with DAX and Power Query, Streamlit, an Excel/openpyxl assurance workpaper, Docker Compose, 234 automated tests (162 unit + 72 integration), and GitHub Actions CI.
 - The Streamlit interface is locally runnable. The portfolio does not advertise a hosted live demo unless public access is verified.
 
-The reusable [Project Evidence Standard](PROJECT_EVIDENCE_STANDARD.md) defines how future projects should show a truthful, functional technology stack and a small set of project-specific evidence links.
+The reusable [Project Evidence Standard](PROJECT_EVIDENCE_STANDARD.md) defines how projects show a truthful, functional technology stack and verified evidence links.
 
 ---
 

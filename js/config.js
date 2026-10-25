@@ -16,7 +16,7 @@ const SITE_CONFIG = {
     hackerrankUrl: "https://www.hackerrank.com/profile/meetpokalwork",
     resumeUrl: "assets/docs/Meet_Pokal_Data_Analyst_BI_Resume.pdf",
     resumeAvailable: true,
-    tableauPublicUrl: "",
+    tableauPublicUrl: "https://public.tableau.com/app/profile/meet.pokal/viz/MarketPulseIndiaEssentialCommodityPriceIntelligence_/Dashboard1-MarketPulse",
     powerBiUrl: ""
   },
 
