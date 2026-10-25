@@ -3849,3 +3849,192 @@
   width: 100%;
   object-fit: contain;
 }
+
+
+/* --------------------------------------------------------------------------
+   Accessible Resume PDF Viewer
+   -------------------------------------------------------------------------- */
+.resume-viewer-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 3vw;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease, visibility 180ms ease;
+}
+.resume-viewer-modal.is-active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.resume-viewer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 14, 20, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.resume-viewer-dialog {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 90vh;
+  max-width: 1180px;
+  max-height: 960px;
+  min-height: 280px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  outline: none;
+}
+.resume-viewer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  flex: 0 0 auto;
+  padding: var(--space-12) var(--space-16);
+  background: var(--bg-surface-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.resume-viewer-title {
+  min-width: 0;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+.resume-viewer-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex: 0 0 auto;
+}
+.resume-viewer-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+.resume-viewer-icon-btn:hover {
+  color: var(--accent-amber);
+  background: var(--accent-surface);
+  border-color: var(--accent-amber);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.resume-viewer-icon-btn:focus-visible {
+  outline: 2px solid var(--accent-amber);
+  outline-offset: 3px;
+}
+.resume-viewer-body {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  background: #252a33;
+  overflow: hidden;
+}
+.resume-viewer-body iframe {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  border: 0;
+  background: #ffffff;
+}
+.resume-viewer-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 10px;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+  padding: 8px var(--space-16);
+  color: var(--text-muted);
+  background: var(--bg-surface-subtle);
+  border-top: 1px solid var(--border-subtle);
+  font-size: var(--fs-xs);
+  line-height: 1.4;
+  text-align: center;
+}
+.resume-viewer-fallback a {
+  color: var(--accent-amber);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.resume-viewer-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .resume-viewer-modal {
+    padding: 0;
+  }
+  .resume-viewer-dialog {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    min-height: 0;
+    border: 0;
+    border-radius: 0;
+  }
+  .resume-viewer-header {
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .resume-viewer-title {
+    font-size: 0.9rem;
+  }
+  .resume-viewer-header-actions {
+    gap: 6px;
+  }
+  .resume-viewer-icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .resume-viewer-fallback {
+    padding: 9px 10px;
+    gap: 4px 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-viewer-modal,
+  .resume-viewer-icon-btn {
+    transition: none;
+  }
+}
