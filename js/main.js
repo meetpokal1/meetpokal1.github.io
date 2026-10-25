@@ -740,7 +740,7 @@ function initResumeViewer() {
 
     const cleanUrl = pdfUrl.split("#")[0];
     const fileName = cleanUrl.split("/").pop().split("?")[0] || "Meet_Pokal_Resume.pdf";
-    const previewUrl = cleanUrl + (cleanUrl.includes("#") ? "&" : "#") + "zoom=page-width";
+    const previewUrl = cleanUrl + "#view=fith&zoom=page-width";
 
     returnFocusElement =
       trigger.closest("#nav-menu") && mobileMenuToggle ? mobileMenuToggle : trigger;
