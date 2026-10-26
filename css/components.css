@@ -1502,8 +1502,8 @@
 }
 
 .skill-icon {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
@@ -1542,8 +1542,8 @@
 }
 
 .tech-svg-icon {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   fill: currentColor;
   flex-shrink: 0;
 }
@@ -4038,3 +4038,11 @@
     transition: none;
   }
 }
+
+
+/* Brand colours for the skills that use recognisable technology marks. */
+.skill-brand-logo--snowflake { color: #29B5E8; }
+.skill-brand-logo--databricks { color: #FF3621; }
+.skill-brand-logo--bigquery { color: #669DF6; }
+.skill-brand-logo--dbt { color: #FF694B; }
+.skill-brand-logo--looker-studio { color: #4285F4; }
