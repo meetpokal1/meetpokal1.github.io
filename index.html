@@ -278,7 +278,7 @@
           </div>
 
           <p class="project-problem">
-            <strong>Business Problem:</strong> When commercial sales and inventory data arrive as disparate exports across stores and warehouses, unvalidated line items distort turnover by over 100% (+&#8377;220.9M in raw data from quantity outliers and decimal displacement), duplicate customer profiles fracture account history, and missing reorder thresholds leave stockouts unflagged. InsightFlow engineers an auditable data-quality pipeline that detects and reconciles these anomalies before numbers surface in executive profitability and replenishment decisions.
+            <strong>Business Problem:</strong> Retail teams often combine sales and inventory files exported from different systems. Duplicate customers, incorrect quantities, mismatched order totals and missing stock thresholds can distort profit reports and hide items that need attention. In InsightFlow's synthetic benchmark, calculating revenue before cleaning the records overstated it by &#8377;22.09 crore (105.7%) compared with the validated result. InsightFlow demonstrates how automated checks and an audit trail can catch and explain these issues before the data informs business decisions.
           </p>
 
           <!-- Structured Business Value & Decision Application -->
@@ -286,15 +286,15 @@
             <div class="business-value-grid">
               <div class="business-value-col">
                 <span class="business-value-kicker">WHO IT IS FOR</span>
-                <p>Retail operations analysts, commercial category planners, and BI teams managing recurring, multi-location digital sales and inventory exports who require reproducible reporting, data hygiene gates, and auditable metrics.</p>
+                <p>Retail operations, finance, category-planning and business intelligence (BI) teams at companies with multiple stores or warehouses that regularly combine digital sales and inventory files. It is most relevant when teams need consistent checks and traceable figures every reporting cycle&mdash;not for a small shop whose needs are already met by a simple spreadsheet.</p>
               </div>
               <div class="business-value-col">
                 <span class="business-value-kicker">HOW TEAMS USE IT</span>
-                <p>Validate incoming exports against automated quality gates, investigate line-versus-header discrepancies (1,312 audited in benchmark), evaluate SKU unit margins against volume trade-offs (e.g. 58.3% break-even buffer on staple rice), and prioritize working-capital replenishment queues across warehouse locations.</p>
+                <p>Teams run incoming files through repeatable quality checks, review duplicates and mismatched totals, investigate products that sell well but earn little profit, and prioritize stockouts or items below reorder levels. The price simulator lets them test how a proposed price change and an assumed change in sales volume could affect gross profit.</p>
               </div>
               <div class="business-value-col">
                 <span class="business-value-kicker">DECISION BENEFIT &amp; BOUNDARIES</span>
-                <p>Replaces manual spreadsheet cross-checking with traceable, rule-based validations that catch corrupt records earlier and prioritize high-conviction inventory and pricing decisions. Boundaries: Evaluated on a 49,975-record synthetic retail benchmark; elasticity scenarios model explicit assumptions rather than econometric causal proofs.</p>
+                <p>InsightFlow aims to reduce repeated manual checking, make data issues easier to trace, and help teams focus pricing and restocking reviews on the items that need attention. All figures come from a synthetic dataset&mdash;not a real retailer's operations&mdash;so the results demonstrate the method, not actual savings or profit growth. Price tests are what-if scenarios, not forecasts; replenishment priorities use explicit rules rather than an advanced demand-forecasting model.</p>
               </div>
             </div>
           </div>
@@ -700,7 +700,7 @@
           </div>
 
           <p class="project-problem">
-            <strong>Market Problem:</strong> Wholesale crop prices can differ between markets and dates, but comparing two prices directly can be misleading: crop variety, reporting practices, and transport costs can all affect the comparison. MarketPulse analyses historical mandi records to reveal price patterns, flag questionable reports, and investigate how prices move alongside arrivals.
+            <strong>Business Problem:</strong> Wholesale prices for the same crop can differ across markets and dates, but the lowest listed price is not automatically the best buying option. Crop variety, reporting quality, market arrivals and transport costs can change the comparison. MarketPulse studies more than 1.48 million historical wholesale-market records across six states to compare price patterns, flag questionable reports, and examine how prices move alongside market arrivals.
           </p>
 
           <!-- Structured Business Value & Decision Application -->
@@ -708,15 +708,15 @@
             <div class="business-value-grid">
               <div class="business-value-col">
                 <span class="business-value-kicker">WHO IT IS FOR</span>
-                <p>Businesses that buy produce in bulk, including supermarket procurement teams, food processors, wholesalers, and distributors, as well as agricultural analysts and researchers comparing wholesale markets.</p>
+                <p>Procurement teams at food processors, supermarket chains, wholesalers and distributors that buy produce from multiple wholesale markets (mandis), as well as agricultural analysts and researchers studying regional prices and arrivals.</p>
               </div>
               <div class="business-value-col">
                 <span class="business-value-kicker">HOW TEAMS USE IT</span>
-                <p>Compare historical prices for a crop across markets, review price and arrival patterns, check data-quality warnings, and test how an assumed transport cost changes a sourcing scenario before investigating it further.</p>
+                <p>Teams compare historical prices for the same crop across markets and dates, review arrival trends and data-quality warnings, and test how an assumed transport cost changes the apparent price advantage of one market. They can use the results to shortlist markets or periods for further checking before making a sourcing decision.</p>
               </div>
               <div class="business-value-col">
                 <span class="business-value-kicker">DECISION BENEFIT &amp; BOUNDARIES</span>
-                <p>Helps teams identify price patterns and potential sourcing options worth checking more closely; it does not tell buyers where to purchase today. The data is historical, the &#8377;120/qtl freight figure is a modeled assumption, price spreads alone do not prove a profitable trade, and statistical findings are observational rather than proof of cause and effect.</p>
+                <p>MarketPulse helps users spot price patterns and sourcing options worth investigating, while showing how data quality and cost assumptions affect the comparison. It uses historical records, not live purchasing data. The &#8377;120-per-quintal freight cost is a modeled assumption, and a price gap alone does not prove a profitable trade because other costs may apply. Statistical relationships between arrivals and prices do not prove that one causes the other.</p>
               </div>
             </div>
           </div>
